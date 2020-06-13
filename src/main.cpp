@@ -1,8 +1,6 @@
 /*
 *   Made by Epilan Gian Cedrick G.
-*   Most code by https://learnopengl.com
-*   
-*
+*   Most code by https://learnopengl.com, and the cherno https://youtube.com/thecherno
 *
 */
 
@@ -10,13 +8,6 @@
 #include <GLFW/glfw3.h>
 
 #include <iostream>
-
-/* 
- *   TODO: Make Shader source file parser function
- *   TODO: Optimize passShader function into faster c api. c++ tends to be a lot slower than    the c api but this is just openGL for now.
- * 
- * 
-*/
 
 #include <fstream>
 #include <string>
@@ -27,6 +18,8 @@ struct ShaderProgramSource
     std::string VertexSource;
     std::string FragmentSource;
 };
+
+// TODO: Optimize passShader function into faster c api. c++ tends to be a lot slower than the c api but this is just openGL for now.
 
 /* simple parser that passes shader file and convert them into strings */
 static ShaderProgramSource ParseShader(const std::string& filepath) 
@@ -74,7 +67,7 @@ static unsigned int CompileShader(unsigned int type, const std::string& source)
         glGetShaderiv(id, GL_INFO_LOG_LENGTH, &length);
         char* message = (char*)alloca(length * sizeof(char)); // allocate to the stack
         glGetShaderInfoLog(id, length, &length, message);
-        std::cout << "Fail tp compile shader!" << (type == GL_VERTEX_SHADER ? "vertex" : "fragment" ) << std::endl;
+        std::cout << "Fail to compile " << (type == GL_VERTEX_SHADER ? "vertex" : "fragment") << "shader!!" << std::endl;
         std::cout << message << std::endl;
         glDeleteShader(id);
         
@@ -113,28 +106,7 @@ void processInput(GLFWwindow *window)
 }
 
 int main(void)
-{   
-    /* 
-    *   FIXME: the parse shader function outputs vertexshader and fragment shader of type 
-    * std::string, the problem is that glShaderSource needs a type const char *
-    */
-    ShaderProgramSource shaders = ParseShader("/shaders/BasicShader.shader");
-
-    const char *vertexShaderSource = 
-    "#version 330 core\n"
-    "layout (location = 0) in vec3 aPos;\n"
-    "void main()\n"
-    "{\n"
-    "   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
-    "}\0";
-
-    const char *fragmentShaderSource = "#version 330 core\n"
-    "out vec4 FragColor;\n"
-    "void main()\n"
-    "{\n"
-    "   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
-    "}\n\0";
-
+{
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -162,60 +134,10 @@ int main(void)
     glViewport(0, 0, 800, 600);
 
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);  
-    
-    // Vertex Shader
-    unsigned int vertexShader;
-    vertexShader = glCreateShader(GL_VERTEX_SHADER);
-    // attach the shader source code to the shader object and compile the shader:
-    glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
-    glCompileShader(vertexShader);
 
-    // check for shader compile errors
-    int  success;
-    char infoLog[512];
-    glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
-    if(!success)
-    {
-        glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
-        std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
-    }
-
-    // Fragment Shader
-    unsigned int fragmentShader;
-    fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-
-    glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
-    glCompileShader(fragmentShader);
-
-    // check for shader compile errors
-    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
-    if(!success)
-    {
-        glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
-        std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
-    }
-
-    // creating a shader object program for the final linked version of the multiple shaders combined
-    unsigned int shaderProgram;
-    shaderProgram = glCreateProgram();
-
-    glAttachShader(shaderProgram, vertexShader);
-    glAttachShader(shaderProgram, fragmentShader);
-    glLinkProgram(shaderProgram);
-
-    // check for shader compile errors
-    glGetShaderiv(shaderProgram, GL_LINK_STATUS, &success);
-    if(!success)
-    {
-        glGetShaderInfoLog(shaderProgram, 512, NULL, infoLog);
-        std::cout << "ERROR::SHADER::SHADERPROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
-    } 
-    // The result is a program object that we can activate by calling glUseProgram with the newly created program object as its argument:
-    glUseProgram(shaderProgram);
-
-    // delete the shader objects once we've linked them into the program object
-    glDeleteShader(vertexShader);
-    glDeleteShader(fragmentShader);  
+    ShaderProgramSource source = ParseShader("shaders/BasicShader.shader");
+    unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource);
+    glUseProgram(shader);
 
     float vertices[] = {
         -0.5f, -0.5f, 0.0f, // left  
@@ -240,7 +162,8 @@ int main(void)
 
     // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
     // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
-    glBindVertexArray(0); 
+    glBindVertexArray(0);
+
 
     // uncomment this call to draw in wireframe polygons.
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -263,11 +186,9 @@ int main(void)
         // check and call events and swap the buffers
         glfwSwapBuffers(window);
         glfwPollEvents();
-    }        
+    }
 
     glfwTerminate();
-
-   
 
     return 0;
 }
