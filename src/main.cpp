@@ -16,6 +16,7 @@
 
 // TODO: make debug trap for every compiler
 // TODO: display the name of the errors
+// TODO: make some kind of manifest for xcode settings, compilers in order for the code to run right
 
 #ifdef DEBUG
     #ifdef __APPLE__
@@ -176,6 +177,8 @@ int main(void)
         return -1;
     }
     glfwMakeContextCurrent(window);
+    
+    glfwSwapInterval(1); // synchronize with our vsync
 
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
@@ -186,11 +189,7 @@ int main(void)
     glViewport(0, 0, 800, 600);
 
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-
-    ShaderProgramSource source = ParseShader("shaders/BasicShader.shader");
-    unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource);
-    glUseProgram(shader);
-
+    
     float vertices[] = {
              0.5f,  0.5f, 0.0f,  // top right    0
              0.5f, -0.5f, 0.0f,  // bottom right 1
@@ -228,7 +227,17 @@ int main(void)
 
     // uncomment this call to draw in wireframe polygons.
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-
+    
+    ShaderProgramSource source = ParseShader("shaders/BasicShader.shader");
+    unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource);
+    glUseProgram(shader);
+    
+    int location = glGetUniformLocation(shader, "u_Color");
+    ASSERT(location != -1);
+    glUniform4f(location, 0.2f, 0.3f, 0.8f, 1.0f);
+    
+    float r = 0.0f;
+    float increment = 0.05f;
     // render loop
     // -----------
     //window render loop
@@ -238,15 +247,20 @@ int main(void)
         processInput(window);
 
         //rendering commands here
+        glUniform4f(location, r, 0.3f, 0.8f, 1.0f);
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
 
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);// the second parameter is the number of indices not the number of vertices
-
+        if (r > 1.0f)
+            increment = -0.05f;
+        else if (r < 0.0f)
+            increment = 0.05f;
+        r += increment;
+        
         // glBindVertexArray(0); // no need to unbind it every time
 
         // check and call events and swap the buffers
