@@ -45,7 +45,7 @@ static bool GLLogCall(const char* function, const char* file, int line)
     if(GLenum error = glGetError())
     {
 //        display function with hexcode
-//        std::cout << "[OpenGL Error] (0x" << std::hex << error << std::dec << "): "<< function << " " << file << ":" << line << std::endl;
+        std::cout << "[OpenGL Error] (0x" << std::hex << error << std::dec << "): "<< function << " " << file << ":" << line << std::endl << std::endl;
         
         //        TODO: make this faster with the c api
 //        display the name of the errors
@@ -178,7 +178,7 @@ int main(void)
     }
     glfwMakeContextCurrent(window);
     
-    glfwSwapInterval(1); // synchronize with our vsync
+    glfwSwapInterval(1); // synchronize
 
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
@@ -225,9 +225,6 @@ int main(void)
     // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
     glBindVertexArray(0);
 
-    // uncomment this call to draw in wireframe polygons.
-    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    
     ShaderProgramSource source = ParseShader("shaders/BasicShader.shader");
     unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource);
     glUseProgram(shader);
