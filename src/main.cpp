@@ -12,6 +12,29 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include <signal.h>
+
+#define ASSERT(x) if (!(x)) raise(SIGTRAP)
+
+#define GLCall(x) GLClearError();\
+    x;\
+    ASSERT(GLLogCall(#x, __FILE__, __LINE__))
+
+static void GLClearError()
+{
+    while(glGetError() != GL_NO_ERROR);
+}
+
+static bool GLLogCall(const char* function, const char* file, int line)
+{
+    if(GLenum error = glGetError())
+    {
+        std::cout << "[OpenGL Error] (0x" << std::hex << error << std::dec << "): "<< function << " " << file << ":" << line << std::endl;
+        return false;
+    }
+    
+    return false;
+}
 
 struct ShaderProgramSource
 {
@@ -133,15 +156,15 @@ int main(void)
 
     glViewport(0, 0, 800, 600);
 
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);  
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
     ShaderProgramSource source = ParseShader("shaders/BasicShader.shader");
     unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource);
     glUseProgram(shader);
 
     float vertices[] = {
-            0.5f,  0.5f, 0.0f,  // top right    0
-            0.5f, -0.5f, 0.0f,  // bottom right 1
+             0.5f,  0.5f, 0.0f,  // top right    0
+             0.5f, -0.5f, 0.0f,  // bottom right 1
             -0.5f, -0.5f, 0.0f, // bottom left  2
             -0.5f,  0.5f, 0.0f  // top left     3
     };
@@ -192,7 +215,9 @@ int main(void)
         glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
 
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr); // the second parameter is the number of indices not the number of vertices
+
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);// the second parameter is the number of indices not the number of vertices
+
         // glBindVertexArray(0); // no need to unbind it every time
 
         // check and call events and swap the buffers
