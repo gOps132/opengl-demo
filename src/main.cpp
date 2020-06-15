@@ -34,7 +34,6 @@
     #define GLCall(x) x
 #endif
 
-
 static void GLClearError()
 {
     while(glGetError() != GL_NO_ERROR);
@@ -44,9 +43,11 @@ static bool GLLogCall(const char* function, const char* file, int line)
 {
     if(GLenum error = glGetError())
     {
+//        display function with hexcode
 //        std::cout << "[OpenGL Error] (0x" << std::hex << error << std::dec << "): "<< function << " " << file << ":" << line << std::endl;
         
-//        experimental, display the name of the errors
+        //        TODO: make this faster with the c api
+//        display the name of the errors
         std::stringstream ss;
         ss << std::hex << error; // decimal_value
         std::string res(ss.str());
@@ -244,7 +245,7 @@ int main(void)
 
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 
-        GLCall(glDrawElements(GL_TRIANGLES, 6, GL_INT, nullptr));// the second parameter is the number of indices not the number of vertices
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);// the second parameter is the number of indices not the number of vertices
 
         // glBindVertexArray(0); // no need to unbind it every time
 
