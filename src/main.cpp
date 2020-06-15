@@ -14,11 +14,26 @@
 #include <sstream>
 #include <signal.h>
 
-#define ASSERT(x) if (!(x)) raise(SIGTRAP)
+// TODO: make debug trap for every compiler
+// TODO: display the name of the errors
 
-#define GLCall(x) GLClearError();\
-    x;\
-    ASSERT(GLLogCall(#x, __FILE__, __LINE__))
+#ifdef DEBUG
+    #ifdef __APPLE__
+        #define ASSERT(x) if (!(x)) __builtin_debugtrap() // works with xcode built in compiler
+    #endif
+    #ifdef __linux__
+        #define ASSERT(x) if (!(x)) raise(SIGTRAP) // works with clang (more research)
+    #endif
+    #ifdef _WIN32
+        #define ASSERT(x) if (!(x)) __debugbreak(); // works with VS MSVC compiler intrinsic
+    #endif
+    #define GLCall(x) GLClearError();\
+        x;\
+        ASSERT(GLLogCall(#x, __FILE__, __LINE__))
+    #else
+    #define GLCall(x) x
+#endif
+
 
 static void GLClearError()
 {
@@ -29,7 +44,20 @@ static bool GLLogCall(const char* function, const char* file, int line)
 {
     if(GLenum error = glGetError())
     {
-        std::cout << "[OpenGL Error] (0x" << std::hex << error << std::dec << "): "<< function << " " << file << ":" << line << std::endl;
+//        std::cout << "[OpenGL Error] (0x" << std::hex << error << std::dec << "): "<< function << " " << file << ":" << line << std::endl;
+        
+//        experimental, display the name of the errors
+        std::stringstream ss;
+        ss << std::hex << error; // decimal_value
+        std::string res(ss.str());
+        std::string new_string = std::string(4 - res.length(), '0') + res;
+        std::ifstream stream("lib/glad/include/glad/glad.h");
+        std::string line;
+        while (getline(stream, line)) {
+            if (line.find(new_string) != std::string::npos)
+                std::cout << line << std::endl;
+        }
+        
         return false;
     }
     
@@ -216,7 +244,7 @@ int main(void)
 
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);// the second parameter is the number of indices not the number of vertices
+        GLCall(glDrawElements(GL_TRIANGLES, 6, GL_INT, nullptr));// the second parameter is the number of indices not the number of vertices
 
         // glBindVertexArray(0); // no need to unbind it every time
 
