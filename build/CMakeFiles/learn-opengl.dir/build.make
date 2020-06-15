@@ -87,19 +87,79 @@ CMakeFiles/learn-opengl.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/learn-opengl.dir/src/main.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/giancedrickepilan/dev/native/learn-opengl/src/main.cpp -o CMakeFiles/learn-opengl.dir/src/main.cpp.s
 
+CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: CMakeFiles/learn-opengl.dir/flags.make
+CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: ../src/Renderer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.cpp
+
+CMakeFiles/learn-opengl.dir/src/Renderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/learn-opengl.dir/src/Renderer.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.cpp > CMakeFiles/learn-opengl.dir/src/Renderer.cpp.i
+
+CMakeFiles/learn-opengl.dir/src/Renderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/learn-opengl.dir/src/Renderer.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.cpp -o CMakeFiles/learn-opengl.dir/src/Renderer.cpp.s
+
+CMakeFiles/learn-opengl.dir/src/Shader.cpp.o: CMakeFiles/learn-opengl.dir/flags.make
+CMakeFiles/learn-opengl.dir/src/Shader.cpp.o: ../src/Shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/learn-opengl.dir/src/Shader.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/learn-opengl.dir/src/Shader.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/Shader.cpp
+
+CMakeFiles/learn-opengl.dir/src/Shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/learn-opengl.dir/src/Shader.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/giancedrickepilan/dev/native/learn-opengl/src/Shader.cpp > CMakeFiles/learn-opengl.dir/src/Shader.cpp.i
+
+CMakeFiles/learn-opengl.dir/src/Shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/learn-opengl.dir/src/Shader.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/giancedrickepilan/dev/native/learn-opengl/src/Shader.cpp -o CMakeFiles/learn-opengl.dir/src/Shader.cpp.s
+
+CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o: CMakeFiles/learn-opengl.dir/flags.make
+CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o: ../src/VertexBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.cpp
+
+CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.cpp > CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.i
+
+CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.cpp -o CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.s
+
+CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.o: CMakeFiles/learn-opengl.dir/flags.make
+CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.o: ../src/IndexBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.cpp
+
+CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.cpp > CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.i
+
+CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.cpp -o CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.s
+
 # Object files for target learn-opengl
 learn__opengl_OBJECTS = \
-"CMakeFiles/learn-opengl.dir/src/main.cpp.o"
+"CMakeFiles/learn-opengl.dir/src/main.cpp.o" \
+"CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o" \
+"CMakeFiles/learn-opengl.dir/src/Shader.cpp.o" \
+"CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o" \
+"CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.o"
 
 # External object files for target learn-opengl
 learn__opengl_EXTERNAL_OBJECTS =
 
 learn-opengl: CMakeFiles/learn-opengl.dir/src/main.cpp.o
+learn-opengl: CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o
+learn-opengl: CMakeFiles/learn-opengl.dir/src/Shader.cpp.o
+learn-opengl: CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o
+learn-opengl: CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.o
 learn-opengl: CMakeFiles/learn-opengl.dir/build.make
 learn-opengl: libglad.a
 learn-opengl: lib/glfw/src/libglfw3.a
 learn-opengl: CMakeFiles/learn-opengl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable learn-opengl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable learn-opengl"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/learn-opengl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

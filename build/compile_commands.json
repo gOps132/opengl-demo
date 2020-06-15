@@ -1,8 +1,28 @@
 [
 {
   "directory": "/Users/giancedrickepilan/dev/native/learn-opengl/build",
-  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include   -std=c++14 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/main.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/main.cpp",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include   -std=c++14 -DDEBUG -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/main.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/main.cpp",
   "file": "/Users/giancedrickepilan/dev/native/learn-opengl/src/main.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/native/learn-opengl/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include   -std=c++14 -DDEBUG -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.cpp",
+  "file": "/Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/native/learn-opengl/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include   -std=c++14 -DDEBUG -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/Shader.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/Shader.cpp",
+  "file": "/Users/giancedrickepilan/dev/native/learn-opengl/src/Shader.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/native/learn-opengl/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include   -std=c++14 -DDEBUG -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.cpp",
+  "file": "/Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/native/learn-opengl/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include   -std=c++14 -DDEBUG -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.cpp",
+  "file": "/Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.cpp"
 },
 {
   "directory": "/Users/giancedrickepilan/dev/native/learn-opengl/build",

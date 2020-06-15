@@ -1,3 +1,6 @@
 [submodule "lib/glfw"]
 	path = lib/glfw
 	url = https://github.com/glfw/glfw
+[submodule "lib/portable-snippets"]
+	path = lib/portable-snippets
+	url = https://github.com/nemequ/portable-snippets.git

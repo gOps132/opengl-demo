@@ -11,9 +11,22 @@ add_subdirectory(
 
 # TODO: set working directory on the root of the project
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+# TODO: REMOVE DEBUG FLAG LATER 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -DDEBUG")
 set(SOURCE_FILES
     src/main.cpp
+
+    src/Renderer.cpp
+    src/Renderer.hpp
+
+    src/Shader.cpp
+    src/Shader.hpp
+
+    src/VertexBuffer.cpp
+    src/VertexBuffer.hpp
+
+    src/IndexBuffer.cpp
+    src/IndexBuffer.hpp
 )
 
 if (APPLE)
