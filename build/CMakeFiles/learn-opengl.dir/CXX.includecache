@@ -62,10 +62,18 @@ GL/glext.h
 GL/glu.h
 -
 
-../lib/portable-snippets/debug-trap/debug-trap.h
-builtins.h
--
-signal.h
+/Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.cpp
+IndexBuffer.hpp
+/Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.hpp
+Renderer.hpp
+/Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.hpp
+
+/Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.hpp
+
+/Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.cpp
+Renderer.hpp
+/Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.hpp
+iostream
 -
 
 /Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.hpp
@@ -93,6 +101,14 @@ string
 -
 sstream
 -
+
+/Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.cpp
+VertexBuffer.hpp
+/Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.hpp
+Renderer.hpp
+/Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.hpp
+
+/Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.hpp
 
 /Users/giancedrickepilan/dev/native/learn-opengl/src/main.cpp
 glad/glad.h
@@ -103,8 +119,10 @@ Renderer.hpp
 /Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.hpp
 Shader.hpp
 /Users/giancedrickepilan/dev/native/learn-opengl/src/Shader.hpp
-debug-trap/debug-trap.h
--
+VertexBuffer.hpp
+/Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.hpp
+IndexBuffer.hpp
+/Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.hpp
 iostream
 -
 

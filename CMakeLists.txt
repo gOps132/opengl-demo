@@ -32,6 +32,7 @@ set(SOURCE_FILES
 if (APPLE)
     list (APPEND EXTRA_LIBS
         "-framework OpenGL"
+        "-DDEBUG"
     )
 
 elseif(WIN32)
