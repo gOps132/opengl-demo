@@ -11,7 +11,7 @@ bool GLLogCall(const char* function, const char* file, int line)
     if(GLenum error = glGetError())
     {
 //        display function with hexcode
-        std::cout << "[OpenGL Error] (0x" << std::hex << error << std::dec << "): "<<  std::endl << function << std::endl << file << ":" << line << std::endl << std::endl;
+        std::cout << "[OpenGL Error] " <<  std::endl << function << std::endl << file << ":" << line << std::endl << std::endl;
         
         //        TODO: make this faster with the c api
 //        display the name of the errors
