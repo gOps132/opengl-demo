@@ -62,7 +62,19 @@ GL/glext.h
 GL/glu.h
 -
 
+/Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.cpp
+IndexBuffer.hpp
 /Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.hpp
+Renderer.hpp
+/Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.hpp
+
+/Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.hpp
+
+/Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.cpp
+Renderer.hpp
+/Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.hpp
+iostream
+-
 
 /Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.hpp
 glad/glad.h
@@ -90,11 +102,23 @@ string
 sstream
 -
 
+/Users/giancedrickepilan/dev/native/learn-opengl/src/VertexArray.cpp
+VertexArray.hpp
+/Users/giancedrickepilan/dev/native/learn-opengl/src/VertexArray.hpp
+Renderer.hpp
+/Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.hpp
+
 /Users/giancedrickepilan/dev/native/learn-opengl/src/VertexArray.hpp
 VertexBuffer.hpp
 /Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.hpp
 VertexBufferLayout.hpp
 /Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBufferLayout.hpp
+
+/Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.cpp
+VertexBuffer.hpp
+/Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.hpp
+Renderer.hpp
+/Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.hpp
 
 /Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.hpp
 

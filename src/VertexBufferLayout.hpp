@@ -49,16 +49,23 @@ public:
 //    }
 
     template<typename T>
-    void Push(int count) {
+    void Push(int count) 
+    {
         const unsigned int type=
-            (unsigned int[]){0,GL_FLOAT,GL_UNSIGNED_INT,GL_UNSIGNED_BYTE}[
+            (unsigned int[])
+            {
+                0,
+                GL_FLOAT,GL_UNSIGNED_INT,
+                GL_UNSIGNED_BYTE
+            }
+            [
                 1*std::is_same<T,float>::value+
                 2*std::is_same<T,unsigned int>::value+
                 3*std::is_same<T,unsigned char>::value
             ];
      
         m_Elements.push_back({type,static_cast<unsigned int>(count),GL_FALSE});
-        m_Stride+=VertexBufferElement::GetSizeOfType(type);
+        m_Stride+= count * VertexBufferElement::GetSizeOfType(type);
     }
     
     inline const std::vector<VertexBufferElement> GetElement() const { return m_Elements; }

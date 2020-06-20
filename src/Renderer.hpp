@@ -10,7 +10,8 @@
 #include <signal.h>
 
 /*
- * Add -DDEBUG flag to clang llvm compiler
+ * Add -DDEBUG flag to clang llvm compiler or other compilers
+ * FIXME: Deal with bug that breakpoints even if assertion is okay
  */
 
 #ifdef DEBUG

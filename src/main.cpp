@@ -18,10 +18,9 @@
 
 /*
 	*	TODO: implement some kind of break point trap for every compiler
-	* 	TODO: display the name of the errors
 	* 	TODO: make some kind of manifest for xcode settings, compilers in order for the code to run right
 	*	TODO: make a display class which handles the OpenGL context and the window and its destructor will call glfwterminate automatically.
-	*/
+*/
 
 void framebuffer_size_callback(GLFWwindow *window, int width, int height)
 {
@@ -68,10 +67,10 @@ int main(void)
 
 	{
 		float vertices[] = {
-			0.5f, 0.5f, 0.0f,	// top right    0
-			0.5f,-0.5f, 0.0f,	// bottom right 1
-		   -0.5f,-0.5f, 0.0f, // bottom left  2
-		   -0.5f, 0.5f, 0.0f	// top left     3
+			0.5f,	0.5f,	0.0f,	// top right    0
+			0.5f,  -0.5f,	0.0f,	// bottom right 1
+		   -0.5f,  -0.5f,	0.0f, // bottom left  2
+		   -0.5f,	0.5f,	0.0f	// top left     3
 		};
 		unsigned int indices[] = {
 			// note that we start from 0!
@@ -87,7 +86,7 @@ int main(void)
 		VertexArray va;
 		VertexBuffer vb(vertices, sizeof(vertices));
 		VertexBufferLayout layout;
-		
+
 		// va.AddBuffer(vb, &layout);
 		layout.Push<float>(3);
 		va.AddBuffer(vb, layout);
