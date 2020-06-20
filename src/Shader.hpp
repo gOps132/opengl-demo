@@ -17,10 +17,12 @@ struct ShaderProgramSource
 // TODO: Optimize passShader function into faster c api. c++ tends to be a lot slower than the c api but this is just openGL for now.
 
 /* simple parser that passes shader file and convert them into strings */
-ShaderProgramSource ParseShader(const std::string& filepath);
+ShaderProgramSource ParseShader(const std::string &filepath);
 
-unsigned int CompileShader(unsigned int type, const std::string& source);
+/* setups, compile shader and catch GL errors from input shaders */
+unsigned int CompileShader(unsigned int type, const std::string &source);
 
-unsigned int CreateShader(const std::string& vertexShader, const std::string& fragmentShader);
+/* creates, attach, and deletes input vertex and  fragment shaders */
+unsigned int CreateShader(const std::string &vertexShader, const std::string &fragmentShader);
 
 #endif
