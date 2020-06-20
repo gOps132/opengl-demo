@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef IndexBuffer_hpp
+#define IndexBuffer_hpp
 class IndexBuffer 
 {
 private:
@@ -14,3 +14,5 @@ public:
 
     inline unsigned int getCount() const { return m_Count; }
 };
+
+#endif 

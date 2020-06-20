@@ -1,4 +1,5 @@
-#pragma once
+#ifndef VertexBuffer_hpp
+#define VertexBuffer_hpp
 
 class VertexBuffer 
 {
@@ -11,3 +12,5 @@ public:
     void Bind() const;
     void Unbind() const;
 };
+
+#endif

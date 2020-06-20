@@ -6,4 +6,6 @@ dependencies: \
   /Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.hpp \
   /Users/giancedrickepilan/dev/native/learn-opengl/src/Shader.hpp \
   /Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.hpp \
-  /Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.hpp
+  /Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.hpp \
+  /Users/giancedrickepilan/dev/native/learn-opengl/src/VertexArray.hpp \
+  /Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBufferLayout.hpp

@@ -27,12 +27,21 @@ set(SOURCE_FILES
 
     src/IndexBuffer.cpp
     src/IndexBuffer.hpp
+    
+    src/VertexArray.cpp
+    src/VertexArray.hpp
+
+    src/VertexBufferLayout.hpp
+)
+
+list (APPEND OTHER_FLAGS
+    "-Wno-int-to-void-pointer-cast"
+    "-DDEBUG"
 )
 
 if (APPLE)
     list (APPEND EXTRA_LIBS
         "-framework OpenGL"
-        "-DDEBUG"
     )
 
 elseif(WIN32)
@@ -59,6 +68,7 @@ add_library(glad STATIC
 target_link_libraries(
     ${PROJECT_NAME} 
     ${EXTRA_LIBS}
+    ${OTHER_FLAGS}
     glad
     glfw 
 )
