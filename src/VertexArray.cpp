@@ -6,10 +6,16 @@
 //
 
 /*
+ *
+ * FIXME: fix casting warning
+ * 
+ * NOTE: 
  * avoid casting warning in this file
  * NO NEED FOR Visual Studio
- * flag -Wno-int-to-void-pointer-cast
+ * flag " -Wno-int-to-void-pointer-cast "
+ * 
 */
+
 #include "VertexArray.hpp"
 #include "Renderer.hpp"
 

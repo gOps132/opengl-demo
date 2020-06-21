@@ -24,7 +24,7 @@ private:
     unsigned int m_RendererID;
     // caching for unforms
     std::unordered_map<std::string, int> m_UniformLocationChache;
-    
+
 public:
     Shader(const std::string& filepath);
     ~Shader();
@@ -33,6 +33,7 @@ public:
     void Unbind() const;
 
     // set uniforms
+    void SetUniform1f(const std::string& name, float value);
     void SetUniform4f(const std::string& name, float v0, float v1, float v2, float v3);
 
     void glGetUniformLocation(const std::string& name);

@@ -17,21 +17,21 @@ set(SOURCE_FILES
     src/main.cpp
 
     src/Renderer.cpp
-    src/Renderer.hpp
+    header/Renderer.hpp
 
     src/Shader.cpp
-    src/Shader.hpp
+    header/Shader.hpp
 
     src/VertexBuffer.cpp
-    src/VertexBuffer.hpp
+    header/VertexBuffer.hpp
 
     src/IndexBuffer.cpp
-    src/IndexBuffer.hpp
+    header/IndexBuffer.hpp
     
     src/VertexArray.cpp
-    src/VertexArray.hpp
+    header/VertexArray.hpp
 
-    src/VertexBufferLayout.hpp
+    header/VertexBufferLayout.hpp
 )
 
 list (APPEND OTHER_FLAGS
@@ -58,6 +58,7 @@ add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 include_directories(
     ${GLAD_SOURCE_DIR}/include
+    ${CMAKE_SOURCE_DIR}/header
 )
 
 add_library(glad STATIC

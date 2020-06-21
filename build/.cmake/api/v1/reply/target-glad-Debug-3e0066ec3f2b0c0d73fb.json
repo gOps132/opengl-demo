@@ -26,7 +26,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 63,
+				"line" : 64,
 				"parent" : 0
 			},
 			{
@@ -51,6 +51,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/giancedrickepilan/dev/native/learn-opengl/header"
 				}
 			],
 			"language" : "C",
