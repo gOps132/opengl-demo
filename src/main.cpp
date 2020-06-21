@@ -86,33 +86,23 @@ int main(void)
 		VertexArray va;
 		VertexBuffer vb(vertices, sizeof(vertices));
 		VertexBufferLayout layout;
+		IndexBuffer ib(indices, sizeof(indices));
 
 		// va.AddBuffer(vb, &layout);
 		layout.Push<float>(3);
 		va.AddBuffer(vb, layout);
 
-		// note that this is allowed, the call to glVertexAttribPointer registered VBO as the vertex attribute's bound vertex buffer object so afterwards we can safely unbind
-		glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-		// You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
-		// VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
-		glBindVertexArray(0);
-
-		IndexBuffer ib(indices, sizeof(indices));
+		Shader shader("shaders/BasicShader.shader");
+		shader.Bind();
+		shader.SetUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
+		shader.Unbind();
+		vb.Unbind();
+		ib.Unbind();
 
 		// uncomment this call to draw in wireframe polygons.
 		// glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
-		ShaderProgramSource source = ParseShader("shaders/BasicShader.shader");
-		unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource);
-		glUseProgram(shader);
-
-		//     set uniforms
-		int location = glGetUniformLocation(shader, "u_Color");
-		ASSERT(location != -1);
-		glUniform4f(location, 0.2f, 0.3f, 0.8f, 1.0f);
-
-		float r = 0.0f;
+		float r = 0.0f; 
 		float increment = 0.05f;
 		// render loop
 		// -----------
@@ -123,13 +113,15 @@ int main(void)
 			processInput(window);
 
 			//rendering commands here
-			glUniform4f(location, r, 0.3f, 0.8f, 1.0f);
+			// glUniform4f(location, r, 0.3f, 0.8f, 1.0f);
 			glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);
 
+			shader.Bind();
+			shader.SetUniform4f("u_Color", r, 0.3f, 0.8f, 1.0f);
 			va.Bind();
 			ib.Bind();
-
+ 
 			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr); // the second parameter is the number of indices not the number of vertices
 			if (r > 1.0f)
 				increment = -0.05f;

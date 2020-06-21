@@ -1,8 +1,65 @@
+/* 
+ *  simple parser that passes shader file and convert them into strings 
+*/
+
 #include "Shader.hpp"
 
 // TODO: Optimize passShader function into faster c api. c++ tends to be a lot slower than the c api but this is just openGL for now.
-/* simple parser that passes shader file and convert them into strings */
-ShaderProgramSource ParseShader(const std::string &filepath)
+
+Shader::Shader(const std::string& filepath)
+    : m_FilePath(filepath), m_RendererID(0) 
+{
+    ShaderProgramSource source = ParseShader(filepath);
+	m_RendererID = CreateShader(source.VertexSource, source.FragmentSource);
+}
+
+Shader::~Shader() 
+{
+    glDeleteProgram(m_RendererID);
+}
+
+void Shader::Bind() const
+{
+    glUseProgram(m_RendererID);
+}
+
+void Shader::Unbind() const
+{
+    glUseProgram(0);
+}
+
+void Shader::SetUniform1f(const std::string &name, float value)
+{
+    glUniform1f(GetUniformLocation(name), value);
+}
+
+void Shader::SetUniform4f(const std::string &name, float v0, float v1, float v2, float v3)
+{
+    glUniform4f(GetUniformLocation(name), v0, v1, v2, v3);
+}
+
+int Shader::GetUniformLocation(const std::string& name)
+{
+    if (m_UniformLocationChache.find(name) != m_UniformLocationChache.end())
+        return m_UniformLocationChache[name];
+
+#ifndef __glad_h
+    int location = ::glad_glGetUniformLocation(m_RendererID , name.c_str());
+#endif
+
+// TODO: Still not sure if it's __glew_h
+#ifdef __glew_h
+    int location = glGetUniformLocation(m_RendererID , name.c_str());
+#endif
+
+    if (location == -1)
+        std::cout << "Warning: Uniform " << name << "does not exist" << std::endl;
+    else
+        m_UniformLocationChache[name] = location;
+    return location;
+}
+
+ShaderProgramSource Shader::ParseShader(const std::string &filepath)
 {
     enum class ShaderType
     {
@@ -35,7 +92,7 @@ ShaderProgramSource ParseShader(const std::string &filepath)
     return {ss[0].str(), ss[1].str()};
 }
 
-unsigned int CompileShader(unsigned int type, const std::string &source)
+unsigned int Shader::CompileShader(unsigned int type, const std::string &source)
 {
     unsigned int id = glCreateShader(type);
     const char *src = source.c_str();
@@ -61,7 +118,7 @@ unsigned int CompileShader(unsigned int type, const std::string &source)
     return id;
 }
 
-unsigned int CreateShader(const std::string &vertexShader, const std::string &fragmentShader)
+unsigned int Shader::CreateShader(const std::string &vertexShader, const std::string &fragmentShader)
 {
     unsigned int program = glCreateProgram();
     unsigned int vs = CompileShader(GL_VERTEX_SHADER, vertexShader);
