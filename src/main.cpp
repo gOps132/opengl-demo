@@ -1,7 +1,7 @@
 /*
-	*   Made by Epilan Gian Cedrick G.
-	*   Most code by https://learnopengl.com, and the cherno https://youtube.com/thecherno
-	*/
+ *   Made by Epilan Gian Cedrick G.
+ *   Most code by https://learnopengl.com, and the cherno https://youtube.com/thecherno
+ */
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
