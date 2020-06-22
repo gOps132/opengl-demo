@@ -4,15 +4,27 @@
 CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.o
  ../header/IndexBuffer.hpp
  ../header/Renderer.hpp
+ ../header/Shader.hpp
+ ../header/VertexArray.hpp
+ ../header/VertexBuffer.hpp
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
  /Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.cpp
 CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o
+ ../header/IndexBuffer.hpp
+ ../header/Renderer.hpp
+ ../header/Shader.hpp
+ ../header/VertexArray.hpp
+ ../header/VertexBuffer.hpp
+ ../lib/glad/include/KHR/khrplatform.h
+ ../lib/glad/include/glad/glad.h
  /Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.cpp
 CMakeFiles/learn-opengl.dir/src/Shader.cpp.o
  /Users/giancedrickepilan/dev/native/learn-opengl/src/Shader.cpp
 CMakeFiles/learn-opengl.dir/src/VertexArray.cpp.o
+ ../header/IndexBuffer.hpp
  ../header/Renderer.hpp
+ ../header/Shader.hpp
  ../header/VertexArray.hpp
  ../header/VertexBuffer.hpp
  ../header/VertexBufferLayout.hpp
@@ -22,6 +34,12 @@ CMakeFiles/learn-opengl.dir/src/VertexArray.cpp.o
 CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o
  /Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.cpp
 CMakeFiles/learn-opengl.dir/src/main.cpp.o
+ ../header/IndexBuffer.hpp
+ ../header/Renderer.hpp
+ ../header/Shader.hpp
+ ../header/VertexArray.hpp
+ ../header/VertexBuffer.hpp
+ ../header/VertexBufferLayout.hpp
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
  ../lib/glfw/include/GLFW/glfw3.h

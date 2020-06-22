@@ -95,12 +95,15 @@ int main(void)
 		Shader shader("shaders/BasicShader.shader");
 		shader.Bind();
 		shader.SetUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
+
+		// unbinding
 		shader.Unbind();
 		vb.Unbind();
 		ib.Unbind();
 
 		// uncomment this call to draw in wireframe polygons.
 		// glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+		Renderer renderer;
 
 		float r = 0.0f; 
 		float increment = 0.05f;
@@ -113,23 +116,18 @@ int main(void)
 			processInput(window);
 
 			//rendering commands here
-			// glUniform4f(location, r, 0.3f, 0.8f, 1.0f);
 			glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);
 
-			shader.Bind();
+			renderer.Draw(va, ib, shader);
+
 			shader.SetUniform4f("u_Color", r, 0.3f, 0.8f, 1.0f);
-			va.Bind();
-			ib.Bind();
- 
-			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr); // the second parameter is the number of indices not the number of vertices
+
 			if (r > 1.0f)
 				increment = -0.05f;
 			else if (r < 0.0f)
 				increment = 0.05f;
 			r += increment;
-
-			// glBindVertexArray(0); // no need to unbind it every time
 
 			// check and call events and swap the buffers
 			glfwSwapBuffers(window);

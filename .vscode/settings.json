@@ -1,6 +1,12 @@
 [{
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-    
+    "CppHelper.SourcePattern": [
+      "{FILE}.cpp",
+      "{FILE}.c",
+      "{FILE}.inl",
+      "/src/{FILE}.cpp"
+  ],
+  "CppHelper.HeaderGaurdPattern": "{FILE}_H"
 },
 {
     "editor.cursorStyle": "line-thin",

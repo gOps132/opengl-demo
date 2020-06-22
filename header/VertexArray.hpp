@@ -9,7 +9,10 @@
 #define VertexArray_hpp
 
 #include "VertexBuffer.hpp"
-#include "VertexBufferLayout.hpp"
+
+// #include "VertexBufferLayout.hpp"
+
+class VertexBufferLayout;
 
 class VertexArray 
 {

@@ -15,4 +15,4 @@ public:
     inline unsigned int getCount() const { return m_Count; }
 };
 
-#endif 
+#endif
