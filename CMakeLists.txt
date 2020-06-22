@@ -32,6 +32,9 @@ set(SOURCE_FILES
     header/VertexArray.hpp
 
     header/VertexBufferLayout.hpp
+
+    src/ErrorManager.cpp
+    header/ErrorManager.hpp
 )
 
 list (APPEND OTHER_FLAGS

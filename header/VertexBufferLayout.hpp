@@ -2,13 +2,14 @@
  * defines the layout of the vertex buffer
 */
 
+
 #ifndef VertexBufferLayout_hpp
 #define VertexBufferLayout_hpp
 
 #include <glad/glad.h>
 #include <vector>
 
-#include "Renderer.hpp"
+#include "ErrorManager.hpp"
 
 struct VertexBufferElement
 {

@@ -67,10 +67,10 @@ int main(void)
 
 	{
 		float vertices[] = {
-			0.5f,	0.5f,	0.0f,	// top right    0
-			0.5f,  -0.5f,	0.0f,	// bottom right 1
-		   -0.5f,  -0.5f,	0.0f, // bottom left  2
-		   -0.5f,	0.5f,	0.0f	// top left     3
+			0.5f, 0.5f, 0.0f,	// top right    0
+			0.5f, -0.5f, 0.0f,	// bottom right 1
+			-0.5f, -0.5f, 0.0f, // bottom left  2
+			-0.5f, 0.5f, 0.0f	// top left     3
 		};
 		unsigned int indices[] = {
 			// note that we start from 0!
@@ -105,7 +105,7 @@ int main(void)
 		// glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 		Renderer renderer;
 
-		float r = 0.0f; 
+		float r = 0.0f;
 		float increment = 0.05f;
 		// render loop
 		// -----------
@@ -120,6 +120,14 @@ int main(void)
 			glClear(GL_COLOR_BUFFER_BIT);
 
 			renderer.Draw(va, ib, shader);
+			
+			// shader.Bind();
+
+			// va.Bind();
+			// ib.Bind();
+
+			// // the second parameter is the number of indices not the number of vertices
+			// glDrawElements(GL_TRIANGLES, ib.getCount(), GL_UNSIGNED_INT, nullptr);
 
 			shader.SetUniform4f("u_Color", r, 0.3f, 0.8f, 1.0f);
 

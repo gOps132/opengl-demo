@@ -252,6 +252,33 @@ lib/glad/src/glad.c.s:
 	$(MAKE) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/lib/glad/src/glad.c.s
 .PHONY : lib/glad/src/glad.c.s
 
+src/ErrorManager.o: src/ErrorManager.cpp.o
+
+.PHONY : src/ErrorManager.o
+
+# target to build an object file
+src/ErrorManager.cpp.o:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/ErrorManager.cpp.o
+.PHONY : src/ErrorManager.cpp.o
+
+src/ErrorManager.i: src/ErrorManager.cpp.i
+
+.PHONY : src/ErrorManager.i
+
+# target to preprocess a source file
+src/ErrorManager.cpp.i:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/ErrorManager.cpp.i
+.PHONY : src/ErrorManager.cpp.i
+
+src/ErrorManager.s: src/ErrorManager.cpp.s
+
+.PHONY : src/ErrorManager.s
+
+# target to generate assembly for a file
+src/ErrorManager.cpp.s:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/ErrorManager.cpp.s
+.PHONY : src/ErrorManager.cpp.s
+
 src/IndexBuffer.o: src/IndexBuffer.cpp.o
 
 .PHONY : src/IndexBuffer.o
@@ -433,6 +460,9 @@ help:
 	@echo "... lib/glad/src/glad.o"
 	@echo "... lib/glad/src/glad.i"
 	@echo "... lib/glad/src/glad.s"
+	@echo "... src/ErrorManager.o"
+	@echo "... src/ErrorManager.i"
+	@echo "... src/ErrorManager.s"
 	@echo "... src/IndexBuffer.o"
 	@echo "... src/IndexBuffer.i"
 	@echo "... src/IndexBuffer.s"

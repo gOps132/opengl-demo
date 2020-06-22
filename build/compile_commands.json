@@ -31,6 +31,11 @@
 },
 {
   "directory": "/Users/giancedrickepilan/dev/native/learn-opengl/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/header -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include   -std=c++14 -DDEBUG -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/ErrorManager.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/ErrorManager.cpp",
+  "file": "/Users/giancedrickepilan/dev/native/learn-opengl/src/ErrorManager.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/native/learn-opengl/build",
   "command": "/usr/bin/clang  -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/header  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -o CMakeFiles/glad.dir/lib/glad/src/glad.c.o   -c /Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/src/glad.c",
   "file": "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/src/glad.c"
 },

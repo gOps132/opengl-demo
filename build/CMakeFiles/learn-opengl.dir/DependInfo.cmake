@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/giancedrickepilan/dev/native/learn-opengl/src/ErrorManager.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/ErrorManager.cpp.o"
   "/Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.o"
   "/Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o"
   "/Users/giancedrickepilan/dev/native/learn-opengl/src/Shader.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/Shader.cpp.o"

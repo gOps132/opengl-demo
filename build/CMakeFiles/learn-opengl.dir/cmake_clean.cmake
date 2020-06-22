@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/learn-opengl.dir/src/ErrorManager.cpp.o"
   "CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.o"
   "CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o"
   "CMakeFiles/learn-opengl.dir/src/Shader.cpp.o"
