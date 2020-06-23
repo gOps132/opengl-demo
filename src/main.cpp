@@ -6,14 +6,14 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-#include "Renderer.hpp"
-#include "Shader.hpp"
+#include "Renderer.h"
+#include "Shader.h"
 
-#include "VertexBuffer.hpp"
-#include "IndexBuffer.hpp"
-#include "VertexArray.hpp"
-#include "VertexBufferLayout.hpp"
-#include "ErrorManager.hpp"
+#include "VertexBuffer.h"
+#include "IndexBuffer.h"
+#include "VertexArray.h"
+#include "VertexBufferLayout.h"
+#include "ErrorManager.h"
 
 #include <iostream>
 

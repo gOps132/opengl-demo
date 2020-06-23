@@ -1,6 +1,7 @@
 #ifndef __ERRORMANAGER_H__
 #define __ERRORMANAGER_H__
 
+
 /*
  * Add -DDEBUG flag to clang llvm compiler or other compilers
  * FIXME: Deal with bug that breakpoints even if assertion is okay
@@ -49,5 +50,6 @@
 void GLClearError();
 
 bool GLLogCall(const char *function, const char *file, int line);
+
 
 #endif // __ERRORMANAGER_H__

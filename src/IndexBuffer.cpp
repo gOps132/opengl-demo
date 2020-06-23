@@ -1,5 +1,5 @@
-#include "IndexBuffer.hpp"
-#include "ErrorManager.hpp"
+#include "IndexBuffer.h"
+#include "ErrorManager.h"
 
 #include <glad/glad.h>
 

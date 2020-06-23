@@ -16,9 +16,9 @@
  * 
 */
 
-#include "VertexArray.hpp"
-#include "Renderer.hpp"
-#include "VertexBufferLayout.hpp"
+#include "VertexArray.h"
+#include "Renderer.h"
+#include "VertexBufferLayout.h"
 
 VertexArray::VertexArray()
 {

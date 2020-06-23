@@ -1,6 +1,13 @@
 {
     "env": {
-        "myDefaultIncludePath": ["${workspaceFolder}", "${workspaceFolder}/**/header", "${workspaceFolder}/**"],
+        "myDefaultIncludePaths": [
+            "${workspaceFolder}", 
+            "${workspaceFolder}/**",
+            "${workspaceFolder}/**/src/header"
+        ],
+        "myOtherIncludePaths": [
+            "${workspaceFolder}/**/src/vendor/**"
+        ],
         "myCompilerPath": "/usr/bin/clang"
       },
 
@@ -8,7 +15,8 @@
         {
             "name": "Mac",
             "includePath": [
-                "${myDefaultIncludePath}"
+                "${myDefaultIncludePaths}",
+                "${myOtherIncludePaths}"
             ],
             "defines": [],
             "macFrameworkPath": [

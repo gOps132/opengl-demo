@@ -1,15 +1,14 @@
+#ifndef __VERTEXBUFFERLAYOUT_H__
+#define __VERTEXBUFFERLAYOUT_H__
+
 /*
  * defines the layout of the vertex buffer
 */
 
-
-#ifndef VertexBufferLayout_hpp
-#define VertexBufferLayout_hpp
-
 #include <glad/glad.h>
 #include <vector>
 
-#include "ErrorManager.hpp"
+#include "ErrorManager.h"
 
 struct VertexBufferElement
 {
@@ -94,4 +93,4 @@ public:
 //        m_Stride += VertexBufferElement::GetSizeOfType(GL_UNSIGNED_BYTE);
 //    }
 
-#endif
+#endif // __VERTEXBUFFERLAYOUT_H__

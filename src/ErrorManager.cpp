@@ -1,4 +1,4 @@
-#include "ErrorManager.hpp"
+#include "ErrorManager.h"
 #include <glad/glad.h>
 
 void GLClearError()

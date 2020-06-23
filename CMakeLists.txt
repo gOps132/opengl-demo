@@ -4,6 +4,8 @@ set(CMAKE_CXX_STANDARD 14)
 
 set(GLFW_SOURCE_DIR "lib/glfw")
 set(GLAD_SOURCE_DIR "lib/glad")
+set(HEADER_DIR "src/header")
+set(NOT_MY_HEADER_DIR "src/vendor")
 
 add_subdirectory(
     ${GLFW_SOURCE_DIR}
@@ -17,24 +19,26 @@ set(SOURCE_FILES
     src/main.cpp
 
     src/Renderer.cpp
-    header/Renderer.hpp
+    ${HEADER_DIR}/Renderer.h
 
     src/Shader.cpp
-    header/Shader.hpp
+    ${HEADER_DIR}/Shader.h
 
     src/VertexBuffer.cpp
-    header/VertexBuffer.hpp
+    ${HEADER_DIR}/VertexBuffer.h
 
     src/IndexBuffer.cpp
-    header/IndexBuffer.hpp
+    ${HEADER_DIR}/IndexBuffer.h
     
     src/VertexArray.cpp
-    header/VertexArray.hpp
+    ${HEADER_DIR}/VertexArray.h
 
-    header/VertexBufferLayout.hpp
+    ${HEADER_DIR}/VertexBufferLayout.h
 
     src/ErrorManager.cpp
-    header/ErrorManager.hpp
+    ${HEADER_DIR}/ErrorManager.h
+
+    ${NOT_MY_HEADER_DIR}/stb_image/stb_image.h
 )
 
 list (APPEND OTHER_FLAGS

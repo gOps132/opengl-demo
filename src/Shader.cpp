@@ -2,7 +2,7 @@
  *  simple parser that passes shader file and convert them into strings 
 */
 
-#include "Shader.hpp"
+#include "Shader.h"
 
 // TODO: Optimize passShader function into faster c api. c++ tends to be a lot slower than the c api but this is just openGL for now.
 

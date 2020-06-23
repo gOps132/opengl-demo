@@ -1,3 +1,6 @@
+#ifndef __VERTEXARRAY_H__
+#define __VERTEXARRAY_H__
+
 //
 //  VertexArray.hpp
 //  ALL_BUILD
@@ -5,10 +8,7 @@
 //  Created by Gian Cedrick Epilan on 18/06/2020.
 //
 
-#ifndef VertexArray_hpp
-#define VertexArray_hpp
-
-#include "VertexBuffer.hpp"
+#include "VertexBuffer.h"
 
 // #include "VertexBufferLayout.hpp"
 
@@ -33,4 +33,4 @@ public:
     void Unbind() const;
 };
 
-#endif /* VertexArray_hpp */
+#endif // __VERTEXARRAY_H__

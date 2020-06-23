@@ -1,5 +1,5 @@
-#ifndef VertexBuffer_hpp
-#define VertexBuffer_hpp
+#ifndef __VERTEXBUFFER_H__
+#define __VERTEXBUFFER_H__
 
 class VertexBuffer 
 {
@@ -13,4 +13,5 @@ public:
     void Unbind() const;
 };
 
-#endif
+
+#endif // __VERTEXBUFFER_H__
