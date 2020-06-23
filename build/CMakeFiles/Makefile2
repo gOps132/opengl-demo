@@ -129,8 +129,8 @@ lib/glfw/src/clean: lib/glfw/src/CMakeFiles/glfw.dir/clean
 # Target rules for target CMakeFiles/learn-opengl.dir
 
 # All Build rule for target.
-CMakeFiles/learn-opengl.dir/all: CMakeFiles/glad.dir/all
 CMakeFiles/learn-opengl.dir/all: lib/glfw/src/CMakeFiles/glfw.dir/all
+CMakeFiles/learn-opengl.dir/all: CMakeFiles/glad.dir/all
 	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/depend
 	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles --progress-num=19,20,21,22,23,24,25,26 "Built target learn-opengl"

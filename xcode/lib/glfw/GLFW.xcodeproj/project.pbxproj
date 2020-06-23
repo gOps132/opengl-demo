@@ -7,298 +7,298 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		126BA06C3A084A45AB14BFCF /* install */ = {
+		077D65985FEF402FA0678FF9 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = CB1CC2BC9E7D4001BC22DC4C /* Build configuration list for PBXAggregateTarget "install" */;
+			buildConfigurationList = 3B9B82B852154170AD90DB55 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
-				E5A33F8078734F0DB656DC61 /* CMake PostBuild Rules */,
+				B7031C7C0F2B44D88064D00E /* CMake Rules */,
 			);
 			dependencies = (
-				11791D973B7A472F8431DD44 /* PBXTargetDependency */,
+				A56EBEBF1CE649B5B8F7C648 /* PBXTargetDependency */,
+				F12366C877084F21B6B91FDD /* PBXTargetDependency */,
 			);
-			name = install;
-			productName = install;
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
 		};
-		1C0D4692A6C34F2EA4F11066 /* ZERO_CHECK */ = {
+		4BB58979B2A448FBAD6A0CA9 /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = FCE78E7C7ECE46828CB5A03D /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = A56F448B1C0444898E912159 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				0656BCDFEB3C462CA8E43A76 /* CMake Rules */,
+				387C818BAE28404AA307B0C6 /* CMake Rules */,
 			);
 			dependencies = (
 			);
 			name = ZERO_CHECK;
 			productName = ZERO_CHECK;
 		};
-		89E1D528E20B49A6A4CBA348 /* uninstall */ = {
+		7CFCBEADB9CC45F581DED30C /* install */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 85BCF1B810BF45959F0F91CB /* Build configuration list for PBXAggregateTarget "uninstall" */;
+			buildConfigurationList = BB4023AAAB1F41348967B8F6 /* Build configuration list for PBXAggregateTarget "install" */;
 			buildPhases = (
-				42B8C8972F824262A221E4F0 /* CMake Rules */,
+				4EF77B8A07B04A36AEC351DA /* CMake PostBuild Rules */,
 			);
 			dependencies = (
-				BE4F2070B79443AAB600BF44 /* PBXTargetDependency */,
+				BC571C47AE9747FF99B86871 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		CFA0DB9CE6A94FE38855CA6B /* uninstall */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AF817510D07F44EEB9737EE1 /* Build configuration list for PBXAggregateTarget "uninstall" */;
+			buildPhases = (
+				DF2CF0053EBB48868341A317 /* CMake Rules */,
+			);
+			dependencies = (
+				7F34D57DE2724B088CE04DF9 /* PBXTargetDependency */,
 			);
 			name = uninstall;
 			productName = uninstall;
 		};
-		8D728B30B6DC43BEA852993E /* ALL_BUILD */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 6F6E62B2F5B2483992B0A291 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
-			buildPhases = (
-				6455055B2FFF4151BCAE7B59 /* CMake Rules */,
-			);
-			dependencies = (
-				E975FEA2ECAC4AC6B0862813 /* PBXTargetDependency */,
-				1A0C12366CBC4A368EC31155 /* PBXTargetDependency */,
-			);
-			name = ALL_BUILD;
-			productName = ALL_BUILD;
-		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		051818FC158D4067A1D47624 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 1B79A67B6B6143779ECC9239 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_window.m */; };
-		07359DF22FC64ADDAA13A0FA /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = 6253675ED0FE445CB6EBABFD /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/internal.h */; };
-		18E6A030CA644E87B179799D /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 39DB2EA7516C42349F81FC97 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/CMakeLists.txt */; };
-		248F653B5D934F82B097D6A2 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.h */ = {isa = PBXBuildFile; fileRef = 06F99847C6944EC0BFED9DFE /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.h */; };
-		41174445BF29458FAC35DB12 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = F593C5B980F14E28AE0EDF1E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		6446B5329158409899EE5A93 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 6EA97313F1BD445481F3746C /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_init.m */; };
-		67228088105D439280E88E36 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 82A3C8EF2C3644F0909813C1 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_monitor.m */; };
-		69FE86A8435A4A8AB29C7237 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.c */ = {isa = PBXBuildFile; fileRef = 9CCACAAD1D50430398DF6D11 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.c */; };
-		705E45D09E814B6590700E57 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.c */ = {isa = PBXBuildFile; fileRef = BD60044E8D9B49C7BC5638B2 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		721A5BA91DF34CD39E714E0A /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = C3FD7214DD8745D7B339D254 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/input.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		7B4A3FE9F77B4A2DBA0658D7 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = A9C65C01674D474A9EB4352B /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/monitor.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		843E83F6C2D34FBAA07558E5 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/vulkan.c */ = {isa = PBXBuildFile; fileRef = EDA5CC994EE14126B6605E56 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/vulkan.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		896CE8FCF5734DD5A154B674 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 4D5F51B8EE434968BFCC9287 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_platform.h */; };
-		94E46CB3BBFD460DBC75CA2B /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = 2E467C82D3CE4014A6DDCB31 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/window.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		955CEB8ED78B471DBDD8DC5B /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/mappings.h */ = {isa = PBXBuildFile; fileRef = 6AE1697C8C2D4F7EACE47500 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/mappings.h */; };
-		96E910FA0A8A4EDEB59FB655 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = 64A2BF7A12194C79A3A5EC4E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.h */; };
-		A28ED613A11149E5916821E8 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 0DB9E01A40404DB0BFCF3D3B /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include/GLFW/glfw3native.h */; };
-		AD301375CE044871BF7443DF /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 1BAB0150602340C99867DF9C /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include/GLFW/glfw3.h */; };
-		ADDF30EC1B224903A02D206F /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = 274AD0AAD27E4259972ACB2C /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_time.c */; };
-		BB0978F3FA88432DBD28CBF7 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = 3309635EABE24084A3A0410F /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.m */; };
-		BFC61C39584F474FBE4EBBA1 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.h */ = {isa = PBXBuildFile; fileRef = 1395ED2C8D88460FAF02190F /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.h */; };
-		C41E69770FCA4F31B984911E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.c */ = {isa = PBXBuildFile; fileRef = 30652E31A81641C3B907884A /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		C441FEC4CA4A4329AADC5B45 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.h */ = {isa = PBXBuildFile; fileRef = 83E1CA50F1F447E5A639EBCA /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.h */; };
-		D42DC0965EDF480E86F29544 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.h */ = {isa = PBXBuildFile; fileRef = A8B5CC237C81413DB5C544E0 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.h */; };
-		DE56F0B97E87499BA021D724 /* /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = 9CD307CBDFF6422D8FF55DC1 /* /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/glfw_config.h */; };
-		E60566D6002549D2BB13C498 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = C3DDC4F4E67D49DFB910BBA5 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/init.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		F478BAA5AB07452A8D2E0D33 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = 7FFFC59B14B944AF85B3A443 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.m */; };
+		1461647447D340C28B54DD17 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = B33DB41763974CAA85B9BDD0 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/internal.h */; };
+		19E222DF1BA64AA7B2BF5739 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = BDA85A3CA6D448ECA710659C /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/monitor.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		20B9E2AF2F5044D299D9DAF8 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 59CC7192FC40435A9E322271 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_monitor.m */; };
+		20FCF0E8C29F4B45BD52FE92 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 6AB39F655C11474F9EC38C6E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/CMakeLists.txt */; };
+		227A230869E347AE9A568C24 /* /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = 57092FEF220E46F8AE2387D0 /* /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/glfw_config.h */; };
+		2ACE6BEAC0AC4711819B36D0 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = B73005F75CC149F9A596710E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_init.m */; };
+		2DD807AC04B448CCBD19E45D /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = E2BAFFAF378C4550B2071D7A /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/window.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		2F0DB183D5E6465BA51C5DA8 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.c */ = {isa = PBXBuildFile; fileRef = 96E4B6E53F06425E966E3791 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.c */; };
+		422A8F5796874B4EB33BEE7B /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = D389F8FFE4EC4A09A6FC37E2 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_platform.h */; };
+		48B530E225794B7D81303C4A /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = 5417989E57CB49B18674B0CF /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		49B424A2C96F48CC92C7C46B /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.h */ = {isa = PBXBuildFile; fileRef = CD07E6BF7E0548D4A75DBAE9 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.h */; };
+		5E2F5A3A912D466D8C8B57D2 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = 57B8AA1315DE4E239672B7CA /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/init.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		5E3802A74F6244BEA31E5C79 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/vulkan.c */ = {isa = PBXBuildFile; fileRef = D5651A639BA043038CD108CD /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/vulkan.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		61484FFE97AD418F83214B8D /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = A4E7B996C97D4CCD904C7416 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_window.m */; };
+		735FF397A7584C0186EB8896 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = 92231099B7FA4873AA386A5D /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.h */; };
+		85664C4A2A0E4FD9ACF21F62 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = 2C9AE4859163411AA26C47FA /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/input.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		99B5283C913347D38344E2D0 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = BDAB41E1DBC6476A9AE603F6 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.m */; };
+		A3C1FB97DCBB4903988BE325 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.h */ = {isa = PBXBuildFile; fileRef = 054D8F2D7F0F476584599592 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.h */; };
+		AA5FAB353CAE4156A6A88E80 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = 97EB9A3A8F4D4F3FA5A729F2 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.m */; };
+		B05E16E347404AAF95AEDC97 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.c */ = {isa = PBXBuildFile; fileRef = C737FD8DDF13478EAA572C49 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		BE43E76C9D3649E1B24107D6 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 0137AFB7BE4F4620901172E7 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include/GLFW/glfw3.h */; };
+		BEE3180900DF44839C3084DB /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.h */ = {isa = PBXBuildFile; fileRef = 84C6D1B4E17542FDB476E576 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.h */; };
+		CF6561904C2C4E66A624E350 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.c */ = {isa = PBXBuildFile; fileRef = 65D56A11AAF041B5A09B33B7 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		D55A246182FF482A83C54980 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/mappings.h */ = {isa = PBXBuildFile; fileRef = 150A11F0A9654B9A99E51E3E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/mappings.h */; };
+		D62A21D70B794FFAA964BCC6 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = 1042DD2DC70D472F92B8B2ED /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_time.c */; };
+		E08753572E744BBB89746580 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 0322290EC77D40FEB0801DB1 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include/GLFW/glfw3native.h */; };
+		E5DA94C87CD14595A9FFF647 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.h */ = {isa = PBXBuildFile; fileRef = 531DAB8365D24C6B87A81924 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		20072AE1BFAD4F4A99A65715 /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		4E1B07D02EBD490394DBB891 /* RelWithDebInfo */ = {
+		0EA1019B214046D2A6B7DCC2 /* RelWithDebInfo */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = RelWithDebInfo;
 		};
-		8057E0D1A7B94894BD7DADD3 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		9A871EBCB5C54DBF8D996EBD /* MinSizeRel */ = {
+		49E146353B6D4E3E8F0563BC /* MinSizeRel */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = MinSizeRel;
 		};
+		5F9BC63C59B8466DA7D193D9 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		783D56EC231143D2A3277616 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		3E704791105444B1B599A3DE /* PBXContainerItemProxy */ = {
+		0AE9B5128F544899935B5722 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DF4CFB1DDFCB48D6969E98D7 /* Project object */;
+			containerPortal = E767236CF5744135BA84FC57 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D728B30B6DC43BEA852993E;
+			remoteGlobalIDString = 077D65985FEF402FA0678FF9;
 			remoteInfo = ALL_BUILD;
 		};
-		52A8F36E8FE24319BD6EBB85 /* PBXContainerItemProxy */ = {
+		5D7B343229904B5E9CAEE6C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DF4CFB1DDFCB48D6969E98D7 /* Project object */;
+			containerPortal = E767236CF5744135BA84FC57 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1C0D4692A6C34F2EA4F11066;
-			remoteInfo = ZERO_CHECK;
-		};
-		729B1C7AECA34664A0DC89B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DF4CFB1DDFCB48D6969E98D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F40106A5891B444AAE6250F5;
+			remoteGlobalIDString = 02C628EEBEC04E74BAA32B7F;
 			remoteInfo = glfw;
 		};
-		F65157C224DE4678BEA5E7E3 /* PBXContainerItemProxy */ = {
+		B2654D5B8B714E419822F848 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DF4CFB1DDFCB48D6969E98D7 /* Project object */;
+			containerPortal = E767236CF5744135BA84FC57 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1C0D4692A6C34F2EA4F11066;
+			remoteGlobalIDString = 4BB58979B2A448FBAD6A0CA9;
+			remoteInfo = ZERO_CHECK;
+		};
+		E90DBE8CCAAD47A1893D8B0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E767236CF5744135BA84FC57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BB58979B2A448FBAD6A0CA9;
 			remoteInfo = ZERO_CHECK;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06F99847C6944EC0BFED9DFE /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = osmesa_context.h; path = src/osmesa_context.h; sourceTree = SOURCE_ROOT; };
-		0A2DAFCF2BDD4F65965BDA77 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		0DB9E01A40404DB0BFCF3D3B /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
-		1395ED2C8D88460FAF02190F /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = src/cocoa_joystick.h; sourceTree = SOURCE_ROOT; };
-		1ADA4CA1ACAF41448DBAAE95 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B79A67B6B6143779ECC9239 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
-		1BAB0150602340C99867DF9C /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
-		274AD0AAD27E4259972ACB2C /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = src/cocoa_time.c; sourceTree = SOURCE_ROOT; };
-		2E467C82D3CE4014A6DDCB31 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = src/window.c; sourceTree = SOURCE_ROOT; };
-		30652E31A81641C3B907884A /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = egl_context.c; path = src/egl_context.c; sourceTree = SOURCE_ROOT; };
-		3309635EABE24084A3A0410F /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = src/cocoa_joystick.m; sourceTree = SOURCE_ROOT; };
-		39DB2EA7516C42349F81FC97 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		4D5F51B8EE434968BFCC9287 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
-		6253675ED0FE445CB6EBABFD /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = src/internal.h; sourceTree = SOURCE_ROOT; };
-		64A2BF7A12194C79A3A5EC4E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
-		6AE1697C8C2D4F7EACE47500 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/mappings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mappings.h; path = src/mappings.h; sourceTree = SOURCE_ROOT; };
-		6EA97313F1BD445481F3746C /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
-		7FFFC59B14B944AF85B3A443 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
-		82A3C8EF2C3644F0909813C1 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
-		83E1CA50F1F447E5A639EBCA /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = egl_context.h; path = src/egl_context.h; sourceTree = SOURCE_ROOT; };
-		94796B0D0E1E49129FFE6D53 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		9CCACAAD1D50430398DF6D11 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_thread.c; path = src/posix_thread.c; sourceTree = SOURCE_ROOT; };
-		9CD307CBDFF6422D8FF55DC1 /* /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = ../../xcode/lib/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
-		A8B5CC237C81413DB5C544E0 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_thread.h; path = src/posix_thread.h; sourceTree = SOURCE_ROOT; };
-		A9C65C01674D474A9EB4352B /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = src/monitor.c; sourceTree = SOURCE_ROOT; };
-		BD60044E8D9B49C7BC5638B2 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = osmesa_context.c; path = src/osmesa_context.c; sourceTree = SOURCE_ROOT; };
-		C3DDC4F4E67D49DFB910BBA5 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = src/init.c; sourceTree = SOURCE_ROOT; };
-		C3FD7214DD8745D7B339D254 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = src/input.c; sourceTree = SOURCE_ROOT; };
-		EDA5CC994EE14126B6605E56 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = src/vulkan.c; sourceTree = SOURCE_ROOT; };
-		F593C5B980F14E28AE0EDF1E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = src/context.c; sourceTree = SOURCE_ROOT; };
+		0137AFB7BE4F4620901172E7 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		0322290EC77D40FEB0801DB1 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		054D8F2D7F0F476584599592 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_thread.h; path = src/posix_thread.h; sourceTree = SOURCE_ROOT; };
+		1042DD2DC70D472F92B8B2ED /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = src/cocoa_time.c; sourceTree = SOURCE_ROOT; };
+		150A11F0A9654B9A99E51E3E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/mappings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mappings.h; path = src/mappings.h; sourceTree = SOURCE_ROOT; };
+		2C9AE4859163411AA26C47FA /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = src/input.c; sourceTree = SOURCE_ROOT; };
+		362D35764FDF4F0DB80EAD72 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		531DAB8365D24C6B87A81924 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = src/cocoa_joystick.h; sourceTree = SOURCE_ROOT; };
+		5417989E57CB49B18674B0CF /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = src/context.c; sourceTree = SOURCE_ROOT; };
+		57092FEF220E46F8AE2387D0 /* /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = ../../xcode/lib/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
+		57B8AA1315DE4E239672B7CA /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = src/init.c; sourceTree = SOURCE_ROOT; };
+		59CC7192FC40435A9E322271 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		65D56A11AAF041B5A09B33B7 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = egl_context.c; path = src/egl_context.c; sourceTree = SOURCE_ROOT; };
+		6AB39F655C11474F9EC38C6E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		84C6D1B4E17542FDB476E576 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = egl_context.h; path = src/egl_context.h; sourceTree = SOURCE_ROOT; };
+		92231099B7FA4873AA386A5D /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
+		96E4B6E53F06425E966E3791 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_thread.c; path = src/posix_thread.c; sourceTree = SOURCE_ROOT; };
+		97EB9A3A8F4D4F3FA5A729F2 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = src/cocoa_joystick.m; sourceTree = SOURCE_ROOT; };
+		A4E7B996C97D4CCD904C7416 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+		B33DB41763974CAA85B9BDD0 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = src/internal.h; sourceTree = SOURCE_ROOT; };
+		B39456CA6FDB496C8907A419 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B3F461158C804A33917785D7 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B73005F75CC149F9A596710E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		BDA85A3CA6D448ECA710659C /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = src/monitor.c; sourceTree = SOURCE_ROOT; };
+		BDAB41E1DBC6476A9AE603F6 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+		C737FD8DDF13478EAA572C49 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = osmesa_context.c; path = src/osmesa_context.c; sourceTree = SOURCE_ROOT; };
+		CD07E6BF7E0548D4A75DBAE9 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = osmesa_context.h; path = src/osmesa_context.h; sourceTree = SOURCE_ROOT; };
+		D389F8FFE4EC4A09A6FC37E2 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+		D5651A639BA043038CD108CD /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = src/vulkan.c; sourceTree = SOURCE_ROOT; };
+		E2BAFFAF378C4550B2071D7A /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = src/window.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		1F1C2F2485324AB1A3EAA02E /* CMake Rules */ = {
+		1118F210312A41F49A27562F /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				0137AFB7BE4F4620901172E7 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include/GLFW/glfw3.h */,
+				0322290EC77D40FEB0801DB1 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include/GLFW/glfw3native.h */,
+				531DAB8365D24C6B87A81924 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.h */,
+				D389F8FFE4EC4A09A6FC37E2 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_platform.h */,
+				84C6D1B4E17542FDB476E576 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.h */,
+				B33DB41763974CAA85B9BDD0 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/internal.h */,
+				150A11F0A9654B9A99E51E3E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/mappings.h */,
+				92231099B7FA4873AA386A5D /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.h */,
+				CD07E6BF7E0548D4A75DBAE9 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.h */,
+				054D8F2D7F0F476584599592 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.h */,
+				57092FEF220E46F8AE2387D0 /* /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/glfw_config.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		11D01C91C5B948BD8ABAF870 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		4EBAFDD1BA52490D9196645C /* glfw */ = {
+		2380C763EA614A6EA576B792 /* glfw */ = {
 			isa = PBXGroup;
 			children = (
-				F9940D6543244A1E9BA55EC3 /* Header Files */,
-				CCA08F68B89B49B48D6B0DDE /* Source Files */,
-				39DB2EA7516C42349F81FC97 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/CMakeLists.txt */,
+				1118F210312A41F49A27562F /* Header Files */,
+				CA867A255491443887003065 /* Source Files */,
+				6AB39F655C11474F9EC38C6E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/CMakeLists.txt */,
 			);
 			name = glfw;
 			sourceTree = "<group>";
 		};
-		830DA6EDC78D40CE937B82F6 /* Products */ = {
+		282D6D05C10F40609A61A1AF = {
 			isa = PBXGroup;
 			children = (
-				1ADA4CA1ACAF41448DBAAE95 /* glfw */,
+				BCD143E8E79B41FDADB3ED7B /* GLFW3 */,
+				ED77E28510284E2788E55383 /* ALL_BUILD */,
+				3988C611D7C6410F989123D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3988C611D7C6410F989123D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3F461158C804A33917785D7 /* glfw */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		92CE486E67A1453EB627308F /* ALL_BUILD */ = {
-			isa = PBXGroup;
-			children = (
-				1F1C2F2485324AB1A3EAA02E /* CMake Rules */,
-				94796B0D0E1E49129FFE6D53 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/CMakeLists.txt */,
-			);
-			name = ALL_BUILD;
-			sourceTree = "<group>";
-		};
-		9430D29C85514824B05140B8 /* uninstall */ = {
-			isa = PBXGroup;
-			children = (
-				F877F3F1CD2041DF91C40626 /* CMake Rules */,
-				0A2DAFCF2BDD4F65965BDA77 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/CMakeLists.txt */,
-			);
-			name = uninstall;
-			sourceTree = "<group>";
-		};
-		AF558CF58162404C9FD1E626 = {
-			isa = PBXGroup;
-			children = (
-				D671A4A2FCCB400099FF0F98 /* GLFW3 */,
-				92CE486E67A1453EB627308F /* ALL_BUILD */,
-				830DA6EDC78D40CE937B82F6 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		CCA08F68B89B49B48D6B0DDE /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				6EA97313F1BD445481F3746C /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_init.m */,
-				3309635EABE24084A3A0410F /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.m */,
-				82A3C8EF2C3644F0909813C1 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_monitor.m */,
-				274AD0AAD27E4259972ACB2C /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_time.c */,
-				1B79A67B6B6143779ECC9239 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_window.m */,
-				F593C5B980F14E28AE0EDF1E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/context.c */,
-				30652E31A81641C3B907884A /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.c */,
-				C3DDC4F4E67D49DFB910BBA5 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/init.c */,
-				C3FD7214DD8745D7B339D254 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/input.c */,
-				A9C65C01674D474A9EB4352B /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/monitor.c */,
-				7FFFC59B14B944AF85B3A443 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.m */,
-				BD60044E8D9B49C7BC5638B2 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.c */,
-				9CCACAAD1D50430398DF6D11 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.c */,
-				EDA5CC994EE14126B6605E56 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/vulkan.c */,
-				2E467C82D3CE4014A6DDCB31 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/window.c */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		D671A4A2FCCB400099FF0F98 /* GLFW3 */ = {
-			isa = PBXGroup;
-			children = (
-				9430D29C85514824B05140B8 /* uninstall */,
-				4EBAFDD1BA52490D9196645C /* glfw */,
-			);
-			name = GLFW3;
-			sourceTree = "<group>";
-		};
-		F877F3F1CD2041DF91C40626 /* CMake Rules */ = {
+		6D1FE5B0842744CBAEF4B3C6 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		F9940D6543244A1E9BA55EC3 /* Header Files */ = {
+		AD4E7A8663184AF9BDFEFB7A /* uninstall */ = {
 			isa = PBXGroup;
 			children = (
-				1BAB0150602340C99867DF9C /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include/GLFW/glfw3.h */,
-				0DB9E01A40404DB0BFCF3D3B /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include/GLFW/glfw3native.h */,
-				1395ED2C8D88460FAF02190F /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.h */,
-				4D5F51B8EE434968BFCC9287 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_platform.h */,
-				83E1CA50F1F447E5A639EBCA /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.h */,
-				6253675ED0FE445CB6EBABFD /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/internal.h */,
-				6AE1697C8C2D4F7EACE47500 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/mappings.h */,
-				64A2BF7A12194C79A3A5EC4E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.h */,
-				06F99847C6944EC0BFED9DFE /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.h */,
-				A8B5CC237C81413DB5C544E0 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.h */,
-				9CD307CBDFF6422D8FF55DC1 /* /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/glfw_config.h */,
+				11D01C91C5B948BD8ABAF870 /* CMake Rules */,
+				B39456CA6FDB496C8907A419 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/CMakeLists.txt */,
 			);
-			name = "Header Files";
+			name = uninstall;
+			sourceTree = "<group>";
+		};
+		BCD143E8E79B41FDADB3ED7B /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				AD4E7A8663184AF9BDFEFB7A /* uninstall */,
+				2380C763EA614A6EA576B792 /* glfw */,
+			);
+			name = GLFW3;
+			sourceTree = "<group>";
+		};
+		CA867A255491443887003065 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				B73005F75CC149F9A596710E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_init.m */,
+				97EB9A3A8F4D4F3FA5A729F2 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.m */,
+				59CC7192FC40435A9E322271 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_monitor.m */,
+				1042DD2DC70D472F92B8B2ED /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_time.c */,
+				A4E7B996C97D4CCD904C7416 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_window.m */,
+				5417989E57CB49B18674B0CF /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/context.c */,
+				65D56A11AAF041B5A09B33B7 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.c */,
+				57B8AA1315DE4E239672B7CA /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/init.c */,
+				2C9AE4859163411AA26C47FA /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/input.c */,
+				BDA85A3CA6D448ECA710659C /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/monitor.c */,
+				BDAB41E1DBC6476A9AE603F6 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.m */,
+				C737FD8DDF13478EAA572C49 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.c */,
+				96E4B6E53F06425E966E3791 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.c */,
+				D5651A639BA043038CD108CD /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/vulkan.c */,
+				E2BAFFAF378C4550B2071D7A /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		ED77E28510284E2788E55383 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				6D1FE5B0842744CBAEF4B3C6 /* CMake Rules */,
+				362D35764FDF4F0DB80EAD72 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F40106A5891B444AAE6250F5 /* glfw */ = {
+		02C628EEBEC04E74BAA32B7F /* glfw */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 383E21642F314D6989995B96 /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildConfigurationList = 17DE6488A11E4EC2A3B428B2 /* Build configuration list for PBXNativeTarget "glfw" */;
 			buildPhases = (
-				B9C86AC9E85A4715B08FF0C1 /* Sources */,
+				EE49A4660FF54D099D96CDA0 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -306,44 +306,59 @@
 			);
 			name = glfw;
 			productName = glfw;
-			productReference = 1ADA4CA1ACAF41448DBAAE95 /* glfw */;
+			productReference = B3F461158C804A33917785D7 /* glfw */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DF4CFB1DDFCB48D6969E98D7 /* Project object */ = {
+		E767236CF5744135BA84FC57 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1130;
 			};
-			buildConfigurationList = E60D8D4ACF47433EB63C4C22 /* Build configuration list for PBXProject "GLFW" */;
+			buildConfigurationList = 06D5DFDB35634B84947A676B /* Build configuration list for PBXProject "GLFW" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				20072AE1BFAD4F4A99A65715 /* Debug */,
-				8057E0D1A7B94894BD7DADD3 /* Release */,
-				9A871EBCB5C54DBF8D996EBD /* MinSizeRel */,
-				4E1B07D02EBD490394DBB891 /* RelWithDebInfo */,
+				783D56EC231143D2A3277616 /* Debug */,
+				5F9BC63C59B8466DA7D193D9 /* Release */,
+				49E146353B6D4E3E8F0563BC /* MinSizeRel */,
+				0EA1019B214046D2A6B7DCC2 /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = AF558CF58162404C9FD1E626;
+			mainGroup = 282D6D05C10F40609A61A1AF;
 			projectDirPath = ../../../lib/glfw;
 			projectRoot = "";
 			targets = (
-				8D728B30B6DC43BEA852993E /* ALL_BUILD */,
-				1C0D4692A6C34F2EA4F11066 /* ZERO_CHECK */,
-				F40106A5891B444AAE6250F5 /* glfw */,
-				126BA06C3A084A45AB14BFCF /* install */,
-				89E1D528E20B49A6A4CBA348 /* uninstall */,
+				077D65985FEF402FA0678FF9 /* ALL_BUILD */,
+				4BB58979B2A448FBAD6A0CA9 /* ZERO_CHECK */,
+				02C628EEBEC04E74BAA32B7F /* glfw */,
+				7CFCBEADB9CC45F581DED30C /* install */,
+				CFA0DB9CE6A94FE38855CA6B /* uninstall */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0656BCDFEB3C462CA8E43A76 /* CMake Rules */ = {
+		306198CE8A5C47B490E1BC1A = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		387C818BAE28404AA307B0C6 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -354,74 +369,7 @@
 			shellScript = "make -C /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw -f /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
-		42B8C8972F824262A221E4F0 /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw -f /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/CMakeScripts/uninstall_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
-			showEnvVarsInLog = 0;
-		};
-		52C39EA1DF7E4CD9914E29E7 = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
-		6455055B2FFF4151BCAE7B59 /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw -f /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
-			showEnvVarsInLog = 0;
-		};
-		826256A4A42143E0B84EC58F = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
-		C83BACF0850C4904ABABA35B = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
-		E5A33F8078734F0DB656DC61 /* CMake PostBuild Rules */ = {
+		4EF77B8A07B04A36AEC351DA /* CMake PostBuild Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -432,7 +380,59 @@ exit 0";
 			shellScript = "make -C /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw -f /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
-		F04580814B73444AB9C66C17 = {
+		9C86567485A847B98CB80162 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		A243C83554D241B9B9FE69D6 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		B7031C7C0F2B44D88064D00E /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw -f /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		DF2CF0053EBB48868341A317 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw -f /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/CMakeScripts/uninstall_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		F04065035BE149D5B98F90E5 = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -450,80 +450,65 @@ exit 0";
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B9C86AC9E85A4715B08FF0C1 /* Sources */ = {
+		EE49A4660FF54D099D96CDA0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6446B5329158409899EE5A93 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_init.m */,
-				BB0978F3FA88432DBD28CBF7 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.m */,
-				67228088105D439280E88E36 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_monitor.m */,
-				ADDF30EC1B224903A02D206F /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_time.c */,
-				051818FC158D4067A1D47624 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_window.m */,
-				41174445BF29458FAC35DB12 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/context.c */,
-				C41E69770FCA4F31B984911E /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.c */,
-				E60566D6002549D2BB13C498 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/init.c */,
-				721A5BA91DF34CD39E714E0A /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/input.c */,
-				7B4A3FE9F77B4A2DBA0658D7 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/monitor.c */,
-				F478BAA5AB07452A8D2E0D33 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.m */,
-				705E45D09E814B6590700E57 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.c */,
-				69FE86A8435A4A8AB29C7237 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.c */,
-				843E83F6C2D34FBAA07558E5 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/vulkan.c */,
-				94E46CB3BBFD460DBC75CA2B /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/window.c */,
+				2ACE6BEAC0AC4711819B36D0 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_init.m */,
+				AA5FAB353CAE4156A6A88E80 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.m */,
+				20B9E2AF2F5044D299D9DAF8 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_monitor.m */,
+				D62A21D70B794FFAA964BCC6 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_time.c */,
+				61484FFE97AD418F83214B8D /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_window.m */,
+				48B530E225794B7D81303C4A /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/context.c */,
+				CF6561904C2C4E66A624E350 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.c */,
+				5E2F5A3A912D466D8C8B57D2 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/init.c */,
+				85664C4A2A0E4FD9ACF21F62 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/input.c */,
+				19E222DF1BA64AA7B2BF5739 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/monitor.c */,
+				99B5283C913347D38344E2D0 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.m */,
+				B05E16E347404AAF95AEDC97 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.c */,
+				2F0DB183D5E6465BA51C5DA8 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.c */,
+				5E3802A74F6244BEA31E5C79 /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/vulkan.c */,
+				2DD807AC04B448CCBD19E45D /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/window.c */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		11791D973B7A472F8431DD44 /* PBXTargetDependency */ = {
+		7F34D57DE2724B088CE04DF9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8D728B30B6DC43BEA852993E /* ALL_BUILD */;
-			targetProxy = 3E704791105444B1B599A3DE /* PBXContainerItemProxy */;
+			target = 4BB58979B2A448FBAD6A0CA9 /* ZERO_CHECK */;
+			targetProxy = E90DBE8CCAAD47A1893D8B0C /* PBXContainerItemProxy */;
 		};
-		1A0C12366CBC4A368EC31155 /* PBXTargetDependency */ = {
+		A56EBEBF1CE649B5B8F7C648 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1C0D4692A6C34F2EA4F11066 /* ZERO_CHECK */;
-			targetProxy = F65157C224DE4678BEA5E7E3 /* PBXContainerItemProxy */;
+			target = 02C628EEBEC04E74BAA32B7F /* glfw */;
+			targetProxy = 5D7B343229904B5E9CAEE6C9 /* PBXContainerItemProxy */;
 		};
-		BE4F2070B79443AAB600BF44 /* PBXTargetDependency */ = {
+		BC571C47AE9747FF99B86871 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1C0D4692A6C34F2EA4F11066 /* ZERO_CHECK */;
-			targetProxy = 52A8F36E8FE24319BD6EBB85 /* PBXContainerItemProxy */;
+			target = 077D65985FEF402FA0678FF9 /* ALL_BUILD */;
+			targetProxy = 0AE9B5128F544899935B5722 /* PBXContainerItemProxy */;
 		};
-		E975FEA2ECAC4AC6B0862813 /* PBXTargetDependency */ = {
+		F12366C877084F21B6B91FDD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F40106A5891B444AAE6250F5 /* glfw */;
-			targetProxy = 729B1C7AECA34664A0DC89B1 /* PBXContainerItemProxy */;
+			target = 4BB58979B2A448FBAD6A0CA9 /* ZERO_CHECK */;
+			targetProxy = B2654D5B8B714E419822F848 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0D5B3D072D7B4A5EBAAF9BBA /* RelWithDebInfo */ = {
+		006E8A217910438EA907CD81 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include","/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src","/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "       -DNDEBUG -fPIC -Wall '-std=c99'  ";
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glfw3;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/build";
 			};
 			name = RelWithDebInfo;
 		};
-		0EA51949D625409B90AF85F0 /* RelWithDebInfo */ = {
+		00BD7A3538794CBE9150746F /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -535,52 +520,7 @@ exit 0";
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		144ABE9B0E8347608C0B79C1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include","/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src","/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "    -DNDEBUG -fPIC -Wall '-std=c99'  ";
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glfw3;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		182C610FD0A04D6A9D4F94CD /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
+				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
 				USE_HEADERMAP = NO;
@@ -588,154 +528,7 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		19F59EBD27BD4A3DBD763504 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		372AD78366B748D2B41A7A92 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		44CF3D19580548CCA7C58741 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/build";
-			};
-			name = Release;
-		};
-		53517888C9A243A0B31DE27F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/build";
-			};
-			name = Debug;
-		};
-		5C2268B9872A47C394B7ED47 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		7CFFE3CC20824436A3D0324C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = uninstall;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		8921C704A8D944ED8E7AD505 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = uninstall;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		9F72024AFD7F49E586E9AD77 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/build";
-			};
-			name = MinSizeRel;
-		};
-		9F7FDCC7D91F408E9BF935EC /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = uninstall;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		A0F819BA29144C99A46AA168 /* Debug */ = {
+		043F4FB216094100BC173E67 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -760,67 +553,7 @@ exit 0";
 			};
 			name = Debug;
 		};
-		A6712E9E3D72437BA7C0DEB2 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		AC40219DAC5144A2A1E2A4A7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		C6DF1A603C664B91BD1352A7 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		CF0D164059BF4F7295EF25E7 /* MinSizeRel */ = {
+		176F1E977BF444EBB77EA048 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -840,56 +573,7 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		CFF0B6618E1943769A0C881B /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/build";
-			};
-			name = RelWithDebInfo;
-		};
-		D980A73932274ED3ABDF0AC8 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		DA857E1038FE4470A5CD5F4E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		EE2D54D3FA1E49B3AC09E7DD /* Release */ = {
+		1F39A3C1A0884DCC8CBEEFF1 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -907,9 +591,9 @@ exit 0";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Release;
+			name = RelWithDebInfo;
 		};
-		F3A8AB770B744FCEB4B2F8E0 /* MinSizeRel */ = {
+		2AC46D17C965480197D9A164 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -934,7 +618,307 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		F6FE8679866E451BB84C944D /* Debug */ = {
+		396482D15EB54BBE8B70B9F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/build";
+			};
+			name = Debug;
+		};
+		3B790DF7824F41C5855BAC17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		51CF1E0224C44575A5B4F7A5 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		52552918DDAE42D6B4B86875 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		56742AAD98CC44C5A70B03F4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		5780275A60B549A2A836552B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		61A9C2E3310540F399AC28E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include","/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src","/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC -Wall '-std=c99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		69F8BDD76A3A4877BFAC3E7C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		6D22D45F1F874C929842C77D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/build";
+			};
+			name = MinSizeRel;
+		};
+		84358BEAA24E496F9B09E76B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		8ED207ABC3AB4F6EA78F3F8D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		904F6E4EA15E4731B7FD636A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		949E9A81C7A74EA0892B90F5 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A9FC46B0A1CB4F6DAC76E3FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/build";
+			};
+			name = Release;
+		};
+		ACEE708D1C964AB1AAD275A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		D3316B411CEC44FA9CA6993D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include","/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src","/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG -fPIC -Wall '-std=c99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		DCA9EEB7E65B4E9598FDB529 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -954,76 +938,96 @@ exit 0";
 			};
 			name = Debug;
 		};
+		F0A6CD94DA1A40FABC436F04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		383E21642F314D6989995B96 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+		06D5DFDB35634B84947A676B /* Build configuration list for PBXProject "GLFW" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A0F819BA29144C99A46AA168 /* Debug */,
-				144ABE9B0E8347608C0B79C1 /* Release */,
-				F3A8AB770B744FCEB4B2F8E0 /* MinSizeRel */,
-				0D5B3D072D7B4A5EBAAF9BBA /* RelWithDebInfo */,
+				396482D15EB54BBE8B70B9F6 /* Debug */,
+				A9FC46B0A1CB4F6DAC76E3FF /* Release */,
+				6D22D45F1F874C929842C77D /* MinSizeRel */,
+				006E8A217910438EA907CD81 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		6F6E62B2F5B2483992B0A291 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		17DE6488A11E4EC2A3B428B2 /* Build configuration list for PBXNativeTarget "glfw" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F6FE8679866E451BB84C944D /* Debug */,
-				EE2D54D3FA1E49B3AC09E7DD /* Release */,
-				C6DF1A603C664B91BD1352A7 /* MinSizeRel */,
-				A6712E9E3D72437BA7C0DEB2 /* RelWithDebInfo */,
+				043F4FB216094100BC173E67 /* Debug */,
+				61A9C2E3310540F399AC28E8 /* Release */,
+				2AC46D17C965480197D9A164 /* MinSizeRel */,
+				D3316B411CEC44FA9CA6993D /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		85BCF1B810BF45959F0F91CB /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
+		3B9B82B852154170AD90DB55 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8921C704A8D944ED8E7AD505 /* Debug */,
-				7CFFE3CC20824436A3D0324C /* Release */,
-				CF0D164059BF4F7295EF25E7 /* MinSizeRel */,
-				9F7FDCC7D91F408E9BF935EC /* RelWithDebInfo */,
+				DCA9EEB7E65B4E9598FDB529 /* Debug */,
+				F0A6CD94DA1A40FABC436F04 /* Release */,
+				00BD7A3538794CBE9150746F /* MinSizeRel */,
+				1F39A3C1A0884DCC8CBEEFF1 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		CB1CC2BC9E7D4001BC22DC4C /* Build configuration list for PBXAggregateTarget "install" */ = {
+		A56F448B1C0444898E912159 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5C2268B9872A47C394B7ED47 /* Debug */,
-				DA857E1038FE4470A5CD5F4E /* Release */,
-				372AD78366B748D2B41A7A92 /* MinSizeRel */,
-				D980A73932274ED3ABDF0AC8 /* RelWithDebInfo */,
+				84358BEAA24E496F9B09E76B /* Debug */,
+				52552918DDAE42D6B4B86875 /* Release */,
+				56742AAD98CC44C5A70B03F4 /* MinSizeRel */,
+				8ED207ABC3AB4F6EA78F3F8D /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		E60D8D4ACF47433EB63C4C22 /* Build configuration list for PBXProject "GLFW" */ = {
+		AF817510D07F44EEB9737EE1 /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				53517888C9A243A0B31DE27F /* Debug */,
-				44CF3D19580548CCA7C58741 /* Release */,
-				9F72024AFD7F49E586E9AD77 /* MinSizeRel */,
-				CFF0B6618E1943769A0C881B /* RelWithDebInfo */,
+				3B790DF7824F41C5855BAC17 /* Debug */,
+				ACEE708D1C964AB1AAD275A3 /* Release */,
+				176F1E977BF444EBB77EA048 /* MinSizeRel */,
+				69F8BDD76A3A4877BFAC3E7C /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		FCE78E7C7ECE46828CB5A03D /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		BB4023AAAB1F41348967B8F6 /* Build configuration list for PBXAggregateTarget "install" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AC40219DAC5144A2A1E2A4A7 /* Debug */,
-				19F59EBD27BD4A3DBD763504 /* Release */,
-				182C610FD0A04D6A9D4F94CD /* MinSizeRel */,
-				0EA51949D625409B90AF85F0 /* RelWithDebInfo */,
+				904F6E4EA15E4731B7FD636A /* Debug */,
+				5780275A60B549A2A836552B /* Release */,
+				949E9A81C7A74EA0892B90F5 /* MinSizeRel */,
+				51CF1E0224C44575A5B4F7A5 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DF4CFB1DDFCB48D6969E98D7 /* Project object */;
+	rootObject = E767236CF5744135BA84FC57 /* Project object */;
 }

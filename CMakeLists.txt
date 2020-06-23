@@ -38,7 +38,7 @@ set(SOURCE_FILES
 )
 
 list (APPEND OTHER_FLAGS
-    "-Wno-int-to-void-pointer-cast"
+#  "-Wno-int-to-void-pointer-cast"
     "-DDEBUG"
 )
 

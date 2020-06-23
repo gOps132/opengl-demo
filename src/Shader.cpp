@@ -100,6 +100,7 @@ unsigned int Shader::CompileShader(unsigned int type, const std::string &source)
     glCompileShader(id);
 
     int result;
+//    error handling
     glGetShaderiv(id, GL_COMPILE_STATUS, &result);
     if (result == GL_FALSE)
     {

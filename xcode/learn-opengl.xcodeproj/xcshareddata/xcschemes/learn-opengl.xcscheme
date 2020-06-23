@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A106082780F1434C9EF48E3C"
+               BlueprintIdentifier = "2D46A83CC4FD495E85F9E076"
                BuildableName = "learn-opengl"
                BlueprintName = "learn-opengl"
                ReferencedContainer = "container:xcode/learn-opengl.xcodeproj">
@@ -27,15 +27,6 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A106082780F1434C9EF48E3C"
-            BuildableName = "learn-opengl"
-            BlueprintName = "learn-opengl"
-            ReferencedContainer = "container:xcode/learn-opengl.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <Testables>
       </Testables>
    </TestAction>
@@ -54,19 +45,12 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A106082780F1434C9EF48E3C"
+            BlueprintIdentifier = "2D46A83CC4FD495E85F9E076"
             BuildableName = "learn-opengl"
             BlueprintName = "learn-opengl"
             ReferencedContainer = "container:xcode/learn-opengl.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "-DDEBUG"
-            value = ""
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -78,7 +62,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A106082780F1434C9EF48E3C"
+            BlueprintIdentifier = "2D46A83CC4FD495E85F9E076"
             BuildableName = "learn-opengl"
             BlueprintName = "learn-opengl"
             ReferencedContainer = "container:xcode/learn-opengl.xcodeproj">

@@ -13,6 +13,7 @@ CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.o
  ../lib/glad/include/glad/glad.h
  /Users/giancedrickepilan/dev/native/learn-opengl/src/IndexBuffer.cpp
 CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o
+ ../header/ErrorManager.hpp
  ../header/IndexBuffer.hpp
  ../header/Renderer.hpp
  ../header/Shader.hpp
@@ -22,6 +23,9 @@ CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o
  ../lib/glad/include/glad/glad.h
  /Users/giancedrickepilan/dev/native/learn-opengl/src/Renderer.cpp
 CMakeFiles/learn-opengl.dir/src/Shader.cpp.o
+ ../header/Shader.hpp
+ ../lib/glad/include/KHR/khrplatform.h
+ ../lib/glad/include/glad/glad.h
  /Users/giancedrickepilan/dev/native/learn-opengl/src/Shader.cpp
 CMakeFiles/learn-opengl.dir/src/VertexArray.cpp.o
  ../header/ErrorManager.hpp

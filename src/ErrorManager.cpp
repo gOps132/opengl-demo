@@ -1,12 +1,12 @@
 #include "ErrorManager.hpp"
 #include <glad/glad.h>
 
-void ErrorManager::GLClearError()
+void GLClearError()
 {
     while (glGetError() != GL_NO_ERROR);
 }
 
-bool ErrorManager::GLLogCall(const char *function, const char *file, int line)
+bool GLLogCall(const char *function, const char *file, int line)
 {
     if (GLenum error = glGetError())
     {

@@ -12,40 +12,42 @@
 #include <sstream>
 #include <signal.h>
 
-#ifdef DEBUG
-#ifdef __APPLE__
-#define ASSERT(x) \
-        if (!(x)) \
-        __builtin_debugtrap() // works with xcode built in compiler
-#endif
-#ifdef __linux__
-#define ASSERT(x) \
-        if (!(x)) \
-        raise(SIGTRAP) // works with clang (more research)
-#endif
-#ifdef _WIN32
-#define ASSERT(x) \
-        if (!(x)) \
-                __debugbreak(); // works with VS MSVC compiler intrinsic
-#endif
-#define GLCall(x)       \
-        GLClearError(); \
-        x;              \
-        ASSERT(GLLogCall(#x, __FILE__, __LINE__))
-#else
-#define ASSERT(x) \
-        if (!(x)) \
-        raise(SIGABRT)
-#define GLCall(x) x
-#endif
+ #ifdef DEBUG
+ #ifdef __APPLE__
+ #define ASSERT(x) \
+         if (!(x)) \
+         __builtin_debugtrap() // works with xcode built in compiler
+ #endif
+ #ifdef __linux__
+ #define ASSERT(x) \
+         if (!(x)) \
+         raise(SIGTRAP) // works with clang (more research)
+ #endif
+ #ifdef _WIN32
+ #define ASSERT(x) \
+         if (!(x)) \
+                 __debugbreak(); // works with VS MSVC compiler intrinsic
+ #endif
 
-class ErrorManager
-{
-public:
-    void GLClearError();
+ #define GLCall(x)       \
+         GLClearError(); \
+         x;              \
+         ASSERT(GLLogCall(#x, __FILE__, __LINE__))
+ #else
 
-    bool GLLogCall(const char *function, const char *file, int line);
-};
+ #define GLCall(x) x
+ #endif
 
+//#define ASSERT(x) \
+//        if (!(x)) \
+//        __builtin_debugtrap()
+//#define GLCall(x)       \
+//        GLClearError(); \
+//        x;              \
+//        ASSERT(GLLogCall(#x, __FILE__, __LINE__))
+
+void GLClearError();
+
+bool GLLogCall(const char *function, const char *file, int line);
 
 #endif // __ERRORMANAGER_H__

@@ -12,6 +12,7 @@ CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.o: ../lib/glad/include/KHR/khrpl
 CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.o: ../lib/glad/include/glad/glad.h
 CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.o: ../src/IndexBuffer.cpp
 
+CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: ../header/ErrorManager.hpp
 CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: ../header/IndexBuffer.hpp
 CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: ../header/Renderer.hpp
 CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: ../header/Shader.hpp
@@ -21,6 +22,9 @@ CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: ../lib/glad/include/KHR/khrplatf
 CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: ../lib/glad/include/glad/glad.h
 CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: ../src/Renderer.cpp
 
+CMakeFiles/learn-opengl.dir/src/Shader.cpp.o: ../header/Shader.hpp
+CMakeFiles/learn-opengl.dir/src/Shader.cpp.o: ../lib/glad/include/KHR/khrplatform.h
+CMakeFiles/learn-opengl.dir/src/Shader.cpp.o: ../lib/glad/include/glad/glad.h
 CMakeFiles/learn-opengl.dir/src/Shader.cpp.o: ../src/Shader.cpp
 
 CMakeFiles/learn-opengl.dir/src/VertexArray.cpp.o: ../header/ErrorManager.hpp

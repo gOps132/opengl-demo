@@ -1,7 +1,8 @@
 #include "Renderer.hpp"
+#include "ErrorManager.hpp"
 #include <iostream>
 
-void Renderer::Draw(const VertexArray &va, const IndexBuffer ib, const Shader &shader) const
+void Renderer::Draw(const VertexArray &va, const IndexBuffer& ib, const Shader &shader) const
 {
     shader.Bind();
 
@@ -9,5 +10,12 @@ void Renderer::Draw(const VertexArray &va, const IndexBuffer ib, const Shader &s
     ib.Bind();
 
     // the second parameter is the number of indices not the number of vertices
-    glDrawElements(GL_TRIANGLES, ib.getCount(), GL_UNSIGNED_INT, nullptr);
+    glDrawElements(GL_TRIANGLES, ib.getCount(), GL_UNSIGNED_INT, 0);
+}
+
+void Renderer::Clear() const
+{
+    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+
 }

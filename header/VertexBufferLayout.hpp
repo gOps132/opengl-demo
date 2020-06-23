@@ -46,11 +46,11 @@ public:
 //    template<typename T>
 //    void Push(T count)
 //    {
-//        static_assert(false, "");
+//        static_assert(false);
 //    }
 
     template<typename T>
-    void Push(int count) 
+    void Push(int count)
     {
         const unsigned int type=
             (unsigned int[])
@@ -64,7 +64,7 @@ public:
                 2*std::is_same<T,unsigned int>::value+
                 3*std::is_same<T,unsigned char>::value
             ];
-     
+
         m_Elements.push_back({type,static_cast<unsigned int>(count),GL_FALSE});
         m_Stride+= count * VertexBufferElement::GetSizeOfType(type);
     }
