@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.8)
 project(learn-opengl C CXX)
 set(CMAKE_CXX_STANDARD 14)
 
+
 set(GLFW_SOURCE_DIR "lib/glfw")
 set(GLAD_SOURCE_DIR "lib/glad")
 set(HEADER_DIR "src/header")
@@ -11,9 +12,8 @@ add_subdirectory(
     ${GLFW_SOURCE_DIR}
 )
 
-# TODO: set working directory on the root of the project
-
 # TODO: REMOVE DEBUG FLAG LATER 
+# TODO: make some kind of function that iterate over source files in a specified directory.
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -DDEBUG")
 set(SOURCE_FILES
     src/main.cpp
@@ -38,6 +38,7 @@ set(SOURCE_FILES
     src/ErrorManager.cpp
     ${HEADER_DIR}/ErrorManager.h
 
+    ${NOT_MY_HEADER_DIR}/stb_image/stb_image.cpp
     ${NOT_MY_HEADER_DIR}/stb_image/stb_image.h
 )
 
@@ -65,7 +66,9 @@ add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 include_directories(
     ${GLAD_SOURCE_DIR}/include
-    ${CMAKE_SOURCE_DIR}/header
+
+    ${CMAKE_SOURCE_DIR}/src/header
+    ${NOT_MY_HEADER_DIR}
 )
 
 add_library(glad STATIC

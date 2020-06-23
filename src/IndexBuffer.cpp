@@ -1,8 +1,6 @@
 #include "IndexBuffer.h"
 #include "ErrorManager.h"
-
 #include <glad/glad.h>
-
 
 IndexBuffer::IndexBuffer(const unsigned int* data, unsigned int count)
     : m_Count(count)

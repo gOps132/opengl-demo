@@ -11,13 +11,15 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/giancedrickepilan/dev/native/learn-opengl/src/VertexArray.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/VertexArray.cpp.o"
   "/Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o"
   "/Users/giancedrickepilan/dev/native/learn-opengl/src/main.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/main.cpp.o"
+  "/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/stb_image/stb_image.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../lib/glad/include"
-  "../header"
+  "../src/header"
+  "../src/vendor"
   "../lib/glfw/include"
   )
 

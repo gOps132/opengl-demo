@@ -6,7 +6,7 @@
             "${workspaceFolder}/**/src/header"
         ],
         "myOtherIncludePaths": [
-            "${workspaceFolder}/**/src/vendor/**"
+            "${workspaceFolder}/src/vendor/**/**"
         ],
         "myCompilerPath": "/usr/bin/clang"
       },
