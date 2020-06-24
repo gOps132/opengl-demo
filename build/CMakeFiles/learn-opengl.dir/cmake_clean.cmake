@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.o"
   "CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o"
   "CMakeFiles/learn-opengl.dir/src/Shader.cpp.o"
+  "CMakeFiles/learn-opengl.dir/src/Texture.cpp.o"
   "CMakeFiles/learn-opengl.dir/src/VertexArray.cpp.o"
   "CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o"
   "CMakeFiles/learn-opengl.dir/src/main.cpp.o"

@@ -97,7 +97,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "glad::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-glad-Debug-e8b174671d15c8268541.json",
+					"jsonFile" : "target-glad-Debug-9f1d894cb457cc66a817.json",
 					"name" : "glad",
 					"projectIndex" : 0
 				},
@@ -111,7 +111,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "learn-opengl::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-learn-opengl-Debug-d8affe4e864df48d23a1.json",
+					"jsonFile" : "target-learn-opengl-Debug-7d28e52fd5277d6a1be3.json",
 					"name" : "learn-opengl",
 					"projectIndex" : 0
 				},

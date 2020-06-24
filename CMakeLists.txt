@@ -40,6 +40,9 @@ set(SOURCE_FILES
 
     ${NOT_MY_HEADER_DIR}/stb_image/stb_image.cpp
     ${NOT_MY_HEADER_DIR}/stb_image/stb_image.h
+
+    src/Texture.cpp
+    ${HEADER_DIR}/Texture.h
 )
 
 list (APPEND OTHER_FLAGS

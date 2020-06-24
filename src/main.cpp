@@ -14,6 +14,7 @@
 #include "VertexArray.h"
 #include "VertexBufferLayout.h"
 #include "ErrorManager.h"
+#include "Texture.h"
 
 #include <iostream>
 
@@ -68,10 +69,10 @@ int main(void)
 
 	{
 		float vertices[] = {
-			0.5f, 0.5f, 0.0f,	// top right    0
-			0.5f, -0.5f, 0.0f,	// bottom right 1
-			-0.5f, -0.5f, 0.0f, // bottom left  2
-			-0.5f, 0.5f, 0.0f	// top left     3
+			0.5f,  0.5f, 0.0f, 0.0f, 		// top right    0
+			0.5f, -0.5f, 1.0f, 0.0f,		// bottom right 1
+		   -0.5f, -0.5f, 1.0f, 1.0f, 		// bottom left  2
+		   -0.5f,  0.5f, 0.0f, 1.0f		// top left     3
 		};
 		unsigned int indices[] = {
 			// note that we start from 0!
@@ -79,18 +80,17 @@ int main(void)
 			1, 2, 3	 // second triangle
 		};
 
-		// bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
-		unsigned int VAO;
-		glGenVertexArrays(1, &VAO);
-		glBindVertexArray(VAO);
-
-		VertexBuffer vb(vertices, sizeof(vertices));
+		glEnable(GL_BLEND);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        
         VertexArray va;
+		VertexBuffer vb(vertices, 4 * 4 * sizeof(float));
 		VertexBufferLayout layout;
 		IndexBuffer ib(indices, sizeof(indices));
 
 		// va.AddBuffer(vb, &layout);
-		layout.Push<float>(3);
+		layout.Push<float>(2);
+		layout.Push<float>(2);
 		va.AddBuffer(vb, layout);
 
 		Shader shader("shaders/BasicShader.shader");
@@ -106,6 +106,9 @@ int main(void)
 		// uncomment this call to draw in wireframe polygons.
 		// glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 		Renderer renderer;
+		Texture texture("textures/smile.png");
+		texture.Bind();
+		shader.SetUniform1i("u_Texture", 0);
 
 		float r = 0.0f;
 		float increment = 0.05f;

@@ -1,8 +1,6 @@
 {
     "env": {
         "myDefaultIncludePaths": [
-            "${workspaceFolder}", 
-            "${workspaceFolder}/**",
             "${workspaceFolder}/**/src/header"
         ],
         "myOtherIncludePaths": [

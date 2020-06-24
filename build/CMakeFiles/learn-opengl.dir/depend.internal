@@ -27,6 +27,13 @@ CMakeFiles/learn-opengl.dir/src/Shader.cpp.o
  ../lib/glad/include/glad/glad.h
  ../src/header/Shader.h
  /Users/giancedrickepilan/dev/native/learn-opengl/src/Shader.cpp
+CMakeFiles/learn-opengl.dir/src/Texture.cpp.o
+ ../lib/glad/include/KHR/khrplatform.h
+ ../lib/glad/include/glad/glad.h
+ ../src/header/ErrorManager.h
+ ../src/header/Texture.h
+ ../src/vendor/stb_image/stb_image.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/Texture.cpp
 CMakeFiles/learn-opengl.dir/src/VertexArray.cpp.o
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
@@ -55,6 +62,7 @@ CMakeFiles/learn-opengl.dir/src/main.cpp.o
  ../src/header/IndexBuffer.h
  ../src/header/Renderer.h
  ../src/header/Shader.h
+ ../src/header/Texture.h
  ../src/header/VertexArray.h
  ../src/header/VertexBuffer.h
  ../src/header/VertexBufferLayout.h
