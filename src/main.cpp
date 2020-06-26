@@ -88,6 +88,7 @@ int main(void)
 		VertexBuffer vb(vertices, sizeof(vertices) * sizeof(float));
 		VertexBufferLayout layout;
 		IndexBuffer ib(indices, sizeof(indices));
+		Renderer renderer;
 
 		// va.AddBuffer(vb, &layout);
 		layout.Push<float>(2);
@@ -95,9 +96,13 @@ int main(void)
 		va.AddBuffer(vb, layout);
 
 		Shader shader("shaders/BasicShader.shader");
+
+		Texture texture("textures/poop.png");
+		texture.Bind();
+		shader.SetUniform1i("u_Texture", 0);
         
 		shader.Bind();
-		shader.SetUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
+		// shader.SetUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
 
 		// unbinding
 		shader.Unbind();
@@ -106,10 +111,7 @@ int main(void)
 
 		// uncomment this call to draw in wireframe polygons.
 		// glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-		Renderer renderer;
-		Texture texture("textures/smile.png");
-		texture.Bind();
-		shader.SetUniform1i("u_Texture", 0);
+		
 
 		float r = 0.0f;
 		float increment = 0.05f;
@@ -130,7 +132,7 @@ int main(void)
 //          the second parameter is the number of indices not the number of vertices
             glDrawElements(GL_TRIANGLES, ib.getCount(), GL_UNSIGNED_INT, 0);
 
-			shader.SetUniform4f("u_Color", r, 0.3f, 0.8f, 1.0f);
+			// shader.SetUniform4f("u_Color", r, 0.3f, 0.8f, 1.0f);
             
 			if (r > 1.0f)
 				increment = -0.05f;

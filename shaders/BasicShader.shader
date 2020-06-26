@@ -8,7 +8,6 @@ out vec2 v_TexCoord;
 void main()
 {
     gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);
-    // gl_Position = aPos;
     v_TexCoord = texCoord;
 }
 
@@ -19,12 +18,10 @@ in vec2 v_TexCoord;
 
 layout(location = 0) out vec4 color;
 
-uniform vec4 u_Color;
 uniform sampler2D u_Texture;
 
 void main()
 {
     vec4 texColor = texture(u_Texture, v_TexCoord);
-    color = u_Color;
     color = texColor;
 }
