@@ -69,10 +69,11 @@ int main(void)
 
 	{
 		float vertices[] = {
-			0.5f,  0.5f, 0.0f, 0.0f, 		// top right    0
-			0.5f, -0.5f, 1.0f, 0.0f,		// bottom right 1
-		   -0.5f, -0.5f, 1.0f, 1.0f, 		// bottom left  2
-		   -0.5f,  0.5f, 0.0f, 1.0f		// top left     3
+		//vertex coords	   //texture coords
+			0.5f,  0.5f, 	0.0f, 0.0f, 	// top right    0
+			0.5f, -0.5f, 	1.0f, 0.0f,		// bottom right 1
+		   -0.5f, -0.5f, 	1.0f, 1.0f, 	// bottom left  2
+		   -0.5f,  0.5f, 	0.0f, 1.0f		// top left     3
 		};
 		unsigned int indices[] = {
 			// note that we start from 0!
@@ -84,7 +85,7 @@ int main(void)
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         
         VertexArray va;
-		VertexBuffer vb(vertices, 4 * 4 * sizeof(float));
+		VertexBuffer vb(vertices, sizeof(vertices) * sizeof(float));
 		VertexBufferLayout layout;
 		IndexBuffer ib(indices, sizeof(indices));
 
@@ -123,7 +124,6 @@ int main(void)
 
 			// render here
 			renderer.Clear();
-            
             
 			renderer.Draw(va, ib, shader);
             
