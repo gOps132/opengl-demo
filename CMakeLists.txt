@@ -1,19 +1,27 @@
+#
+#   Made by Epilan Gian Cedrick G.
+#  
+# TODO: REMOVE DEBUG FLAG LATER 
+# TODO: use function that iterates of over .cpp & .h / .hpp files in certain directories in source files
+# TODO: maybe find another way to add flags in cmake
+# TODO: make this cmakelists.txt file not look like it's made by an idiot
+#
+
 cmake_minimum_required(VERSION 3.8)
 project(learn-opengl C CXX)
 set(CMAKE_CXX_STANDARD 14)
 
 
-set(GLFW_SOURCE_DIR "lib/glfw")
-set(GLAD_SOURCE_DIR "lib/glad")
-set(HEADER_DIR "src/header")
-set(NOT_MY_HEADER_DIR "src/vendor")
+set(GLFW_SOURCE_DIR "${CMAKE_SOURCE_DIR}/lib/glfw")
+set(GLAD_SOURCE_DIR "${CMAKE_SOURCE_DIR}/lib/glad")
+set(GLM_SOURCE_DIR "${CMAKE_SOURCE_DIR}/lib/glm")
 
-add_subdirectory(
-    ${GLFW_SOURCE_DIR}
-)
+set(HEADER_DIR "${CMAKE_SOURCE_DIR}/src/header")
+set(NOT_MY_HEADER_DIR "${CMAKE_SOURCE_DIR}/src/vendor")
 
-# TODO: REMOVE DEBUG FLAG LATER 
-# TODO: make some kind of function that iterate over source files in a specified directory.
+add_subdirectory(${GLFW_SOURCE_DIR})
+add_subdirectory(${GLM_SOURCE_DIR})
+
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -DDEBUG")
 set(SOURCE_FILES
     src/main.cpp
@@ -64,16 +72,17 @@ else()
         "-lGL -lGLU -lX11")
 endif()
 
-
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 include_directories(
     ${GLAD_SOURCE_DIR}/include
+    ${GLM_SOURCE_DIR}
 
-    ${CMAKE_SOURCE_DIR}/src/header
+    ${HEADER_DIR}
     ${NOT_MY_HEADER_DIR}
 )
 
+# making glad library here because COMFORT
 add_library(glad STATIC
   ${GLAD_SOURCE_DIR}/src/glad.c
   ${GLAD_SOURCE_DIR}/include
@@ -85,4 +94,5 @@ target_link_libraries(
     ${OTHER_FLAGS}
     glad
     glfw 
+    glm
 )

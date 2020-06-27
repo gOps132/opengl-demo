@@ -19,9 +19,11 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../lib/glad/include"
+  "../lib/glm"
   "../src/header"
   "../src/vendor"
   "../lib/glfw/include"
+  "../lib/glm/glm/.."
   )
 
 # Targets to which this target links.

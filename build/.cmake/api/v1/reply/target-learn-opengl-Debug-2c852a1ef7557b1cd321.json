@@ -26,19 +26,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 68,
+				"line" : 75,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 82,
+				"line" : 91,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 70,
+				"line" : 77,
 				"parent" : 0
 			}
 		]
@@ -63,6 +63,10 @@
 				},
 				{
 					"backtrace" : 3,
+					"path" : "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm"
+				},
+				{
+					"backtrace" : 3,
 					"path" : "/Users/giancedrickepilan/dev/native/learn-opengl/src/header"
 				},
 				{
@@ -72,6 +76,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm/glm/.."
 				}
 			],
 			"language" : "CXX",
@@ -93,11 +101,11 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "glfw::@17f284a5fc0809a54549"
+			"id" : "glad::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "glad::@6890427a1f51a3e7e1df"
+			"id" : "glfw::@17f284a5fc0809a54549"
 		}
 	],
 	"id" : "learn-opengl::@6890427a1f51a3e7e1df",

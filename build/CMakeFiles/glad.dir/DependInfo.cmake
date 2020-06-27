@@ -11,6 +11,7 @@ set(CMAKE_C_COMPILER_ID "AppleClang")
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../lib/glad/include"
+  "../lib/glm"
   "../src/header"
   "../src/vendor"
   )

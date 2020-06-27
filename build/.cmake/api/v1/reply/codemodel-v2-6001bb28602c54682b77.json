@@ -8,7 +8,8 @@
 					"build" : ".",
 					"childIndexes" : 
 					[
-						1
+						1,
+						3
 					],
 					"hasInstallRule" : true,
 					"minimumCMakeVersion" : 
@@ -56,6 +57,30 @@
 					[
 						1
 					]
+				},
+				{
+					"build" : "lib/glm",
+					"childIndexes" : 
+					[
+						4
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "lib/glm"
+				},
+				{
+					"build" : "lib/glm/glm",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "lib/glm/glm"
 				}
 			],
 			"name" : "Debug",
@@ -64,7 +89,8 @@
 				{
 					"childIndexes" : 
 					[
-						1
+						1,
+						2
 					],
 					"directoryIndexes" : 
 					[
@@ -90,6 +116,15 @@
 						1,
 						3
 					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3,
+						4
+					],
+					"name" : "glm",
+					"parentIndex" : 0
 				}
 			],
 			"targets" : 
@@ -97,7 +132,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "glad::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-glad-Debug-9f1d894cb457cc66a817.json",
+					"jsonFile" : "target-glad-Debug-b3ad6fca865ec2ca0635.json",
 					"name" : "glad",
 					"projectIndex" : 0
 				},
@@ -111,7 +146,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "learn-opengl::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-learn-opengl-Debug-3b9d75ce2a250bec725d.json",
+					"jsonFile" : "target-learn-opengl-Debug-2c852a1ef7557b1cd321.json",
 					"name" : "learn-opengl",
 					"projectIndex" : 0
 				},

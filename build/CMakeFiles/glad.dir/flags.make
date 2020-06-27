@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacO
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/src/header -I/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor 
+C_INCLUDES = -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm -I/Users/giancedrickepilan/dev/native/learn-opengl/src/header -I/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor 
 

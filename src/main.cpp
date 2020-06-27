@@ -18,6 +18,9 @@
 
 #include <iostream>
 
+// TEST LINKING
+#include <glm/ext.hpp>
+
 /*
 	*	TODO: implement some kind of break point trap for every compiler
 	* 	TODO: make some kind of manifest for xcode settings, compilers in order for the code to run right

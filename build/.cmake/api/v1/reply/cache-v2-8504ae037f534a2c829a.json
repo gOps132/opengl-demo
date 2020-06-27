@@ -1003,7 +1003,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "3"
+			"value" : "5"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -1608,6 +1608,30 @@
 			],
 			"type" : "STATIC",
 			"value" : "general;-framework Cocoa;general;-framework IOKit;general;-framework CoreFoundation;"
+		},
+		{
+			"name" : "glm_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/giancedrickepilan/dev/native/learn-opengl/build/lib/glm"
+		},
+		{
+			"name" : "glm_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm"
 		},
 		{
 			"name" : "learn-opengl_BINARY_DIR",
