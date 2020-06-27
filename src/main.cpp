@@ -97,7 +97,7 @@ int main(void)
 
 		Shader shader("shaders/BasicShader.shader");
 
-		Texture texture("textures/poop.png");
+		Texture texture("textures/smile.png");
 		texture.Bind();
 		shader.SetUniform1i("u_Texture", 0);
         
