@@ -101,7 +101,7 @@ int main(void)
 		texture.Bind();
 		shader.SetUniform1i("u_Texture", 0);
         
-		shader.Bind();
+		shader.Bind(); 
 		// shader.SetUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
 
 		// unbinding
@@ -124,7 +124,7 @@ int main(void)
 			//input
 			processInput(window);
 
-			// render here
+			// render here	
 			renderer.Clear();
             
 			renderer.Draw(va, ib, shader);
