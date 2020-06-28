@@ -5,6 +5,8 @@
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 #include "Renderer.h"
 #include "Shader.h"
@@ -18,13 +20,11 @@
 
 #include <iostream>
 
-// TEST LINKING
-#include <glm/ext.hpp>
-
 /*
 	*	TODO: implement some kind of break point trap for every compiler
 	* 	TODO: make some kind of manifest for xcode settings, compilers in order for the code to run right
 	*	TODO: make a display class which handles the OpenGL context and the window and its destructor will call glfwterminate automatically.
+	* 	TODO: make some kind of openGL context that handles the vertexbuffers, vertexarrays, indexbuffers and etc.
 */
 
 void framebuffer_size_callback(GLFWwindow *window, int width, int height)
@@ -49,7 +49,9 @@ int main(void)
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
 
-	GLFWwindow *window = glfwCreateWindow(800, 600, "LearnOpenGL", NULL, NULL);
+	int wHeight = 960;
+	int wWidth = 540;
+	GLFWwindow *window = glfwCreateWindow(wHeight, wWidth, "LearnOpenGL", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -66,17 +68,17 @@ int main(void)
 		return -1;
 	}
 
-	glViewport(0, 0, 800, 600);
+	glViewport(0, 0, wHeight, wWidth);
 
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
 	{
 		float vertices[] = {
 		//vertex coords	   //texture coords
-			0.5f,  0.5f, 	0.0f, 0.0f, 	// top right    0
-			0.5f, -0.5f, 	1.0f, 0.0f,		// bottom right 1
-		   -0.5f, -0.5f, 	1.0f, 1.0f, 	// bottom left  2
-		   -0.5f,  0.5f, 	0.0f, 1.0f		// top left     3
+			100.0f,	100.0f, 	0.0f, 0.0f, 	// top right    0
+			200.0f, 100.0f, 	1.0f, 0.0f,		// bottom right 1
+			200.0f, 200.0f, 	1.0f, 1.0f, 	// bottom left  2
+			100.0f, 200.0f, 	0.0f, 1.0f		// top left     3
 		};
 		unsigned int indices[] = {
 			// note that we start from 0!
@@ -87,35 +89,38 @@ int main(void)
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         
-        VertexArray va;
-		VertexBuffer vb(vertices, sizeof(vertices) * sizeof(float));
 		VertexBufferLayout layout;
-		IndexBuffer ib(indices, sizeof(indices));
-		Renderer renderer;
+		layout.Push<float>(2);
+		layout.Push<float>(2);
 
-		// va.AddBuffer(vb, &layout);
-		layout.Push<float>(2);
-		layout.Push<float>(2);
+		IndexBuffer ib(indices, sizeof(indices));
+		
+		glm::mat4 proj = glm::ortho(0.0f, 960.0f, 0.0f, 540.0f, -1.0f, 1.0f);
+
+		VertexBuffer vb(vertices, sizeof(vertices) * sizeof(float));
+		VertexArray va;
 		va.AddBuffer(vb, layout);
 
 		Shader shader("shaders/BasicShader.shader");
+		shader.Bind(); 
+		// not using "u_Color" right now
+		// shader.SetUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
+		shader.SetUniformMat4f("u_MVP", proj);
 
 		Texture texture("textures/smile.png");
 		texture.Bind();
 		shader.SetUniform1i("u_Texture", 0);
-        
-		shader.Bind(); 
-		// shader.SetUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
 
-		// unbinding
+		/* unbinding */
 		shader.Unbind();
 		vb.Unbind();
 		ib.Unbind();
 
+		Renderer renderer;
+
 		// uncomment this call to draw in wireframe polygons.
 		// glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 		
-
 		float r = 0.0f;
 		float increment = 0.05f;
 
@@ -124,17 +129,15 @@ int main(void)
 		//window render loop
 		while (!glfwWindowShouldClose(window))
 		{
-			//input
+			/* input */
 			processInput(window);
 
-			// render here	
+			/* render here */	
 			renderer.Clear();
             
 			renderer.Draw(va, ib, shader);
             
-//          the second parameter is the number of indices not the number of vertices
-            glDrawElements(GL_TRIANGLES, ib.getCount(), GL_UNSIGNED_INT, 0);
-
+			// not using "u_Color" will cause errors
 			// shader.SetUniform4f("u_Color", r, 0.3f, 0.8f, 1.0f);
             
 			if (r > 1.0f)
@@ -143,7 +146,7 @@ int main(void)
 				increment = 0.05f;
 			r += increment;
 
-			// check and call events and swap the buffers
+			/* swaps buffers checks IO events */
 			glfwSwapBuffers(window);
 			glfwPollEvents();
 		}

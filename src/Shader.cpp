@@ -3,6 +3,7 @@
 */
 
 #include "Shader.h"
+#include <glm/glm.hpp>
 
 // TODO: Optimize passShader function into faster c api. c++ tends to be a lot slower than the c api but this is just openGL for now.
 
@@ -42,6 +43,12 @@ void Shader::SetUniform1f(const std::string &name, float value)
 void Shader::SetUniform4f(const std::string &name, float v0, float v1, float v2, float v3)
 {
     glUniform4f(GetUniformLocation(name), v0, v1, v2, v3);
+}
+
+
+void Shader::SetUniformMat4f(const std::string& name, const glm::mat4& matrix) 
+{
+    glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, &matrix[0][0]);
 }
 
 int Shader::GetUniformLocation(const std::string& name)
