@@ -1,6 +1,8 @@
 /*
+ *
  *   Made by Epilan Gian Cedrick G.
  *   Most code by https://learnopengl.com, and the cherno https://youtube.com/thecherno
+ * 
  */
 
 #include <glad/glad.h>
@@ -51,6 +53,7 @@ int main(void)
 
 	int wHeight = 960;
 	int wWidth = 540;
+
 	GLFWwindow *window = glfwCreateWindow(wHeight, wWidth, "LearnOpenGL", NULL, NULL);
 	if (window == NULL)
 	{
@@ -73,14 +76,16 @@ int main(void)
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
 	{
-		float vertices[] = {
+		float vertices[] = 
+		{
 		//vertex coords	   //texture coords
 			100.0f,	100.0f, 	0.0f, 0.0f, 	// top right    0
 			200.0f, 100.0f, 	1.0f, 0.0f,		// bottom right 1
 			200.0f, 200.0f, 	1.0f, 1.0f, 	// bottom left  2
 			100.0f, 200.0f, 	0.0f, 1.0f		// top left     3
 		};
-		unsigned int indices[] = {
+		unsigned int indices[] = 
+		{
 			// note that we start from 0!
 			0, 1, 3, // first triangle
 			1, 2, 3	 // second triangle
@@ -95,7 +100,14 @@ int main(void)
 
 		IndexBuffer ib(indices, sizeof(indices));
 		
-		glm::mat4 proj = glm::ortho(0.0f, 960.0f, 0.0f, 540.0f, -1.0f, 1.0f);
+		glm::mat4 proj = glm::ortho(0.0f, (float)wHeight, 0.0f, float(wWidth), -1.0f, 1.0f);
+		/* position of the camera */
+		glm::mat4 view = glm::translate(glm::mat4(1.0f) , glm::vec3(100, 0, 0));
+		// position of the model (as far as i understand)
+		glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(200, 200, 0));
+
+		// some other graphics api may not be in order (not communicative)
+		glm::mat4 mvp = proj * view * model;
 
 		VertexBuffer vb(vertices, sizeof(vertices) * sizeof(float));
 		VertexArray va;
@@ -105,7 +117,7 @@ int main(void)
 		shader.Bind(); 
 		// not using "u_Color" right now
 		// shader.SetUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
-		shader.SetUniformMat4f("u_MVP", proj);
+		shader.SetUniformMat4f("u_MVP", mvp);
 
 		Texture texture("textures/smile.png");
 		texture.Bind();
