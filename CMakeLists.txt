@@ -4,7 +4,7 @@
 # TODO: REMOVE DEBUG FLAG LATER 
 # TODO: use function that iterates of over .cpp & .h / .hpp files in certain directories in source files
 # TODO: maybe find another way to add flags in cmake
-# TODO: make this cmakelists.txt file not look like it's made by an idiot
+# TODO: abstract other libraries with cmake files
 #
 
 cmake_minimum_required(VERSION 3.8)
