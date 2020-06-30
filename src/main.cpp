@@ -100,6 +100,7 @@ int main(void)
 
 		IndexBuffer ib(indices, sizeof(indices));
 		
+		// TODO: abstract all these glm maths
 		glm::mat4 proj = glm::ortho(0.0f, (float)wHeight, 0.0f, float(wWidth), -1.0f, 1.0f);
 		/* position of the camera */
 		glm::mat4 view = glm::translate(glm::mat4(1.0f) , glm::vec3(100, 0, 0));

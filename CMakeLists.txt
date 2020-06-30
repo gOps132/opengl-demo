@@ -25,13 +25,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -DDEBUG")
 
 file(GLOB MAIN_SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 file(GLOB MAIN_HEADER_FILES ${HEADER_DIR}/*.h)
-file(GLOB VENDOR_FOLDER ${VENDOR_DIR}/*)
-
-# TODO: how to iterate over folders
-# foreach(VAR ${VENDOR_FOLDER})
-#     file(GLOB VENDOR_HEADER_FILES ${VENDOR_DIR}/${VAR}/*.h)
-#     file(GLOB VENDOR_SOURCE_FILES ${VENDOR_DIR}/${VAR}/*.cpp)
-# endforeach(VAR ${VENDOR_FOLDER})
+# file(GLOB VENDOR_FOLDER ${VENDOR_DIR}/*) TODO: iterate over directories and list them
 
 set(VENDOR_FOLDERS 
     "imgui"
