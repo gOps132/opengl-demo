@@ -831,6 +831,10 @@ CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/Texture.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/VertexArray.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/VertexBuffer.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/VertexBufferLayout.h
+CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui-1.77/imconfig.h
+CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui-1.77/imgui.h
+CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui-1.77/imgui_impl_glfw.h
+CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui-1.77/imgui_impl_opengl3.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/main.cpp
 
 CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o: ../src/vendor/stb_image/stb_image.cpp

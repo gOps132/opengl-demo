@@ -832,6 +832,10 @@ CMakeFiles/learn-opengl.dir/src/main.cpp.o
  ../src/header/VertexArray.h
  ../src/header/VertexBuffer.h
  ../src/header/VertexBufferLayout.h
+ ../src/vendor/imgui-1.77/imconfig.h
+ ../src/vendor/imgui-1.77/imgui.h
+ ../src/vendor/imgui-1.77/imgui_impl_glfw.h
+ ../src/vendor/imgui-1.77/imgui_impl_opengl3.h
  /Users/giancedrickepilan/dev/native/learn-opengl/src/main.cpp
 CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o
  /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/stb_image/stb_image.cpp

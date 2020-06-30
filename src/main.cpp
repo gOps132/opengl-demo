@@ -3,12 +3,21 @@
  *   Made by Epilan Gian Cedrick G.
  *   Most code by https://learnopengl.com, and the cherno https://youtube.com/thecherno
  * 
+ * 	TODO: implement some kind of break point trap for every compiler
+ * 	TODO: make some kind of manifest for xcode settings, compilers in order for the code to run right
+ *	TODO: make a display class which handles the OpenGL context and the window and its destructor will call glfwterminate automatically.
+ * 	TODO: make some kind of openGL context that handles the vertexbuffers, vertexarrays, indexbuffers and etc.
+ * 
  */
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+
+#include "imgui-1.77/imgui.h"
+#include "imgui-1.77/imgui_impl_opengl3.h"
+#include "imgui-1.77/imgui_impl_glfw.h"
 
 #include "Renderer.h"
 #include "Shader.h"
@@ -21,13 +30,6 @@
 #include "Texture.h"
 
 #include <iostream>
-
-/*
-	*	TODO: implement some kind of break point trap for every compiler
-	* 	TODO: make some kind of manifest for xcode settings, compilers in order for the code to run right
-	*	TODO: make a display class which handles the OpenGL context and the window and its destructor will call glfwterminate automatically.
-	* 	TODO: make some kind of openGL context that handles the vertexbuffers, vertexarrays, indexbuffers and etc.
-*/
 
 void framebuffer_size_callback(GLFWwindow *window, int width, int height)
 {
@@ -116,8 +118,6 @@ int main(void)
 
 		Shader shader("shaders/BasicShader.shader");
 		shader.Bind(); 
-		// not using "u_Color" right now
-		// shader.SetUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
 		shader.SetUniformMat4f("u_MVP", mvp);
 
 		Texture texture("textures/smile.png");
@@ -133,10 +133,20 @@ int main(void)
 
 		// uncomment this call to draw in wireframe polygons.
 		// glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-		
-		float r = 0.0f;
-		float increment = 0.05f;
 
+		/* ImGui Initialization */
+  		IMGUI_CHECKVERSION();
+    	ImGui::CreateContext();
+    	ImGuiIO& io = ImGui::GetIO(); (void)io;
+		ImGui::StyleColorsDark();
+		ImGui_ImplGlfw_InitForOpenGL(window, true);
+		ImGui_ImplOpenGL3_Init((char *)glGetString(GL_SHADING_LANGUAGE_VERSION));
+
+		// Our state
+		bool show_demo_window = true;
+		bool show_another_window = false;
+		ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+	
 		// render loop
 		// -----------
 		//window render loop
@@ -147,22 +157,53 @@ int main(void)
 
 			/* render here */	
 			renderer.Clear();
-            
-			renderer.Draw(va, ib, shader);
-            
-			// not using "u_Color" will cause errors
-			// shader.SetUniform4f("u_Color", r, 0.3f, 0.8f, 1.0f);
-            
-			if (r > 1.0f)
-				increment = -0.05f;
-			else if (r < 0.0f)
-				increment = 0.05f;
-			r += increment;
 
+			/* new imgui frame */
+			// Start the Dear ImGui frame
+			ImGui_ImplOpenGL3_NewFrame();
+			ImGui_ImplGlfw_NewFrame();
+			ImGui::NewFrame();
+			
+			/* Draw the vertices */
+			renderer.Draw(va, ib, shader);
+
+			// simple window
+			{
+				static float f = 0.0f;
+				static int counter = 0;
+
+				ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
+
+				ImGui::Text("This is some useful text.");               // Display some text (you can use a format strings too)
+				ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
+				ImGui::Checkbox("Another Window", &show_another_window);
+
+				ImGui::SliderFloat("float", &f, 0.0f, 1.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
+				ImGui::ColorEdit3("clear color", (float*)&clear_color); // Edit 3 floats representing a color
+
+				if (ImGui::Button("Button"))                            // Buttons return true when clicked (most widgets return true when edited/activated)
+					counter++;
+				ImGui::SameLine();
+				ImGui::Text("counter = %d", counter);
+
+				ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+				ImGui::End();
+        	}
+
+			/* render imgui */
+			ImGui::Render();
+        	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+	
 			/* swaps buffers checks IO events */
 			glfwSwapBuffers(window);
 			glfwPollEvents();
 		}
+
+		/* ImGUI shutdown */
+		ImGui_ImplOpenGL3_Shutdown();
+		ImGui_ImplGlfw_Shutdown();
+		
+		ImGui::DestroyContext();
 
 		glfwTerminate();
 	}
