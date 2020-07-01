@@ -35,6 +35,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/cmake_install.cmake")
+  include("/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm/cmake_install.cmake")
 
 endif()
 

@@ -134,13 +134,15 @@ int main(void)
 		// uncomment this call to draw in wireframe polygons.
 		// glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
+		const char* glsl_version = "#version 130";
+
 		/* ImGui Initialization */
   		IMGUI_CHECKVERSION();
     	ImGui::CreateContext();
     	ImGuiIO& io = ImGui::GetIO(); (void)io;
 		ImGui::StyleColorsDark();
 		ImGui_ImplGlfw_InitForOpenGL(window, true);
-		ImGui_ImplOpenGL3_Init((char *)glGetString(GL_SHADING_LANGUAGE_VERSION));
+		ImGui_ImplOpenGL3_Init(glsl_version);
 
 		// Our state
 		bool show_demo_window = true;
@@ -202,7 +204,7 @@ int main(void)
 		/* ImGUI shutdown */
 		ImGui_ImplOpenGL3_Shutdown();
 		ImGui_ImplGlfw_Shutdown();
-		
+
 		ImGui::DestroyContext();
 
 		glfwTerminate();

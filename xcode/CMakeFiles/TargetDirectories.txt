@@ -9,3 +9,7 @@
 /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/CMakeFiles/ZERO_CHECK.dir
 /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/CMakeFiles/install.dir
 /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/CMakeFiles/glfw.dir
+/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm/CMakeFiles/install.dir
+/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm/CMakeFiles/ALL_BUILD.dir
+/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm/CMakeFiles/ZERO_CHECK.dir
+/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm/glm/CMakeFiles/install.dir
