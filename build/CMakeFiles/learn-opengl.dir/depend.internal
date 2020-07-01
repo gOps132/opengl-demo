@@ -832,11 +832,39 @@ CMakeFiles/learn-opengl.dir/src/main.cpp.o
  ../src/header/VertexArray.h
  ../src/header/VertexBuffer.h
  ../src/header/VertexBufferLayout.h
- ../src/vendor/imgui-1.77/imconfig.h
- ../src/vendor/imgui-1.77/imgui.h
- ../src/vendor/imgui-1.77/imgui_impl_glfw.h
- ../src/vendor/imgui-1.77/imgui_impl_opengl3.h
+ ../src/vendor/imgui/imconfig.h
+ ../src/vendor/imgui/imgui.h
+ ../src/vendor/imgui/imgui_impl_glfw.h
+ ../src/vendor/imgui/imgui_impl_opengl3.h
  /Users/giancedrickepilan/dev/native/learn-opengl/src/main.cpp
-CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o
- /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/stb_image/stb_image.cpp
- /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/stb_image/stb_image.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imconfig.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui.cpp
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_internal.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imstb_textedit.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imconfig.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_demo.cpp
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imconfig.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_draw.cpp
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_internal.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imstb_rectpack.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imstb_textedit.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imstb_truetype.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o
+ ../lib/glad/include/KHR/khrplatform.h
+ ../lib/glad/include/glad/glad.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imconfig.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_impl_opengl3.cpp
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_impl_opengl3.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imconfig.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_internal.h
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_widgets.cpp
+ /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imstb_textedit.h

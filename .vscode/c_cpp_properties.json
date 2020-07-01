@@ -4,7 +4,8 @@
             "${workspaceFolder}/**/src/header"
         ],
         "myOtherIncludePaths": [
-            "${workspaceFolder}/src/vendor/**/**"
+            "${workspaceFolder}/src/vendor/imgui/**",
+            "${workspaceFolder}/src/vendor/stb_image/**"
         ],
         "myCompilerPath": "/usr/bin/clang"
       },

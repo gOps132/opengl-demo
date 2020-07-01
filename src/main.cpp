@@ -15,9 +15,9 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-#include "imgui-1.77/imgui.h"
-#include "imgui-1.77/imgui_impl_opengl3.h"
-#include "imgui-1.77/imgui_impl_glfw.h"
+#include "imgui/imgui.h"
+#include "imgui/imgui_impl_opengl3.h"
+#include "imgui/imgui_impl_glfw.h"
 
 #include "Renderer.h"
 #include "Shader.h"
@@ -134,7 +134,7 @@ int main(void)
 		// uncomment this call to draw in wireframe polygons.
 		// glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
-		const char* glsl_version = "#version 130";
+		const char* glsl_version = "#version 150";
 
 		/* ImGui Initialization */
   		IMGUI_CHECKVERSION();

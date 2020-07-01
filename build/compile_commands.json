@@ -41,8 +41,33 @@
 },
 {
   "directory": "/Users/giancedrickepilan/dev/native/learn-opengl/build",
-  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm -I/Users/giancedrickepilan/dev/native/learn-opengl/src/header -I/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm/glm/..   -std=c++14 -DDEBUG -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/stb_image/stb_image.cpp",
-  "file": "/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/stb_image/stb_image.cpp"
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm -I/Users/giancedrickepilan/dev/native/learn-opengl/src/header -I/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm/glm/..   -std=c++14 -DDEBUG -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui.cpp",
+  "file": "/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/native/learn-opengl/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm -I/Users/giancedrickepilan/dev/native/learn-opengl/src/header -I/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm/glm/..   -std=c++14 -DDEBUG -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_demo.cpp",
+  "file": "/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_demo.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/native/learn-opengl/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm -I/Users/giancedrickepilan/dev/native/learn-opengl/src/header -I/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm/glm/..   -std=c++14 -DDEBUG -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_draw.cpp",
+  "file": "/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/native/learn-opengl/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm -I/Users/giancedrickepilan/dev/native/learn-opengl/src/header -I/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm/glm/..   -std=c++14 -DDEBUG -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_impl_glfw.cpp",
+  "file": "/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_impl_glfw.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/native/learn-opengl/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm -I/Users/giancedrickepilan/dev/native/learn-opengl/src/header -I/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm/glm/..   -std=c++14 -DDEBUG -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_impl_opengl3.cpp",
+  "file": "/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_impl_opengl3.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/native/learn-opengl/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm -I/Users/giancedrickepilan/dev/native/learn-opengl/src/header -I/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm/glm/..   -std=c++14 -DDEBUG -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_widgets.cpp",
+  "file": "/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_widgets.cpp"
 },
 {
   "directory": "/Users/giancedrickepilan/dev/native/learn-opengl/build",

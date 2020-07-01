@@ -12,7 +12,12 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/giancedrickepilan/dev/native/learn-opengl/src/VertexArray.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/VertexArray.cpp.o"
   "/Users/giancedrickepilan/dev/native/learn-opengl/src/VertexBuffer.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o"
   "/Users/giancedrickepilan/dev/native/learn-opengl/src/main.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/main.cpp.o"
-  "/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/stb_image/stb_image.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o"
+  "/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o"
+  "/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_demo.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o"
+  "/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_draw.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o"
+  "/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_impl_glfw.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.o"
+  "/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_impl_opengl3.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o"
+  "/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_widgets.cpp" "/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

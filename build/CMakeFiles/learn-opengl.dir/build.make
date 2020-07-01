@@ -178,18 +178,83 @@ CMakeFiles/learn-opengl.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/learn-opengl.dir/src/main.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/giancedrickepilan/dev/native/learn-opengl/src/main.cpp -o CMakeFiles/learn-opengl.dir/src/main.cpp.s
 
-CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o: CMakeFiles/learn-opengl.dir/flags.make
-CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o: ../src/vendor/stb_image/stb_image.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/stb_image/stb_image.cpp
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o: CMakeFiles/learn-opengl.dir/flags.make
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o: ../src/vendor/imgui/imgui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui.cpp
 
-CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/stb_image/stb_image.cpp > CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.i
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui.cpp > CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.i
 
-CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/stb_image/stb_image.cpp -o CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.s
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui.cpp -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.s
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o: CMakeFiles/learn-opengl.dir/flags.make
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o: ../src/vendor/imgui/imgui_demo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_demo.cpp
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_demo.cpp > CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.i
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_demo.cpp -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.s
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o: CMakeFiles/learn-opengl.dir/flags.make
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o: ../src/vendor/imgui/imgui_draw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_draw.cpp
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_draw.cpp > CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.i
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_draw.cpp -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.s
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.o: CMakeFiles/learn-opengl.dir/flags.make
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.o: ../src/vendor/imgui/imgui_impl_glfw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_impl_glfw.cpp
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_impl_glfw.cpp > CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.i
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_impl_glfw.cpp -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.s
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o: CMakeFiles/learn-opengl.dir/flags.make
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o: ../src/vendor/imgui/imgui_impl_opengl3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_impl_opengl3.cpp
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_impl_opengl3.cpp > CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.i
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_impl_opengl3.cpp -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.s
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o: CMakeFiles/learn-opengl.dir/flags.make
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o: ../src/vendor/imgui/imgui_widgets.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o -c /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_widgets.cpp
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_widgets.cpp > CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.i
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/giancedrickepilan/dev/native/learn-opengl/src/vendor/imgui/imgui_widgets.cpp -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.s
 
 # Object files for target learn-opengl
 learn__opengl_OBJECTS = \
@@ -201,7 +266,12 @@ learn__opengl_OBJECTS = \
 "CMakeFiles/learn-opengl.dir/src/VertexArray.cpp.o" \
 "CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o" \
 "CMakeFiles/learn-opengl.dir/src/main.cpp.o" \
-"CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o"
+"CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o" \
+"CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o" \
+"CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o" \
+"CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.o" \
+"CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o" \
+"CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o"
 
 # External object files for target learn-opengl
 learn__opengl_EXTERNAL_OBJECTS =
@@ -214,12 +284,17 @@ learn-opengl: CMakeFiles/learn-opengl.dir/src/Texture.cpp.o
 learn-opengl: CMakeFiles/learn-opengl.dir/src/VertexArray.cpp.o
 learn-opengl: CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o
 learn-opengl: CMakeFiles/learn-opengl.dir/src/main.cpp.o
-learn-opengl: CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o
+learn-opengl: CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o
+learn-opengl: CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o
+learn-opengl: CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o
+learn-opengl: CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.o
+learn-opengl: CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o
+learn-opengl: CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o
 learn-opengl: CMakeFiles/learn-opengl.dir/build.make
 learn-opengl: libglad.a
 learn-opengl: lib/glfw/src/libglfw3.a
 learn-opengl: CMakeFiles/learn-opengl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable learn-opengl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/giancedrickepilan/dev/native/learn-opengl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable learn-opengl"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/learn-opengl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

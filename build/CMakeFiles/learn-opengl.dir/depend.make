@@ -831,12 +831,40 @@ CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/Texture.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/VertexArray.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/VertexBuffer.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/VertexBufferLayout.h
-CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui-1.77/imconfig.h
-CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui-1.77/imgui.h
-CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui-1.77/imgui_impl_glfw.h
-CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui-1.77/imgui_impl_opengl3.h
+CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui/imconfig.h
+CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui/imgui.h
+CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui/imgui_impl_glfw.h
+CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui/imgui_impl_opengl3.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/main.cpp
 
-CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o: ../src/vendor/stb_image/stb_image.cpp
-CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o: ../src/vendor/stb_image/stb_image.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o: ../src/vendor/imgui/imconfig.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o: ../src/vendor/imgui/imgui.cpp
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o: ../src/vendor/imgui/imgui.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o: ../src/vendor/imgui/imgui_internal.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o: ../src/vendor/imgui/imstb_textedit.h
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o: ../src/vendor/imgui/imconfig.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o: ../src/vendor/imgui/imgui.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o: ../src/vendor/imgui/imgui_demo.cpp
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o: ../src/vendor/imgui/imconfig.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o: ../src/vendor/imgui/imgui.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o: ../src/vendor/imgui/imgui_draw.cpp
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o: ../src/vendor/imgui/imgui_internal.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o: ../src/vendor/imgui/imstb_rectpack.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o: ../src/vendor/imgui/imstb_textedit.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o: ../src/vendor/imgui/imstb_truetype.h
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o: ../lib/glad/include/KHR/khrplatform.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o: ../lib/glad/include/glad/glad.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o: ../src/vendor/imgui/imconfig.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o: ../src/vendor/imgui/imgui.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o: ../src/vendor/imgui/imgui_impl_opengl3.cpp
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o: ../src/vendor/imgui/imgui_impl_opengl3.h
+
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o: ../src/vendor/imgui/imconfig.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o: ../src/vendor/imgui/imgui.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o: ../src/vendor/imgui/imgui_internal.h
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o: ../src/vendor/imgui/imgui_widgets.cpp
+CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o: ../src/vendor/imgui/imstb_textedit.h
 

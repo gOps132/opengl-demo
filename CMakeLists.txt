@@ -27,31 +27,25 @@ file(GLOB MAIN_SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 file(GLOB MAIN_HEADER_FILES ${HEADER_DIR}/*.h)
 # file(GLOB VENDOR_FOLDER ${VENDOR_DIR}/*) TODO: iterate over directories and list them
 
-set(VENDOR_FOLDERS 
-    "imgui"
-    "stb_image"
-)
+file(GLOB STB_IMAGE_HEADER_FILES ${VENDOR_DIR}/stb_image/*.h)
+file(GLOB STB_IMAGE_SOURCE_FILES ${VENDOR_DIR}/stb_image/*.cpp)
 
-foreach(VAR ${VENDOR_FOLDERS})
-    file(GLOB VENDOR_HEADER_FILES ${VENDOR_DIR}/${VAR}/*.h)
-    file(GLOB VENDOR_SOURCE_FILES ${VENDOR_DIR}/${VAR}/*.cpp)
-endforeach(VAR ${VENDOR_FOLDERS})
+file(GLOB IMGUI_HEADER_FILES ${VENDOR_DIR}/imgui/*.h)
+file(GLOB IMGUI_SOURCE_FILES ${VENDOR_DIR}/imgui/*.cpp)
 
-set(SOURCE_FILES 
-    ${MAIN_SRC_FILES} 
-    ${MAIN_HEADER_FILES}
-    ${VENOR_HEADER_FILES}
-    ${VENDOR_SOURCE_FILES}
+set(SOURCE_FILES
+        ${MAIN_SRC_FILES}
+        ${MAIN_HEADER_FILES}
+
+        ${STB_IMAGE_HEADER_FILES}
+        ${STB_IMAGE_SOURCE_FILES}
+
+        ${IMGUI_HEADER_FILES}
+        ${IMGUI_SOURCE_FILES}
 )
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
-list (APPEND OTHER_FLAGS
-#  "-Wno-int-to-void-pointer-cast"
-    "-DDEBUG"
-)
-
-# OPENGL FLAGS
 if (APPLE)
     list (APPEND EXTRA_LIBS
         "-framework OpenGL"
@@ -82,7 +76,6 @@ add_library(glad STATIC
 target_link_libraries(
     ${PROJECT_NAME} 
     ${EXTRA_LIBS}
-    ${OTHER_FLAGS}
     glad
     glfw 
     glm

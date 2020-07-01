@@ -468,32 +468,167 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/vendor/stb_image/stb_image.o: src/vendor/stb_image/stb_image.cpp.o
+src/vendor/imgui/imgui.o: src/vendor/imgui/imgui.cpp.o
 
-.PHONY : src/vendor/stb_image/stb_image.o
+.PHONY : src/vendor/imgui/imgui.o
 
 # target to build an object file
-src/vendor/stb_image/stb_image.cpp.o:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o
-.PHONY : src/vendor/stb_image/stb_image.cpp.o
+src/vendor/imgui/imgui.cpp.o:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o
+.PHONY : src/vendor/imgui/imgui.cpp.o
 
-src/vendor/stb_image/stb_image.i: src/vendor/stb_image/stb_image.cpp.i
+src/vendor/imgui/imgui.i: src/vendor/imgui/imgui.cpp.i
 
-.PHONY : src/vendor/stb_image/stb_image.i
+.PHONY : src/vendor/imgui/imgui.i
 
 # target to preprocess a source file
-src/vendor/stb_image/stb_image.cpp.i:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.i
-.PHONY : src/vendor/stb_image/stb_image.cpp.i
+src/vendor/imgui/imgui.cpp.i:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.i
+.PHONY : src/vendor/imgui/imgui.cpp.i
 
-src/vendor/stb_image/stb_image.s: src/vendor/stb_image/stb_image.cpp.s
+src/vendor/imgui/imgui.s: src/vendor/imgui/imgui.cpp.s
 
-.PHONY : src/vendor/stb_image/stb_image.s
+.PHONY : src/vendor/imgui/imgui.s
 
 # target to generate assembly for a file
-src/vendor/stb_image/stb_image.cpp.s:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.s
-.PHONY : src/vendor/stb_image/stb_image.cpp.s
+src/vendor/imgui/imgui.cpp.s:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.s
+.PHONY : src/vendor/imgui/imgui.cpp.s
+
+src/vendor/imgui/imgui_demo.o: src/vendor/imgui/imgui_demo.cpp.o
+
+.PHONY : src/vendor/imgui/imgui_demo.o
+
+# target to build an object file
+src/vendor/imgui/imgui_demo.cpp.o:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o
+.PHONY : src/vendor/imgui/imgui_demo.cpp.o
+
+src/vendor/imgui/imgui_demo.i: src/vendor/imgui/imgui_demo.cpp.i
+
+.PHONY : src/vendor/imgui/imgui_demo.i
+
+# target to preprocess a source file
+src/vendor/imgui/imgui_demo.cpp.i:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.i
+.PHONY : src/vendor/imgui/imgui_demo.cpp.i
+
+src/vendor/imgui/imgui_demo.s: src/vendor/imgui/imgui_demo.cpp.s
+
+.PHONY : src/vendor/imgui/imgui_demo.s
+
+# target to generate assembly for a file
+src/vendor/imgui/imgui_demo.cpp.s:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.s
+.PHONY : src/vendor/imgui/imgui_demo.cpp.s
+
+src/vendor/imgui/imgui_draw.o: src/vendor/imgui/imgui_draw.cpp.o
+
+.PHONY : src/vendor/imgui/imgui_draw.o
+
+# target to build an object file
+src/vendor/imgui/imgui_draw.cpp.o:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o
+.PHONY : src/vendor/imgui/imgui_draw.cpp.o
+
+src/vendor/imgui/imgui_draw.i: src/vendor/imgui/imgui_draw.cpp.i
+
+.PHONY : src/vendor/imgui/imgui_draw.i
+
+# target to preprocess a source file
+src/vendor/imgui/imgui_draw.cpp.i:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.i
+.PHONY : src/vendor/imgui/imgui_draw.cpp.i
+
+src/vendor/imgui/imgui_draw.s: src/vendor/imgui/imgui_draw.cpp.s
+
+.PHONY : src/vendor/imgui/imgui_draw.s
+
+# target to generate assembly for a file
+src/vendor/imgui/imgui_draw.cpp.s:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.s
+.PHONY : src/vendor/imgui/imgui_draw.cpp.s
+
+src/vendor/imgui/imgui_impl_glfw.o: src/vendor/imgui/imgui_impl_glfw.cpp.o
+
+.PHONY : src/vendor/imgui/imgui_impl_glfw.o
+
+# target to build an object file
+src/vendor/imgui/imgui_impl_glfw.cpp.o:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.o
+.PHONY : src/vendor/imgui/imgui_impl_glfw.cpp.o
+
+src/vendor/imgui/imgui_impl_glfw.i: src/vendor/imgui/imgui_impl_glfw.cpp.i
+
+.PHONY : src/vendor/imgui/imgui_impl_glfw.i
+
+# target to preprocess a source file
+src/vendor/imgui/imgui_impl_glfw.cpp.i:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.i
+.PHONY : src/vendor/imgui/imgui_impl_glfw.cpp.i
+
+src/vendor/imgui/imgui_impl_glfw.s: src/vendor/imgui/imgui_impl_glfw.cpp.s
+
+.PHONY : src/vendor/imgui/imgui_impl_glfw.s
+
+# target to generate assembly for a file
+src/vendor/imgui/imgui_impl_glfw.cpp.s:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.s
+.PHONY : src/vendor/imgui/imgui_impl_glfw.cpp.s
+
+src/vendor/imgui/imgui_impl_opengl3.o: src/vendor/imgui/imgui_impl_opengl3.cpp.o
+
+.PHONY : src/vendor/imgui/imgui_impl_opengl3.o
+
+# target to build an object file
+src/vendor/imgui/imgui_impl_opengl3.cpp.o:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o
+.PHONY : src/vendor/imgui/imgui_impl_opengl3.cpp.o
+
+src/vendor/imgui/imgui_impl_opengl3.i: src/vendor/imgui/imgui_impl_opengl3.cpp.i
+
+.PHONY : src/vendor/imgui/imgui_impl_opengl3.i
+
+# target to preprocess a source file
+src/vendor/imgui/imgui_impl_opengl3.cpp.i:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.i
+.PHONY : src/vendor/imgui/imgui_impl_opengl3.cpp.i
+
+src/vendor/imgui/imgui_impl_opengl3.s: src/vendor/imgui/imgui_impl_opengl3.cpp.s
+
+.PHONY : src/vendor/imgui/imgui_impl_opengl3.s
+
+# target to generate assembly for a file
+src/vendor/imgui/imgui_impl_opengl3.cpp.s:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.s
+.PHONY : src/vendor/imgui/imgui_impl_opengl3.cpp.s
+
+src/vendor/imgui/imgui_widgets.o: src/vendor/imgui/imgui_widgets.cpp.o
+
+.PHONY : src/vendor/imgui/imgui_widgets.o
+
+# target to build an object file
+src/vendor/imgui/imgui_widgets.cpp.o:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o
+.PHONY : src/vendor/imgui/imgui_widgets.cpp.o
+
+src/vendor/imgui/imgui_widgets.i: src/vendor/imgui/imgui_widgets.cpp.i
+
+.PHONY : src/vendor/imgui/imgui_widgets.i
+
+# target to preprocess a source file
+src/vendor/imgui/imgui_widgets.cpp.i:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.i
+.PHONY : src/vendor/imgui/imgui_widgets.cpp.i
+
+src/vendor/imgui/imgui_widgets.s: src/vendor/imgui/imgui_widgets.cpp.s
+
+.PHONY : src/vendor/imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+src/vendor/imgui/imgui_widgets.cpp.s:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.s
+.PHONY : src/vendor/imgui/imgui_widgets.cpp.s
 
 # Help Target
 help:
@@ -538,9 +673,24 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/vendor/stb_image/stb_image.o"
-	@echo "... src/vendor/stb_image/stb_image.i"
-	@echo "... src/vendor/stb_image/stb_image.s"
+	@echo "... src/vendor/imgui/imgui.o"
+	@echo "... src/vendor/imgui/imgui.i"
+	@echo "... src/vendor/imgui/imgui.s"
+	@echo "... src/vendor/imgui/imgui_demo.o"
+	@echo "... src/vendor/imgui/imgui_demo.i"
+	@echo "... src/vendor/imgui/imgui_demo.s"
+	@echo "... src/vendor/imgui/imgui_draw.o"
+	@echo "... src/vendor/imgui/imgui_draw.i"
+	@echo "... src/vendor/imgui/imgui_draw.s"
+	@echo "... src/vendor/imgui/imgui_impl_glfw.o"
+	@echo "... src/vendor/imgui/imgui_impl_glfw.i"
+	@echo "... src/vendor/imgui/imgui_impl_glfw.s"
+	@echo "... src/vendor/imgui/imgui_impl_opengl3.o"
+	@echo "... src/vendor/imgui/imgui_impl_opengl3.i"
+	@echo "... src/vendor/imgui/imgui_impl_opengl3.s"
+	@echo "... src/vendor/imgui/imgui_widgets.o"
+	@echo "... src/vendor/imgui/imgui_widgets.i"
+	@echo "... src/vendor/imgui/imgui_widgets.s"
 .PHONY : help
 
 
