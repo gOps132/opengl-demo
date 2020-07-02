@@ -1,6 +1,7 @@
 #shader vertex
 #version 330 core
 
+// takes in from the vertexbuffer through the vertexbuffer layout
 layout (location = 0) in vec4 aPos;
 layout (location = 1) in vec2 texCoord;
 

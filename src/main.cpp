@@ -53,8 +53,8 @@ int main(void)
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
 
-	int wHeight = 960;
-	int wWidth = 540;
+	int wHeight = 1080;
+	int wWidth = 720;
 
 	GLFWwindow *window = glfwCreateWindow(wHeight, wWidth, "LearnOpenGL", NULL, NULL);
 	if (window == NULL)
@@ -100,31 +100,30 @@ int main(void)
 		layout.Push<float>(2);
 		layout.Push<float>(2);
 
-		IndexBuffer ib(indices, sizeof(indices));
-		
 		// TODO: abstract all these glm maths
 		glm::mat4 proj = glm::ortho(0.0f, (float)wHeight, 0.0f, float(wWidth), -1.0f, 1.0f);
 		/* position of the camera */
 		glm::mat4 view = glm::translate(glm::mat4(1.0f) , glm::vec3(100, 0, 0));
 		// position of the model (as far as i understand)
-		glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(200, 200, 0));
-
-		// some other graphics api may not be in order (not communicative)
-		glm::mat4 mvp = proj * view * model;
+//		glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(200, 200, 0));
+//
+//		// some other graphics api may not be in order (not communicative)
+//		glm::mat4 mvp = proj * view * model;
 
 		VertexBuffer vb(vertices, sizeof(vertices) * sizeof(float));
 		VertexArray va;
 		va.AddBuffer(vb, layout);
 
-		Shader shader("shaders/BasicShader.shader");
+        Shader shader("shaders/BasicShader.shader");
 		shader.Bind(); 
-		shader.SetUniformMat4f("u_MVP", mvp);
 
 		Texture texture("textures/smile.png");
 		texture.Bind();
 		shader.SetUniform1i("u_Texture", 0);
 
-		/* unbinding */
+        IndexBuffer ib(indices, sizeof(indices));
+
+        /* unbinding */
 		shader.Unbind();
 		vb.Unbind();
 		ib.Unbind();
@@ -148,7 +147,9 @@ int main(void)
 		bool show_demo_window = true;
 		bool show_another_window = false;
 		ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
-	
+
+        glm::vec3 translation(200, 200, 0);
+
 		// render loop
 		// -----------
 		//window render loop
@@ -165,8 +166,13 @@ int main(void)
 			ImGui_ImplOpenGL3_NewFrame();
 			ImGui_ImplGlfw_NewFrame();
 			ImGui::NewFrame();
-			
-			/* Draw the vertices */
+
+            /* Recalculating the model matrix every frame */
+            glm::mat4 model = glm::translate(glm::mat4(1.0f), translation);
+            glm::mat4 mvp = proj * view * model;
+            shader.SetUniformMat4f("u_MVP", mvp);
+
+            /* Draw the vertices */
 			renderer.Draw(va, ib, shader);
 
 			// simple window
@@ -180,7 +186,7 @@ int main(void)
 				ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
 				ImGui::Checkbox("Another Window", &show_another_window);
 
-				ImGui::SliderFloat("float", &f, 0.0f, 1.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
+				ImGui::SliderFloat3("Translation", &translation.x, 0.0f, (float)wHeight);
 				ImGui::ColorEdit3("clear color", (float*)&clear_color); // Edit 3 floats representing a color
 
 				if (ImGui::Button("Button"))                            // Buttons return true when clicked (most widgets return true when edited/activated)

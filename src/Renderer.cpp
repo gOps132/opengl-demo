@@ -1,6 +1,4 @@
 #include "Renderer.h"
-#include "ErrorManager.h"
-#include <iostream>
 
 void Renderer::Draw(const VertexArray &va, const IndexBuffer& ib, const Shader &shader) const
 {
@@ -18,5 +16,4 @@ void Renderer::Clear() const
     // set background color
     // glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
-
 }
