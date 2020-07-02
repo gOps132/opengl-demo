@@ -143,12 +143,13 @@ int main(void)
 		ImGui_ImplGlfw_InitForOpenGL(window, true);
 		ImGui_ImplOpenGL3_Init(glsl_version);
 
-		// Our state
+		// window state
 		bool show_demo_window = true;
 		bool show_another_window = false;
 		ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
-        glm::vec3 translation(200, 200, 0);
+        glm::vec3 translationA(200, 200, 0);
+        glm::vec3 translationB(400, 200, 0);
 
 		// render loop
 		// -----------
@@ -167,13 +168,24 @@ int main(void)
 			ImGui_ImplGlfw_NewFrame();
 			ImGui::NewFrame();
 
-            /* Recalculating the model matrix every frame */
-            glm::mat4 model = glm::translate(glm::mat4(1.0f), translation);
-            glm::mat4 mvp = proj * view * model;
-            shader.SetUniformMat4f("u_MVP", mvp);
+            shader.Bind();
 
-            /* Draw the vertices */
-			renderer.Draw(va, ib, shader);
+            {
+                /* Recalculating the model matrix every frame */
+                glm::mat4 model = glm::translate(glm::mat4(1.0f), translationA);
+                glm::mat4 mvp = proj * view * model;
+                shader.SetUniformMat4f("u_MVP", mvp);
+                renderer.Draw(va, ib, shader);
+            }
+
+            {
+                /* Recalculating the model matrix every frame */
+                glm::mat4 model = glm::translate(glm::mat4(1.0f), translationB);
+                glm::mat4 mvp = proj * view * model;
+                shader.SetUniformMat4f("u_MVP", mvp);
+                renderer.Draw(va, ib, shader);
+            }
+
 
 			// simple window
 			{
@@ -186,7 +198,8 @@ int main(void)
 				ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
 				ImGui::Checkbox("Another Window", &show_another_window);
 
-				ImGui::SliderFloat3("Translation", &translation.x, 0.0f, (float)wHeight);
+				ImGui::SliderFloat3("TranslationA", &translationA.x, 0.0f, (float)wHeight);
+				ImGui::SliderFloat3("TranslationB", &translationB.x, 0.0f, (float)wHeight);
 				ImGui::ColorEdit3("clear color", (float*)&clear_color); // Edit 3 floats representing a color
 
 				if (ImGui::Button("Button"))                            // Buttons return true when clicked (most widgets return true when edited/activated)
