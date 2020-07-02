@@ -2,14 +2,20 @@
     Learn-opengl
 </h2>
 
-<h4>
-    Personal project for learning opengl
-</h4>
+<h5>
+    <p>Demo project for openGL</p>
+</h5>
+<h5>
+    <a>https://www.youtube.com/user/TheChernoProject</a>
+</h5>
+
+<h6>
+    Build the project
+</h6>
 
 ###
-
-    build the project:
-        mkdir build
-        cmake ..
-
+    $ mkdir build
+    $ cd build
+    $ cmake ..
+    $ make
 ###
