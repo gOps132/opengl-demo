@@ -81,10 +81,10 @@ int main(void)
 		float vertices[] = 
 		{
 		//vertex coords	   //texture coords
-			100.0f,	100.0f, 	0.0f, 0.0f, 	// top right    0
-			200.0f, 100.0f, 	1.0f, 0.0f,		// bottom right 1
-			200.0f, 200.0f, 	1.0f, 1.0f, 	// bottom left  2
-			100.0f, 200.0f, 	0.0f, 1.0f		// top left     3
+		    -50.0f, -50.0f,     0.0f, 0.0f, 	// top right    0
+			 50.0f, -50.0f,     1.0f, 0.0f,		// bottom right 1
+			 50.0f,  50.0f,     1.0f, 1.0f, 	// bottom left  2
+			-50.0f,  50.0f, 	0.0f, 1.0f		// top left     3
 		};
 		unsigned int indices[] = 
 		{
@@ -103,7 +103,7 @@ int main(void)
 		// TODO: abstract all these glm maths
 		glm::mat4 proj = glm::ortho(0.0f, (float)wHeight, 0.0f, float(wWidth), -1.0f, 1.0f);
 		/* position of the camera */
-		glm::mat4 view = glm::translate(glm::mat4(1.0f) , glm::vec3(100, 0, 0));
+		glm::mat4 view = glm::translate(glm::mat4(1.0f) , glm::vec3(0, 0, 0));
 		// position of the model (as far as i understand)
 //		glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(200, 200, 0));
 //

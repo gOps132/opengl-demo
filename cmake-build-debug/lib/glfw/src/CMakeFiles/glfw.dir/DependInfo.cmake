@@ -4,21 +4,21 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_init.m" "/Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o"
-  "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_joystick.m" "/Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o"
-  "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_monitor.m" "/Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o"
-  "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_time.c" "/Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o"
-  "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/cocoa_window.m" "/Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o"
-  "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/context.c" "/Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/context.c.o"
-  "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/egl_context.c" "/Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o"
-  "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/init.c" "/Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/init.c.o"
-  "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/input.c" "/Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/input.c.o"
-  "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/monitor.c" "/Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
-  "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/nsgl_context.m" "/Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o"
-  "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/osmesa_context.c" "/Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
-  "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/posix_thread.c" "/Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o"
-  "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/vulkan.c" "/Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o"
-  "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/window.c" "/Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/window.c.o"
+  "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/cocoa_init.m" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o"
+  "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/cocoa_joystick.m" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o"
+  "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/cocoa_monitor.m" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o"
+  "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/cocoa_time.c" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o"
+  "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/cocoa_window.m" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o"
+  "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/context.c" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/context.c.o"
+  "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/egl_context.c" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o"
+  "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/init.c" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/init.c.o"
+  "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/input.c" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/input.c.o"
+  "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/monitor.c" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
+  "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/nsgl_context.m" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o"
+  "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/osmesa_context.c" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
+  "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/posix_thread.c" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o"
+  "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/vulkan.c" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o"
+  "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/window.c" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/src/CMakeFiles/glfw.dir/window.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

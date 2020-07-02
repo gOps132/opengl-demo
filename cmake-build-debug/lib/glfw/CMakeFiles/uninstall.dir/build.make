@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/giancedrickepilan/dev/native/learn-opengl
+CMAKE_SOURCE_DIR = /Users/giancedrickepilan/dev/native/opengl-demo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug
 
 # Utility rule file for uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-
 include lib/glfw/CMakeFiles/uninstall.dir/progress.make
 
 lib/glfw/CMakeFiles/uninstall:
-	cd /Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P /Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/cmake_uninstall.cmake
+	cd /Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P /Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/cmake_uninstall.cmake
 
 uninstall: lib/glfw/CMakeFiles/uninstall
 uninstall: lib/glfw/CMakeFiles/uninstall.dir/build.make
@@ -67,10 +67,10 @@ lib/glfw/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : lib/glfw/CMakeFiles/uninstall.dir/build
 
 lib/glfw/CMakeFiles/uninstall.dir/clean:
-	cd /Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd /Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : lib/glfw/CMakeFiles/uninstall.dir/clean
 
 lib/glfw/CMakeFiles/uninstall.dir/depend:
-	cd /Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/giancedrickepilan/dev/native/learn-opengl /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw /Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug /Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw /Users/giancedrickepilan/dev/native/learn-opengl/cmake-build-debug/lib/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/giancedrickepilan/dev/native/opengl-demo /Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw /Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug /Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw /Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/lib/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/glfw/CMakeFiles/uninstall.dir/depend
 

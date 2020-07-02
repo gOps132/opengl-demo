@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++14 -DDEBUG -g -isysroot /Applications/Xcode.app/Contents/De
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm -I/Users/giancedrickepilan/dev/native/learn-opengl/src/header -I/Users/giancedrickepilan/dev/native/learn-opengl/src/vendor -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm/glm/.. 
+CXX_INCLUDES = -I/Users/giancedrickepilan/dev/native/opengl-demo/lib/glad/include -I/Users/giancedrickepilan/dev/native/opengl-demo/lib/glm -I/Users/giancedrickepilan/dev/native/opengl-demo/src/header -I/Users/giancedrickepilan/dev/native/opengl-demo/src/vendor -I/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/include -I/Users/giancedrickepilan/dev/native/opengl-demo/lib/glm/glm/.. 
 

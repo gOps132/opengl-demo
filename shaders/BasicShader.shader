@@ -11,6 +11,7 @@ uniform mat4 u_MVP;
 
 void main()
 {
+//the transformations happens here
     gl_Position =  u_MVP * aPos;
     v_TexCoord = texCoord;
 }

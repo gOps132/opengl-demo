@@ -1,4 +1,4 @@
-# Install script for directory: /Users/giancedrickepilan/dev/native/learn-opengl/lib/glm/glm
+# Install script for directory: /Users/giancedrickepilan/dev/native/opengl-demo/lib/glm/glm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -4,7 +4,8 @@
 # TODO: REMOVE DEBUG FLAG LATER 
 # TODO: use function that iterates of over .cpp & .h / .hpp files in certain directories in source files
 # TODO: maybe find another way to add flags in cmake
-# TODO: abstract other libraries with cmake files
+# TODO: abstract other libraries with cmake modules
+# TODO: iterate over folders / strings (array of strings) and GLOB them
 #
 
 cmake_minimum_required(VERSION 3.8)
@@ -25,7 +26,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -DDEBUG")
 
 file(GLOB MAIN_SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 file(GLOB MAIN_HEADER_FILES ${HEADER_DIR}/*.h)
-# file(GLOB VENDOR_FOLDER ${VENDOR_DIR}/*) TODO: iterate over directories and list them
 
 file(GLOB STB_IMAGE_HEADER_FILES ${VENDOR_DIR}/stb_image/*.h)
 file(GLOB STB_IMAGE_SOURCE_FILES ${VENDOR_DIR}/stb_image/*.cpp)
