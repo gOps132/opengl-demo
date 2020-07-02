@@ -1240,6 +1240,16 @@ imgui.h
 TargetConditionals.h
 ../src/vendor/imgui/TargetConditionals.h
 
+/Users/giancedrickepilan/dev/native/opengl-demo/src/Renderer.cpp
+Renderer.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/Renderer.h
+
+/Users/giancedrickepilan/dev/native/opengl-demo/src/Shader.cpp
+Shader.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/Shader.h
+glm/glm.hpp
+-
+
 /Users/giancedrickepilan/dev/native/opengl-demo/src/main.cpp
 glad/glad.h
 -

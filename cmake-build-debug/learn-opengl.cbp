@@ -374,6 +374,15 @@
 		<Unit filename="/Users/giancedrickepilan/dev/native/opengl-demo/src/main.cpp">
 			<Option target="learn-opengl"/>
 		</Unit>
+		<Unit filename="/Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.h">
+			<Option target="learn-opengl"/>
+		</Unit>
+		<Unit filename="/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestClearColor.cpp">
+			<Option target="learn-opengl"/>
+		</Unit>
+		<Unit filename="/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestClearColor.h">
+			<Option target="learn-opengl"/>
+		</Unit>
 		<Unit filename="/Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imconfig.h">
 			<Option target="learn-opengl"/>
 		</Unit>

@@ -451,6 +451,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/test/TestClearColor.o: src/test/TestClearColor.cpp.o
+
+.PHONY : src/test/TestClearColor.o
+
+# target to build an object file
+src/test/TestClearColor.cpp.o:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o
+.PHONY : src/test/TestClearColor.cpp.o
+
+src/test/TestClearColor.i: src/test/TestClearColor.cpp.i
+
+.PHONY : src/test/TestClearColor.i
+
+# target to preprocess a source file
+src/test/TestClearColor.cpp.i:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.i
+.PHONY : src/test/TestClearColor.cpp.i
+
+src/test/TestClearColor.s: src/test/TestClearColor.cpp.s
+
+.PHONY : src/test/TestClearColor.s
+
+# target to generate assembly for a file
+src/test/TestClearColor.cpp.s:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.s
+.PHONY : src/test/TestClearColor.cpp.s
+
 src/vendor/imgui/imgui.o: src/vendor/imgui/imgui.cpp.o
 
 .PHONY : src/vendor/imgui/imgui.o
@@ -683,6 +710,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/test/TestClearColor.o"
+	@echo "... src/test/TestClearColor.i"
+	@echo "... src/test/TestClearColor.s"
 	@echo "... src/vendor/imgui/imgui.o"
 	@echo "... src/vendor/imgui/imgui.i"
 	@echo "... src/vendor/imgui/imgui.s"

@@ -18,6 +18,7 @@ set(GLM_SOURCE_DIR "${CMAKE_SOURCE_DIR}/lib/glm")
 
 set(HEADER_DIR "${CMAKE_SOURCE_DIR}/src/header")
 set(VENDOR_DIR "${CMAKE_SOURCE_DIR}/src/vendor")
+set(TEST_DIR "${CMAKE_SOURCE_DIR}/src/test")
 
 add_subdirectory(${GLFW_SOURCE_DIR})
 add_subdirectory(${GLM_SOURCE_DIR})
@@ -27,11 +28,14 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -DDEBUG")
 file(GLOB MAIN_SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 file(GLOB MAIN_HEADER_FILES ${HEADER_DIR}/*.h)
 
+file(GLOB TEST_SRC_FILES ${TEST_DIR}/*.cpp)
+file(GLOB TEST_HEADER_FILES ${TEST_DIR}/*.h)
+
 file(GLOB STB_IMAGE_HEADER_FILES ${VENDOR_DIR}/stb_image/*.h)
 file(GLOB STB_IMAGE_SOURCE_FILES ${VENDOR_DIR}/stb_image/*.cpp)
 
-file(GLOB IMGUI_HEADER_FILES ${VENDOR_DIR}/imgui/*.h)
-file(GLOB IMGUI_SOURCE_FILES ${VENDOR_DIR}/imgui/*.cpp)
+file(GLOB IM_GUI_HEADER_FILES ${VENDOR_DIR}/imgui/*.h)
+file(GLOB IM_GUI_SOURCE_FILES ${VENDOR_DIR}/imgui/*.cpp)
 
 set(SOURCE_FILES
         ${MAIN_SRC_FILES}
@@ -40,9 +44,12 @@ set(SOURCE_FILES
         ${STB_IMAGE_HEADER_FILES}
         ${STB_IMAGE_SOURCE_FILES}
 
-        ${IMGUI_HEADER_FILES}
-        ${IMGUI_SOURCE_FILES}
-)
+        ${IM_GUI_HEADER_FILES}
+        ${IM_GUI_SOURCE_FILES}
+
+        ${TEST_SRC_FILES}
+        ${TEST_HEADER_FILES}
+        )
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 

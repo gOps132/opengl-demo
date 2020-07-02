@@ -28,6 +28,7 @@
 #include "VertexBufferLayout.h"
 #include "ErrorManager.h"
 #include "Texture.h"
+#include "test/Test.h"
 
 #include <iostream>
 
@@ -78,56 +79,6 @@ int main(void)
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
 	{
-		float vertices[] = 
-		{
-		//vertex coords	   //texture coords
-		    -50.0f, -50.0f,     0.0f, 0.0f, 	// top right    0
-			 50.0f, -50.0f,     1.0f, 0.0f,		// bottom right 1
-			 50.0f,  50.0f,     1.0f, 1.0f, 	// bottom left  2
-			-50.0f,  50.0f, 	0.0f, 1.0f		// top left     3
-		};
-		unsigned int indices[] = 
-		{
-			// note that we start from 0!
-			0, 1, 3, // first triangle
-			1, 2, 3	 // second triangle
-		};
-
-		glEnable(GL_BLEND);
-		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-        
-		VertexBufferLayout layout;
-		layout.Push<float>(2);
-		layout.Push<float>(2);
-
-		// TODO: abstract all these glm maths
-		glm::mat4 proj = glm::ortho(0.0f, (float)wHeight, 0.0f, float(wWidth), -1.0f, 1.0f);
-		/* position of the camera */
-		glm::mat4 view = glm::translate(glm::mat4(1.0f) , glm::vec3(0, 0, 0));
-		// position of the model (as far as i understand)
-//		glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(200, 200, 0));
-//
-//		// some other graphics api may not be in order (not communicative)
-//		glm::mat4 mvp = proj * view * model;
-
-		VertexBuffer vb(vertices, sizeof(vertices) * sizeof(float));
-		VertexArray va;
-		va.AddBuffer(vb, layout);
-
-        Shader shader("shaders/BasicShader.shader");
-		shader.Bind(); 
-
-		Texture texture("textures/smile.png");
-		texture.Bind();
-		shader.SetUniform1i("u_Texture", 0);
-
-        IndexBuffer ib(indices, sizeof(indices));
-
-        /* unbinding */
-		shader.Unbind();
-		vb.Unbind();
-		ib.Unbind();
-
 		Renderer renderer;
 
 		// uncomment this call to draw in wireframe polygons.
@@ -143,79 +94,21 @@ int main(void)
 		ImGui_ImplGlfw_InitForOpenGL(window, true);
 		ImGui_ImplOpenGL3_Init(glsl_version);
 
-		// window state
-		bool show_demo_window = true;
-		bool show_another_window = false;
-		ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
-        glm::vec3 translationA(200, 200, 0);
-        glm::vec3 translationB(400, 200, 0);
-
-		// render loop
-		// -----------
-		//window render loop
 		while (!glfwWindowShouldClose(window))
 		{
-			/* input */
 			processInput(window);
 
-			/* render here */	
 			renderer.Clear();
 
 			/* new imgui frame */
-			// Start the Dear ImGui frame
 			ImGui_ImplOpenGL3_NewFrame();
 			ImGui_ImplGlfw_NewFrame();
 			ImGui::NewFrame();
 
-            shader.Bind();
-
-            {
-                /* Recalculating the model matrix every frame */
-                glm::mat4 model = glm::translate(glm::mat4(1.0f), translationA);
-                glm::mat4 mvp = proj * view * model;
-                shader.SetUniformMat4f("u_MVP", mvp);
-                renderer.Draw(va, ib, shader);
-            }
-
-            {
-                /* Recalculating the model matrix every frame */
-                glm::mat4 model = glm::translate(glm::mat4(1.0f), translationB);
-                glm::mat4 mvp = proj * view * model;
-                shader.SetUniformMat4f("u_MVP", mvp);
-                renderer.Draw(va, ib, shader);
-            }
-
-
-			// simple window
-			{
-				static float f = 0.0f;
-				static int counter = 0;
-
-				ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
-
-				ImGui::Text("This is some useful text.");               // Display some text (you can use a format strings too)
-				ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
-				ImGui::Checkbox("Another Window", &show_another_window);
-
-				ImGui::SliderFloat3("TranslationA", &translationA.x, 0.0f, (float)wHeight);
-				ImGui::SliderFloat3("TranslationB", &translationB.x, 0.0f, (float)wHeight);
-				ImGui::ColorEdit3("clear color", (float*)&clear_color); // Edit 3 floats representing a color
-
-				if (ImGui::Button("Button"))                            // Buttons return true when clicked (most widgets return true when edited/activated)
-					counter++;
-				ImGui::SameLine();
-				ImGui::Text("counter = %d", counter);
-
-				ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
-				ImGui::End();
-        	}
-
-			/* render imgui */
 			ImGui::Render();
         	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 	
-			/* swaps buffers checks IO events */
 			glfwSwapBuffers(window);
 			glfwPollEvents();
 		}
