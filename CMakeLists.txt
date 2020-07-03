@@ -5,7 +5,6 @@
 # TODO: use function that iterates of over .cpp & .h / .hpp files in certain directories in source files
 # TODO: maybe find another way to add flags in cmake
 # TODO: abstract other libraries with cmake modules
-# TODO: iterate over folders / strings (array of strings) and GLOB them
 #
 
 cmake_minimum_required(VERSION 3.8)

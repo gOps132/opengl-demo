@@ -20,15 +20,9 @@
 #include "imgui/imgui_impl_glfw.h"
 
 #include "Renderer.h"
-#include "Shader.h"
 
-#include "VertexBuffer.h"
-#include "IndexBuffer.h"
-#include "VertexArray.h"
 #include "VertexBufferLayout.h"
-#include "ErrorManager.h"
-#include "Texture.h"
-#include "test/Test.h"
+#include "test/TestClearColor.h"
 
 #include <iostream>
 
@@ -94,6 +88,7 @@ int main(void)
 		ImGui_ImplGlfw_InitForOpenGL(window, true);
 		ImGui_ImplOpenGL3_Init(glsl_version);
 
+        test::TestClearColor test;
 
 		while (!glfwWindowShouldClose(window))
 		{
@@ -101,12 +96,17 @@ int main(void)
 
 			renderer.Clear();
 
+			test.OnUpdate(0.0f);
+			test.OnRender();
+
 			/* new imgui frame */
 			ImGui_ImplOpenGL3_NewFrame();
 			ImGui_ImplGlfw_NewFrame();
 			ImGui::NewFrame();
 
-			ImGui::Render();
+            test.ImGuiRender();
+
+            ImGui::Render();
         	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 	
 			glfwSwapBuffers(window);

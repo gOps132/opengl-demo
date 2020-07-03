@@ -330,7 +330,6 @@ CMakeFiles/learn-opengl.dir/src/Shader.cpp.o: ../src/Shader.cpp
 
 CMakeFiles/learn-opengl.dir/src/Texture.cpp.o: ../lib/glad/include/KHR/khrplatform.h
 CMakeFiles/learn-opengl.dir/src/Texture.cpp.o: ../lib/glad/include/glad/glad.h
-CMakeFiles/learn-opengl.dir/src/Texture.cpp.o: ../src/header/ErrorManager.h
 CMakeFiles/learn-opengl.dir/src/Texture.cpp.o: ../src/header/Texture.h
 CMakeFiles/learn-opengl.dir/src/Texture.cpp.o: ../src/vendor/stb_image/stb_image.h
 CMakeFiles/learn-opengl.dir/src/Texture.cpp.o: ../src/Texture.cpp
@@ -826,7 +825,6 @@ CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/ErrorManager.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/IndexBuffer.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/Renderer.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/Shader.h
-CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/Texture.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/VertexArray.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/VertexBuffer.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/VertexBufferLayout.h
@@ -835,6 +833,17 @@ CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui/imgui.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui/imgui_impl_glfw.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui/imgui_impl_opengl3.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/main.cpp
+CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/test/Test.h
+CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/test/TestClearColor.h
+
+CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o: ../lib/glad/include/KHR/khrplatform.h
+CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o: ../lib/glad/include/glad/glad.h
+CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o: ../src/header/ErrorManager.h
+CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o: ../src/vendor/imgui/imconfig.h
+CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o: ../src/vendor/imgui/imgui.h
+CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o: ../src/test/Test.h
+CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o: ../src/test/TestClearColor.cpp
+CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o: ../src/test/TestClearColor.h
 
 CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o: ../src/vendor/imgui/imconfig.h
 CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o: ../src/vendor/imgui/imgui.cpp
