@@ -7,8 +7,7 @@
 
 #include "Test.h"
 
-namespace test
-{
+namespace test {
     class TestClearColor : public Test
     {
     public:

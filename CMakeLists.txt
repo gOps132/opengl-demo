@@ -57,7 +57,7 @@ if (APPLE)
         "-framework OpenGL"
     )
 elseif(WIN32)
-    list (APPEND EXTA_LIBS
+    list (APPEND EXTRA_LIBS
         "-lgu32 -lopengl32")
     set(CMAKE_EXE_LINKER_FLAGS "-std=gnu99 -static -static-libgcc -static-libstdc++ -mwindows")
 else()

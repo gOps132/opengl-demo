@@ -451,6 +451,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/test/Test.o: src/test/Test.cpp.o
+
+.PHONY : src/test/Test.o
+
+# target to build an object file
+src/test/Test.cpp.o:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/Test.cpp.o
+.PHONY : src/test/Test.cpp.o
+
+src/test/Test.i: src/test/Test.cpp.i
+
+.PHONY : src/test/Test.i
+
+# target to preprocess a source file
+src/test/Test.cpp.i:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/Test.cpp.i
+.PHONY : src/test/Test.cpp.i
+
+src/test/Test.s: src/test/Test.cpp.s
+
+.PHONY : src/test/Test.s
+
+# target to generate assembly for a file
+src/test/Test.cpp.s:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/Test.cpp.s
+.PHONY : src/test/Test.cpp.s
+
 src/test/TestClearColor.o: src/test/TestClearColor.cpp.o
 
 .PHONY : src/test/TestClearColor.o
@@ -710,6 +737,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/test/Test.o"
+	@echo "... src/test/Test.i"
+	@echo "... src/test/Test.s"
 	@echo "... src/test/TestClearColor.o"
 	@echo "... src/test/TestClearColor.i"
 	@echo "... src/test/TestClearColor.s"

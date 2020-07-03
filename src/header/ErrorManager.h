@@ -12,7 +12,11 @@
 
 #ifdef DEBUG
 //#define ASSERT(x) if(!(x)) std::cin.ignore();
-#define ASSERT(x) if(!(x));
+#define ASSERT(x) \
+        if(!(x)) \
+        std::cout << "error of some kind" << std::endl; \
+        std::cin.ignore();
+
 #define GLCall(x)       \
         GLClearError(); \
         x;              \

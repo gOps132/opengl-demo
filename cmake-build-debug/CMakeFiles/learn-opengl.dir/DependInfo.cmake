@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/giancedrickepilan/dev/native/opengl-demo/src/VertexArray.cpp" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/CMakeFiles/learn-opengl.dir/src/VertexArray.cpp.o"
   "/Users/giancedrickepilan/dev/native/opengl-demo/src/VertexBuffer.cpp" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o"
   "/Users/giancedrickepilan/dev/native/opengl-demo/src/main.cpp" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/CMakeFiles/learn-opengl.dir/src/main.cpp.o"
+  "/Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.cpp" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/CMakeFiles/learn-opengl.dir/src/test/Test.cpp.o"
   "/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestClearColor.cpp" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o"
   "/Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui.cpp" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o"
   "/Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui_demo.cpp" "/Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug/CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o"

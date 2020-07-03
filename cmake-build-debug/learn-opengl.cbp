@@ -374,6 +374,9 @@
 		<Unit filename="/Users/giancedrickepilan/dev/native/opengl-demo/src/main.cpp">
 			<Option target="learn-opengl"/>
 		</Unit>
+		<Unit filename="/Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.cpp">
+			<Option target="learn-opengl"/>
+		</Unit>
 		<Unit filename="/Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.h">
 			<Option target="learn-opengl"/>
 		</Unit>

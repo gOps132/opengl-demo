@@ -836,6 +836,11 @@ CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/test/Test.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/test/TestClearColor.h
 
+CMakeFiles/learn-opengl.dir/src/test/Test.cpp.o: ../src/vendor/imgui/imconfig.h
+CMakeFiles/learn-opengl.dir/src/test/Test.cpp.o: ../src/vendor/imgui/imgui.h
+CMakeFiles/learn-opengl.dir/src/test/Test.cpp.o: ../src/test/Test.cpp
+CMakeFiles/learn-opengl.dir/src/test/Test.cpp.o: ../src/test/Test.h
+
 CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o: ../lib/glad/include/KHR/khrplatform.h
 CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o: ../lib/glad/include/glad/glad.h
 CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o: ../src/header/ErrorManager.h

@@ -22,7 +22,9 @@
 #include "Renderer.h"
 
 #include "VertexBufferLayout.h"
+
 #include "test/TestClearColor.h"
+#include "test/Test.h"
 
 #include <iostream>
 
@@ -73,7 +75,10 @@ int main(void)
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
 	{
-		Renderer renderer;
+	    glEnable(GL_BLEND);
+	    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+        Renderer renderer;
 
 		// uncomment this call to draw in wireframe polygons.
 		// glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -88,7 +93,11 @@ int main(void)
 		ImGui_ImplGlfw_InitForOpenGL(window, true);
 		ImGui_ImplOpenGL3_Init(glsl_version);
 
-        test::TestClearColor test;
+		test::Test* currentTest = nullptr;
+        test::TestMenu* testMenu = new test::TestMenu(currentTest);
+        currentTest = testMenu;
+
+        testMenu->RegisterTest<test::TestClearColor>("Clear Color");
 
 		while (!glfwWindowShouldClose(window))
 		{
@@ -96,15 +105,24 @@ int main(void)
 
 			renderer.Clear();
 
-			test.OnUpdate(0.0f);
-			test.OnRender();
-
 			/* new imgui frame */
 			ImGui_ImplOpenGL3_NewFrame();
 			ImGui_ImplGlfw_NewFrame();
 			ImGui::NewFrame();
 
-            test.ImGuiRender();
+			if(currentTest)
+            {
+			    currentTest->OnUpdate(0.0f);
+			    currentTest->OnRender();
+			    ImGui::Begin("Test");
+			    if(currentTest != testMenu && ImGui::Button("<-"))
+                {
+                     delete currentTest;
+                     currentTest = testMenu;
+                }
+			    currentTest->ImGuiRender();
+			    ImGui::End();
+            }
 
             ImGui::Render();
         	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());

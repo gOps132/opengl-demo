@@ -836,6 +836,11 @@ CMakeFiles/learn-opengl.dir/src/main.cpp.o
  /Users/giancedrickepilan/dev/native/opengl-demo/src/main.cpp
  /Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.h
  /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestClearColor.h
+CMakeFiles/learn-opengl.dir/src/test/Test.cpp.o
+ ../src/vendor/imgui/imconfig.h
+ ../src/vendor/imgui/imgui.h
+ /Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.cpp
+ /Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.h
 CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
