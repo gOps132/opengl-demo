@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D46A83CC4FD495E85F9E076"
+               BlueprintIdentifier = "17CDE16352CC41B596DF1565"
                BuildableName = "learn-opengl"
                BlueprintName = "learn-opengl"
                ReferencedContainer = "container:xcode/learn-opengl.xcodeproj">
@@ -36,7 +36,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/giancedrickepilan/dev/native/learn-opengl"
+      customWorkingDirectory = "/Users/giancedrickepilan/dev/native/opengl-demo"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
@@ -45,7 +45,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2D46A83CC4FD495E85F9E076"
+            BlueprintIdentifier = "17CDE16352CC41B596DF1565"
             BuildableName = "learn-opengl"
             BlueprintName = "learn-opengl"
             ReferencedContainer = "container:xcode/learn-opengl.xcodeproj">
@@ -62,7 +62,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2D46A83CC4FD495E85F9E076"
+            BlueprintIdentifier = "17CDE16352CC41B596DF1565"
             BuildableName = "learn-opengl"
             BlueprintName = "learn-opengl"
             ReferencedContainer = "container:xcode/learn-opengl.xcodeproj">

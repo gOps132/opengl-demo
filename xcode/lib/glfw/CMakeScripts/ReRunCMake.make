@@ -9,6 +9,7 @@ TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Applications/CMake.app/Cont
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Applications/CMake.app/Contents/share/cmake-3.17/Modules/CMakeDependentOption.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Applications/CMake.app/Contents/share/cmake-3.17/Modules/CMakePackageConfigHelpers.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Applications/CMake.app/Contents/share/cmake-3.17/Modules/CheckCSourceCompiles.cmake))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Applications/CMake.app/Contents/share/cmake-3.17/Modules/CheckIncludeFile.c.in))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Applications/CMake.app/Contents/share/cmake-3.17/Modules/CheckIncludeFile.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Applications/CMake.app/Contents/share/cmake-3.17/Modules/CheckLibraryExists.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Applications/CMake.app/Contents/share/cmake-3.17/Modules/FindDoxygen.cmake))
@@ -17,12 +18,12 @@ TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Applications/CMake.app/Cont
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Applications/CMake.app/Contents/share/cmake-3.17/Modules/FindThreads.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Applications/CMake.app/Contents/share/cmake-3.17/Modules/GNUInstallDirs.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Applications/CMake.app/Contents/share/cmake-3.17/Modules/WriteBasicConfigVersionFile.cmake))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/CMake/cmake_uninstall.cmake.in))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/CMake/glfw3.pc.in))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/CMake/glfw3Config.cmake.in))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/CMakeLists.txt))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/CMakeLists.txt))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src/glfw_config.h.in))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/CMake/cmake_uninstall.cmake.in))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/CMake/glfw3.pc.in))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/CMake/glfw3Config.cmake.in))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/CMakeLists.txt))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/CMakeLists.txt))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src/glfw_config.h.in))
 
-/Users/giancedrickepilan/dev/native/learn-opengl/xcode/CMakeFiles/cmake.check_cache: $(TARGETS)
-	/Applications/CMake.app/Contents/bin/cmake -H/Users/giancedrickepilan/dev/native/learn-opengl -B/Users/giancedrickepilan/dev/native/learn-opengl/xcode
+/Users/giancedrickepilan/dev/native/opengl-demo/xcode/CMakeFiles/cmake.check_cache: $(TARGETS)
+	/Applications/CMake.app/Contents/bin/cmake -H/Users/giancedrickepilan/dev/native/opengl-demo -B/Users/giancedrickepilan/dev/native/opengl-demo/xcode

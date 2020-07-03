@@ -3,10 +3,11 @@
 
 void GLClearError()
 {
+//    infinite loop if it has errors
     while (glGetError() != GL_NO_ERROR);
 }
 
-bool GLLogCall(const char *function, const char *file, int line)
+int GLLogCall(const char *function, const char *file, int line)
 {
     if (GLenum error = glGetError())
     {
@@ -30,8 +31,8 @@ bool GLLogCall(const char *function, const char *file, int line)
                 std::cout << line << std::endl;
         }
 
-        return false;
+        return -1;
     }
 
-    return false;
+    return 1;
 }

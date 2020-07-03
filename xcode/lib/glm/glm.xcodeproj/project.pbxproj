@@ -7,66 +7,66 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		077D65985FEF402FA0678FF9 /* ALL_BUILD */ = {
+		57225581723F4DFFAF7F9B63 /* install */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 536E944497364486B379D9CA /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 7DD64982CD4D48E59473FAA2 /* Build configuration list for PBXAggregateTarget "install" */;
 			buildPhases = (
-				0BFD7213D91045F6ADE70AF7 /* CMake Rules */,
+				D11F450501AC4D9EBD9508AC /* CMake PostBuild Rules */,
 			);
 			dependencies = (
-				7BEDDEC816F7438FBACAADCD /* PBXTargetDependency */,
+				0EC1C8C222B34DA7A9E1041D /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		60AF542C289C42989ABB172F /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 298FE2FAD9B742FA8FE95CAC /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				F8B496D42D2340D1B33BD03F /* CMake Rules */,
+			);
+			dependencies = (
+				0A197B46267B4365937E33A3 /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
 		};
-		4BB58979B2A448FBAD6A0CA9 /* ZERO_CHECK */ = {
+		81287E9154394ACCBFD2FCA5 /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = F12F41AC09F843AAA2671B06 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = D3F415CF5F9745D4897DA9BB /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				0CFF0134739540E1B69843B6 /* CMake Rules */,
+				31A1F94D1F40481D968F5775 /* CMake Rules */,
 			);
 			dependencies = (
 			);
 			name = ZERO_CHECK;
 			productName = ZERO_CHECK;
 		};
-		7CFCBEADB9CC45F581DED30C /* install */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 61902356F7AC40BFBA7B5466 /* Build configuration list for PBXAggregateTarget "install" */;
-			buildPhases = (
-				79D994B2F70E47469ABDEF62 /* CMake PostBuild Rules */,
-			);
-			dependencies = (
-				79E6172E6D0B48878CD5D5AB /* PBXTargetDependency */,
-			);
-			name = install;
-			productName = install;
-		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildStyle section */
-		0B35061F88CD4840A6E0399D /* RelWithDebInfo */ = {
+		061CEC13EDCE42278C6C8540 /* RelWithDebInfo */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = RelWithDebInfo;
 		};
-		10BA5AF71DE7421291B1872C /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		8E588EFC84E544A985D372FD /* Debug */ = {
+		2795C09D390A4420A599F8A3 /* Debug */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = Debug;
 		};
-		C9403EC6D64E4C5EBE76E3D1 /* MinSizeRel */ = {
+		963ED7C307D947E19B653543 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		BE7B3A0ED55549C284309BD2 /* MinSizeRel */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -76,91 +76,91 @@
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		8687BAEFCCE341D386790948 /* PBXContainerItemProxy */ = {
+		36B17171D3E743A4A919EB6E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2F71F7B8221C492F9E3640AE /* Project object */;
+			containerPortal = BB07217CD41E4BEBA3263281 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4BB58979B2A448FBAD6A0CA9;
-			remoteInfo = ZERO_CHECK;
-		};
-		B859C40993BE48B8A01B771F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2F71F7B8221C492F9E3640AE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 077D65985FEF402FA0678FF9;
+			remoteGlobalIDString = 60AF542C289C42989ABB172F;
 			remoteInfo = ALL_BUILD;
+		};
+		D47B199EBEDA453B8C6A0A30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB07217CD41E4BEBA3263281 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81287E9154394ACCBFD2FCA5;
+			remoteInfo = ZERO_CHECK;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09AE167D70B547F081A546AB /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glm/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D6D1EE54E97145D4AF9F0E18 /* /Users/giancedrickepilan/dev/native/opengl-demo/lib/glm/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		3F86C98CFDCC48DAACB98F04 = {
+		3A5302850CCB44DF932232AE /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
-				D5EA991894704848A292BEC0 /* ALL_BUILD */,
-				CF1E628384414AAFBF9A8258 /* Products */,
 			);
+			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		CF1E628384414AAFBF9A8258 /* Products */ = {
+		A7A611E3CC4F4D1C8CE9EBB4 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				3A5302850CCB44DF932232AE /* CMake Rules */,
+				D6D1EE54E97145D4AF9F0E18 /* /Users/giancedrickepilan/dev/native/opengl-demo/lib/glm/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		B4D2A0E742F341A981CCE0E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D5EA991894704848A292BEC0 /* ALL_BUILD */ = {
+		CC5C9649A4D448D2B0E7B164 = {
 			isa = PBXGroup;
 			children = (
-				E9656BE5BAC549EC896E946E /* CMake Rules */,
-				09AE167D70B547F081A546AB /* /Users/giancedrickepilan/dev/native/learn-opengl/lib/glm/CMakeLists.txt */,
+				A7A611E3CC4F4D1C8CE9EBB4 /* ALL_BUILD */,
+				B4D2A0E742F341A981CCE0E5 /* Products */,
 			);
-			name = ALL_BUILD;
-			sourceTree = "<group>";
-		};
-		E9656BE5BAC549EC896E946E /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXProject section */
-		2F71F7B8221C492F9E3640AE /* Project object */ = {
+		BB07217CD41E4BEBA3263281 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1130;
 			};
-			buildConfigurationList = 392BE70CA5F646D68CDD4A4C /* Build configuration list for PBXProject "glm" */;
+			buildConfigurationList = AF1218A7E5BB45BBBAA17A0B /* Build configuration list for PBXProject "glm" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				8E588EFC84E544A985D372FD /* Debug */,
-				10BA5AF71DE7421291B1872C /* Release */,
-				C9403EC6D64E4C5EBE76E3D1 /* MinSizeRel */,
-				0B35061F88CD4840A6E0399D /* RelWithDebInfo */,
+				2795C09D390A4420A599F8A3 /* Debug */,
+				963ED7C307D947E19B653543 /* Release */,
+				BE7B3A0ED55549C284309BD2 /* MinSizeRel */,
+				061CEC13EDCE42278C6C8540 /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = 3F86C98CFDCC48DAACB98F04;
+			mainGroup = CC5C9649A4D448D2B0E7B164;
 			projectDirPath = ../../../lib/glm;
 			projectRoot = "";
 			targets = (
-				077D65985FEF402FA0678FF9 /* ALL_BUILD */,
-				4BB58979B2A448FBAD6A0CA9 /* ZERO_CHECK */,
-				7CFCBEADB9CC45F581DED30C /* install */,
+				60AF542C289C42989ABB172F /* ALL_BUILD */,
+				81287E9154394ACCBFD2FCA5 /* ZERO_CHECK */,
+				57225581723F4DFFAF7F9B63 /* install */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0BFD7213D91045F6ADE70AF7 /* CMake Rules */ = {
+		31A1F94D1F40481D968F5775 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -168,21 +168,10 @@
 			name = "CMake Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm -f /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			shellScript = "make -C /Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm -f /Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
-		0CFF0134739540E1B69843B6 /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm -f /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
-			showEnvVarsInLog = 0;
-		};
-		5AE55944542543B6B4BC302D = {
+		4B4EDF13FCDF4B5FB9CFEEB7 = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -197,7 +186,7 @@
 exit 0";
 			showEnvVarsInLog = 0;
 		};
-		7454C498AFB0448B9DB65B23 = {
+		AE407EC231634AFD874C8F65 = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -212,7 +201,7 @@ exit 0";
 exit 0";
 			showEnvVarsInLog = 0;
 		};
-		79D994B2F70E47469ABDEF62 /* CMake PostBuild Rules */ = {
+		D11F450501AC4D9EBD9508AC /* CMake PostBuild Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,10 +209,10 @@ exit 0";
 			name = "CMake PostBuild Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm -f /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			shellScript = "make -C /Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm -f /Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
-		AC70D69524AC4B758DD3EABD = {
+		EDD6D6301E404D509FE4CCB7 = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -238,23 +227,34 @@ exit 0";
 exit 0";
 			showEnvVarsInLog = 0;
 		};
+		F8B496D42D2340D1B33BD03F /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm -f /Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		79E6172E6D0B48878CD5D5AB /* PBXTargetDependency */ = {
+		0A197B46267B4365937E33A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 077D65985FEF402FA0678FF9 /* ALL_BUILD */;
-			targetProxy = B859C40993BE48B8A01B771F /* PBXContainerItemProxy */;
+			target = 81287E9154394ACCBFD2FCA5 /* ZERO_CHECK */;
+			targetProxy = D47B199EBEDA453B8C6A0A30 /* PBXContainerItemProxy */;
 		};
-		7BEDDEC816F7438FBACAADCD /* PBXTargetDependency */ = {
+		0EC1C8C222B34DA7A9E1041D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4BB58979B2A448FBAD6A0CA9 /* ZERO_CHECK */;
-			targetProxy = 8687BAEFCCE341D386790948 /* PBXContainerItemProxy */;
+			target = 60AF542C289C42989ABB172F /* ALL_BUILD */;
+			targetProxy = 36B17171D3E743A4A919EB6E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		048A3158FA6B4985B9E98C4C /* Debug */ = {
+		07E1B2BB25CC48B9BE4B9DFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -268,53 +268,13 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = install;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = Debug;
 		};
-		0FDF582F926A4C828BFA2410 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		165DE30B12FB4FFF9B5B4E10 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		183E13C6671A446AA0CB2818 /* Debug */ = {
+		0B51B5307ACA4002B306B95A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -328,13 +288,23 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = Debug;
 		};
-		3828BC209A6B411082EF5AA0 /* MinSizeRel */ = {
+		198E6110BE944BC48AE26E45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm/build";
+			};
+			name = Release;
+		};
+		2E14FBE06FFB46D99542602E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -348,103 +318,13 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = MinSizeRel;
+			name = Debug;
 		};
-		3B840653C6334F5C90BC909B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		4537B722FABD41C2910EE7B6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm/build";
-			};
-			name = Release;
-		};
-		4EAAA84B75E747EAB165E460 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm/build";
-			};
-			name = MinSizeRel;
-		};
-		53F9A9B03B3A4F2288C81C63 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		563AAC380F754A6883E46A9E /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm/build";
-			};
-			name = RelWithDebInfo;
-		};
-		862D09DA0DDB437BA4597D72 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		8795A57E62024FD9BC90BF29 /* RelWithDebInfo */ = {
+		31910C0E39B14EF2B1354870 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -458,13 +338,53 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = install;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		32D59650F36F4091B2DF1632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		38F72A0F629445CCA51A8FE3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = RelWithDebInfo;
 		};
-		A53FB0C53EDC4CE284403C4B /* Debug */ = {
+		4CC732CB645C486883D2578A /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -478,43 +398,73 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		DF420804E4AA42DEA7272C18 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = MinSizeRel;
 		};
-		E22217C886FD4128B015C646 /* Debug */ = {
+		58CA50E4DC7E458CA8C7DF35 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm/build";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Debug;
+			name = RelWithDebInfo;
 		};
-		E8C33FCD4BC84D598BEE51B9 /* Release */ = {
+		6837267BB01A4635A476B10D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		711673911E28421D86C8CAD9 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A41C1EFE20A94A85B28C3E35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -528,60 +478,110 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = install;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = Release;
+		};
+		B5648B98F5094707BACD08E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm/build";
+			};
+			name = Debug;
+		};
+		CAB13CDB579E482B928AF1DC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D64388C9185840D0BE90D9F7 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm/build";
+			};
+			name = RelWithDebInfo;
+		};
+		EFA88D558960427387FA63F1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm/build";
+			};
+			name = MinSizeRel;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		392BE70CA5F646D68CDD4A4C /* Build configuration list for PBXProject "glm" */ = {
+		298FE2FAD9B742FA8FE95CAC /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E22217C886FD4128B015C646 /* Debug */,
-				4537B722FABD41C2910EE7B6 /* Release */,
-				4EAAA84B75E747EAB165E460 /* MinSizeRel */,
-				563AAC380F754A6883E46A9E /* RelWithDebInfo */,
+				0B51B5307ACA4002B306B95A /* Debug */,
+				32D59650F36F4091B2DF1632 /* Release */,
+				CAB13CDB579E482B928AF1DC /* MinSizeRel */,
+				58CA50E4DC7E458CA8C7DF35 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		536E944497364486B379D9CA /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		7DD64982CD4D48E59473FAA2 /* Build configuration list for PBXAggregateTarget "install" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				183E13C6671A446AA0CB2818 /* Debug */,
-				3B840653C6334F5C90BC909B /* Release */,
-				862D09DA0DDB437BA4597D72 /* MinSizeRel */,
-				53F9A9B03B3A4F2288C81C63 /* RelWithDebInfo */,
+				07E1B2BB25CC48B9BE4B9DFA /* Debug */,
+				A41C1EFE20A94A85B28C3E35 /* Release */,
+				31910C0E39B14EF2B1354870 /* MinSizeRel */,
+				38F72A0F629445CCA51A8FE3 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		61902356F7AC40BFBA7B5466 /* Build configuration list for PBXAggregateTarget "install" */ = {
+		AF1218A7E5BB45BBBAA17A0B /* Build configuration list for PBXProject "glm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				048A3158FA6B4985B9E98C4C /* Debug */,
-				E8C33FCD4BC84D598BEE51B9 /* Release */,
-				DF420804E4AA42DEA7272C18 /* MinSizeRel */,
-				8795A57E62024FD9BC90BF29 /* RelWithDebInfo */,
+				B5648B98F5094707BACD08E2 /* Debug */,
+				198E6110BE944BC48AE26E45 /* Release */,
+				EFA88D558960427387FA63F1 /* MinSizeRel */,
+				D64388C9185840D0BE90D9F7 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		F12F41AC09F843AAA2671B06 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		D3F415CF5F9745D4897DA9BB /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A53FB0C53EDC4CE284403C4B /* Debug */,
-				165DE30B12FB4FFF9B5B4E10 /* Release */,
-				3828BC209A6B411082EF5AA0 /* MinSizeRel */,
-				0FDF582F926A4C828BFA2410 /* RelWithDebInfo */,
+				2E14FBE06FFB46D99542602E /* Debug */,
+				6837267BB01A4635A476B10D /* Release */,
+				4CC732CB645C486883D2578A /* MinSizeRel */,
+				711673911E28421D86C8CAD9 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2F71F7B8221C492F9E3640AE /* Project object */;
+	rootObject = BB07217CD41E4BEBA3263281 /* Project object */;
 }

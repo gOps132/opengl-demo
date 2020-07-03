@@ -8,23 +8,23 @@ default:
 # link.  This forces Xcode to relink the targets from scratch.  It
 # does not seem to check these dependencies itself.
 PostBuild.glfw.Debug:
-/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/Debug/libglfw3.a:
-	/bin/rm -f /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/Debug/libglfw3.a
+/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glfw/src/Debug/libglfw3.a:
+	/bin/rm -f /Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glfw/src/Debug/libglfw3.a
 
 
 PostBuild.glfw.Release:
-/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/Release/libglfw3.a:
-	/bin/rm -f /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/Release/libglfw3.a
+/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glfw/src/Release/libglfw3.a:
+	/bin/rm -f /Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glfw/src/Release/libglfw3.a
 
 
 PostBuild.glfw.MinSizeRel:
-/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/MinSizeRel/libglfw3.a:
-	/bin/rm -f /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/MinSizeRel/libglfw3.a
+/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glfw/src/MinSizeRel/libglfw3.a:
+	/bin/rm -f /Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glfw/src/MinSizeRel/libglfw3.a
 
 
 PostBuild.glfw.RelWithDebInfo:
-/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/RelWithDebInfo/libglfw3.a:
-	/bin/rm -f /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glfw/src/RelWithDebInfo/libglfw3.a
+/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glfw/src/RelWithDebInfo/libglfw3.a:
+	/bin/rm -f /Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glfw/src/RelWithDebInfo/libglfw3.a
 
 
 

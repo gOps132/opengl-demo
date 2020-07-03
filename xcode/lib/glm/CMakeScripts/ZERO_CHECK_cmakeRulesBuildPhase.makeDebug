@@ -2,9 +2,9 @@
 # Custom rules for ZERO_CHECK
 .SUFFIXES: 
 all: \
-	/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm/CMakeFiles/ZERO_CHECK
+	/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm/CMakeFiles/ZERO_CHECK
 
 
-/Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm/CMakeFiles/ZERO_CHECK: 
+/Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm/CMakeFiles/ZERO_CHECK: 
 	echo ""
-	make -f /Users/giancedrickepilan/dev/native/learn-opengl/xcode/lib/glm/CMakeScripts/ReRunCMake.make
+	make -f /Users/giancedrickepilan/dev/native/opengl-demo/xcode/lib/glm/CMakeScripts/ReRunCMake.make

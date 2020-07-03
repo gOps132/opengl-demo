@@ -5,8 +5,8 @@ empty:=
 space:= $(empty) $(empty)
 spaceplus:= $(empty)\ $(empty)
 
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/giancedrickepilan/dev/native/learn-opengl/lib/glm/CMakeLists.txt))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/giancedrickepilan/dev/native/learn-opengl/lib/glm/glm/CMakeLists.txt))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/giancedrickepilan/dev/native/opengl-demo/lib/glm/CMakeLists.txt))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/giancedrickepilan/dev/native/opengl-demo/lib/glm/glm/CMakeLists.txt))
 
-/Users/giancedrickepilan/dev/native/learn-opengl/xcode/CMakeFiles/cmake.check_cache: $(TARGETS)
-	/Applications/CMake.app/Contents/bin/cmake -H/Users/giancedrickepilan/dev/native/learn-opengl -B/Users/giancedrickepilan/dev/native/learn-opengl/xcode
+/Users/giancedrickepilan/dev/native/opengl-demo/xcode/CMakeFiles/cmake.check_cache: $(TARGETS)
+	/Applications/CMake.app/Contents/bin/cmake -H/Users/giancedrickepilan/dev/native/opengl-demo -B/Users/giancedrickepilan/dev/native/opengl-demo/xcode
