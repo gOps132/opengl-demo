@@ -101,6 +101,9 @@ int main(void)
 
 		while (!glfwWindowShouldClose(window))
 		{
+		    /* resets to black at the menu */
+		    GLCall(glClearColor(0.0f, 0.0f, 0.0f, 1.0f));
+
 			processInput(window);
 
 			renderer.Clear();
