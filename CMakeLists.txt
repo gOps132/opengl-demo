@@ -22,7 +22,7 @@ set(TEST_DIR "${CMAKE_SOURCE_DIR}/src/test")
 add_subdirectory(${GLFW_SOURCE_DIR})
 add_subdirectory(${GLM_SOURCE_DIR})
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -DDEBUG")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
 file(GLOB MAIN_SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 file(GLOB MAIN_HEADER_FILES ${HEADER_DIR}/*.h)
@@ -30,7 +30,7 @@ file(GLOB MAIN_HEADER_FILES ${HEADER_DIR}/*.h)
 file(GLOB TEST_SRC_FILES ${TEST_DIR}/*.cpp)
 file(GLOB TEST_HEADER_FILES ${TEST_DIR}/*.h)
 
-file(GLOB STB_IMAGE_HEADER_FILES ${VENDOR_DIR}/stb_image/*.h)
+file(GLOB STB_IMAGE_HEADER_FILES ${VENxDOR_DIR}/stb_image/*.h)
 file(GLOB STB_IMAGE_SOURCE_FILES ${VENDOR_DIR}/stb_image/*.cpp)
 
 file(GLOB IM_GUI_HEADER_FILES ${VENDOR_DIR}/imgui/*.h)

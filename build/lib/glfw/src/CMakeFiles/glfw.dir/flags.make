@@ -6,7 +6,7 @@ C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacO
 
 C_DEFINES = -D_GLFW_USE_CONFIG_H
 
-C_INCLUDES = -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include -I/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src -I/Users/giancedrickepilan/dev/native/learn-opengl/build/lib/glfw/src 
+C_INCLUDES = -I/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/include -I/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src -I/Users/giancedrickepilan/dev/native/opengl-demo/build/lib/glfw/src 
 
 # Custom flags: lib/glfw/src/CMakeFiles/glfw.dir/context.c.o_FLAGS = -Wdeclaration-after-statement
 

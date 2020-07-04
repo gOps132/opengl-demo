@@ -386,6 +386,12 @@
 		<Unit filename="/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestClearColor.h">
 			<Option target="learn-opengl"/>
 		</Unit>
+		<Unit filename="/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestTexture2d.cpp">
+			<Option target="learn-opengl"/>
+		</Unit>
+		<Unit filename="/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestTexture2d.h">
+			<Option target="learn-opengl"/>
+		</Unit>
 		<Unit filename="/Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imconfig.h">
 			<Option target="learn-opengl"/>
 		</Unit>

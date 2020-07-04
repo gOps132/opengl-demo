@@ -505,6 +505,33 @@ src/test/TestClearColor.cpp.s:
 	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.s
 .PHONY : src/test/TestClearColor.cpp.s
 
+src/test/TestTexture2d.o: src/test/TestTexture2d.cpp.o
+
+.PHONY : src/test/TestTexture2d.o
+
+# target to build an object file
+src/test/TestTexture2d.cpp.o:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.o
+.PHONY : src/test/TestTexture2d.cpp.o
+
+src/test/TestTexture2d.i: src/test/TestTexture2d.cpp.i
+
+.PHONY : src/test/TestTexture2d.i
+
+# target to preprocess a source file
+src/test/TestTexture2d.cpp.i:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.i
+.PHONY : src/test/TestTexture2d.cpp.i
+
+src/test/TestTexture2d.s: src/test/TestTexture2d.cpp.s
+
+.PHONY : src/test/TestTexture2d.s
+
+# target to generate assembly for a file
+src/test/TestTexture2d.cpp.s:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.s
+.PHONY : src/test/TestTexture2d.cpp.s
+
 src/vendor/imgui/imgui.o: src/vendor/imgui/imgui.cpp.o
 
 .PHONY : src/vendor/imgui/imgui.o
@@ -743,6 +770,9 @@ help:
 	@echo "... src/test/TestClearColor.o"
 	@echo "... src/test/TestClearColor.i"
 	@echo "... src/test/TestClearColor.s"
+	@echo "... src/test/TestTexture2d.o"
+	@echo "... src/test/TestTexture2d.i"
+	@echo "... src/test/TestTexture2d.s"
 	@echo "... src/vendor/imgui/imgui.o"
 	@echo "... src/vendor/imgui/imgui.i"
 	@echo "... src/vendor/imgui/imgui.s"

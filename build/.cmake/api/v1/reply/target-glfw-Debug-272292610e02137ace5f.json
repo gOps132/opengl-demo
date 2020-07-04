@@ -107,15 +107,15 @@
 			[
 				{
 					"backtrace" : 5,
-					"path" : "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include"
+					"path" : "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/include"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src"
+					"path" : "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "/Users/giancedrickepilan/dev/native/learn-opengl/build/lib/glfw/src"
+					"path" : "/Users/giancedrickepilan/dev/native/opengl-demo/build/lib/glfw/src"
 				}
 			],
 			"language" : "C",
@@ -156,15 +156,15 @@
 			[
 				{
 					"backtrace" : 5,
-					"path" : "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/include"
+					"path" : "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/include"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw/src"
+					"path" : "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/src"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "/Users/giancedrickepilan/dev/native/learn-opengl/build/lib/glfw/src"
+					"path" : "/Users/giancedrickepilan/dev/native/opengl-demo/build/lib/glfw/src"
 				}
 			],
 			"language" : "C",

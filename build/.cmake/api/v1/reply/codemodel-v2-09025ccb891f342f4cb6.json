@@ -132,21 +132,21 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "glad::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-glad-Debug-e191671ce2aac54cdc99.json",
+					"jsonFile" : "target-glad-Debug-5cae71d6d09e90bc9279.json",
 					"name" : "glad",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "glfw::@17f284a5fc0809a54549",
-					"jsonFile" : "target-glfw-Debug-7861ea7e95acff113f76.json",
+					"jsonFile" : "target-glfw-Debug-272292610e02137ace5f.json",
 					"name" : "glfw",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "learn-opengl::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-learn-opengl-Debug-90015b26b989bc06ebe5.json",
+					"jsonFile" : "target-learn-opengl-Debug-2e3652160c5dbd965f38.json",
 					"name" : "learn-opengl",
 					"projectIndex" : 0
 				},
@@ -163,8 +163,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/giancedrickepilan/dev/native/learn-opengl/build",
-		"source" : "/Users/giancedrickepilan/dev/native/learn-opengl"
+		"build" : "/Users/giancedrickepilan/dev/native/opengl-demo/build",
+		"source" : "/Users/giancedrickepilan/dev/native/opengl-demo"
 	},
 	"version" : 
 	{

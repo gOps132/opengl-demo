@@ -18,7 +18,7 @@ stdint.h
 KHR/khrplatform.h
 -
 
-/Users/giancedrickepilan/dev/native/learn-opengl/lib/glad/src/glad.c
+/Users/giancedrickepilan/dev/native/opengl-demo/lib/glad/src/glad.c
 stdio.h
 -
 stdlib.h

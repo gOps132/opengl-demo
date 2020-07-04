@@ -1,11 +1,14 @@
 {
     "env": {
         "myDefaultIncludePaths": [
-            "${workspaceFolder}/**/src/header"
+            "${workspaceFolder}/**/src/header",
+            "${workspaceFolder}/src/header"
         ],
         "myOtherIncludePaths": [
-            "${workspaceFolder}/src/vendor/imgui/**",
-            "${workspaceFolder}/src/vendor/stb_image/**"
+            "${workspaceFolder}/src/vendor/**/**",
+            "${workspaceFolder}/**/src/vendor/**/**",
+            "${workspaceFolder}/src/test/**",
+            "${workspaceFolder}/**/src/test/**"
         ],
         "myCompilerPath": "/usr/bin/clang"
       },

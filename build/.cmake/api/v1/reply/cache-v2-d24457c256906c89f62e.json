@@ -67,7 +67,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/giancedrickepilan/dev/native/learn-opengl/build"
+			"value" : "/Users/giancedrickepilan/dev/native/opengl-demo/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -579,7 +579,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/giancedrickepilan/dev/native/learn-opengl"
+			"value" : "/Users/giancedrickepilan/dev/native/opengl-demo"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -1499,7 +1499,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/giancedrickepilan/dev/native/learn-opengl/build/lib/glfw"
+			"value" : "/Users/giancedrickepilan/dev/native/opengl-demo/build/lib/glfw"
 		},
 		{
 			"name" : "GLFW_BUILD_DOCS",
@@ -1559,7 +1559,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glfw"
+			"value" : "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw"
 		},
 		{
 			"name" : "GLFW_USE_OSMESA",
@@ -1619,7 +1619,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/giancedrickepilan/dev/native/learn-opengl/build/lib/glm"
+			"value" : "/Users/giancedrickepilan/dev/native/opengl-demo/build/lib/glm"
 		},
 		{
 			"name" : "glm_SOURCE_DIR",
@@ -1631,7 +1631,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/giancedrickepilan/dev/native/learn-opengl/lib/glm"
+			"value" : "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glm"
 		},
 		{
 			"name" : "learn-opengl_BINARY_DIR",
@@ -1643,7 +1643,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/giancedrickepilan/dev/native/learn-opengl/build"
+			"value" : "/Users/giancedrickepilan/dev/native/opengl-demo/build"
 		},
 		{
 			"name" : "learn-opengl_SOURCE_DIR",
@@ -1655,7 +1655,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/giancedrickepilan/dev/native/learn-opengl"
+			"value" : "/Users/giancedrickepilan/dev/native/opengl-demo"
 		}
 	],
 	"kind" : "cache",

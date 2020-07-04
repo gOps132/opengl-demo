@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/learn-opengl.dir/src/main.cpp.o"
   "CMakeFiles/learn-opengl.dir/src/test/Test.cpp.o"
   "CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o"
+  "CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.o"
   "CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o"
   "CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o"
   "CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o"

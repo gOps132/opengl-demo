@@ -25,6 +25,7 @@
 
 #include "test/TestClearColor.h"
 #include "test/Test.h"
+#include "test/TestTexture2d.h"
 
 #include <iostream>
 
@@ -75,9 +76,6 @@ int main(void)
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
 	{
-	    glEnable(GL_BLEND);
-	    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
         Renderer renderer;
 
 		// uncomment this call to draw in wireframe polygons.
@@ -132,7 +130,12 @@ int main(void)
 	
 			glfwSwapBuffers(window);
 			glfwPollEvents();
+
 		}
+
+        delete currentTest;
+        if (currentTest != testMenu)
+            delete testMenu;
 
 		/* ImGUI shutdown */
 		ImGui_ImplOpenGL3_Shutdown();

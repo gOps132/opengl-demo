@@ -11,8 +11,8 @@ void Renderer::Draw(const VertexArray &va, const IndexBuffer& ib, const Shader &
     glDrawElements(GL_TRIANGLES, ib.getCount(), GL_UNSIGNED_INT, 0);
 }
 
-void Renderer::SetClearColor() const {
-
+void Renderer::SetClearColor() const
+{
 }
 
 void Renderer::Clear() const
