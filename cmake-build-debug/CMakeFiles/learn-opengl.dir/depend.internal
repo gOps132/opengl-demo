@@ -166,6 +166,7 @@ CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o
  ../lib/glm/glm/vec3.hpp
  ../lib/glm/glm/vec4.hpp
  ../lib/glm/glm/vector_relational.hpp
+ ../src/header/ErrorManager.h
  ../src/header/IndexBuffer.h
  ../src/header/Renderer.h
  ../src/header/Shader.h
@@ -826,6 +827,7 @@ CMakeFiles/learn-opengl.dir/src/main.cpp.o
  ../src/header/IndexBuffer.h
  ../src/header/Renderer.h
  ../src/header/Shader.h
+ ../src/header/Texture.h
  ../src/header/VertexArray.h
  ../src/header/VertexBuffer.h
  ../src/header/VertexBufferLayout.h
@@ -1018,6 +1020,7 @@ CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.o
  ../lib/glm/glm/vector_relational.hpp
  ../src/header/ErrorManager.h
  ../src/header/IndexBuffer.h
+ ../src/header/Renderer.h
  ../src/header/Shader.h
  ../src/header/Texture.h
  ../src/header/VertexArray.h

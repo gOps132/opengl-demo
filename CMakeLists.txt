@@ -22,7 +22,7 @@ set(TEST_DIR "${CMAKE_SOURCE_DIR}/src/test")
 add_subdirectory(${GLFW_SOURCE_DIR})
 add_subdirectory(${GLM_SOURCE_DIR})
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -DDEBUG")
 
 file(GLOB MAIN_SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 file(GLOB MAIN_HEADER_FILES ${HEADER_DIR}/*.h)

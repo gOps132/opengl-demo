@@ -165,6 +165,7 @@ CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: ../lib/glm/glm/vec2.hpp
 CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: ../lib/glm/glm/vec3.hpp
 CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: ../lib/glm/glm/vec4.hpp
 CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: ../lib/glm/glm/vector_relational.hpp
+CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: ../src/header/ErrorManager.h
 CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: ../src/header/IndexBuffer.h
 CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: ../src/header/Renderer.h
 CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o: ../src/header/Shader.h
@@ -825,6 +826,7 @@ CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/ErrorManager.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/IndexBuffer.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/Renderer.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/Shader.h
+CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/Texture.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/VertexArray.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/VertexBuffer.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/header/VertexBufferLayout.h
@@ -1017,6 +1019,7 @@ CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.o: ../lib/glm/glm/vec4.hp
 CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.o: ../lib/glm/glm/vector_relational.hpp
 CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.o: ../src/header/ErrorManager.h
 CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.o: ../src/header/IndexBuffer.h
+CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.o: ../src/header/Renderer.h
 CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.o: ../src/header/Shader.h
 CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.o: ../src/header/Texture.h
 CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.o: ../src/header/VertexArray.h

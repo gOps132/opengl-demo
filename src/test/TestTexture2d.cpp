@@ -2,20 +2,28 @@
 // Created by Gian Cedrick Epilan on 02/07/2020.
 //
 
+/*
+ * TODO: fix the problem whereas, you have to bind the shader in order to set the uniform
+ */
+
 #include "TestTexture2d.h"
 #include "ErrorManager.h"
+
+#include "IndexBuffer.h"
 #include "VertexArray.h"
 #include "VertexBuffer.h"
 #include "VertexBufferLayout.h"
-#include "IndexBuffer.h"
-#include "Shader.h"
 #include "Texture.h"
+
+#include "Shader.h"
+#include "Renderer.h"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-
 #include <glad/glad.h>
 #include <imgui/imgui.h>
+
+#include <memory>
 
 namespace test {
 
@@ -23,7 +31,15 @@ namespace test {
     int wWidth = 720;
 
     TestTexture2d::TestTexture2d()
+        :
+        m_Proj(glm::ortho(0.0f, (float)wHeight, 0.0f, float(wWidth), -1.0f, 1.0f)),
+        m_View(glm::translate(glm::mat4(1.0f) , glm::vec3(0, 0, 0))),
+        m_TranslationA(200, 200, 0),
+        m_TranslationB(400, 200, 0)
     {
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
         float vertices[] = {
                     //vertex coords	   //texture coords
                     - 50.0f, -50.0f,    0.0f, 0.0f, 	// top right    0
@@ -37,35 +53,19 @@ namespace test {
                         1, 2, 3	 // second triangle
                 };
 
-        glEnable(GL_BLEND);
-        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
         VertexBuffer vb(vertices, sizeof(vertices) * sizeof(float));
-        VertexArray va;
         VertexBufferLayout layout;
 
-        va.AddBuffer(vb, layout);
-
         layout.Push<float>(2);
         layout.Push<float>(2);
 
-        glm::mat4 proj = glm::ortho(0.0f, (float)wHeight, 0.0f, float(wWidth), -1.0f, 1.0f);
-        /* position of the camera */
-        glm::mat4 view = glm::translate(glm::mat4(1.0f) , glm::vec3(0, 0, 0));
+        m_VAO = std::make_unique<VertexArray>();
+        m_IndexBuffer = std::make_unique<IndexBuffer>(indices, sizeof(indices));
+        m_Texture = std::make_unique<Texture>("/textures/smile.png");
+        m_Shader = std::make_unique<Shader>("shaders/BasicShader.shader");
 
-        Shader shader("shaders/BasicShader.shader");
-        shader.Bind();
-
-        Texture texture("textures/smile.png");
-        texture.Bind();
-        shader.SetUniform1i("u_Texture", 0);
-
-        IndexBuffer ib(indices, sizeof(indices));
-
-        /* unbinding */
-        shader.Unbind();
-        vb.Unbind();
-        ib.Unbind();
+        m_VAO->AddBuffer(vb, layout);
+        m_Shader->SetUniform1i("u_Texture", 0);
     }
 
     TestTexture2d::~TestTexture2d()
@@ -78,12 +78,37 @@ namespace test {
 
     void TestTexture2d::OnRender()
     {
+
         GLCall(glClearColor(0.0f, 0.0f, 0.0f, 1.0f));
-        glClear(GL_COLOR_BUFFER_BIT);
+        GLCall(glClear(GL_COLOR_BUFFER_BIT));
+
+        Renderer renderer;
+
+        m_Texture->Bind();
+
+        {
+            /* Recalculating the model matrix every frame */
+            glm::mat4 model = glm::translate(glm::mat4(1.0f), m_TranslationA);
+            glm::mat4 mvp = m_Proj * m_View * model;
+            m_Shader->Bind(); /* Bind to set the uniform */
+            m_Shader->SetUniformMat4f("u_MVP", mvp);
+            renderer.Draw(*m_VAO, *m_IndexBuffer, *m_Shader);
+        }
+        {
+            /* Recalculating the model matrix every frame */
+            glm::mat4 model = glm::translate(glm::mat4(1.0f), m_TranslationB);
+            glm::mat4 mvp = m_Proj * m_View * model;
+            m_Shader->Bind();
+            m_Shader->SetUniformMat4f("u_MVP", mvp);
+            renderer.Draw(*m_VAO, *m_IndexBuffer, *m_Shader);
+        }
     }
 
     void TestTexture2d::ImGuiRender()
     {
+        ImGui::SliderFloat3("m_TranslationA", &m_TranslationA.x, 0.0f, (float)wHeight);
+        ImGui::SliderFloat3("m_TranslationB", &m_TranslationB.x, 0.0f, (float)wHeight);
+        ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
     }
 
 }

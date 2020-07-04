@@ -5,9 +5,8 @@
  * 
  * 	TODO: implement some kind of break point trap for every compiler
  * 	TODO: make some kind of manifest for xcode settings, compilers in order for the code to run right
- *	TODO: make a display class which handles the OpenGL context and the window and its destructor will call glfwterminate automatically.
- * 	TODO: make some kind of openGL context that handles the vertexbuffers, vertexarrays, indexbuffers and etc.
- * 
+ * 	TODO: make a glfw window context that handles the window data ( height, width, etc.. )
+ *
  */
 
 #include <glad/glad.h>
@@ -96,6 +95,7 @@ int main(void)
         currentTest = testMenu;
 
         testMenu->RegisterTest<test::TestClearColor>("Clear Color");
+        testMenu->RegisterTest<test::TestTexture2d>("Texture 2d");
 
 		while (!glfwWindowShouldClose(window))
 		{
@@ -130,7 +130,6 @@ int main(void)
 	
 			glfwSwapBuffers(window);
 			glfwPollEvents();
-
 		}
 
         delete currentTest;

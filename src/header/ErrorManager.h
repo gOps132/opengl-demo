@@ -5,17 +5,18 @@
 #include <fstream>
 #include <string>
 #include <sstream>
-#include <cassert>
 
 /*
  * FIXME: Deal with bug that breakpoints even if assertion is okay
  */
 
+#define	dassert(e) (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+
 #ifdef DEBUG
 #define GLCall(x)       \
         GLClearError(); \
         x;              \
-        assert(GLLogCall(#x, __FILE__, __LINE__))
+        dassert(GLLogCall(#x, __FILE__, __LINE__))
 #else
     #define GLCall(x) x
 #endif
