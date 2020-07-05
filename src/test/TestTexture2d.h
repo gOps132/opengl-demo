@@ -18,7 +18,6 @@
 
 #include <glm/glm.hpp>
 
-
 namespace test {
 
     class TestTexture2d : public Test
