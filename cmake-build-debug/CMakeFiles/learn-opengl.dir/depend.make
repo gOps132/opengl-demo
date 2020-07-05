@@ -326,6 +326,7 @@ CMakeFiles/learn-opengl.dir/src/Shader.cpp.o: ../lib/glm/glm/vec2.hpp
 CMakeFiles/learn-opengl.dir/src/Shader.cpp.o: ../lib/glm/glm/vec3.hpp
 CMakeFiles/learn-opengl.dir/src/Shader.cpp.o: ../lib/glm/glm/vec4.hpp
 CMakeFiles/learn-opengl.dir/src/Shader.cpp.o: ../lib/glm/glm/vector_relational.hpp
+CMakeFiles/learn-opengl.dir/src/Shader.cpp.o: ../src/header/ErrorManager.h
 CMakeFiles/learn-opengl.dir/src/Shader.cpp.o: ../src/header/Shader.h
 CMakeFiles/learn-opengl.dir/src/Shader.cpp.o: ../src/Shader.cpp
 
@@ -650,6 +651,7 @@ CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o: ../lib/glm/glm/vec2.hpp
 CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o: ../lib/glm/glm/vec3.hpp
 CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o: ../lib/glm/glm/vec4.hpp
 CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o: ../lib/glm/glm/vector_relational.hpp
+CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o: ../src/header/ErrorManager.h
 CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o: ../src/header/IndexBuffer.h
 CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o: ../src/header/Renderer.h
 CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o: ../src/header/Shader.h
@@ -836,6 +838,7 @@ CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui/imgui_impl_glfw.
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/vendor/imgui/imgui_impl_opengl3.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/test/Test.h
+CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/test/TestBatchRendering.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/test/TestClearColor.h
 CMakeFiles/learn-opengl.dir/src/main.cpp.o: ../src/test/TestTexture2d.h
 

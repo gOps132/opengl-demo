@@ -327,6 +327,7 @@ CMakeFiles/learn-opengl.dir/src/Shader.cpp.o
  ../lib/glm/glm/vec3.hpp
  ../lib/glm/glm/vec4.hpp
  ../lib/glm/glm/vector_relational.hpp
+ ../src/header/ErrorManager.h
  ../src/header/Shader.h
  /Users/giancedrickepilan/dev/native/opengl-demo/src/Shader.cpp
 CMakeFiles/learn-opengl.dir/src/Texture.cpp.o
@@ -651,6 +652,7 @@ CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o
  ../lib/glm/glm/vec3.hpp
  ../lib/glm/glm/vec4.hpp
  ../lib/glm/glm/vector_relational.hpp
+ ../src/header/ErrorManager.h
  ../src/header/IndexBuffer.h
  ../src/header/Renderer.h
  ../src/header/Shader.h
@@ -837,6 +839,7 @@ CMakeFiles/learn-opengl.dir/src/main.cpp.o
  ../src/vendor/imgui/imgui_impl_opengl3.h
  /Users/giancedrickepilan/dev/native/opengl-demo/src/main.cpp
  /Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.h
+ /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestBatchRendering.h
  /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestClearColor.h
  /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestTexture2d.h
 CMakeFiles/learn-opengl.dir/src/test/Test.cpp.o

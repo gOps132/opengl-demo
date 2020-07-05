@@ -3,6 +3,7 @@
 */
 
 #include "Shader.h"
+#include "ErrorManager.h"
 #include <glm/glm.hpp>
 
 // TODO: Optimize passShader function into faster c api. c++ tends to be a lot slower than the c api but this is just openGL for now.
@@ -16,37 +17,37 @@ Shader::Shader(const std::string& filepath)
 
 Shader::~Shader() 
 {
-    glDeleteProgram(m_RendererID);
+    GLCall(glDeleteProgram(m_RendererID));
 }
 
 void Shader::Bind() const
 {
-    glUseProgram(m_RendererID);
+    GLCall(glUseProgram(m_RendererID));
 }
 
 void Shader::Unbind() const
 {
-    glUseProgram(0);
+    GLCall(glUseProgram(0));
 }
 
 void Shader::SetUniform1i(const std::string& name, int value) 
 {
-    glUniform1i(GetUniformLocation(name), value);
+    GLCall(glUniform1i(GetUniformLocation(name), value));
 }
 
 void Shader::SetUniform1f(const std::string &name, float value)
 {
-    glUniform1f(GetUniformLocation(name), value);
+    GLCall(glUniform1f(GetUniformLocation(name), value));
 }
 
 void Shader::SetUniform4f(const std::string &name, float v0, float v1, float v2, float v3)
 {
-    glUniform4f(GetUniformLocation(name), v0, v1, v2, v3);
+    GLCall(glUniform4f(GetUniformLocation(name), v0, v1, v2, v3));
 }
 
 void Shader::SetUniformMat4f(const std::string& name, const glm::mat4& matrix) 
 {
-    glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, &matrix[0][0]);
+    GLCall(glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, &matrix[0][0]));
 }
 
 int Shader::GetUniformLocation(const std::string& name)
@@ -58,7 +59,6 @@ int Shader::GetUniformLocation(const std::string& name)
     int location = ::glad_glGetUniformLocation(m_RendererID , name.c_str());
 #endif
 
-// TODO: Still not sure if it's __glew_h
 #ifdef __glew_h
     int location = glGetUniformLocation(m_RendererID , name.c_str());
 #endif

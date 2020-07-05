@@ -17,5 +17,3 @@ void Renderer::Clear() const
 {
     GLCall(glClear(GL_COLOR_BUFFER_BIT));
 }
-
-

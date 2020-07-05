@@ -1,9 +1,10 @@
 //
-// Created by Gian Cedrick Epilan on 02/07/2020.
+// Created by Gian Cedrick Epilan on 05/07/2020.
 //
 
-#ifndef LEARN_OPENGL_TESTTEXTURE2D_H
-#define LEARN_OPENGL_TESTTEXTURE2D_H
+#ifndef LEARN_OPENGL_TESTBATCHRENDERING_H
+#define LEARN_OPENGL_TESTBATCHRENDERING_H
+
 
 #include "Test.h"
 
@@ -21,11 +22,11 @@
 
 namespace test {
 
-    class TestTexture2d : public Test
+    class TestBatchRendering : public Test
     {
     public:
-        TestTexture2d();
-        ~TestTexture2d();
+        TestBatchRendering();
+        ~TestBatchRendering();
 
         void OnUpdate(float deltaTime) override;
         void OnRender() override;
@@ -44,4 +45,4 @@ namespace test {
     };
 }
 
-#endif //LEARN_OPENGL_TESTCLEARCOLOR_H
+#endif //LEARN_OPENGL_TESTBATCHRENDERING_H

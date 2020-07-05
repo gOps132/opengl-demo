@@ -5,11 +5,13 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include "signal.h"
 
 /*
- * FIXME: Deal with bug that breakpoints even if assertion is okay
+ * FIXME: break points on specific lines
  */
 
+/* another version of assert so I don't have to edit the internal codegg */
 #define	dassert(e) (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
 
 #ifdef DEBUG

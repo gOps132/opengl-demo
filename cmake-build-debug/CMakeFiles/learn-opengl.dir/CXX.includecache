@@ -1161,6 +1161,8 @@ string
 -
 sstream
 -
+signal.h
+../src/header/signal.h
 
 ../src/header/IndexBuffer.h
 
@@ -1238,27 +1240,19 @@ imgui.h
 TargetConditionals.h
 ../src/vendor/imgui/TargetConditionals.h
 
-/Users/giancedrickepilan/dev/native/opengl-demo/src/ErrorManager.cpp
-ErrorManager.h
-/Users/giancedrickepilan/dev/native/opengl-demo/src/ErrorManager.h
-glad/glad.h
--
-
-/Users/giancedrickepilan/dev/native/opengl-demo/src/IndexBuffer.cpp
-IndexBuffer.h
-/Users/giancedrickepilan/dev/native/opengl-demo/src/IndexBuffer.h
-ErrorManager.h
-/Users/giancedrickepilan/dev/native/opengl-demo/src/ErrorManager.h
-glad/glad.h
--
-cassert
--
-
 /Users/giancedrickepilan/dev/native/opengl-demo/src/Renderer.cpp
 Renderer.h
 /Users/giancedrickepilan/dev/native/opengl-demo/src/Renderer.h
 ErrorManager.h
 /Users/giancedrickepilan/dev/native/opengl-demo/src/ErrorManager.h
+
+/Users/giancedrickepilan/dev/native/opengl-demo/src/Shader.cpp
+Shader.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/Shader.h
+ErrorManager.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/ErrorManager.h
+glm/glm.hpp
+-
 
 /Users/giancedrickepilan/dev/native/opengl-demo/src/VertexArray.cpp
 VertexArray.h
@@ -1287,12 +1281,14 @@ Renderer.h
 /Users/giancedrickepilan/dev/native/opengl-demo/src/Renderer.h
 VertexBufferLayout.h
 /Users/giancedrickepilan/dev/native/opengl-demo/src/VertexBufferLayout.h
-test/TestClearColor.h
-/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestClearColor.h
 test/Test.h
 /Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.h
+test/TestClearColor.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestClearColor.h
 test/TestTexture2d.h
 /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestTexture2d.h
+test/TestBatchRendering.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestBatchRendering.h
 iostream
 -
 
@@ -1304,14 +1300,24 @@ vector
 functional
 -
 
-/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestClearColor.cpp
-TestClearColor.h
-/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestClearColor.h
-ErrorManager.h
-/Users/giancedrickepilan/dev/native/opengl-demo/src/test/ErrorManager.h
-glad/glad.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestBatchRendering.h
+Test.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.h
+VertexArray.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/VertexArray.h
+VertexBuffer.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/VertexBuffer.h
+VertexBufferLayout.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/VertexBufferLayout.h
+Texture.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/Texture.h
+IndexBuffer.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/IndexBuffer.h
+Shader.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/Shader.h
+memory
 -
-imgui/imgui.h
+glm/glm.hpp
 -
 
 /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestClearColor.h

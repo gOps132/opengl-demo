@@ -1,12 +1,10 @@
 //
-// Created by Gian Cedrick Epilan on 02/07/2020.
+// Created by Gian Cedrick Epilan on 05/07/2020.
 //
 
-/*
- * TODO: fix the problem whereas, you have to bind the shader in order to set the uniform
- */
+#include "TestBatchRendering.h"
 
-#include "TestTexture2d.h"
+#include "TestBatchRendering.h"
 #include "ErrorManager.h"
 
 #include "IndexBuffer.h"
@@ -30,12 +28,12 @@ namespace test {
     int wHeight = 1080;
     int wWidth = 720;
 
-    TestTexture2d::TestTexture2d()
-        :
-        m_Proj(glm::ortho(0.0f, (float)wHeight, 0.0f, float(wWidth), -1.0f, 1.0f)),
-        m_View(glm::translate(glm::mat4(1.0f) , glm::vec3(0, 0, 0))),
-        m_TranslationA(200, 200, 0),
-        m_TranslationB(400, 200, 0)
+    TestBatchRendering::TestBatchRendering()
+            :
+            m_Proj(glm::ortho(0.0f, (float)wHeight, 0.0f, float(wWidth), -1.0f, 1.0f)),
+            m_View(glm::translate(glm::mat4(1.0f) , glm::vec3(0, 0, 0))),
+            m_TranslationA(200, 200, 0),
+            m_TranslationB(400, 200, 0)
     {
         GLCall(glEnable(GL_BLEND));
         GLCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
@@ -46,15 +44,17 @@ namespace test {
                  50.0f, -50.0f,     1.0f, 0.0f,		// bottom right 1
                  50.0f,  50.0f,     1.0f, 1.0f, 	// bottom left  2
                 -50.0f,  50.0f,     0.0f, 1.0f		// top left     3
-                };
+        };
         unsigned int indices[] = {
                 // note that we start from 0!
                 0, 1, 3, // first triangle
                 1, 2, 3	 // second triangle
-                };
+        };
 
         m_VAO = std::make_unique<VertexArray>();
+
         m_VertexBuffer = std::make_unique<VertexBuffer>(vertices, sizeof(vertices) * sizeof(float));
+
         VertexBufferLayout layout;
         layout.Push<float>(2);
         layout.Push<float>(2);
@@ -68,15 +68,15 @@ namespace test {
         m_Shader->SetUniform1i("u_Texture", 0);
     }
 
-    TestTexture2d::~TestTexture2d()
+    TestBatchRendering::~TestBatchRendering()
     {
     }
 
-    void TestTexture2d::OnUpdate(float deltaTime)
+    void TestBatchRendering::OnUpdate(float deltaTime)
     {
     }
 
-    void TestTexture2d::OnRender()
+    void TestBatchRendering::OnRender()
     {
 
         GLCall(glClearColor(0.0f, 0.0f, 0.0f, 1.0f));
@@ -104,7 +104,7 @@ namespace test {
         }
     }
 
-    void TestTexture2d::ImGuiRender()
+    void TestBatchRendering::ImGuiRender()
     {
         ImGui::SliderFloat3("m_TranslationA", &m_TranslationA.x, 0.0f, (float)wHeight);
         ImGui::SliderFloat3("m_TranslationB", &m_TranslationB.x, 0.0f, (float)wHeight);
