@@ -25,15 +25,14 @@
 
 namespace test {
 
-    int wHeight = 1080;
-    int wWidth = 720;
+    int w_Height = 1080;
+    int w_Width = 720;
 
     TestBatchRendering::TestBatchRendering()
             :
-            m_Proj(glm::ortho(0.0f, (float)wHeight, 0.0f, float(wWidth), -1.0f, 1.0f)),
+            m_Proj(glm::ortho(0.0f, (float)w_Height, 0.0f, float(w_Width), -1.0f, 1.0f)),
             m_View(glm::translate(glm::mat4(1.0f) , glm::vec3(0, 0, 0))),
-            m_TranslationA(200, 200, 0),
-            m_TranslationB(400, 200, 0)
+            m_TranslationA(200, 200, 0)
     {
         GLCall(glEnable(GL_BLEND));
         GLCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
@@ -94,20 +93,11 @@ namespace test {
             m_Shader->SetUniformMat4f("u_MVP", mvp);
             renderer.Draw(*m_VAO, *m_IndexBuffer, *m_Shader);
         }
-        {
-            /* Recalculating the model matrix every frame */
-            glm::mat4 model = glm::translate(glm::mat4(1.0f), m_TranslationB);
-            glm::mat4 mvp = m_Proj * m_View * model;
-            m_Shader->Bind();
-            m_Shader->SetUniformMat4f("u_MVP", mvp);
-            renderer.Draw(*m_VAO, *m_IndexBuffer, *m_Shader);
-        }
     }
 
     void TestBatchRendering::ImGuiRender()
     {
-        ImGui::SliderFloat3("m_TranslationA", &m_TranslationA.x, 0.0f, (float)wHeight);
-        ImGui::SliderFloat3("m_TranslationB", &m_TranslationB.x, 0.0f, (float)wHeight);
+        ImGui::SliderFloat3("m_TranslationA", &m_TranslationA.x, 0.0f, (float)w_Height);
         ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
     }
 

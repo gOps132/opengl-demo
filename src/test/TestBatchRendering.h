@@ -41,7 +41,7 @@ namespace test {
 
         glm::mat4 m_Proj, m_View;
 
-        glm::vec3 m_TranslationA, m_TranslationB;
+        glm::vec3 m_TranslationA;
     };
 }
 

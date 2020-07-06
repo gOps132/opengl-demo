@@ -97,7 +97,7 @@ int main(void)
 
         testMenu->RegisterTest<test::TestClearColor>("Clear Color");
         testMenu->RegisterTest<test::TestTexture2d>("Texture 2d");
-        testMenu->RegisterTest<test::TestTexture2d>("Batch Rendering");
+        testMenu->RegisterTest<test::TestBatchRendering>("Batch Rendering");
 
 		while (!glfwWindowShouldClose(window))
 		{

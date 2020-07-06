@@ -81,6 +81,11 @@
 },
 {
   "directory": "/Users/giancedrickepilan/dev/native/opengl-demo/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/native/opengl-demo/lib/glad/include -I/Users/giancedrickepilan/dev/native/opengl-demo/lib/glm -I/Users/giancedrickepilan/dev/native/opengl-demo/src/header -I/Users/giancedrickepilan/dev/native/opengl-demo/src/vendor -I/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/include -I/Users/giancedrickepilan/dev/native/opengl-demo/lib/glm/glm/..   -std=c++14 -DDEBUG -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/test/TestBatchRendering.cpp.o -c /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestBatchRendering.cpp",
+  "file": "/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestBatchRendering.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/native/opengl-demo/build",
   "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/native/opengl-demo/lib/glad/include -I/Users/giancedrickepilan/dev/native/opengl-demo/lib/glm -I/Users/giancedrickepilan/dev/native/opengl-demo/src/header -I/Users/giancedrickepilan/dev/native/opengl-demo/src/vendor -I/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw/include -I/Users/giancedrickepilan/dev/native/opengl-demo/lib/glm/glm/..   -std=c++14 -DDEBUG -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o -c /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestClearColor.cpp",
   "file": "/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestClearColor.cpp"
 },
