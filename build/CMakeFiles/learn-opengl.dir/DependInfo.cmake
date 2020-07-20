@@ -12,6 +12,16 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/VertexArray.cpp" "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles/learn-opengl.dir/src/VertexArray.cpp.o"
   "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/VertexBuffer.cpp" "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o"
   "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/main.cpp" "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles/learn-opengl.dir/src/main.cpp.o"
+  "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test/Test.cpp" "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles/learn-opengl.dir/src/test/Test.cpp.o"
+  "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test/TestClearColor.cpp" "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o"
+  "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test/TestTexture2d.cpp" "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.o"
+  "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui.cpp" "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o"
+  "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui_demo.cpp" "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o"
+  "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui_draw.cpp" "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o"
+  "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui_impl_glfw.cpp" "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.o"
+  "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui_impl_opengl3.cpp" "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o"
+  "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui_widgets.cpp" "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o"
+  "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/stb_image/stb_image.cpp" "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

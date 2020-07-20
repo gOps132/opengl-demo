@@ -17,8 +17,9 @@ add_subdirectory(lib/glad)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
-file(GLOB IMGUI_HEADERS src/vendor/*.h)
-file(GLOB IMGUI_SOURCES src/vendor/*.cpp)
+# this is not good but im tired
+file(GLOB VENDOR_HEADERS src/vendor/*/*.h)
+file(GLOB VENDOR_SOURCES src/vendor/*/*.cpp)
 
 set(SOURCE_FILES
     src/ErrorManager.cpp
@@ -39,8 +40,15 @@ set(SOURCE_FILES
     src/header/VertexBuffer.h
     src/header/VertexBufferLayout.h
 
-    ${IMGUI_HEADERS}
-    ${IMGUI_SOURCES}
+    src/test/Test.cpp
+    src/test/Test.h
+    src/test/TestClearColor.cpp
+    src/test/TestClearColor.h    
+    src/test/TestTexture2d.cpp
+    src/test/TestTexture2d.h
+
+    ${VENDOR_HEADERS}
+    ${VENDOR_SOURCES}
 )
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})

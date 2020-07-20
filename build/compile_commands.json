@@ -40,6 +40,56 @@
   "file": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/VertexBuffer.cpp"
 },
 {
+  "directory": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/header -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/src -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glfw/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glm/glm/..   -std=c++14 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/test/Test.cpp.o -c /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test/Test.cpp",
+  "file": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test/Test.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/header -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/src -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glfw/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glm/glm/..   -std=c++14 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o -c /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test/TestClearColor.cpp",
+  "file": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test/TestClearColor.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/header -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/src -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glfw/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glm/glm/..   -std=c++14 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.o -c /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test/TestTexture2d.cpp",
+  "file": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test/TestTexture2d.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/header -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/src -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glfw/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glm/glm/..   -std=c++14 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o -c /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui.cpp",
+  "file": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/header -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/src -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glfw/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glm/glm/..   -std=c++14 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o -c /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui_demo.cpp",
+  "file": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui_demo.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/header -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/src -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glfw/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glm/glm/..   -std=c++14 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o -c /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui_draw.cpp",
+  "file": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/header -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/src -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glfw/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glm/glm/..   -std=c++14 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.o -c /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui_impl_glfw.cpp",
+  "file": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui_impl_glfw.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/header -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/src -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glfw/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glm/glm/..   -std=c++14 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o -c /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui_impl_opengl3.cpp",
+  "file": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui_impl_opengl3.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/header -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/src -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glfw/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glm/glm/..   -std=c++14 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o -c /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui_widgets.cpp",
+  "file": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/imgui/imgui_widgets.cpp"
+},
+{
+  "directory": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build",
+  "command": "/usr/bin/clang++   -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/header -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/src -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glfw/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glm/glm/..   -std=c++14 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -std=gnu++14 -o CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o -c /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/stb_image/stb_image.cpp",
+  "file": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor/stb_image/stb_image.cpp"
+},
+{
   "directory": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/lib/glfw/src",
   "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glfw/include -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glfw/src -I/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/lib/glfw/src  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -fPIC   -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/context.c.o   -c /Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glfw/src/context.c",
   "file": "/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glfw/src/context.c"
