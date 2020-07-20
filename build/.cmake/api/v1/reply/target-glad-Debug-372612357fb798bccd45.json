@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libglad.a"
+			"path" : "lib/glad/libglad.a"
 		}
 	],
 	"backtrace" : 1,
@@ -12,11 +12,11 @@
 		"commands" : 
 		[
 			"add_library",
-			"include_directories"
+			"target_include_directories"
 		],
 		"files" : 
 		[
-			"CMakeLists.txt"
+			"lib/glad/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -26,13 +26,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 77,
+				"line" : 3,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 68,
+				"line" : 9,
 				"parent" : 0
 			}
 		]
@@ -50,19 +50,11 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glad/include"
+					"path" : "/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/src"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glm"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/giancedrickepilan/dev/native/opengl-demo/src/header"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/giancedrickepilan/dev/native/opengl-demo/src/vendor"
+					"path" : "/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/include"
 				}
 			],
 			"language" : "C",
@@ -72,13 +64,13 @@
 			]
 		}
 	],
-	"id" : "glad::@6890427a1f51a3e7e1df",
+	"id" : "glad::@bf3af473941166e98053",
 	"name" : "glad",
 	"nameOnDisk" : "libglad.a",
 	"paths" : 
 	{
-		"build" : ".",
-		"source" : "."
+		"build" : "lib/glad",
+		"source" : "lib/glad"
 	},
 	"sourceGroups" : 
 	[
@@ -90,10 +82,11 @@
 			]
 		},
 		{
-			"name" : "",
+			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -107,7 +100,12 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "lib/glad/include",
+			"path" : "lib/glad/include/glad/glad.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/glad/include/KHR/khrplatform.h",
 			"sourceGroupIndex" : 1
 		}
 	],

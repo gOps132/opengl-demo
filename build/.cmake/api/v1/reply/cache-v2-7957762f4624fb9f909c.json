@@ -14,6 +14,18 @@
 			"value" : "OFF"
 		},
 		{
+			"name" : "BUILD_STATIC_LIBS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : "ON"
+		},
+		{
 			"name" : "CMAKE_ADDR2LINE",
 			"properties" : 
 			[
@@ -67,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/giancedrickepilan/dev/native/opengl-demo/build"
+			"value" : "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -579,7 +591,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/giancedrickepilan/dev/native/opengl-demo"
+			"value" : "/Users/giancedrickepilan/dev/game-engine/opengl-demo"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -1003,7 +1015,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "5"
+			"value" : "6"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -1499,7 +1511,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/giancedrickepilan/dev/native/opengl-demo/build/lib/glfw"
+			"value" : "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/lib/glfw"
 		},
 		{
 			"name" : "GLFW_BUILD_DOCS",
@@ -1559,7 +1571,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glfw"
+			"value" : "/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glfw"
 		},
 		{
 			"name" : "GLFW_USE_OSMESA",
@@ -1619,7 +1631,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/giancedrickepilan/dev/native/opengl-demo/build/lib/glm"
+			"value" : "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/lib/glm"
 		},
 		{
 			"name" : "glm_SOURCE_DIR",
@@ -1631,7 +1643,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glm"
+			"value" : "/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glm"
 		},
 		{
 			"name" : "learn-opengl_BINARY_DIR",
@@ -1643,7 +1655,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/giancedrickepilan/dev/native/opengl-demo/build"
+			"value" : "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build"
 		},
 		{
 			"name" : "learn-opengl_SOURCE_DIR",
@@ -1655,7 +1667,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/giancedrickepilan/dev/native/opengl-demo"
+			"value" : "/Users/giancedrickepilan/dev/game-engine/opengl-demo"
 		}
 	],
 	"kind" : "cache",
