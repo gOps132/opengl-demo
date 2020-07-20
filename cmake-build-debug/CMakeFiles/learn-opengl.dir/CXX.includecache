@@ -1117,8 +1117,8 @@ string
 -
 sstream
 -
-cassert
--
+signal.h
+../src/header/signal.h
 
 ../src/header/IndexBuffer.h
 
@@ -1186,10 +1186,6 @@ stdint.h
 imgui_user.h
 ../src/vendor/imgui/imgui_user.h
 
-/Users/giancedrickepilan/dev/native/opengl-demo/src/Renderer.cpp
-Renderer.h
-/Users/giancedrickepilan/dev/native/opengl-demo/src/Renderer.h
-
 /Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.h
 iostream
 -
@@ -1198,23 +1194,27 @@ vector
 functional
 -
 
-/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestTexture2d.cpp
-TestTexture2d.h
-/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestTexture2d.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestBatchRendering.cpp
+TestBatchRendering.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestBatchRendering.h
+TestBatchRendering.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestBatchRendering.h
 ErrorManager.h
 /Users/giancedrickepilan/dev/native/opengl-demo/src/test/ErrorManager.h
+IndexBuffer.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/IndexBuffer.h
 VertexArray.h
 /Users/giancedrickepilan/dev/native/opengl-demo/src/test/VertexArray.h
 VertexBuffer.h
 /Users/giancedrickepilan/dev/native/opengl-demo/src/test/VertexBuffer.h
 VertexBufferLayout.h
 /Users/giancedrickepilan/dev/native/opengl-demo/src/test/VertexBufferLayout.h
-IndexBuffer.h
-/Users/giancedrickepilan/dev/native/opengl-demo/src/test/IndexBuffer.h
-Shader.h
-/Users/giancedrickepilan/dev/native/opengl-demo/src/test/Shader.h
 Texture.h
 /Users/giancedrickepilan/dev/native/opengl-demo/src/test/Texture.h
+Shader.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/Shader.h
+Renderer.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/Renderer.h
 glm/glm.hpp
 -
 glm/gtc/matrix_transform.hpp
@@ -1223,8 +1223,26 @@ glad/glad.h
 -
 imgui/imgui.h
 -
+memory
+-
 
-/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestTexture2d.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestBatchRendering.h
 Test.h
 /Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.h
+VertexArray.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/VertexArray.h
+VertexBuffer.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/VertexBuffer.h
+VertexBufferLayout.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/VertexBufferLayout.h
+Texture.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/Texture.h
+IndexBuffer.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/IndexBuffer.h
+Shader.h
+/Users/giancedrickepilan/dev/native/opengl-demo/src/test/Shader.h
+memory
+-
+glm/glm.hpp
+-
 

@@ -11,44 +11,45 @@ cmake_minimum_required(VERSION 3.8)
 project(learn-opengl C CXX)
 set(CMAKE_CXX_STANDARD 14)
 
-set(GLFW_SOURCE_DIR "${CMAKE_SOURCE_DIR}/lib/glfw")
-set(GLAD_SOURCE_DIR "${CMAKE_SOURCE_DIR}/lib/glad")
-set(GLM_SOURCE_DIR "${CMAKE_SOURCE_DIR}/lib/glm")
-
-set(HEADER_DIR "${CMAKE_SOURCE_DIR}/src/header")
-set(VENDOR_DIR "${CMAKE_SOURCE_DIR}/src/vendor")
-set(TEST_DIR "${CMAKE_SOURCE_DIR}/src/test")
-
-add_subdirectory(${GLFW_SOURCE_DIR})
-add_subdirectory(${GLM_SOURCE_DIR})
+add_subdirectory(lib/glfw)
+add_subdirectory(lib/glm)
+add_subdirectory(lib/glad)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
-file(GLOB MAIN_SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
-file(GLOB MAIN_HEADER_FILES ${HEADER_DIR}/*.h)
-
-file(GLOB TEST_SRC_FILES ${TEST_DIR}/*.cpp)
-file(GLOB TEST_HEADER_FILES ${TEST_DIR}/*.h)
-
-file(GLOB STB_IMAGE_HEADER_FILES ${VENxDOR_DIR}/stb_image/*.h)
-file(GLOB STB_IMAGE_SOURCE_FILES ${VENDOR_DIR}/stb_image/*.cpp)
-
-file(GLOB IM_GUI_HEADER_FILES ${VENDOR_DIR}/imgui/*.h)
-file(GLOB IM_GUI_SOURCE_FILES ${VENDOR_DIR}/imgui/*.cpp)
+# this is not good but im tired
+file(GLOB VENDOR_HEADERS src/vendor/*/*.h)
+file(GLOB VENDOR_SOURCES src/vendor/*/*.cpp)
 
 set(SOURCE_FILES
-        ${MAIN_SRC_FILES}
-        ${MAIN_HEADER_FILES}
+    src/ErrorManager.cpp
+    src/IndexBuffer.cpp
+    src/main.cpp
+    src/Renderer.cpp  
+    src/Shader.cpp
+    src/Texture.cpp
+    src/VertexArray.cpp
+    src/VertexBuffer.cpp
+    
+    src/header/ErrorManager.h
+    src/header/IndexBuffer.h
+    src/header/Renderer.h  
+    src/header/Shader.h
+    src/header/Texture.h
+    src/header/VertexArray.h
+    src/header/VertexBuffer.h
+    src/header/VertexBufferLayout.h
 
-        ${STB_IMAGE_HEADER_FILES}
-        ${STB_IMAGE_SOURCE_FILES}
+    src/test/Test.cpp
+    src/test/Test.h
+    src/test/TestClearColor.cpp
+    src/test/TestClearColor.h    
+    src/test/TestTexture2d.cpp
+    src/test/TestTexture2d.h
 
-        ${IM_GUI_HEADER_FILES}
-        ${IM_GUI_SOURCE_FILES}
-
-        ${TEST_SRC_FILES}
-        ${TEST_HEADER_FILES}
-        )
+    ${VENDOR_HEADERS}
+    ${VENDOR_SOURCES}
+)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
@@ -66,21 +67,12 @@ else()
 endif()
 
 include_directories(
-    ${GLAD_SOURCE_DIR}/include
-    ${GLM_SOURCE_DIR}
-
-    ${HEADER_DIR}
-    ${VENDOR_DIR}
+    src/header
+    src/vendor
+    src/test
 )
 
-# TODO: move this to seperate cmake modules
-add_library(glad STATIC
-  ${GLAD_SOURCE_DIR}/src/glad.c
-  ${GLAD_SOURCE_DIR}/include
-)
-
-target_link_libraries(
-    ${PROJECT_NAME} 
+target_link_libraries(${PROJECT_NAME} 
     ${EXTRA_LIBS}
     glad
     glfw 

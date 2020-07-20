@@ -478,6 +478,33 @@ src/test/Test.cpp.s:
 	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/Test.cpp.s
 .PHONY : src/test/Test.cpp.s
 
+src/test/TestBatchRendering.o: src/test/TestBatchRendering.cpp.o
+
+.PHONY : src/test/TestBatchRendering.o
+
+# target to build an object file
+src/test/TestBatchRendering.cpp.o:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestBatchRendering.cpp.o
+.PHONY : src/test/TestBatchRendering.cpp.o
+
+src/test/TestBatchRendering.i: src/test/TestBatchRendering.cpp.i
+
+.PHONY : src/test/TestBatchRendering.i
+
+# target to preprocess a source file
+src/test/TestBatchRendering.cpp.i:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestBatchRendering.cpp.i
+.PHONY : src/test/TestBatchRendering.cpp.i
+
+src/test/TestBatchRendering.s: src/test/TestBatchRendering.cpp.s
+
+.PHONY : src/test/TestBatchRendering.s
+
+# target to generate assembly for a file
+src/test/TestBatchRendering.cpp.s:
+	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestBatchRendering.cpp.s
+.PHONY : src/test/TestBatchRendering.cpp.s
+
 src/test/TestClearColor.o: src/test/TestClearColor.cpp.o
 
 .PHONY : src/test/TestClearColor.o
@@ -767,6 +794,9 @@ help:
 	@echo "... src/test/Test.o"
 	@echo "... src/test/Test.i"
 	@echo "... src/test/Test.s"
+	@echo "... src/test/TestBatchRendering.o"
+	@echo "... src/test/TestBatchRendering.i"
+	@echo "... src/test/TestBatchRendering.s"
 	@echo "... src/test/TestClearColor.o"
 	@echo "... src/test/TestClearColor.i"
 	@echo "... src/test/TestClearColor.s"
