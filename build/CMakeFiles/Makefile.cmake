@@ -46,6 +46,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.17.0/CMakeCCompiler.cmake"
   "CMakeFiles/3.17.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.17.0/CMakeSystem.cmake"
+  "../lib/glad/CMakeLists.txt"
   "../lib/glfw/CMake/cmake_uninstall.cmake.in"
   "../lib/glfw/CMake/glfw3.pc.in"
   "../lib/glfw/CMake/glfw3Config.cmake.in"
@@ -69,12 +70,14 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "lib/glfw/src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/glm/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/glm/glm/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/glad/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/learn-opengl.dir/DependInfo.cmake"
-  "CMakeFiles/glad.dir/DependInfo.cmake"
   "lib/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake"
   "lib/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "lib/glm/glm/CMakeFiles/glm_static.dir/DependInfo.cmake"
+  "lib/glad/CMakeFiles/glad.dir/DependInfo.cmake"
   )

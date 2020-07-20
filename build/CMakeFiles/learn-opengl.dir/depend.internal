@@ -5,13 +5,13 @@ CMakeFiles/learn-opengl.dir/src/ErrorManager.cpp.o
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
  ../src/header/ErrorManager.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/ErrorManager.cpp
+ /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/ErrorManager.cpp
 CMakeFiles/learn-opengl.dir/src/IndexBuffer.cpp.o
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
  ../src/header/ErrorManager.h
  ../src/header/IndexBuffer.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/IndexBuffer.cpp
+ /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/IndexBuffer.cpp
 CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
@@ -172,7 +172,7 @@ CMakeFiles/learn-opengl.dir/src/Renderer.cpp.o
  ../src/header/Shader.h
  ../src/header/VertexArray.h
  ../src/header/VertexBuffer.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/Renderer.cpp
+ /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/Renderer.cpp
 CMakeFiles/learn-opengl.dir/src/Shader.cpp.o
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
@@ -329,13 +329,12 @@ CMakeFiles/learn-opengl.dir/src/Shader.cpp.o
  ../lib/glm/glm/vector_relational.hpp
  ../src/header/ErrorManager.h
  ../src/header/Shader.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/Shader.cpp
+ /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/Shader.cpp
 CMakeFiles/learn-opengl.dir/src/Texture.cpp.o
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
  ../src/header/Texture.h
- ../src/vendor/stb_image/stb_image.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/Texture.cpp
+ /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/Texture.cpp
 CMakeFiles/learn-opengl.dir/src/VertexArray.cpp.o
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
@@ -497,7 +496,7 @@ CMakeFiles/learn-opengl.dir/src/VertexArray.cpp.o
  ../src/header/VertexArray.h
  ../src/header/VertexBuffer.h
  ../src/header/VertexBufferLayout.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/VertexArray.cpp
+ /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/VertexArray.cpp
 CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
@@ -658,7 +657,7 @@ CMakeFiles/learn-opengl.dir/src/VertexBuffer.cpp.o
  ../src/header/Shader.h
  ../src/header/VertexArray.h
  ../src/header/VertexBuffer.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/VertexBuffer.cpp
+ /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/VertexBuffer.cpp
 CMakeFiles/learn-opengl.dir/src/main.cpp.o
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
@@ -833,423 +832,8 @@ CMakeFiles/learn-opengl.dir/src/main.cpp.o
  ../src/header/VertexArray.h
  ../src/header/VertexBuffer.h
  ../src/header/VertexBufferLayout.h
- ../src/vendor/imgui/imconfig.h
- ../src/vendor/imgui/imgui.h
- ../src/vendor/imgui/imgui_impl_glfw.h
- ../src/vendor/imgui/imgui_impl_opengl3.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/main.cpp
- /Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestBatchRendering.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestClearColor.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestTexture2d.h
-CMakeFiles/learn-opengl.dir/src/test/Test.cpp.o
- ../src/vendor/imgui/imconfig.h
- ../src/vendor/imgui/imgui.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.cpp
- /Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.h
-CMakeFiles/learn-opengl.dir/src/test/TestBatchRendering.cpp.o
- ../lib/glad/include/KHR/khrplatform.h
- ../lib/glad/include/glad/glad.h
- ../lib/glm/glm/common.hpp
- ../lib/glm/glm/detail/_fixes.hpp
- ../lib/glm/glm/detail/_swizzle.hpp
- ../lib/glm/glm/detail/_swizzle_func.hpp
- ../lib/glm/glm/detail/_vectorize.hpp
- ../lib/glm/glm/detail/compute_common.hpp
- ../lib/glm/glm/detail/compute_vector_relational.hpp
- ../lib/glm/glm/detail/func_common.inl
- ../lib/glm/glm/detail/func_common_simd.inl
- ../lib/glm/glm/detail/func_exponential.inl
- ../lib/glm/glm/detail/func_exponential_simd.inl
- ../lib/glm/glm/detail/func_geometric.inl
- ../lib/glm/glm/detail/func_geometric_simd.inl
- ../lib/glm/glm/detail/func_integer.inl
- ../lib/glm/glm/detail/func_integer_simd.inl
- ../lib/glm/glm/detail/func_matrix.inl
- ../lib/glm/glm/detail/func_matrix_simd.inl
- ../lib/glm/glm/detail/func_packing.inl
- ../lib/glm/glm/detail/func_packing_simd.inl
- ../lib/glm/glm/detail/func_trigonometric.inl
- ../lib/glm/glm/detail/func_trigonometric_simd.inl
- ../lib/glm/glm/detail/func_vector_relational.inl
- ../lib/glm/glm/detail/func_vector_relational_simd.inl
- ../lib/glm/glm/detail/qualifier.hpp
- ../lib/glm/glm/detail/setup.hpp
- ../lib/glm/glm/detail/type_half.hpp
- ../lib/glm/glm/detail/type_half.inl
- ../lib/glm/glm/detail/type_mat2x2.hpp
- ../lib/glm/glm/detail/type_mat2x2.inl
- ../lib/glm/glm/detail/type_mat2x3.hpp
- ../lib/glm/glm/detail/type_mat2x3.inl
- ../lib/glm/glm/detail/type_mat2x4.hpp
- ../lib/glm/glm/detail/type_mat2x4.inl
- ../lib/glm/glm/detail/type_mat3x2.hpp
- ../lib/glm/glm/detail/type_mat3x2.inl
- ../lib/glm/glm/detail/type_mat3x3.hpp
- ../lib/glm/glm/detail/type_mat3x3.inl
- ../lib/glm/glm/detail/type_mat3x4.hpp
- ../lib/glm/glm/detail/type_mat3x4.inl
- ../lib/glm/glm/detail/type_mat4x2.hpp
- ../lib/glm/glm/detail/type_mat4x2.inl
- ../lib/glm/glm/detail/type_mat4x3.hpp
- ../lib/glm/glm/detail/type_mat4x3.inl
- ../lib/glm/glm/detail/type_mat4x4.hpp
- ../lib/glm/glm/detail/type_mat4x4.inl
- ../lib/glm/glm/detail/type_mat4x4_simd.inl
- ../lib/glm/glm/detail/type_vec1.hpp
- ../lib/glm/glm/detail/type_vec1.inl
- ../lib/glm/glm/detail/type_vec2.hpp
- ../lib/glm/glm/detail/type_vec2.inl
- ../lib/glm/glm/detail/type_vec3.hpp
- ../lib/glm/glm/detail/type_vec3.inl
- ../lib/glm/glm/detail/type_vec4.hpp
- ../lib/glm/glm/detail/type_vec4.inl
- ../lib/glm/glm/detail/type_vec4_simd.inl
- ../lib/glm/glm/exponential.hpp
- ../lib/glm/glm/ext/matrix_clip_space.hpp
- ../lib/glm/glm/ext/matrix_clip_space.inl
- ../lib/glm/glm/ext/matrix_double2x2.hpp
- ../lib/glm/glm/ext/matrix_double2x2_precision.hpp
- ../lib/glm/glm/ext/matrix_double2x3.hpp
- ../lib/glm/glm/ext/matrix_double2x3_precision.hpp
- ../lib/glm/glm/ext/matrix_double2x4.hpp
- ../lib/glm/glm/ext/matrix_double2x4_precision.hpp
- ../lib/glm/glm/ext/matrix_double3x2.hpp
- ../lib/glm/glm/ext/matrix_double3x2_precision.hpp
- ../lib/glm/glm/ext/matrix_double3x3.hpp
- ../lib/glm/glm/ext/matrix_double3x3_precision.hpp
- ../lib/glm/glm/ext/matrix_double3x4.hpp
- ../lib/glm/glm/ext/matrix_double3x4_precision.hpp
- ../lib/glm/glm/ext/matrix_double4x2.hpp
- ../lib/glm/glm/ext/matrix_double4x2_precision.hpp
- ../lib/glm/glm/ext/matrix_double4x3.hpp
- ../lib/glm/glm/ext/matrix_double4x3_precision.hpp
- ../lib/glm/glm/ext/matrix_double4x4.hpp
- ../lib/glm/glm/ext/matrix_double4x4_precision.hpp
- ../lib/glm/glm/ext/matrix_float2x2.hpp
- ../lib/glm/glm/ext/matrix_float2x2_precision.hpp
- ../lib/glm/glm/ext/matrix_float2x3.hpp
- ../lib/glm/glm/ext/matrix_float2x3_precision.hpp
- ../lib/glm/glm/ext/matrix_float2x4.hpp
- ../lib/glm/glm/ext/matrix_float2x4_precision.hpp
- ../lib/glm/glm/ext/matrix_float3x2.hpp
- ../lib/glm/glm/ext/matrix_float3x2_precision.hpp
- ../lib/glm/glm/ext/matrix_float3x3.hpp
- ../lib/glm/glm/ext/matrix_float3x3_precision.hpp
- ../lib/glm/glm/ext/matrix_float3x4.hpp
- ../lib/glm/glm/ext/matrix_float3x4_precision.hpp
- ../lib/glm/glm/ext/matrix_float4x2.hpp
- ../lib/glm/glm/ext/matrix_float4x2_precision.hpp
- ../lib/glm/glm/ext/matrix_float4x3.hpp
- ../lib/glm/glm/ext/matrix_float4x3_precision.hpp
- ../lib/glm/glm/ext/matrix_float4x4.hpp
- ../lib/glm/glm/ext/matrix_float4x4_precision.hpp
- ../lib/glm/glm/ext/matrix_projection.hpp
- ../lib/glm/glm/ext/matrix_projection.inl
- ../lib/glm/glm/ext/matrix_transform.hpp
- ../lib/glm/glm/ext/scalar_constants.hpp
- ../lib/glm/glm/ext/scalar_constants.inl
- ../lib/glm/glm/ext/scalar_int_sized.hpp
- ../lib/glm/glm/ext/scalar_uint_sized.hpp
- ../lib/glm/glm/ext/vector_bool2.hpp
- ../lib/glm/glm/ext/vector_bool2_precision.hpp
- ../lib/glm/glm/ext/vector_bool3.hpp
- ../lib/glm/glm/ext/vector_bool3_precision.hpp
- ../lib/glm/glm/ext/vector_bool4.hpp
- ../lib/glm/glm/ext/vector_bool4_precision.hpp
- ../lib/glm/glm/ext/vector_double2.hpp
- ../lib/glm/glm/ext/vector_double2_precision.hpp
- ../lib/glm/glm/ext/vector_double3.hpp
- ../lib/glm/glm/ext/vector_double3_precision.hpp
- ../lib/glm/glm/ext/vector_double4.hpp
- ../lib/glm/glm/ext/vector_double4_precision.hpp
- ../lib/glm/glm/ext/vector_float2.hpp
- ../lib/glm/glm/ext/vector_float2_precision.hpp
- ../lib/glm/glm/ext/vector_float3.hpp
- ../lib/glm/glm/ext/vector_float3_precision.hpp
- ../lib/glm/glm/ext/vector_float4.hpp
- ../lib/glm/glm/ext/vector_float4_precision.hpp
- ../lib/glm/glm/ext/vector_int2.hpp
- ../lib/glm/glm/ext/vector_int2_sized.hpp
- ../lib/glm/glm/ext/vector_int3.hpp
- ../lib/glm/glm/ext/vector_int3_sized.hpp
- ../lib/glm/glm/ext/vector_int4.hpp
- ../lib/glm/glm/ext/vector_int4_sized.hpp
- ../lib/glm/glm/ext/vector_uint2.hpp
- ../lib/glm/glm/ext/vector_uint2_sized.hpp
- ../lib/glm/glm/ext/vector_uint3.hpp
- ../lib/glm/glm/ext/vector_uint3_sized.hpp
- ../lib/glm/glm/ext/vector_uint4.hpp
- ../lib/glm/glm/ext/vector_uint4_sized.hpp
- ../lib/glm/glm/fwd.hpp
- ../lib/glm/glm/geometric.hpp
- ../lib/glm/glm/glm.hpp
- ../lib/glm/glm/gtc/constants.hpp
- ../lib/glm/glm/gtc/constants.inl
- ../lib/glm/glm/gtc/matrix_transform.hpp
- ../lib/glm/glm/gtc/matrix_transform.inl
- ../lib/glm/glm/integer.hpp
- ../lib/glm/glm/mat2x2.hpp
- ../lib/glm/glm/mat2x3.hpp
- ../lib/glm/glm/mat2x4.hpp
- ../lib/glm/glm/mat3x2.hpp
- ../lib/glm/glm/mat3x3.hpp
- ../lib/glm/glm/mat3x4.hpp
- ../lib/glm/glm/mat4x2.hpp
- ../lib/glm/glm/mat4x3.hpp
- ../lib/glm/glm/mat4x4.hpp
- ../lib/glm/glm/matrix.hpp
- ../lib/glm/glm/packing.hpp
- ../lib/glm/glm/simd/common.h
- ../lib/glm/glm/simd/exponential.h
- ../lib/glm/glm/simd/geometric.h
- ../lib/glm/glm/simd/integer.h
- ../lib/glm/glm/simd/matrix.h
- ../lib/glm/glm/simd/neon.h
- ../lib/glm/glm/simd/platform.h
- ../lib/glm/glm/trigonometric.hpp
- ../lib/glm/glm/vec2.hpp
- ../lib/glm/glm/vec3.hpp
- ../lib/glm/glm/vec4.hpp
- ../lib/glm/glm/vector_relational.hpp
- ../src/header/ErrorManager.h
- ../src/header/IndexBuffer.h
- ../src/header/Renderer.h
- ../src/header/Shader.h
- ../src/header/Texture.h
- ../src/header/VertexArray.h
- ../src/header/VertexBuffer.h
- ../src/header/VertexBufferLayout.h
- ../src/vendor/imgui/imconfig.h
- ../src/vendor/imgui/imgui.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestBatchRendering.cpp
- /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestBatchRendering.h
-CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o
- ../lib/glad/include/KHR/khrplatform.h
- ../lib/glad/include/glad/glad.h
- ../src/header/ErrorManager.h
- ../src/vendor/imgui/imconfig.h
- ../src/vendor/imgui/imgui.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestClearColor.cpp
- /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestClearColor.h
-CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.o
- ../lib/glad/include/KHR/khrplatform.h
- ../lib/glad/include/glad/glad.h
- ../lib/glm/glm/common.hpp
- ../lib/glm/glm/detail/_fixes.hpp
- ../lib/glm/glm/detail/_swizzle.hpp
- ../lib/glm/glm/detail/_swizzle_func.hpp
- ../lib/glm/glm/detail/_vectorize.hpp
- ../lib/glm/glm/detail/compute_common.hpp
- ../lib/glm/glm/detail/compute_vector_relational.hpp
- ../lib/glm/glm/detail/func_common.inl
- ../lib/glm/glm/detail/func_common_simd.inl
- ../lib/glm/glm/detail/func_exponential.inl
- ../lib/glm/glm/detail/func_exponential_simd.inl
- ../lib/glm/glm/detail/func_geometric.inl
- ../lib/glm/glm/detail/func_geometric_simd.inl
- ../lib/glm/glm/detail/func_integer.inl
- ../lib/glm/glm/detail/func_integer_simd.inl
- ../lib/glm/glm/detail/func_matrix.inl
- ../lib/glm/glm/detail/func_matrix_simd.inl
- ../lib/glm/glm/detail/func_packing.inl
- ../lib/glm/glm/detail/func_packing_simd.inl
- ../lib/glm/glm/detail/func_trigonometric.inl
- ../lib/glm/glm/detail/func_trigonometric_simd.inl
- ../lib/glm/glm/detail/func_vector_relational.inl
- ../lib/glm/glm/detail/func_vector_relational_simd.inl
- ../lib/glm/glm/detail/qualifier.hpp
- ../lib/glm/glm/detail/setup.hpp
- ../lib/glm/glm/detail/type_half.hpp
- ../lib/glm/glm/detail/type_half.inl
- ../lib/glm/glm/detail/type_mat2x2.hpp
- ../lib/glm/glm/detail/type_mat2x2.inl
- ../lib/glm/glm/detail/type_mat2x3.hpp
- ../lib/glm/glm/detail/type_mat2x3.inl
- ../lib/glm/glm/detail/type_mat2x4.hpp
- ../lib/glm/glm/detail/type_mat2x4.inl
- ../lib/glm/glm/detail/type_mat3x2.hpp
- ../lib/glm/glm/detail/type_mat3x2.inl
- ../lib/glm/glm/detail/type_mat3x3.hpp
- ../lib/glm/glm/detail/type_mat3x3.inl
- ../lib/glm/glm/detail/type_mat3x4.hpp
- ../lib/glm/glm/detail/type_mat3x4.inl
- ../lib/glm/glm/detail/type_mat4x2.hpp
- ../lib/glm/glm/detail/type_mat4x2.inl
- ../lib/glm/glm/detail/type_mat4x3.hpp
- ../lib/glm/glm/detail/type_mat4x3.inl
- ../lib/glm/glm/detail/type_mat4x4.hpp
- ../lib/glm/glm/detail/type_mat4x4.inl
- ../lib/glm/glm/detail/type_mat4x4_simd.inl
- ../lib/glm/glm/detail/type_vec1.hpp
- ../lib/glm/glm/detail/type_vec1.inl
- ../lib/glm/glm/detail/type_vec2.hpp
- ../lib/glm/glm/detail/type_vec2.inl
- ../lib/glm/glm/detail/type_vec3.hpp
- ../lib/glm/glm/detail/type_vec3.inl
- ../lib/glm/glm/detail/type_vec4.hpp
- ../lib/glm/glm/detail/type_vec4.inl
- ../lib/glm/glm/detail/type_vec4_simd.inl
- ../lib/glm/glm/exponential.hpp
- ../lib/glm/glm/ext/matrix_clip_space.hpp
- ../lib/glm/glm/ext/matrix_clip_space.inl
- ../lib/glm/glm/ext/matrix_double2x2.hpp
- ../lib/glm/glm/ext/matrix_double2x2_precision.hpp
- ../lib/glm/glm/ext/matrix_double2x3.hpp
- ../lib/glm/glm/ext/matrix_double2x3_precision.hpp
- ../lib/glm/glm/ext/matrix_double2x4.hpp
- ../lib/glm/glm/ext/matrix_double2x4_precision.hpp
- ../lib/glm/glm/ext/matrix_double3x2.hpp
- ../lib/glm/glm/ext/matrix_double3x2_precision.hpp
- ../lib/glm/glm/ext/matrix_double3x3.hpp
- ../lib/glm/glm/ext/matrix_double3x3_precision.hpp
- ../lib/glm/glm/ext/matrix_double3x4.hpp
- ../lib/glm/glm/ext/matrix_double3x4_precision.hpp
- ../lib/glm/glm/ext/matrix_double4x2.hpp
- ../lib/glm/glm/ext/matrix_double4x2_precision.hpp
- ../lib/glm/glm/ext/matrix_double4x3.hpp
- ../lib/glm/glm/ext/matrix_double4x3_precision.hpp
- ../lib/glm/glm/ext/matrix_double4x4.hpp
- ../lib/glm/glm/ext/matrix_double4x4_precision.hpp
- ../lib/glm/glm/ext/matrix_float2x2.hpp
- ../lib/glm/glm/ext/matrix_float2x2_precision.hpp
- ../lib/glm/glm/ext/matrix_float2x3.hpp
- ../lib/glm/glm/ext/matrix_float2x3_precision.hpp
- ../lib/glm/glm/ext/matrix_float2x4.hpp
- ../lib/glm/glm/ext/matrix_float2x4_precision.hpp
- ../lib/glm/glm/ext/matrix_float3x2.hpp
- ../lib/glm/glm/ext/matrix_float3x2_precision.hpp
- ../lib/glm/glm/ext/matrix_float3x3.hpp
- ../lib/glm/glm/ext/matrix_float3x3_precision.hpp
- ../lib/glm/glm/ext/matrix_float3x4.hpp
- ../lib/glm/glm/ext/matrix_float3x4_precision.hpp
- ../lib/glm/glm/ext/matrix_float4x2.hpp
- ../lib/glm/glm/ext/matrix_float4x2_precision.hpp
- ../lib/glm/glm/ext/matrix_float4x3.hpp
- ../lib/glm/glm/ext/matrix_float4x3_precision.hpp
- ../lib/glm/glm/ext/matrix_float4x4.hpp
- ../lib/glm/glm/ext/matrix_float4x4_precision.hpp
- ../lib/glm/glm/ext/matrix_projection.hpp
- ../lib/glm/glm/ext/matrix_projection.inl
- ../lib/glm/glm/ext/matrix_transform.hpp
- ../lib/glm/glm/ext/scalar_constants.hpp
- ../lib/glm/glm/ext/scalar_constants.inl
- ../lib/glm/glm/ext/scalar_int_sized.hpp
- ../lib/glm/glm/ext/scalar_uint_sized.hpp
- ../lib/glm/glm/ext/vector_bool2.hpp
- ../lib/glm/glm/ext/vector_bool2_precision.hpp
- ../lib/glm/glm/ext/vector_bool3.hpp
- ../lib/glm/glm/ext/vector_bool3_precision.hpp
- ../lib/glm/glm/ext/vector_bool4.hpp
- ../lib/glm/glm/ext/vector_bool4_precision.hpp
- ../lib/glm/glm/ext/vector_double2.hpp
- ../lib/glm/glm/ext/vector_double2_precision.hpp
- ../lib/glm/glm/ext/vector_double3.hpp
- ../lib/glm/glm/ext/vector_double3_precision.hpp
- ../lib/glm/glm/ext/vector_double4.hpp
- ../lib/glm/glm/ext/vector_double4_precision.hpp
- ../lib/glm/glm/ext/vector_float2.hpp
- ../lib/glm/glm/ext/vector_float2_precision.hpp
- ../lib/glm/glm/ext/vector_float3.hpp
- ../lib/glm/glm/ext/vector_float3_precision.hpp
- ../lib/glm/glm/ext/vector_float4.hpp
- ../lib/glm/glm/ext/vector_float4_precision.hpp
- ../lib/glm/glm/ext/vector_int2.hpp
- ../lib/glm/glm/ext/vector_int2_sized.hpp
- ../lib/glm/glm/ext/vector_int3.hpp
- ../lib/glm/glm/ext/vector_int3_sized.hpp
- ../lib/glm/glm/ext/vector_int4.hpp
- ../lib/glm/glm/ext/vector_int4_sized.hpp
- ../lib/glm/glm/ext/vector_uint2.hpp
- ../lib/glm/glm/ext/vector_uint2_sized.hpp
- ../lib/glm/glm/ext/vector_uint3.hpp
- ../lib/glm/glm/ext/vector_uint3_sized.hpp
- ../lib/glm/glm/ext/vector_uint4.hpp
- ../lib/glm/glm/ext/vector_uint4_sized.hpp
- ../lib/glm/glm/fwd.hpp
- ../lib/glm/glm/geometric.hpp
- ../lib/glm/glm/glm.hpp
- ../lib/glm/glm/gtc/constants.hpp
- ../lib/glm/glm/gtc/constants.inl
- ../lib/glm/glm/gtc/matrix_transform.hpp
- ../lib/glm/glm/gtc/matrix_transform.inl
- ../lib/glm/glm/integer.hpp
- ../lib/glm/glm/mat2x2.hpp
- ../lib/glm/glm/mat2x3.hpp
- ../lib/glm/glm/mat2x4.hpp
- ../lib/glm/glm/mat3x2.hpp
- ../lib/glm/glm/mat3x3.hpp
- ../lib/glm/glm/mat3x4.hpp
- ../lib/glm/glm/mat4x2.hpp
- ../lib/glm/glm/mat4x3.hpp
- ../lib/glm/glm/mat4x4.hpp
- ../lib/glm/glm/matrix.hpp
- ../lib/glm/glm/packing.hpp
- ../lib/glm/glm/simd/common.h
- ../lib/glm/glm/simd/exponential.h
- ../lib/glm/glm/simd/geometric.h
- ../lib/glm/glm/simd/integer.h
- ../lib/glm/glm/simd/matrix.h
- ../lib/glm/glm/simd/neon.h
- ../lib/glm/glm/simd/platform.h
- ../lib/glm/glm/trigonometric.hpp
- ../lib/glm/glm/vec2.hpp
- ../lib/glm/glm/vec3.hpp
- ../lib/glm/glm/vec4.hpp
- ../lib/glm/glm/vector_relational.hpp
- ../src/header/ErrorManager.h
- ../src/header/IndexBuffer.h
- ../src/header/Renderer.h
- ../src/header/Shader.h
- ../src/header/Texture.h
- ../src/header/VertexArray.h
- ../src/header/VertexBuffer.h
- ../src/header/VertexBufferLayout.h
- ../src/vendor/imgui/imconfig.h
- ../src/vendor/imgui/imgui.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/test/Test.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestTexture2d.cpp
- /Users/giancedrickepilan/dev/native/opengl-demo/src/test/TestTexture2d.h
-CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imconfig.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui.cpp
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui_internal.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imstb_textedit.h
-CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imconfig.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui_demo.cpp
-CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imconfig.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui_draw.cpp
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui_internal.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imstb_rectpack.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imstb_textedit.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imstb_truetype.h
-CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.o
- ../lib/glfw/include/GLFW/glfw3.h
- ../lib/glfw/include/GLFW/glfw3native.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imconfig.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui_impl_glfw.cpp
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui_impl_glfw.h
-CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o
- ../lib/glad/include/KHR/khrplatform.h
- ../lib/glad/include/glad/glad.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imconfig.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui_impl_opengl3.cpp
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui_impl_opengl3.h
-CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imconfig.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui_internal.h
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imgui_widgets.cpp
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/imgui/imstb_textedit.h
-CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/stb_image/stb_image.cpp
- /Users/giancedrickepilan/dev/native/opengl-demo/src/vendor/stb_image/stb_image.h
+ /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/main.cpp
+ /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test/Test.h
+ /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test/TestBatchRendering.h
+ /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test/TestClearColor.h
+ /Users/giancedrickepilan/dev/game-engine/opengl-demo/src/test/TestTexture2d.h

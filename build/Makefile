@@ -65,10 +65,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/giancedrickepilan/dev/native/opengl-demo
+CMAKE_SOURCE_DIR = /Users/giancedrickepilan/dev/game-engine/opengl-demo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/giancedrickepilan/dev/native/opengl-demo/build
+CMAKE_BINARY_DIR = /Users/giancedrickepilan/dev/game-engine/opengl-demo/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -84,6 +84,30 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CMake.app/Contents/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CMake.app/Contents/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -117,35 +141,11 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/Applications/CMake.app/Contents/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/Applications/CMake.app/Contents/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/giancedrickepilan/dev/native/opengl-demo/build/CMakeFiles /Users/giancedrickepilan/dev/native/opengl-demo/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles /Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/giancedrickepilan/dev/native/opengl-demo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -187,19 +187,6 @@ learn-opengl/fast:
 .PHONY : learn-opengl/fast
 
 #=============================================================================
-# Target rules for targets named glad
-
-# Build rule for target.
-glad: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glad
-.PHONY : glad
-
-# fast build rule for target.
-glad/fast:
-	$(MAKE) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/build
-.PHONY : glad/fast
-
-#=============================================================================
 # Target rules for targets named uninstall
 
 # Build rule for target.
@@ -225,32 +212,31 @@ glfw/fast:
 	$(MAKE) -f lib/glfw/src/CMakeFiles/glfw.dir/build.make lib/glfw/src/CMakeFiles/glfw.dir/build
 .PHONY : glfw/fast
 
-lib/glad/src/glad.o: lib/glad/src/glad.c.o
+#=============================================================================
+# Target rules for targets named glm_static
 
-.PHONY : lib/glad/src/glad.o
+# Build rule for target.
+glm_static: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glm_static
+.PHONY : glm_static
 
-# target to build an object file
-lib/glad/src/glad.c.o:
-	$(MAKE) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/lib/glad/src/glad.c.o
-.PHONY : lib/glad/src/glad.c.o
+# fast build rule for target.
+glm_static/fast:
+	$(MAKE) -f lib/glm/glm/CMakeFiles/glm_static.dir/build.make lib/glm/glm/CMakeFiles/glm_static.dir/build
+.PHONY : glm_static/fast
 
-lib/glad/src/glad.i: lib/glad/src/glad.c.i
+#=============================================================================
+# Target rules for targets named glad
 
-.PHONY : lib/glad/src/glad.i
+# Build rule for target.
+glad: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glad
+.PHONY : glad
 
-# target to preprocess a source file
-lib/glad/src/glad.c.i:
-	$(MAKE) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/lib/glad/src/glad.c.i
-.PHONY : lib/glad/src/glad.c.i
-
-lib/glad/src/glad.s: lib/glad/src/glad.c.s
-
-.PHONY : lib/glad/src/glad.s
-
-# target to generate assembly for a file
-lib/glad/src/glad.c.s:
-	$(MAKE) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/lib/glad/src/glad.c.s
-.PHONY : lib/glad/src/glad.c.s
+# fast build rule for target.
+glad/fast:
+	$(MAKE) -f lib/glad/CMakeFiles/glad.dir/build.make lib/glad/CMakeFiles/glad.dir/build
+.PHONY : glad/fast
 
 src/ErrorManager.o: src/ErrorManager.cpp.o
 
@@ -468,303 +454,6 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/test/Test.o: src/test/Test.cpp.o
-
-.PHONY : src/test/Test.o
-
-# target to build an object file
-src/test/Test.cpp.o:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/Test.cpp.o
-.PHONY : src/test/Test.cpp.o
-
-src/test/Test.i: src/test/Test.cpp.i
-
-.PHONY : src/test/Test.i
-
-# target to preprocess a source file
-src/test/Test.cpp.i:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/Test.cpp.i
-.PHONY : src/test/Test.cpp.i
-
-src/test/Test.s: src/test/Test.cpp.s
-
-.PHONY : src/test/Test.s
-
-# target to generate assembly for a file
-src/test/Test.cpp.s:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/Test.cpp.s
-.PHONY : src/test/Test.cpp.s
-
-src/test/TestBatchRendering.o: src/test/TestBatchRendering.cpp.o
-
-.PHONY : src/test/TestBatchRendering.o
-
-# target to build an object file
-src/test/TestBatchRendering.cpp.o:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestBatchRendering.cpp.o
-.PHONY : src/test/TestBatchRendering.cpp.o
-
-src/test/TestBatchRendering.i: src/test/TestBatchRendering.cpp.i
-
-.PHONY : src/test/TestBatchRendering.i
-
-# target to preprocess a source file
-src/test/TestBatchRendering.cpp.i:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestBatchRendering.cpp.i
-.PHONY : src/test/TestBatchRendering.cpp.i
-
-src/test/TestBatchRendering.s: src/test/TestBatchRendering.cpp.s
-
-.PHONY : src/test/TestBatchRendering.s
-
-# target to generate assembly for a file
-src/test/TestBatchRendering.cpp.s:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestBatchRendering.cpp.s
-.PHONY : src/test/TestBatchRendering.cpp.s
-
-src/test/TestClearColor.o: src/test/TestClearColor.cpp.o
-
-.PHONY : src/test/TestClearColor.o
-
-# target to build an object file
-src/test/TestClearColor.cpp.o:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.o
-.PHONY : src/test/TestClearColor.cpp.o
-
-src/test/TestClearColor.i: src/test/TestClearColor.cpp.i
-
-.PHONY : src/test/TestClearColor.i
-
-# target to preprocess a source file
-src/test/TestClearColor.cpp.i:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.i
-.PHONY : src/test/TestClearColor.cpp.i
-
-src/test/TestClearColor.s: src/test/TestClearColor.cpp.s
-
-.PHONY : src/test/TestClearColor.s
-
-# target to generate assembly for a file
-src/test/TestClearColor.cpp.s:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestClearColor.cpp.s
-.PHONY : src/test/TestClearColor.cpp.s
-
-src/test/TestTexture2d.o: src/test/TestTexture2d.cpp.o
-
-.PHONY : src/test/TestTexture2d.o
-
-# target to build an object file
-src/test/TestTexture2d.cpp.o:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.o
-.PHONY : src/test/TestTexture2d.cpp.o
-
-src/test/TestTexture2d.i: src/test/TestTexture2d.cpp.i
-
-.PHONY : src/test/TestTexture2d.i
-
-# target to preprocess a source file
-src/test/TestTexture2d.cpp.i:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.i
-.PHONY : src/test/TestTexture2d.cpp.i
-
-src/test/TestTexture2d.s: src/test/TestTexture2d.cpp.s
-
-.PHONY : src/test/TestTexture2d.s
-
-# target to generate assembly for a file
-src/test/TestTexture2d.cpp.s:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/test/TestTexture2d.cpp.s
-.PHONY : src/test/TestTexture2d.cpp.s
-
-src/vendor/imgui/imgui.o: src/vendor/imgui/imgui.cpp.o
-
-.PHONY : src/vendor/imgui/imgui.o
-
-# target to build an object file
-src/vendor/imgui/imgui.cpp.o:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.o
-.PHONY : src/vendor/imgui/imgui.cpp.o
-
-src/vendor/imgui/imgui.i: src/vendor/imgui/imgui.cpp.i
-
-.PHONY : src/vendor/imgui/imgui.i
-
-# target to preprocess a source file
-src/vendor/imgui/imgui.cpp.i:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.i
-.PHONY : src/vendor/imgui/imgui.cpp.i
-
-src/vendor/imgui/imgui.s: src/vendor/imgui/imgui.cpp.s
-
-.PHONY : src/vendor/imgui/imgui.s
-
-# target to generate assembly for a file
-src/vendor/imgui/imgui.cpp.s:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui.cpp.s
-.PHONY : src/vendor/imgui/imgui.cpp.s
-
-src/vendor/imgui/imgui_demo.o: src/vendor/imgui/imgui_demo.cpp.o
-
-.PHONY : src/vendor/imgui/imgui_demo.o
-
-# target to build an object file
-src/vendor/imgui/imgui_demo.cpp.o:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.o
-.PHONY : src/vendor/imgui/imgui_demo.cpp.o
-
-src/vendor/imgui/imgui_demo.i: src/vendor/imgui/imgui_demo.cpp.i
-
-.PHONY : src/vendor/imgui/imgui_demo.i
-
-# target to preprocess a source file
-src/vendor/imgui/imgui_demo.cpp.i:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.i
-.PHONY : src/vendor/imgui/imgui_demo.cpp.i
-
-src/vendor/imgui/imgui_demo.s: src/vendor/imgui/imgui_demo.cpp.s
-
-.PHONY : src/vendor/imgui/imgui_demo.s
-
-# target to generate assembly for a file
-src/vendor/imgui/imgui_demo.cpp.s:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_demo.cpp.s
-.PHONY : src/vendor/imgui/imgui_demo.cpp.s
-
-src/vendor/imgui/imgui_draw.o: src/vendor/imgui/imgui_draw.cpp.o
-
-.PHONY : src/vendor/imgui/imgui_draw.o
-
-# target to build an object file
-src/vendor/imgui/imgui_draw.cpp.o:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.o
-.PHONY : src/vendor/imgui/imgui_draw.cpp.o
-
-src/vendor/imgui/imgui_draw.i: src/vendor/imgui/imgui_draw.cpp.i
-
-.PHONY : src/vendor/imgui/imgui_draw.i
-
-# target to preprocess a source file
-src/vendor/imgui/imgui_draw.cpp.i:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.i
-.PHONY : src/vendor/imgui/imgui_draw.cpp.i
-
-src/vendor/imgui/imgui_draw.s: src/vendor/imgui/imgui_draw.cpp.s
-
-.PHONY : src/vendor/imgui/imgui_draw.s
-
-# target to generate assembly for a file
-src/vendor/imgui/imgui_draw.cpp.s:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_draw.cpp.s
-.PHONY : src/vendor/imgui/imgui_draw.cpp.s
-
-src/vendor/imgui/imgui_impl_glfw.o: src/vendor/imgui/imgui_impl_glfw.cpp.o
-
-.PHONY : src/vendor/imgui/imgui_impl_glfw.o
-
-# target to build an object file
-src/vendor/imgui/imgui_impl_glfw.cpp.o:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.o
-.PHONY : src/vendor/imgui/imgui_impl_glfw.cpp.o
-
-src/vendor/imgui/imgui_impl_glfw.i: src/vendor/imgui/imgui_impl_glfw.cpp.i
-
-.PHONY : src/vendor/imgui/imgui_impl_glfw.i
-
-# target to preprocess a source file
-src/vendor/imgui/imgui_impl_glfw.cpp.i:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.i
-.PHONY : src/vendor/imgui/imgui_impl_glfw.cpp.i
-
-src/vendor/imgui/imgui_impl_glfw.s: src/vendor/imgui/imgui_impl_glfw.cpp.s
-
-.PHONY : src/vendor/imgui/imgui_impl_glfw.s
-
-# target to generate assembly for a file
-src/vendor/imgui/imgui_impl_glfw.cpp.s:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_glfw.cpp.s
-.PHONY : src/vendor/imgui/imgui_impl_glfw.cpp.s
-
-src/vendor/imgui/imgui_impl_opengl3.o: src/vendor/imgui/imgui_impl_opengl3.cpp.o
-
-.PHONY : src/vendor/imgui/imgui_impl_opengl3.o
-
-# target to build an object file
-src/vendor/imgui/imgui_impl_opengl3.cpp.o:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.o
-.PHONY : src/vendor/imgui/imgui_impl_opengl3.cpp.o
-
-src/vendor/imgui/imgui_impl_opengl3.i: src/vendor/imgui/imgui_impl_opengl3.cpp.i
-
-.PHONY : src/vendor/imgui/imgui_impl_opengl3.i
-
-# target to preprocess a source file
-src/vendor/imgui/imgui_impl_opengl3.cpp.i:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.i
-.PHONY : src/vendor/imgui/imgui_impl_opengl3.cpp.i
-
-src/vendor/imgui/imgui_impl_opengl3.s: src/vendor/imgui/imgui_impl_opengl3.cpp.s
-
-.PHONY : src/vendor/imgui/imgui_impl_opengl3.s
-
-# target to generate assembly for a file
-src/vendor/imgui/imgui_impl_opengl3.cpp.s:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.s
-.PHONY : src/vendor/imgui/imgui_impl_opengl3.cpp.s
-
-src/vendor/imgui/imgui_widgets.o: src/vendor/imgui/imgui_widgets.cpp.o
-
-.PHONY : src/vendor/imgui/imgui_widgets.o
-
-# target to build an object file
-src/vendor/imgui/imgui_widgets.cpp.o:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.o
-.PHONY : src/vendor/imgui/imgui_widgets.cpp.o
-
-src/vendor/imgui/imgui_widgets.i: src/vendor/imgui/imgui_widgets.cpp.i
-
-.PHONY : src/vendor/imgui/imgui_widgets.i
-
-# target to preprocess a source file
-src/vendor/imgui/imgui_widgets.cpp.i:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.i
-.PHONY : src/vendor/imgui/imgui_widgets.cpp.i
-
-src/vendor/imgui/imgui_widgets.s: src/vendor/imgui/imgui_widgets.cpp.s
-
-.PHONY : src/vendor/imgui/imgui_widgets.s
-
-# target to generate assembly for a file
-src/vendor/imgui/imgui_widgets.cpp.s:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/imgui/imgui_widgets.cpp.s
-.PHONY : src/vendor/imgui/imgui_widgets.cpp.s
-
-src/vendor/stb_image/stb_image.o: src/vendor/stb_image/stb_image.cpp.o
-
-.PHONY : src/vendor/stb_image/stb_image.o
-
-# target to build an object file
-src/vendor/stb_image/stb_image.cpp.o:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.o
-.PHONY : src/vendor/stb_image/stb_image.cpp.o
-
-src/vendor/stb_image/stb_image.i: src/vendor/stb_image/stb_image.cpp.i
-
-.PHONY : src/vendor/stb_image/stb_image.i
-
-# target to preprocess a source file
-src/vendor/stb_image/stb_image.cpp.i:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.i
-.PHONY : src/vendor/stb_image/stb_image.cpp.i
-
-src/vendor/stb_image/stb_image.s: src/vendor/stb_image/stb_image.cpp.s
-
-.PHONY : src/vendor/stb_image/stb_image.s
-
-# target to generate assembly for a file
-src/vendor/stb_image/stb_image.cpp.s:
-	$(MAKE) -f CMakeFiles/learn-opengl.dir/build.make CMakeFiles/learn-opengl.dir/src/vendor/stb_image/stb_image.cpp.s
-.PHONY : src/vendor/stb_image/stb_image.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -780,10 +469,8 @@ help:
 	@echo "... uninstall"
 	@echo "... glad"
 	@echo "... glfw"
+	@echo "... glm_static"
 	@echo "... learn-opengl"
-	@echo "... lib/glad/src/glad.o"
-	@echo "... lib/glad/src/glad.i"
-	@echo "... lib/glad/src/glad.s"
 	@echo "... src/ErrorManager.o"
 	@echo "... src/ErrorManager.i"
 	@echo "... src/ErrorManager.s"
@@ -808,39 +495,6 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/test/Test.o"
-	@echo "... src/test/Test.i"
-	@echo "... src/test/Test.s"
-	@echo "... src/test/TestBatchRendering.o"
-	@echo "... src/test/TestBatchRendering.i"
-	@echo "... src/test/TestBatchRendering.s"
-	@echo "... src/test/TestClearColor.o"
-	@echo "... src/test/TestClearColor.i"
-	@echo "... src/test/TestClearColor.s"
-	@echo "... src/test/TestTexture2d.o"
-	@echo "... src/test/TestTexture2d.i"
-	@echo "... src/test/TestTexture2d.s"
-	@echo "... src/vendor/imgui/imgui.o"
-	@echo "... src/vendor/imgui/imgui.i"
-	@echo "... src/vendor/imgui/imgui.s"
-	@echo "... src/vendor/imgui/imgui_demo.o"
-	@echo "... src/vendor/imgui/imgui_demo.i"
-	@echo "... src/vendor/imgui/imgui_demo.s"
-	@echo "... src/vendor/imgui/imgui_draw.o"
-	@echo "... src/vendor/imgui/imgui_draw.i"
-	@echo "... src/vendor/imgui/imgui_draw.s"
-	@echo "... src/vendor/imgui/imgui_impl_glfw.o"
-	@echo "... src/vendor/imgui/imgui_impl_glfw.i"
-	@echo "... src/vendor/imgui/imgui_impl_glfw.s"
-	@echo "... src/vendor/imgui/imgui_impl_opengl3.o"
-	@echo "... src/vendor/imgui/imgui_impl_opengl3.i"
-	@echo "... src/vendor/imgui/imgui_impl_opengl3.s"
-	@echo "... src/vendor/imgui/imgui_widgets.o"
-	@echo "... src/vendor/imgui/imgui_widgets.i"
-	@echo "... src/vendor/imgui/imgui_widgets.s"
-	@echo "... src/vendor/stb_image/stb_image.o"
-	@echo "... src/vendor/stb_image/stb_image.i"
-	@echo "... src/vendor/stb_image/stb_image.s"
 .PHONY : help
 
 

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/giancedrickepilan/dev/native/opengl-demo
+# Install script for directory: /Users/giancedrickepilan/dev/game-engine/opengl-demo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/giancedrickepilan/dev/native/opengl-demo/build/lib/glfw/cmake_install.cmake")
-  include("/Users/giancedrickepilan/dev/native/opengl-demo/build/lib/glm/cmake_install.cmake")
+  include("/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/lib/glfw/cmake_install.cmake")
+  include("/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/lib/glm/cmake_install.cmake")
+  include("/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/lib/glad/cmake_install.cmake")
 
 endif()
 
@@ -47,5 +48,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/giancedrickepilan/dev/native/opengl-demo/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

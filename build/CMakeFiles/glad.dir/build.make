@@ -60,10 +60,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/giancedrickepilan/dev/native/opengl-demo
+CMAKE_SOURCE_DIR = /Users/giancedrickepilan/dev/game-engine/opengl-demo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/giancedrickepilan/dev/native/opengl-demo/build
+CMAKE_BINARY_DIR = /Users/giancedrickepilan/dev/game-engine/opengl-demo/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/glad.dir/depend.make
@@ -76,16 +76,16 @@ include CMakeFiles/glad.dir/flags.make
 
 CMakeFiles/glad.dir/lib/glad/src/glad.c.o: CMakeFiles/glad.dir/flags.make
 CMakeFiles/glad.dir/lib/glad/src/glad.c.o: ../lib/glad/src/glad.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/giancedrickepilan/dev/native/opengl-demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/glad.dir/lib/glad/src/glad.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glad.dir/lib/glad/src/glad.c.o   -c /Users/giancedrickepilan/dev/native/opengl-demo/lib/glad/src/glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/glad.dir/lib/glad/src/glad.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glad.dir/lib/glad/src/glad.c.o   -c /Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/src/glad.c
 
 CMakeFiles/glad.dir/lib/glad/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glad.dir/lib/glad/src/glad.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/giancedrickepilan/dev/native/opengl-demo/lib/glad/src/glad.c > CMakeFiles/glad.dir/lib/glad/src/glad.c.i
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/src/glad.c > CMakeFiles/glad.dir/lib/glad/src/glad.c.i
 
 CMakeFiles/glad.dir/lib/glad/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glad.dir/lib/glad/src/glad.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/giancedrickepilan/dev/native/opengl-demo/lib/glad/src/glad.c -o CMakeFiles/glad.dir/lib/glad/src/glad.c.s
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/src/glad.c -o CMakeFiles/glad.dir/lib/glad/src/glad.c.s
 
 # Object files for target glad
 glad_OBJECTS = \
@@ -97,7 +97,7 @@ glad_EXTERNAL_OBJECTS =
 libglad.a: CMakeFiles/glad.dir/lib/glad/src/glad.c.o
 libglad.a: CMakeFiles/glad.dir/build.make
 libglad.a: CMakeFiles/glad.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/giancedrickepilan/dev/native/opengl-demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libglad.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libglad.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/glad.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glad.dir/link.txt --verbose=$(VERBOSE)
 
@@ -111,6 +111,6 @@ CMakeFiles/glad.dir/clean:
 .PHONY : CMakeFiles/glad.dir/clean
 
 CMakeFiles/glad.dir/depend:
-	cd /Users/giancedrickepilan/dev/native/opengl-demo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/giancedrickepilan/dev/native/opengl-demo /Users/giancedrickepilan/dev/native/opengl-demo /Users/giancedrickepilan/dev/native/opengl-demo/build /Users/giancedrickepilan/dev/native/opengl-demo/build /Users/giancedrickepilan/dev/native/opengl-demo/build/CMakeFiles/glad.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/giancedrickepilan/dev/game-engine/opengl-demo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/giancedrickepilan/dev/game-engine/opengl-demo /Users/giancedrickepilan/dev/game-engine/opengl-demo /Users/giancedrickepilan/dev/game-engine/opengl-demo/build /Users/giancedrickepilan/dev/game-engine/opengl-demo/build /Users/giancedrickepilan/dev/game-engine/opengl-demo/build/CMakeFiles/glad.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/glad.dir/depend
 
