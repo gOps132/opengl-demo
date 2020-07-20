@@ -50,19 +50,19 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glad/include"
+					"path" : "/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glad/include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/giancedrickepilan/dev/native/opengl-demo/lib/glm"
+					"path" : "/Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glm"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/giancedrickepilan/dev/native/opengl-demo/src/header"
+					"path" : "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/header"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/giancedrickepilan/dev/native/opengl-demo/src/vendor"
+					"path" : "/Users/giancedrickepilan/dev/game-engine/opengl-demo/src/vendor"
 				}
 			],
 			"language" : "C",

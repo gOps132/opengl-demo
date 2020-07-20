@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "/Users/giancedrickepilan/dev/native/opengl-demo/build/lib/glfw/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: \"/Users/giancedrickepilan/dev/native/opengl-demo/build/lib/glfw/install_manifest.txt\"")
+if (NOT EXISTS "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/lib/glfw/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/lib/glfw/install_manifest.txt\"")
 endif()
 
-file(READ "/Users/giancedrickepilan/dev/native/opengl-demo/build/lib/glfw/install_manifest.txt" files)
+file(READ "/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/lib/glfw/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

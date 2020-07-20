@@ -96,6 +96,7 @@ int main(void)
         currentTest = testMenu;
 
         testMenu->RegisterTest<test::TestClearColor>("Clear Color");
+        testMenu->RegisterTest<test::TestTexture2d>("Texture 2d");
 
 		while (!glfwWindowShouldClose(window))
 		{
@@ -130,7 +131,6 @@ int main(void)
 	
 			glfwSwapBuffers(window);
 			glfwPollEvents();
-
 		}
 
         delete currentTest;

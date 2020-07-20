@@ -1,4 +1,4 @@
-# Install script for directory: /Users/giancedrickepilan/dev/native/opengl-demo/lib/glm
+# Install script for directory: /Users/giancedrickepilan/dev/game-engine/opengl-demo/lib/glm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/giancedrickepilan/dev/native/opengl-demo/build/lib/glm/glm/cmake_install.cmake")
+  include("/Users/giancedrickepilan/dev/game-engine/opengl-demo/build/lib/glm/glm/cmake_install.cmake")
 
 endif()
 

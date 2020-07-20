@@ -13,7 +13,7 @@ namespace test {
     TestClearColor::TestClearColor()
         : m_ClearColor { 0.2f, 0.3f, 0.8f, 0.1f }
     {
-
+        
     }
 
     TestClearColor::~TestClearColor()
