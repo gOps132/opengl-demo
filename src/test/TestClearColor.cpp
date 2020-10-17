@@ -6,7 +6,7 @@
 #include "ErrorManager.h"
 
 #include <glad/glad.h>
-#include <imgui/imgui.h>
+#include <imgui.h>
 
 namespace test {
 

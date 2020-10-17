@@ -7,9 +7,11 @@ project(opengl_demo C CXX)
 set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(lib/glfw)
-add_subdirectory(lib/imgui)
 add_subdirectory(lib/glm)
 add_subdirectory(lib/glad)
+
+# add_subdirectory(lib/imgui)
+add_subdirectory(lib/imgui-test)
 
 set(OPENGL_DEMO_SOURCE_FILES
     src/ErrorManager.cpp
@@ -24,6 +26,8 @@ set(OPENGL_DEMO_SOURCE_FILES
     src/test/Test.cpp
     src/test/TestClearColor.cpp
     src/test/TestTexture2d.cpp
+
+    src/ImguiBuild.cpp
 )
 
 add_executable(opengl_demo ${OPENGL_DEMO_SOURCE_FILES})
@@ -36,6 +40,7 @@ set_target_properties(opengl_demo PROPERTIES
 
     LIBRARY_OUTPUT_DIRECTORY        "${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
     ARCHIVE_OUTPUT_DIRECTORY        "${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
+    RUNTIME_OUTPUT_DIRECTORY        "${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
 )
 
 
@@ -53,14 +58,16 @@ else()
 endif()
 
 target_include_directories(opengl_demo
-    PRIVATE     src/include
-    PRIVATE     src/vendor
-    PRIVATE     src/tests
+    PUBLIC      ${CMAKE_CURRENT_SOURCE_DIR}/vendor
+    PRIVATE     ${CMAKE_CURRENT_SOURCE_DIR}/src/include
+    PRIVATE     ${CMAKE_CURRENT_SOURCE_DIR}/src/tests
 )
 
 target_link_libraries(opengl_demo
     ${EXTRA_LIBS}
     -lstdc++
+    # imgui
+    imgui-test
     glad
     glfw 
     glm
