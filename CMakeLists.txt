@@ -3,7 +3,7 @@
 #
 
 cmake_minimum_required(VERSION 3.8)
-project(opengl_demo C CXX)
+project(opengl-demo C CXX)
 set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(lib/glfw)
@@ -30,9 +30,9 @@ set(OPENGL_DEMO_SOURCE_FILES
     src/ImguiBuild.cpp
 )
 
-add_executable(opengl_demo ${OPENGL_DEMO_SOURCE_FILES})
+add_executable(opengl-demo ${OPENGL_DEMO_SOURCE_FILES})
 
-set_target_properties(opengl_demo PROPERTIES 
+set_target_properties(opengl-demo PROPERTIES 
     LINKER_LANGUAGE CXX
 
     SOVERSION   ${PROJECT_VERSION_MAJOR}
@@ -57,13 +57,13 @@ else()
         "-lGL -lGLU -lX11")
 endif()
 
-target_include_directories(opengl_demo
+target_include_directories(opengl-demo
     PUBLIC      ${CMAKE_CURRENT_SOURCE_DIR}/vendor
     PRIVATE     ${CMAKE_CURRENT_SOURCE_DIR}/src/include
     PRIVATE     ${CMAKE_CURRENT_SOURCE_DIR}/src/tests
 )
 
-target_link_libraries(opengl_demo
+target_link_libraries(opengl-demo
     ${EXTRA_LIBS}
     -lstdc++
     # imgui

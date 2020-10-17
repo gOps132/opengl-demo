@@ -1,21 +1,11 @@
-<h2>
-    Learn-opengl
-</h2>
+# OpenGL Demo
 
-<h5>
-    <p>Demo project for openGL</p>
-</h5>
-<h5>
-    <a>https://www.youtube.com/user/TheChernoProject</a>
-</h5>
+A project following the Cherno's opengl series
 
-<h6>
-    Build the project
-</h6>
+## Initial setup
+```sh
+$ git clone https://www.github.com/gOps132/opengl-demo opengl-demo --recursive
 
-###
-    $ mkdir build
-    $ cd build
-    $ cmake ..
-    $ make
-###
+$ bash scripts/pull.sh
+$ bash scripts/build.sh
+```
