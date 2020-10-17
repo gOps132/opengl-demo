@@ -1,27 +1,19 @@
 #
 #   Made by Epilan Gian Cedrick G.
-#  
-# TODO: REMOVE DEBUG FLAG LATER 
-# TODO: use function that iterates of over .cpp & .h / .hpp files in certain directories in source files
-# TODO: maybe find another way to add flags in cmake
-# TODO: abstract other libraries with cmake modules
 #
 
 cmake_minimum_required(VERSION 3.8)
-project(learn-opengl C CXX)
+project(opengl_demo C CXX)
 set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(lib/glfw)
 add_subdirectory(lib/glm)
 add_subdirectory(lib/glad)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+# add_subdirectory(lib/imgui)
+add_subdirectory(lib/imgui-test)
 
-# this is not good but im tired
-file(GLOB VENDOR_HEADERS src/vendor/*/*.h)
-file(GLOB VENDOR_SOURCES src/vendor/*/*.cpp)
-
-set(SOURCE_FILES
+set(OPENGL_DEMO_SOURCE_FILES
     src/ErrorManager.cpp
     src/IndexBuffer.cpp
     src/main.cpp
@@ -31,27 +23,26 @@ set(SOURCE_FILES
     src/VertexArray.cpp
     src/VertexBuffer.cpp
     
-    src/header/ErrorManager.h
-    src/header/IndexBuffer.h
-    src/header/Renderer.h  
-    src/header/Shader.h
-    src/header/Texture.h
-    src/header/VertexArray.h
-    src/header/VertexBuffer.h
-    src/header/VertexBufferLayout.h
-
     src/test/Test.cpp
-    src/test/Test.h
     src/test/TestClearColor.cpp
-    src/test/TestClearColor.h    
     src/test/TestTexture2d.cpp
-    src/test/TestTexture2d.h
 
-    ${VENDOR_HEADERS}
-    ${VENDOR_SOURCES}
+    src/ImguiBuild.cpp
 )
 
-add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+add_executable(opengl_demo ${OPENGL_DEMO_SOURCE_FILES})
+
+set_target_properties(opengl_demo PROPERTIES 
+    LINKER_LANGUAGE CXX
+
+    SOVERSION   ${PROJECT_VERSION_MAJOR}
+    VERSION     ${PROJECT_VERSION}
+
+    LIBRARY_OUTPUT_DIRECTORY        "${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
+    ARCHIVE_OUTPUT_DIRECTORY        "${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
+    RUNTIME_OUTPUT_DIRECTORY        "${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
+)
+
 
 if (APPLE)
     list (APPEND EXTRA_LIBS
@@ -66,14 +57,17 @@ else()
         "-lGL -lGLU -lX11")
 endif()
 
-include_directories(
-    src/header
-    src/vendor
-    src/test
+target_include_directories(opengl_demo
+    PUBLIC      ${CMAKE_CURRENT_SOURCE_DIR}/vendor
+    PRIVATE     ${CMAKE_CURRENT_SOURCE_DIR}/src/include
+    PRIVATE     ${CMAKE_CURRENT_SOURCE_DIR}/src/tests
 )
 
-target_link_libraries(${PROJECT_NAME} 
+target_link_libraries(opengl_demo
     ${EXTRA_LIBS}
+    -lstdc++
+    # imgui
+    imgui-test
     glad
     glfw 
     glm

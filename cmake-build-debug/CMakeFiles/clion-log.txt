@@ -1,7 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/giancedrickepilan/dev/native/opengl-demo
--- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
--- Using Cocoa for window creation
--- GLM: Version 0.9.9.9
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/giancedrickepilan/dev/native/opengl-demo/cmake-build-debug
