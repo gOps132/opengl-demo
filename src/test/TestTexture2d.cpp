@@ -27,8 +27,8 @@
 
 namespace test {
 
-    int wHeight = 1080;
-    int wWidth = 720;
+    constexpr int wHeight = 1080;
+    constexpr int wWidth = 720;
 
     TestTexture2d::TestTexture2d()
         :
@@ -85,7 +85,7 @@ namespace test {
         Renderer renderer;
 
         m_Texture->Bind();
-
+ 
         {
             /* Recalculating the model matrix every frame */
             glm::mat4 model = glm::translate(glm::mat4(1.0f), m_TranslationA);

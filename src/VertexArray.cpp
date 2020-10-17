@@ -5,17 +5,6 @@
 //  Created by Gian Cedrick Epilan on 18/06/2020.
 //
 
-/*
- *
- * FIXME: fix casting warning
- * 
- * NOTE: 
- * avoid casting warning in this file
- * NO NEED FOR Visual Studio
- * flag " -Wno-int-to-void-pointer-cast "
- * 
-*/
-
 #include "VertexArray.h"
 #include "Renderer.h"
 #include "VertexBufferLayout.h"
