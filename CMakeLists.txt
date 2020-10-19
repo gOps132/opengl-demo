@@ -6,6 +6,8 @@ cmake_minimum_required(VERSION 3.8)
 project(opengl-demo C CXX)
 set(CMAKE_CXX_STANDARD 14)
 
+set(WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+
 add_subdirectory(lib/glfw)
 add_subdirectory(lib/glm)
 add_subdirectory(lib/glad)
@@ -41,6 +43,8 @@ set_target_properties(opengl-demo PROPERTIES
     LIBRARY_OUTPUT_DIRECTORY        "${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
     ARCHIVE_OUTPUT_DIRECTORY        "${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
     RUNTIME_OUTPUT_DIRECTORY        "${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
+
+    WORKING_DIRECTORY   ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 

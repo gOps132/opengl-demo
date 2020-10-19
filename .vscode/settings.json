@@ -1,6 +1,45 @@
 {
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "cmakeFormat.cwd": "${workspaceFolder}",
+    "cmake.debugConfig": {
+        "cwd": "${workspaceFolder}"
+    },
     "files.associations": {
-        "memory": "cpp"
+        "memory": "cpp",
+        "*.tcc": "cpp",
+        "cctype": "cpp",
+        "clocale": "cpp",
+        "cmath": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "exception": "cpp",
+        "fstream": "cpp",
+        "initializer_list": "cpp",
+        "iosfwd": "cpp",
+        "iostream": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "stdexcept": "cpp",
+        "streambuf": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "system_error": "cpp",
+        "type_traits": "cpp",
+        "typeinfo": "cpp",
+        "unordered_map": "cpp",
+        "array": "cpp",
+        "cstddef": "cpp",
+        "cstring": "cpp",
+        "optional": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp"
     }
 }
