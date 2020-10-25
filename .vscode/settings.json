@@ -1,6 +1,5 @@
 {
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-    "cmakeFormat.cwd": "${workspaceFolder}",
     "cmake.debugConfig": {
         "cwd": "${workspaceFolder}"
     },
