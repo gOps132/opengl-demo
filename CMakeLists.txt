@@ -4,7 +4,7 @@
 
 cmake_minimum_required(VERSION 3.8)
 project(opengl-demo C CXX)
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 set(WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 
@@ -12,7 +12,6 @@ add_subdirectory(lib/glfw)
 add_subdirectory(lib/glm)
 add_subdirectory(lib/glad)
 
-# add_subdirectory(lib/imgui)
 add_subdirectory(lib/imgui-test)
 
 set(OPENGL_DEMO_SOURCE_FILES
@@ -24,10 +23,11 @@ set(OPENGL_DEMO_SOURCE_FILES
     src/Texture.cpp
     src/VertexArray.cpp
     src/VertexBuffer.cpp
-    
-    src/test/Test.cpp
-    src/test/TestClearColor.cpp
-    src/test/TestTexture2d.cpp
+    src/Test.cpp
+
+    test/test_clear_color/TestClearColor.cpp
+    test/test_texture_2d/TestTexture2d.cpp
+    test/test_video/TestVideo.cpp
 
     src/ImguiBuild.cpp
 )
@@ -62,15 +62,13 @@ else()
 endif()
 
 target_include_directories(opengl-demo
-    PUBLIC      ${CMAKE_CURRENT_SOURCE_DIR}/vendor
-    PRIVATE     ${CMAKE_CURRENT_SOURCE_DIR}/src/include
-    PRIVATE     ${CMAKE_CURRENT_SOURCE_DIR}/src/tests
+    PRIVATE     ${CMAKE_CURRENT_SOURCE_DIR}
+    PRIVATE      ${CMAKE_CURRENT_SOURCE_DIR}/vendor
+    PRIVATE     ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
 target_link_libraries(opengl-demo
     ${EXTRA_LIBS}
-    -lstdc++
-    # imgui
     imgui-test
     glad
     glfw 

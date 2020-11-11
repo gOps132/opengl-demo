@@ -39,6 +39,7 @@
         "cstring": "cpp",
         "optional": "cpp",
         "tuple": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "__config": "cpp"
     }
 }

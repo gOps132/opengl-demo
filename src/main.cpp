@@ -22,9 +22,11 @@
 
 #include "VertexBufferLayout.h"
 
-#include "test/Test.h"
-#include "test/TestClearColor.h"
-#include "test/TestTexture2d.h"
+#include "Test.h"
+
+#include "test/test_clear_color/TestClearColor.h"
+#include "test/test_texture_2d/TestTexture2d.h"
+#include "test/test_video/TestVideo.h"
 
 #include <iostream>
 
@@ -96,6 +98,7 @@ int main(void)
 
         testMenu->RegisterTest<test::TestClearColor>("Clear Color");
         testMenu->RegisterTest<test::TestTexture2d>("Texture 2d");
+        testMenu->RegisterTest<test::TestVideo>("Test Video");
 		
 		while (!glfwWindowShouldClose(window))
 		{
