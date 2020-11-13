@@ -1,22 +1,18 @@
 #ifndef __ERRORMANAGER_H__
 #define __ERRORMANAGER_H__
 
-#include "signal.h"
+#include "Core.h"
+
 #include <fstream>
 #include <iostream>
 #include <sstream>
 #include <string>
 
-#include <debugbreak.h>
-
-#ifdef DEBUG
+#ifndef DEBUG
 #define GLCall(x)                                                              \
     GLClearError();                                                            \
     x;                                                                         \
-    if (!(x)) {                                                                \
-        std::cout << "GLLogCall Assertion failed" << '\n';                     \
-        debug_break();                                                         \
-    }
+    CORE_ASSERT(GLLogCall(#x, __FILE__, __LINE__), "GLCALL FAILED!");
 #else
 #define GLCall(x) x
 #endif

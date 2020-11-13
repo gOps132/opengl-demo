@@ -2,7 +2,7 @@
 #   Made by Epilan Gian Cedrick G.
 #
 
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.14)
 project(opengl-demo C CXX)
 set(CMAKE_CXX_STANDARD 17)
 
@@ -11,8 +11,8 @@ set(WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 add_subdirectory(lib/glfw)
 add_subdirectory(lib/glm)
 add_subdirectory(lib/glad)
-
-add_subdirectory(lib/imgui-test)
+add_subdirectory(lib/imgui)
+add_subdirectory(lib/spdlog)
 
 set(OPENGL_DEMO_SOURCE_FILES
     src/ErrorManager.cpp
@@ -24,6 +24,7 @@ set(OPENGL_DEMO_SOURCE_FILES
     src/VertexArray.cpp
     src/VertexBuffer.cpp
     src/Test.cpp
+    src/Log.cpp
 
     test/test_clear_color/TestClearColor.cpp
     test/test_texture_2d/TestTexture2d.cpp
@@ -73,4 +74,5 @@ target_link_libraries(opengl-demo
     glad
     glfw 
     glm
-)
+    spdlog
+)   

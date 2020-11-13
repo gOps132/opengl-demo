@@ -4,8 +4,8 @@
 class IndexBuffer 
 {
 private:
-    unsigned int m_RendererID; // renderer id, is just the actual internal render id
-    unsigned int m_Count; // how many indeces do we have
+    unsigned int m_RendererID;
+    unsigned int m_Count;
 public:
     IndexBuffer(const unsigned int* data, unsigned int count);
     ~IndexBuffer();

@@ -82,7 +82,6 @@ void TestTexture2d::OnRender()
     Renderer renderer;
 
     m_Texture->Bind();
-
     {
         /* Recalculating the model matrix every frame */
         glm::mat4 model = glm::translate(glm::mat4(1.0f), m_TranslationA);

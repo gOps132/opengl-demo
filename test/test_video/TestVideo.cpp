@@ -41,11 +41,11 @@ TestVideo::TestVideo()
     GLCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
 
     float vertices[] = {
-        // vertex coords	   //texture coords
-        -50.0f, -50.0f, 0.0f, 0.0f, // top right    0
-        50.0f,  -50.0f, 1.0f, 0.0f, // bottom right 1
-        50.0f,  50.0f,  1.0f, 1.0f, // bottom left  2
-        -50.0f, 50.0f,  0.0f, 1.0f  // top left     3
+        // vertex coords    //texture coords
+        -50.0f, -50.0f,     0.0f, 0.0f, // top right    0
+         50.0f, -50.0f,     1.0f, 0.0f, // bottom right 1
+         50.0f,  50.0f,     1.0f, 1.0f, // bottom left  2
+        -50.0f,  50.0f,     0.0f, 1.0f  // top left     3
     };
     
     unsigned int indices[] = {
@@ -66,7 +66,7 @@ TestVideo::TestVideo()
     m_Shader = std::make_unique<Shader>("shaders/BasicShader.shader");
 
     m_Texture = std::make_unique<Texture>("textures/smile.png");
-    m_Shader->SetUniform1i("u_Textur    e", 0);
+    m_Shader->SetUniform1i("u_Texture", 0);
 }
 
 TestVideo::~TestVideo() {}

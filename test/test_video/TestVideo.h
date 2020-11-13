@@ -24,7 +24,6 @@ class TestVideo : public Test {
 
     void OnUpdate(float deltaTime) override;
     void OnRender() override;
-    void ImGuiRender() override;
 
   private:
     std::unique_ptr<VertexArray> m_VAO;

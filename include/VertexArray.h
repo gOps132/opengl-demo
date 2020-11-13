@@ -1,16 +1,7 @@
 #ifndef __VERTEXARRAY_H__
 #define __VERTEXARRAY_H__
 
-//
-//  VertexArray.hpp
-//  ALL_BUILD
-//
-//  Created by Gian Cedrick Epilan on 18/06/2020.
-//
-
 #include "VertexBuffer.h"
-
-// #include "VertexBufferLayout.hpp"
 
 class VertexBufferLayout;
 

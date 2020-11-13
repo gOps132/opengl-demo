@@ -18,8 +18,9 @@
 #include <examples/imgui_impl_opengl3.h>
 #include <examples/imgui_impl_glfw.h>
 
+#include "Log.h"
 #include "Renderer.h"
-
+#include "ErrorManager.h"
 #include "VertexBufferLayout.h"
 
 #include "Test.h"
@@ -32,7 +33,7 @@
 
 void framebuffer_size_callback(GLFWwindow *window, int width, int height)
 {
-	glViewport(0, 0, width, height);
+	GLCall(glViewport(0, 0, width, height));
 }
 
 void processInput(GLFWwindow *window)
@@ -43,6 +44,8 @@ void processInput(GLFWwindow *window)
 
 int main(void)
 {
+	Log::init();
+
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -52,10 +55,10 @@ int main(void)
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
 
-	int wHeight = 1080;
-	int wWidth = 720;
+	int m_height = 1080;
+	int m_width = 720;
 
-	GLFWwindow *window = glfwCreateWindow(wHeight, wWidth, "LearnOpenGL", NULL, NULL);
+	GLFWwindow *window = glfwCreateWindow(m_height, m_width, "LearnOpenGL", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -72,15 +75,12 @@ int main(void)
 		return -1;
 	}
 
-	glViewport(0, 0, wHeight, wWidth);
+	glViewport(0, 0, m_height, m_width);
 
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-	{
+	// {
         Renderer renderer;
-
-		// uncomment this call to draw in wireframe polygons.
-		// glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
 		const char* glsl_version = "#version 150";
 
@@ -146,7 +146,7 @@ int main(void)
 		ImGui::DestroyContext();
 
 		glfwTerminate();
-	}
+	// }
 
 	return 0;
 }

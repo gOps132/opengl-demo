@@ -40,6 +40,7 @@
         "optional": "cpp",
         "tuple": "cpp",
         "utility": "cpp",
-        "__config": "cpp"
+        "__config": "cpp",
+        "ios": "cpp"
     }
 }
