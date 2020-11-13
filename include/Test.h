@@ -9,6 +9,8 @@
 #include <vector>
 #include <functional>
 
+#include "Log.h"
+
 namespace test {
 
     class Test
@@ -32,7 +34,7 @@ namespace test {
         template<typename T>
         void RegisterTest(const std::string& name)
         {
-            std::cout << "Registering Test" << name << std::endl;
+            LOG_CORE_INFO("Registering Test {0}", name);
 
             m_Tests.push_back(std::make_pair(name, [](){ return new T(); }));
         }
