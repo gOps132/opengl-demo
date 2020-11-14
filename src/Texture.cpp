@@ -27,7 +27,7 @@ Texture::Texture(const std::string& path)
 
     // send to opengl
     GLCall(glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, m_Width, m_Height, 0, GL_RGBA, GL_UNSIGNED_BYTE, m_LocalBuffer));
-//    glGenerateMipmap(GL_TEXTURE_2D);
+    //glGenerateMipmap(GL_TEXTURE_2D);
     GLCall(glBindTexture(GL_TEXTURE_2D, 0));
     
     if (m_LocalBuffer)

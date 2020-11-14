@@ -1,11 +1,14 @@
 /*
  *
  *   Made by Epilan Gian Cedrick G.
- *   Most code by https://learnopengl.com, and the cherno https://youtube.com/thecherno
- * 
+ *   Most code by https://learnopengl.com, and the cherno
+ * https://youtube.com/thecherno
+ *
  * 	TODO: implement some kind of break point trap for every compiler
- * 	TODO: make some kind of manifest for xcode settings, compilers in order for the code to run right
- * 	TODO: make a glfw window context that handles the window data ( height, width, etc.. )
+ * 	TODO: make some kind of manifest for xcode settings, compilers in order
+ * for the code to run right
+ * 	TODO: make a glfw window context that handles the window data ( height,
+ * width, etc.. )
  *
  */
 
@@ -27,126 +30,119 @@
 
 #include "test/test_clear_color/TestClearColor.h"
 #include "test/test_texture_2d/TestTexture2d.h"
-#include "test/test_video/TestVideo.h"
 
 #include <iostream>
 
 void framebuffer_size_callback(GLFWwindow *window, int width, int height)
 {
-	GLCall(glViewport(0, 0, width, height));
+    GLCall(glViewport(0, 0, width, height));
 }
 
 void processInput(GLFWwindow *window)
 {
-	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-		glfwSetWindowShouldClose(window, true);
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, true);
 }
 
 int main(void)
 {
-	Log::init();
+    Log::init();
 
-	glfwInit();
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwInit();
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 #ifdef __APPLE__
-	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
 
-	int m_height = 1080;
-	int m_width = 720;
+    int m_height = 1080;
+    int m_width = 720;
 
-	GLFWwindow *window = glfwCreateWindow(m_height, m_width, "LearnOpenGL", NULL, NULL);
-	if (window == NULL)
-	{
-		std::cout << "Failed to create GLFW window" << std::endl;
-		glfwTerminate();
-		return -1;
-	}
-	glfwMakeContextCurrent(window);
+    GLFWwindow *window =
+        glfwCreateWindow(m_height, m_width, "LearnOpenGL", NULL, NULL);
+    if (window == NULL) {
+        std::cout << "Failed to create GLFW window" << std::endl;
+        glfwTerminate();
+        return -1;
+    }
+    glfwMakeContextCurrent(window);
 
-	glfwSwapInterval(1); // synchronize with our vsync
+    glfwSwapInterval(1); // synchronize with our vsync
 
-	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-	{
-		std::cout << "Failed to initialize GLAD" << std::endl;
-		return -1;
-	}
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+        std::cout << "Failed to initialize GLAD" << std::endl;
+        return -1;
+    }
 
-	glViewport(0, 0, m_height, m_width);
+    glViewport(0, 0, m_height, m_width);
 
-	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-	// {
-        Renderer renderer;
+    Renderer renderer;
 
-		const char* glsl_version = "#version 150";
+    const char *glsl_version = "#version 330 core";
 
-		/* ImGui Initialization */
-  		IMGUI_CHECKVERSION();
-    	ImGui::CreateContext();
-    	ImGuiIO& io = ImGui::GetIO(); (void)io;
-		ImGui::StyleColorsDark();
-		ImGui_ImplGlfw_InitForOpenGL(window, true);
-		ImGui_ImplOpenGL3_Init(glsl_version);
+    /* ImGui Initialization */
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO &io = ImGui::GetIO();
+    (void)io;
+    ImGui::StyleColorsDark();
+    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    ImGui_ImplOpenGL3_Init(glsl_version);
 
-		test::Test* currentTest = nullptr;
-        test::TestMenu* testMenu = new test::TestMenu(currentTest);
-        currentTest = testMenu;
+    test::Test *currentTest = nullptr;
+    test::TestMenu *testMenu = new test::TestMenu(currentTest);
+    currentTest = testMenu;
 
-        testMenu->RegisterTest<test::TestClearColor>("Clear Color");
-        testMenu->RegisterTest<test::TestTexture2d>("Texture 2d");
-        testMenu->RegisterTest<test::TestVideo>("Test Video");
-		
-		while (!glfwWindowShouldClose(window))
-		{
-		    /* resets to black at the menu */
-		    GLCall(glClearColor(0.0f, 0.0f, 0.0f, 1.0f));
+    testMenu->RegisterTest<test::TestClearColor>("Clear Color");
+    testMenu->RegisterTest<test::TestTexture2d>("Texture 2d");
 
-			processInput(window);
+    while (!glfwWindowShouldClose(window)) {
+        /* resets to black at the menu */
+        GLCall(glClearColor(0.0f, 0.0f, 0.0f, 1.0f));
 
-			renderer.Clear();
+        processInput(window);
 
-			/* new imgui frame */
-			ImGui_ImplOpenGL3_NewFrame();
-			ImGui_ImplGlfw_NewFrame();
-			ImGui::NewFrame();
+        renderer.Clear();
 
-			if(currentTest)
-            {
-			    currentTest->OnUpdate(0.0f);
-			    currentTest->OnRender();
-			    ImGui::Begin("Test");
-			    if(currentTest != testMenu && ImGui::Button("<-"))
-                {
-                     delete currentTest;
-                     currentTest = testMenu;
-                }
-			    currentTest->ImGuiRender();
-			    ImGui::End();
+        /* new imgui frame */
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
+
+        if (currentTest) {
+            currentTest->OnUpdate(0.0f);
+            currentTest->OnRender();
+            ImGui::Begin("Test");
+            if (currentTest != testMenu && ImGui::Button("<-")) {
+                delete currentTest;
+                currentTest = testMenu;
             }
+            currentTest->ImGuiRender();
+            ImGui::End();
+        }
 
-            ImGui::Render();
-        	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-	
-			glfwSwapBuffers(window);
-			glfwPollEvents();
-		}
+        ImGui::Render();
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
-        delete currentTest;
-        if (currentTest != testMenu)
-            delete testMenu;
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+    }
 
-		/* ImGUI shutdown */
-		ImGui_ImplOpenGL3_Shutdown();
-		ImGui_ImplGlfw_Shutdown();
+    delete currentTest;
+    if (currentTest != testMenu)
+        delete testMenu;
 
-		ImGui::DestroyContext();
+    /* ImGUI shutdown */
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplGlfw_Shutdown();
 
-		glfwTerminate();
-	// }
+    ImGui::DestroyContext();
 
-	return 0;
+    glfwTerminate();
+
+    return 0;
 }

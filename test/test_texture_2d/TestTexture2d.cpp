@@ -28,12 +28,12 @@
 
 namespace test {
 
-constexpr int wHeight = 1080;
-constexpr int wWidth = 720;
+constexpr int m_height = 1080;
+constexpr int m_width = 720;
 
 TestTexture2d::TestTexture2d()
     : m_Proj(
-          glm::ortho(0.0f, (float)wHeight, 0.0f, float(wWidth), -1.0f, 1.0f)),
+          glm::ortho(0.0f, (float)m_height, 0.0f, float(m_width), -1.0f, 1.0f)),
       m_View(glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0))),
       m_TranslationA(200, 200, 0), m_TranslationB(400, 200, 0)
 {
@@ -41,14 +41,13 @@ TestTexture2d::TestTexture2d()
     GLCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
 
     float vertices[] = {
-        // vertex coords	   //texture coords
+    //  vertex coords   texture coords
         -50.0f, -50.0f, 0.0f, 0.0f, // top right    0
         50.0f,  -50.0f, 1.0f, 0.0f, // bottom right 1
         50.0f,  50.0f,  1.0f, 1.0f, // bottom left  2
         -50.0f, 50.0f,  0.0f, 1.0f  // top left     3
     };
     unsigned int indices[] = {
-        // note that we start from 0!
         0, 1, 3, // first triangle
         1, 2, 3  // second triangle
     };
@@ -66,6 +65,7 @@ TestTexture2d::TestTexture2d()
     m_Shader = std::make_unique<Shader>("shaders/BasicShader.shader");
 
     m_Texture = std::make_unique<Texture>("textures/smile.png");
+
     m_Shader->SetUniform1i("u_Texture", 0);
 }
 
@@ -103,9 +103,9 @@ void TestTexture2d::OnRender()
 void TestTexture2d::ImGuiRender()
 {
     ImGui::SliderFloat3("m_TranslationA", &m_TranslationA.x, 0.0f,
-                        (float)wHeight);
+                        (float)m_height);
     ImGui::SliderFloat3("m_TranslationB", &m_TranslationB.x, 0.0f,
-                        (float)wHeight);
+                        (float)m_height);
     ImGui::Text("Application average %.3f ms/frame (%.1f FPS)",
                 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 }

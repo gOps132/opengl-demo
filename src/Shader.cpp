@@ -30,6 +30,7 @@ void Shader::Unbind() const
     GLCall(glUseProgram(0));
 }
 
+//FIXME: GL_INVALID_OPERATION 0x0502
 void Shader::SetUniform1i(const std::string& name, int value) 
 {
     GLCall(glUniform1i(GetUniformLocation(name), value));
@@ -56,17 +57,18 @@ int Shader::GetUniformLocation(const std::string& name)
         return m_UniformLocationCache[name];
 
 #ifndef __glad_h
-    int location = ::glad_glGetUniformLocation(m_RendererID , name.c_str());
+    GLCall(int location = ::glad_glGetUniformLocation(m_RendererID , name.c_str()));
 #endif
 
 #ifdef __glew_h
-    int location = glGetUniformLocation(m_RendererID , name.c_str());
+    GLCall(int location = glGetUniformLocation(m_RendererID , name.c_str()));
 #endif
 
     if (location == -1)
         LOG_CORE_WARN("Warning: Uniform {0} does not exist", name);
     else
         m_UniformLocationCache[name] = location;
+
     return location;
 }
 
@@ -119,8 +121,10 @@ unsigned int Shader::CompileShader(unsigned int type, const std::string &source)
         // TODO: alloca will cause errors at some point
         char *message = (char *)alloca(length * sizeof(char));
         GLCall(glGetShaderInfoLog(id, length, &length, message));
-        std::cout << "Fail to compile " << (type == GL_VERTEX_SHADER ? "vertex" : "fragment") << "shader!!" << std::endl;
-        std::cout << message << std::endl;
+        // std::cout << "Fail to compile " << (type == GL_VERTEX_SHADER ? "vertex" : "fragment") << "shader!!" << std::endl;
+        // std::cout << message << std::endl;
+        LOG_CORE_ERROR("Fail to compile {0} shader!", (type == GL_VERTEX_SHADER ? "vertex" : "fragment"));
+        LOG_CORE_ERROR("{0}", message);
         GLCall(glDeleteShader(id));
 
         return 0;

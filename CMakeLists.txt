@@ -28,7 +28,6 @@ set(OPENGL_DEMO_SOURCE_FILES
 
     test/test_clear_color/TestClearColor.cpp
     test/test_texture_2d/TestTexture2d.cpp
-    test/test_video/TestVideo.cpp
 
     src/ImguiBuild.cpp
 )
@@ -48,7 +47,6 @@ set_target_properties(opengl-demo PROPERTIES
     WORKING_DIRECTORY   ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-
 if (APPLE)
     list (APPEND EXTRA_LIBS
         "-framework OpenGL"
@@ -64,7 +62,7 @@ endif()
 
 target_include_directories(opengl-demo
     PRIVATE     ${CMAKE_CURRENT_SOURCE_DIR}
-    PRIVATE      ${CMAKE_CURRENT_SOURCE_DIR}/vendor
+    PRIVATE     ${CMAKE_CURRENT_SOURCE_DIR}/vendor
     PRIVATE     ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
