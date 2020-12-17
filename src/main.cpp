@@ -30,6 +30,7 @@
 
 #include "test/test_clear_color/TestClearColor.h"
 #include "test/test_texture_2d/TestTexture2d.h"
+#include "test/video_rendering/video_rendering.h"
 
 #include <iostream>
 
@@ -99,6 +100,7 @@ int main(void)
 
     testMenu->RegisterTest<test::TestClearColor>("Clear Color");
     testMenu->RegisterTest<test::TestTexture2d>("Texture 2d");
+    testMenu->RegisterTest<test::video_rendering>("Video Rendering");
 
     while (!glfwWindowShouldClose(window)) {
         /* resets to black at the menu */

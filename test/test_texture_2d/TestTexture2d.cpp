@@ -2,11 +2,6 @@
 // Created by Gian Cedrick Epilan on 02/07/2020.
 //
 
-/*
- * TODO: fix the problem whereas, you have to bind the shader in order to set
- * the uniform
- */
-
 #include "TestTexture2d.h"
 #include "ErrorManager.h"
 
@@ -33,9 +28,10 @@ constexpr int m_width = 720;
 
 TestTexture2d::TestTexture2d()
     : m_Proj(
-          glm::ortho(0.0f, (float)m_height, 0.0f, float(m_width), -1.0f, 1.0f)),
-      m_View(glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0))),
-      m_TranslationA(200, 200, 0), m_TranslationB(400, 200, 0)
+        glm::ortho(0.0f, (float)m_height, 0.0f, float(m_width), -1.0f, 1.0f)),
+        m_View(glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0))),
+        m_TranslationA(200, 200, 0), 
+        m_TranslationB(400, 200, 0)
 {
     GLCall(glEnable(GL_BLEND));
     GLCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
@@ -47,14 +43,15 @@ TestTexture2d::TestTexture2d()
         50.0f,  50.0f,  1.0f, 1.0f, // bottom left  2
         -50.0f, 50.0f,  0.0f, 1.0f  // top left     3
     };
+
     unsigned int indices[] = {
         0, 1, 3, // first triangle
         1, 2, 3  // second triangle
     };
 
     m_VAO = std::make_unique<VertexArray>();
-    m_VertexBuffer = std::make_unique<VertexBuffer>(
-        vertices, sizeof(vertices) * sizeof(float));
+    m_VertexBuffer = std::make_unique<VertexBuffer>(vertices, sizeof(vertices) * sizeof(float));
+    
     VertexBufferLayout layout;
     layout.Push<float>(2);
     layout.Push<float>(2);
@@ -68,6 +65,7 @@ TestTexture2d::TestTexture2d()
 
     m_Shader->SetUniform1i("u_Texture", 0);
 }
+
 
 TestTexture2d::~TestTexture2d() {}
 
@@ -102,12 +100,9 @@ void TestTexture2d::OnRender()
 
 void TestTexture2d::ImGuiRender()
 {
-    ImGui::SliderFloat3("m_TranslationA", &m_TranslationA.x, 0.0f,
-                        (float)m_height);
-    ImGui::SliderFloat3("m_TranslationB", &m_TranslationB.x, 0.0f,
-                        (float)m_height);
-    ImGui::Text("Application average %.3f ms/frame (%.1f FPS)",
-                1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+    ImGui::SliderFloat3("m_TranslationA", &m_TranslationA.x, 0.0f, (float)m_height);
+    ImGui::SliderFloat3("m_TranslationB", &m_TranslationB.x, 0.0f, (float)m_height);
+    ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 }
 
 } // namespace test

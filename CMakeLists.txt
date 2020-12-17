@@ -13,6 +13,7 @@ add_subdirectory(lib/glm)
 add_subdirectory(lib/glad)
 add_subdirectory(lib/imgui)
 add_subdirectory(lib/spdlog)
+add_subdirectory(lib/FFmpeg)
 
 set(OPENGL_DEMO_SOURCE_FILES
     src/ErrorManager.cpp
@@ -28,11 +29,16 @@ set(OPENGL_DEMO_SOURCE_FILES
 
     test/test_clear_color/TestClearColor.cpp
     test/test_texture_2d/TestTexture2d.cpp
+    test/video_rendering/video_rendering.cpp
 
     src/ImguiBuild.cpp
 )
 
 add_executable(opengl-demo ${OPENGL_DEMO_SOURCE_FILES})
+
+# file(GLOB OPENGL_DEMO_SOURCE_GROUP_INCLUDES_CPP ${CMAKE_CURRENT_SOURCE_DIR}/include/*.cpp)
+# file(GLOB OPENGL_DEMO_SOURCE_GROUP_INCLUDES_H ${CMAKE_CURRENT_SOURCE_DIR}/include/*.h)
+# source_group("test\\include" FILES ${OPENGL_DEMO_SOURCE_GROUP_INCLUDES_CPP} ${OPENGL_DEMO_SOURCE_GROUP_INCLUDES_H})
 
 set_target_properties(opengl-demo PROPERTIES 
     LINKER_LANGUAGE CXX
@@ -73,4 +79,5 @@ target_link_libraries(opengl-demo
     glfw 
     glm
     spdlog
+    FFmpeg
 )   
