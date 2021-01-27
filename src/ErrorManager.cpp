@@ -6,13 +6,13 @@
 
 void GLClearError()
 {
-    while (glGetError() != GL_NO_ERROR);
+    while (glGetError() != GL_NO_ERROR)
+        ;
 }
 
 int GLLogCall(const char *function, const char *file, int line)
 {
-    if (GLenum error = glGetError())
-    {
+    if (GLenum error = glGetError()) {
         LOG_CORE_ERROR("OPENGL ERROR: ");
         LOG_CORE_ERROR("     FUNCTION: {0}", function);
         LOG_CORE_ERROR("     FILE: {0}", file);
@@ -25,8 +25,7 @@ int GLLogCall(const char *function, const char *file, int line)
         std::string new_string = std::string(4 - res.length(), '0') + res;
         std::ifstream stream("lib/glad/include/glad/glad.h");
         std::string line;
-        while (getline(stream, line))
-        {
+        while (getline(stream, line)) {
             if (line.find(new_string) != std::string::npos)
                 LOG_CORE_INFO("{0}", line);
         }

@@ -10,15 +10,15 @@
 namespace test {
 class TestClearColor : public Test {
   public:
-    TestClearColor();
-    ~TestClearColor();
+	TestClearColor();
+	~TestClearColor();
 
-    void OnUpdate(float deltaTime) override;
-    void OnRender() override;
-    void ImGuiRender() override;
+	void OnUpdate(float deltaTime) override;
+	void OnRender() override;
+	void ImGuiRender() override;
 
   private:
-    float m_ClearColor[4];
+	float m_ClearColor[4];
 };
 } // namespace test
 
