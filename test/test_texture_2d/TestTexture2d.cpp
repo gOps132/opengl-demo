@@ -63,7 +63,7 @@ TestTexture2d::TestTexture2d()
 
     m_Texture = std::make_unique<Texture>("textures/smile.png");
 
-    m_Shader->SetUniform1i("u_Texture", 0);
+    // m_Shader->SetUniform1i("u_Texture", 0);
 }
 
 
