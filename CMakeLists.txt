@@ -15,6 +15,10 @@ add_subdirectory(lib/imgui)
 add_subdirectory(lib/spdlog)
 add_subdirectory(lib/FFmpeg)
 
+# fix translation unit warnings (should use regex)
+file(GLOB OPENGL_DEMO_TEST_CPP ${CMAKE_CURRENT_SOURCE_DIR}/test/*/*.cpp)
+file(GLOB OPENGL_DEMO_TEST_H ${CMAKE_CURRENT_SOURCE_DIR}/test/*/*.h)
+
 set(OPENGL_DEMO_SOURCE_FILES
 	src/ErrorManager.cpp
 	src/IndexBuffer.cpp
@@ -27,9 +31,8 @@ set(OPENGL_DEMO_SOURCE_FILES
 	src/Test.cpp
 	src/Log.cpp
 
-	test/test_clear_color/TestClearColor.cpp
-	test/test_texture_2d/TestTexture2d.cpp
-	test/video_rendering/video_rendering.cpp
+	${OPENGL_DEMO_TEST_CPP}
+	${OPENGL_DEMO_TEST_H}
 
 	src/ImguiBuild.cpp
 )
@@ -43,12 +46,12 @@ add_executable(opengl-demo ${OPENGL_DEMO_SOURCE_FILES})
 set_target_properties(opengl-demo PROPERTIES 
 	LINKER_LANGUAGE CXX
 
-	SOVERSION   ${PROJECT_VERSION_MAJOR}
-	VERSION     ${PROJECT_VERSION}
+	SOVERSION	${PROJECT_VERSION_MAJOR}
+	VERSION		${PROJECT_VERSION}
 
-	LIBRARY_OUTPUT_DIRECTORY        "${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
-	ARCHIVE_OUTPUT_DIRECTORY        "${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
-	RUNTIME_OUTPUT_DIRECTORY        "${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
+	LIBRARY_OUTPUT_DIRECTORY	"${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
+	ARCHIVE_OUTPUT_DIRECTORY	"${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
+	RUNTIME_OUTPUT_DIRECTORY	"${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
 
 	WORKING_DIRECTORY   ${CMAKE_CURRENT_SOURCE_DIR}
 )
@@ -67,17 +70,17 @@ else()
 endif()
 
 target_include_directories(opengl-demo
-	PRIVATE     ${CMAKE_CURRENT_SOURCE_DIR}
-	PRIVATE     ${CMAKE_CURRENT_SOURCE_DIR}/vendor
-	PRIVATE     ${CMAKE_CURRENT_SOURCE_DIR}/include
+	PRIVATE		${CMAKE_CURRENT_SOURCE_DIR}
+	PRIVATE		${CMAKE_CURRENT_SOURCE_DIR}/vendor
+	PRIVATE		${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
 target_link_libraries(opengl-demo
 	${EXTRA_LIBS}
 	imgui-test
 	glad
-	glfw 
+	glfw
 	glm
 	spdlog
 	FFmpeg
-)   
+)

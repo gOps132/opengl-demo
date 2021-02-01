@@ -31,6 +31,7 @@
 #include "test/test_clear_color/TestClearColor.h"
 #include "test/test_texture_2d/TestTexture2d.h"
 #include "test/video_rendering/video_rendering.h"
+#include "test/test_3d_cube/test_3d_cube.h"
 
 #include <iostream>
 
@@ -58,8 +59,8 @@ int main(void)
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
 
-	int m_height = 1080;
-	int m_width = 720;
+	constexpr int m_height = 1080;
+	constexpr int m_width = 720;
 
 	GLFWwindow *window =
 		glfwCreateWindow(m_height, m_width, "LearnOpenGL", NULL, NULL);
@@ -101,6 +102,7 @@ int main(void)
 	testMenu->RegisterTest<test::TestClearColor>("Clear Color");
 	testMenu->RegisterTest<test::TestTexture2d>("Texture 2d");
 	testMenu->RegisterTest<test::video_rendering>("Video Rendering");
+	testMenu->RegisterTest<test::test_3d_cube>("3d Cube");
 
 	while (!glfwWindowShouldClose(window)) {
 		/* resets to black at the menu */

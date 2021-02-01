@@ -13,37 +13,34 @@
 
 namespace test {
 
-    class Test
-    {
-    public:
-        Test() {}
-        virtual ~Test() {}
+class Test {
+  public:
+	Test() {}
+	virtual ~Test() {}
 
-        virtual void OnUpdate(float deltaTime) {}
-        virtual void OnRender() {}
-        virtual void ImGuiRender() {}
-    };
+	virtual void OnUpdate(float deltaTime) {}
+	virtual void OnRender() {}
+	virtual void ImGuiRender() {}
+};
 
-    class TestMenu : public Test
-    {
-    public:
-        TestMenu(Test*& currentTestPointer);
+class TestMenu : public Test {
+  public:
+	TestMenu(Test *&currentTestPointer);
 
-        void ImGuiRender() override;
+	void ImGuiRender() override;
 
-        template<typename T>
-        void RegisterTest(const std::string& name)
-        {
-            LOG_CORE_INFO("Registering Test {0}", name);
+	template <typename T> void RegisterTest(const std::string &name)
+	{
+		LOG_CORE_INFO("Registering Test {0}", name);
 
-            m_Tests.push_back(std::make_pair(name, [](){ return new T(); }));
-        }
+		m_Tests.push_back(std::make_pair(name, []() { return new T(); }));
+	}
 
-    private:
-        Test*& m_CurrentTests;
-        std::vector<std::pair<std::string, std::function<Test*()>>> m_Tests;
-    };
+  private:
+	Test *&m_CurrentTests;
+	std::vector<std::pair<std::string, std::function<Test *()>>> m_Tests;
+};
 
-}
+} // namespace test
 
-#endif //LEARN_OPENGL_TEST_H
+#endif // LEARN_OPENGL_TEST_H

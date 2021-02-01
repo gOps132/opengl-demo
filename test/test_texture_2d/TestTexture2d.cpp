@@ -37,10 +37,10 @@ TestTexture2d::TestTexture2d()
 
 	float vertices[] = {
 		//  vertex coords   texture coords
-		-50.0f, -50.0f, 0.0f, 0.0f, // top right    0
-		50.0f,	-50.0f, 1.0f, 0.0f, // bottom right 1
-		50.0f,	50.0f,	1.0f, 1.0f, // bottom left  2
-		-50.0f, 50.0f,	0.0f, 1.0f	// top left     3
+		-100.0f, -100.0f, 0.0f, 0.0f, // top right    0
+		100.0f,	 -100.0f, 1.0f, 0.0f, // bottom right 1
+		100.0f,	 100.0f,  1.0f, 1.0f, // bottom left  2
+		-100.0f, 100.0f,  0.0f, 1.0f  // top left     3
 	};
 
 	unsigned int indices[] = {
@@ -57,6 +57,7 @@ TestTexture2d::TestTexture2d()
 	layout.Push<float>(2);
 
 	m_VAO->AddBuffer(*m_VertexBuffer, layout);
+
 	m_IndexBuffer = std::make_unique<IndexBuffer>(indices, sizeof(indices));
 
 	m_Shader = std::make_unique<Shader>("shaders/BasicShader.shader");
@@ -78,7 +79,7 @@ void TestTexture2d::OnRender()
 
 	Renderer renderer;
 
-	m_Texture->Bind();
+	m_Texture->Bind(0);
 	{
 		/* Recalculating the model matrix every frame */
 		glm::mat4 model = glm::translate(glm::mat4(1.0f), m_TranslationA);
@@ -99,9 +100,9 @@ void TestTexture2d::OnRender()
 
 void TestTexture2d::ImGuiRender()
 {
-	ImGui::SliderFloat3("m_TranslationA", &m_TranslationA.x, 0.0f,
+	ImGui::SliderFloat2("m_TranslationA", &m_TranslationA.x, 0.0f,
 						(float)m_height);
-	ImGui::SliderFloat3("m_TranslationB", &m_TranslationB.x, 0.0f,
+	ImGui::SliderFloat2("m_TranslationB", &m_TranslationB.x, 0.0f,
 						(float)m_height);
 	ImGui::Text("Application average %.3f ms/frame (%.1f FPS)",
 				1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);

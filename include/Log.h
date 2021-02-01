@@ -9,21 +9,22 @@
 
 class Log {
   public:
-    static void init();
+	static void init();
 
-// Possible copying
-    inline static std::shared_ptr<spdlog::logger> &GetCoreLogger()
-    {
-        return s_main_logger;
-    }
+	// Possible copying
+	inline static std::shared_ptr<spdlog::logger> &GetCoreLogger()
+	{
+		return s_main_logger;
+	}
 
-    inline static std::shared_ptr<spdlog::logger> &GetTestLogger()
-    {
-        return s_test_logger;
-    }
+	inline static std::shared_ptr<spdlog::logger> &GetTestLogger()
+	{
+		return s_test_logger;
+	}
+
   private:
-    static std::shared_ptr<spdlog::logger> s_main_logger;
-    static std::shared_ptr<spdlog::logger> s_test_logger;
+	static std::shared_ptr<spdlog::logger> s_main_logger;
+	static std::shared_ptr<spdlog::logger> s_test_logger;
 };
 
 #define LOG_CORE_TRACE(...) ::Log::GetCoreLogger()->trace(__VA_ARGS__)

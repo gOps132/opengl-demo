@@ -10,9 +10,9 @@
 
 #ifndef DEBUG
 #define GLCall(x)                                                              \
-    GLClearError();                                                            \
-    x;                                                                         \
-    CORE_ASSERT(GLLogCall(#x, __FILE__, __LINE__), "GLCALL FAILED!");
+	GLClearError();                                                            \
+	x;                                                                         \
+	CORE_ASSERT(GLLogCall(#x, __FILE__, __LINE__), "GLCALL FAILED!");
 #else
 #define GLCall(x) x
 #endif

@@ -11,9 +11,8 @@ uniform mat4 u_MVP;
 
 void main()
 {
-	// converts into normalize coords
-	gl_Position =  u_MVP * aPos;
-	v_TexCoord = texCoord;
+    gl_Position =  u_MVP * aPos;
+    v_TexCoord = texCoord;
 }
 
 #shader fragment
@@ -26,6 +25,6 @@ uniform sampler2D u_Texture;
 
 void main()
 {
-	vec4 texColor = texture(u_Texture, v_TexCoord);
-	color = texColor;
+    vec4 texColor = texture(u_Texture, v_TexCoord);
+    color = texColor;
 }
