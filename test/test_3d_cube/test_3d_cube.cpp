@@ -18,58 +18,58 @@ test_3d_cube::test_3d_cube()
 	  cc_a(0.5f, 0.0f, 3.0f), cc_b(0.0f, 0.0f, 0.0f), cc_c(0.0f, 0.0f, 1.0f),
 	  m_TranslationA(0, 0, 0)
 {
-	// float vertices[] = {
-	// 	1.0f,  1.0f,  1.f,	1.0f, 0.0f, 0.0f, // 0
-	// 	-1.0f, 1.0f,  1.f,	0.0f, 1.0f, 0.0f, // 1
-	// 	-1.0f, 1.0f,  -1.f, 0.0f, 0.0f, 1.0f, // 2
-	// 	1.0f,  1.0f,  -1.f, 1.0f, 1.0f, 1.0f, // 3
-	// 	1.0f,  -1.0f, 1.f,	1.0f, 1.0f, 0.0f, // 4
-	// 	-1.0f, -1.0f, 1.f,	1.0f, 1.0f, 1.0f, // 5
-	// 	-1.0f, -1.0f, -1.f, 0.0f, 1.0f, 1.0f, // 6
-	// 	1.0f,  -1.0f, -1.f, 1.0f, 0.0f, 1.0f  // 7
-	// };
-
-	// unsigned int indices[] = {
-	// 	0, 1, 3, // top 1
-	// 	3, 1, 2, // top 2
-	// 	2, 6, 7, // front 1
-	// 	7, 3, 2, // front 2
-	// 	7, 6, 5, // bottom 1
-	// 	5, 4, 7, // bottom 2
-	// 	5, 1, 4, // back 1
-	// 	4, 1, 0, // back 2
-	// 	4, 3, 7, // right 1
-	// 	3, 4, 0, // right 2
-	// 	5, 6, 2, // left 1
-	// 	5, 1, 2	 // left 2
-	// };
-
 	float vertices[] = {
-		//  vertex coords   texture coords
-		-0.5f, -0.5f, 0.0f, 0.0f, // top right    0
-		0.5f,  -0.5f, 1.0f, 0.0f, // bottom right 1
-		0.5f,  0.5f,  1.0f, 1.0f, // bottom left  2
-		-0.5f, 0.5f,  0.0f, 1.0f  // top left     3
+		1.0f,  1.0f,  1.f,	1.0f, 0.0f, 0.0f, // 0
+		-1.0f, 1.0f,  1.f,	0.0f, 1.0f, 0.0f, // 1
+		-1.0f, 1.0f,  -1.f, 0.0f, 0.0f, 1.0f, // 2
+		1.0f,  1.0f,  -1.f, 1.0f, 1.0f, 1.0f, // 3
+		1.0f,  -1.0f, 1.f,	1.0f, 1.0f, 0.0f, // 4
+		-1.0f, -1.0f, 1.f,	1.0f, 1.0f, 1.0f, // 5
+		-1.0f, -1.0f, -1.f, 0.0f, 1.0f, 1.0f, // 6
+		1.0f,  -1.0f, -1.f, 1.0f, 0.0f, 1.0f  // 7
 	};
 
 	unsigned int indices[] = {
-		0, 1, 3, // first triangle
-		1, 2, 3	 // second triangle
+		0, 1, 3, // top 1
+		3, 1, 2, // top 2
+		2, 6, 7, // front 1
+		7, 3, 2, // front 2
+		7, 6, 5, // bottom 1
+		5, 4, 7, // bottom 2
+		5, 1, 4, // back 1
+		4, 1, 0, // back 2
+		4, 3, 7, // right 1
+		3, 4, 0, // right 2
+		5, 6, 2, // left 1
+		5, 1, 2	 // left 2
 	};
+
+	// float vertices[] = {
+	// 	//  vertex coords   texture coords
+	// 	-0.5f, -0.5f, 0.0f, 0.0f, // top right    0
+	// 	0.5f,  -0.5f, 1.0f, 0.0f, // bottom right 1
+	// 	0.5f,  0.5f,  1.0f, 1.0f, // bottom left  2
+	// 	-0.5f, 0.5f,  0.0f, 1.0f  // top left     3
+	// };
+
+	// unsigned int indices[] = {
+	// 	0, 1, 3, // first triangle
+	// 	1, 2, 3	 // second triangle
+	// };
 
 	m_VAO = std::make_unique<VertexArray>();
 	m_VertexBuffer = std::make_unique<VertexBuffer>(
 		vertices, sizeof(vertices) * sizeof(float));
 
 	VertexBufferLayout layout;
-	layout.Push<float>(2);
-	layout.Push<float>(2);
+	layout.Push<float>(3);
+	layout.Push<float>(3);
 
 	m_VAO->AddBuffer(*m_VertexBuffer, layout);
 
 	m_IndexBuffer = std::make_unique<IndexBuffer>(indices, sizeof(indices));
 	m_Shader = std::make_unique<Shader>("shaders/test_3d_cube.shader");
-	m_Texture = std::make_unique<Texture>("textures/smile.png");
+	m_Texture = std::make_unique<Texture>("textures/poop.png");
 }
 
 test_3d_cube::~test_3d_cube() {}
@@ -82,9 +82,11 @@ void test_3d_cube::OnRender()
 	GLCall(glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT));
 	GLCall(glEnable(GL_DEPTH_TEST));
 
+	// GLCall(glPolygonMode(GL_FRONT_AND_BACK, GL_LINE))
+
 	Renderer renderer;
 
-	m_Texture->Bind(0);
+	// m_Texture->Bind(0);
 
 	glm::mat4 model = glm::translate(glm::mat4(1.0f), m_TranslationA);
 	m_View = glm::lookAt(cc_a, cc_b, cc_c);
