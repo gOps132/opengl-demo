@@ -13,15 +13,9 @@ constexpr int m_height = 1080;
 constexpr int m_width = 720;
 
 test_3d_cube::test_3d_cube()
-	: // m_Proj(
-	  // 	  glm::ortho(0.0f, (float)m_height, 0.0f, float(m_width),
-	  // -1.0f, 1.0f)),
-	  //   m_View(glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0))),
-	  m_Proj(glm::perspective(glm::radians(45.0f), (float)(m_height / m_width),
-							  0.1f, 10.0f)),
-	  m_View(glm::lookAt(glm::vec3(1.2f, 1.2f, 1.2f),
-						 glm::vec3(0.0f, 0.0f, 0.0f),
-						 glm::vec3(0.0f, 0.0f, 1.0f))),
+	: m_Proj(glm::perspective(glm::radians(45.0f), (float)(m_height / m_width),
+							  0.1f, 20.0f)),
+	  cc_a(0.5f, 0.0f, 3.0f), cc_b(0.0f, 0.0f, 0.0f), cc_c(0.0f, 0.0f, 1.0f),
 	  m_TranslationA(0, 0, 0)
 {
 	// float vertices[] = {
@@ -93,6 +87,7 @@ void test_3d_cube::OnRender()
 	m_Texture->Bind(0);
 
 	glm::mat4 model = glm::translate(glm::mat4(1.0f), m_TranslationA);
+	m_View = glm::lookAt(cc_a, cc_b, cc_c);
 
 	glm::mat4 mvp = m_Proj * m_View * model;
 	m_Shader->Bind();
@@ -104,6 +99,10 @@ void test_3d_cube::ImGuiRender()
 {
 	ImGui::SliderFloat3("m_TranslationA", &m_TranslationA.x, 0.0f,
 						(float)m_height);
+	ImGui::SliderFloat3("camera coordinate a", &cc_a.x, 0.0f, (float)m_height);
+	ImGui::SliderFloat3("camera coordinate b", &cc_b.x, 0.0f, (float)m_height);
+	ImGui::SliderFloat3("camera coordinate c", &cc_c.x, 0.0f, (float)m_height);
+
 	ImGui::Text("Application average %.3f ms/frame (%.1f FPS)",
 				1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 }

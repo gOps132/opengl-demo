@@ -30,7 +30,7 @@ class test_3d_cube : public Test {
 	std::unique_ptr<VertexBuffer> m_VertexBuffer;
 
 	glm::mat4 m_Proj, m_View;
-	glm::vec3 m_TranslationA;
+	glm::vec3 m_TranslationA, cc_a, cc_b, cc_c;
 };
 
 } // namespace test
