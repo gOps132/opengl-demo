@@ -17,10 +17,11 @@ test_3d_cube::test_3d_cube()
 	  // 	  glm::ortho(0.0f, (float)m_height, 0.0f, float(m_width),
 	  // -1.0f, 1.0f)),
 	  //   m_View(glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0))),
-	  m_Proj(glm::perspective(60.0f, (float)(m_height / m_width), 0.1f, 10.0f)),
+	  m_Proj(glm::perspective(glm::radians(45.0f), (float)(m_height / m_width),
+							  0.1f, 10.0f)),
 	  m_View(glm::lookAt(glm::vec3(1.2f, 1.2f, 1.2f),
 						 glm::vec3(0.0f, 0.0f, 0.0f),
-						 glm::vec3(0.0f, 0.0f, 0.0f))),
+						 glm::vec3(0.0f, 0.0f, 1.0f))),
 	  m_TranslationA(0, 0, 0)
 {
 	// float vertices[] = {
