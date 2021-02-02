@@ -23,7 +23,7 @@ set(OPENGL_DEMO_SOURCE_FILES
 	src/ErrorManager.cpp
 	src/IndexBuffer.cpp
 	src/main.cpp
-	src/Renderer.cpp  
+	src/Renderer.cpp
 	src/Shader.cpp
 	src/Texture.cpp
 	src/VertexArray.cpp
