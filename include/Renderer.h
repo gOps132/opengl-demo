@@ -13,6 +13,9 @@ class Renderer {
 	void SetClearColor() const;
 	void Draw(const VertexArray &va, const IndexBuffer &ib,
 			  const Shader &shader) const;
+	/* Render without index buffer */
+	void DrawVA(const VertexArray &va, const Shader &shader,
+				unsigned int va_count) const;
 };
 
 #endif // __RENDERER_H__

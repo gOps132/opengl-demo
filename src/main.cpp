@@ -64,6 +64,7 @@ int main(void)
 
 	GLFWwindow *window =
 		glfwCreateWindow(m_height, m_width, "LearnOpenGL", NULL, NULL);
+
 	if (window == NULL) {
 		std::cout << "Failed to create GLFW window" << std::endl;
 		glfwTerminate();

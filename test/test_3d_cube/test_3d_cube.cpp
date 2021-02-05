@@ -8,61 +8,57 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
+#include <GLFW/glfw3.h>
 namespace test {
 constexpr int m_height = 1080;
 constexpr int m_width = 720;
 
 test_3d_cube::test_3d_cube()
 	: m_Proj(glm::perspective(glm::radians(45.0f), (float)(m_height / m_width),
-							  0.1f, 20.0f)),
+							  0.1f, 10.0f)),
 	  cc_a(0.5f, 0.0f, 3.0f), cc_b(0.0f, 0.0f, 0.0f), cc_c(0.0f, 0.0f, 1.0f),
 	  m_TranslationA(0, 0, 0)
 {
+	// TODO: Set a test API for these callback functions
+	// glfwSetKeyCallback(window, [this](GLFWwindow *p_window, int p_button,
+	// 								  int p_action, int p_mode) {
+	// 	GLfloat cameraSpeed = 0.05f;
+	// 	if (p_button == GLFW_KEY_W)
+	// 		cc_a += cameraSpeed * cc_b;
+	// 	if (p_button == GLFW_KEY_S)
+	// 		cc_a -= cameraSpeed * cameraFront;
+	// 	if (p_button == GLFW_KEY_A)
+	// 		cc_a -=
+	// 			glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+	// 	if (p_button == GLFW_KEY_D)
+	// 		cc_a +=
+	// 			glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+	// });
+
 	float vertices[] = {
-		1.0f,  1.0f,  1.f,	1.0f, 0.0f, 0.0f, // 0
-		-1.0f, 1.0f,  1.f,	0.0f, 1.0f, 0.0f, // 1
-		-1.0f, 1.0f,  -1.f, 0.0f, 0.0f, 1.0f, // 2
-		1.0f,  1.0f,  -1.f, 1.0f, 1.0f, 1.0f, // 3
-		1.0f,  -1.0f, 1.f,	1.0f, 1.0f, 0.0f, // 4
-		-1.0f, -1.0f, 1.f,	1.0f, 1.0f, 1.0f, // 5
-		-1.0f, -1.0f, -1.f, 0.0f, 1.0f, 1.0f, // 6
-		1.0f,  -1.0f, -1.f, 1.0f, 0.0f, 1.0f  // 7
-	};
+		// front
+		-1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0, 1.0,
+		// back
+		-1.0, -1.0, -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, -1.0, -1.0, 1.0, -1.0};
 
-	unsigned int indices[] = {
-		0, 1, 3, // top 1
-		3, 1, 2, // top 2
-		2, 6, 7, // front 1
-		7, 3, 2, // front 2
-		7, 6, 5, // bottom 1
-		5, 4, 7, // bottom 2
-		5, 1, 4, // back 1
-		4, 1, 0, // back 2
-		4, 3, 7, // right 1
-		3, 4, 0, // right 2
-		5, 6, 2, // left 1
-		5, 1, 2	 // left 2
-	};
-
-	// float vertices[] = {
-	// 	//  vertex coords   texture coords
-	// 	-0.5f, -0.5f, 0.0f, 0.0f, // top right    0
-	// 	0.5f,  -0.5f, 1.0f, 0.0f, // bottom right 1
-	// 	0.5f,  0.5f,  1.0f, 1.0f, // bottom left  2
-	// 	-0.5f, 0.5f,  0.0f, 1.0f  // top left     3
-	// };
-
-	// unsigned int indices[] = {
-	// 	0, 1, 3, // first triangle
-	// 	1, 2, 3	 // second triangle
-	// };
+	unsigned int indices[] = {// front
+							  0, 1, 2, 2, 3, 0,
+							  // right
+							  1, 5, 6, 6, 2, 1,
+							  // back
+							  7, 6, 5, 5, 4, 7,
+							  // left
+							  4, 0, 3, 3, 7, 4,
+							  // bottom
+							  4, 5, 1, 1, 0, 4,
+							  // top
+							  3, 2, 6, 6, 7, 3};
 
 	m_VAO = std::make_unique<VertexArray>();
 	m_VertexBuffer = std::make_unique<VertexBuffer>(
 		vertices, sizeof(vertices) * sizeof(float));
 
 	VertexBufferLayout layout;
-	layout.Push<float>(3);
 	layout.Push<float>(3);
 
 	m_VAO->AddBuffer(*m_VertexBuffer, layout);
@@ -82,18 +78,20 @@ void test_3d_cube::OnRender()
 	GLCall(glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT));
 	GLCall(glEnable(GL_DEPTH_TEST));
 
-	// GLCall(glPolygonMode(GL_FRONT_AND_BACK, GL_LINE))
+	// GLCall(glPolygonMode(GL_FRONT_AND_BACK, GL_LINE));
 
 	Renderer renderer;
-
 	// m_Texture->Bind(0);
 
+	// glm::mat4 model = glm::rotate(glm::mat4(1.0f), 45.0f, m_TranslationA);
 	glm::mat4 model = glm::translate(glm::mat4(1.0f), m_TranslationA);
+
 	m_View = glm::lookAt(cc_a, cc_b, cc_c);
 
 	glm::mat4 mvp = m_Proj * m_View * model;
 	m_Shader->Bind();
 	m_Shader->SetUniformMat4f("u_MVP", mvp);
+
 	renderer.Draw(*m_VAO, *m_IndexBuffer, *m_Shader);
 }
 
