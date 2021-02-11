@@ -6,7 +6,7 @@
 	"editor.insertSpaces": false,
 	"editor.tabSize": 4,
 	"editor.detectIndentation": false,
-	"editor.formatOnSave": true,
+	// "editor.formatOnSave": true,
 	"files.associations": {
 		"memory": "cpp",
 		"*.tcc": "cpp",

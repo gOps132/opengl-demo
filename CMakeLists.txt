@@ -15,9 +15,7 @@ add_subdirectory(lib/imgui)
 add_subdirectory(lib/spdlog)
 add_subdirectory(lib/FFmpeg)
 
-# fix translation unit warnings (should use regex)
 file(GLOB OPENGL_DEMO_TEST_CPP ${CMAKE_CURRENT_SOURCE_DIR}/test/*/*.cpp)
-file(GLOB OPENGL_DEMO_TEST_H ${CMAKE_CURRENT_SOURCE_DIR}/test/*/*.h)
 
 set(OPENGL_DEMO_SOURCE_FILES
 	src/ErrorManager.cpp
@@ -32,7 +30,6 @@ set(OPENGL_DEMO_SOURCE_FILES
 	src/Log.cpp
 
 	${OPENGL_DEMO_TEST_CPP}
-	${OPENGL_DEMO_TEST_H}
 
 	src/ImguiBuild.cpp
 )
@@ -53,7 +50,7 @@ set_target_properties(opengl-demo PROPERTIES
 	ARCHIVE_OUTPUT_DIRECTORY	"${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
 	RUNTIME_OUTPUT_DIRECTORY	"${CMAKE_SOURCE_DIR}/bin/${PROJECT_NAME}-${CMAKE_BUILD_TYPE}"
 
-	WORKING_DIRECTORY   ${CMAKE_CURRENT_SOURCE_DIR}
+	WORKING_DIRECTORY	${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 if (APPLE)

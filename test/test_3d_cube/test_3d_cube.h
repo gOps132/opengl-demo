@@ -33,8 +33,6 @@ class test_3d_cube : public Test {
 
 	glm::mat4 m_Proj, m_View;
 	glm::vec3 m_TranslationA, cc_a, cc_b, cc_c;
-
-	// std::__1::chrono::steady_clock::time_point t_start;
 };
 
 } // namespace test

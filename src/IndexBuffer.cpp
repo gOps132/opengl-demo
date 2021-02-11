@@ -1,12 +1,14 @@
 #include "IndexBuffer.h"
 #include "ErrorManager.h"
 #include <glad/glad.h>
-#include <cassert>
+
+// #include <cassert>
 
 IndexBuffer::IndexBuffer(const unsigned int* data, unsigned int count)
 	: m_Count(count)
 {
-	static_assert(sizeof(unsigned int) == sizeof(GLuint), "");
+	CORE_ASSERT(sizeof(unsigned int) == sizeof(GLuint), "unsigned int is not equal to gluint!");
+	// static_assert(sizeof(unsigned int) == sizeof(GLuint), "");
 
 	GLCall(glGenBuffers(1, &m_RendererID));
 	GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID));

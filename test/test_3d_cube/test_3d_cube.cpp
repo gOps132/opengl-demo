@@ -16,43 +16,30 @@ constexpr int m_width = 720;
 test_3d_cube::test_3d_cube()
 	: m_Proj(glm::perspective(glm::radians(45.0f), (float)(m_height / m_width),
 							  0.1f, 10.0f)),
-	  cc_a(0.5f, 0.0f, 3.0f), cc_b(0.0f, 0.0f, 0.0f), cc_c(0.0f, 0.0f, 1.0f),
+	  cc_a(5.5f, 5.0f, 3.0f), cc_b(0.0f, 0.0f, 0.0f), cc_c(0.0f, 0.0f, 1.0f),
 	  m_TranslationA(0, 0, 0)
 {
-	// TODO: Set a test API for these callback functions
-	// glfwSetKeyCallback(window, [this](GLFWwindow *p_window, int p_button,
-	// 								  int p_action, int p_mode) {
-	// 	GLfloat cameraSpeed = 0.05f;
-	// 	if (p_button == GLFW_KEY_W)
-	// 		cc_a += cameraSpeed * cc_b;
-	// 	if (p_button == GLFW_KEY_S)
-	// 		cc_a -= cameraSpeed * cameraFront;
-	// 	if (p_button == GLFW_KEY_A)
-	// 		cc_a -=
-	// 			glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-	// 	if (p_button == GLFW_KEY_D)
-	// 		cc_a +=
-	// 			glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-	// });
-
 	float vertices[] = {
 		// front
-		-1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0, 1.0,
+		-1.0, -1.0, 1.0,	0.0f, 0.0f,
+		 1.0, -1.0, 1.0,	1.0f, 0.0f,
+		 1.0,  1.0, 1.0,	1.0f, 1.0f,
+		-1.0,  1.0, 1.0,	0.0f, 1.0f,
 		// back
-		-1.0, -1.0, -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, -1.0, -1.0, 1.0, -1.0};
+		-1.0, -1.0, -1.0,	0.0f, 0.0f,
+		 1.0, -1.0, -1.0,	1.0f, 0.0f,
+		 1.0,  1.0, -1.0,	1.0f, 1.0f,
+		-1.0,  1.0, -1.0,	0.0f, 1.0f,
+	};
 
-	unsigned int indices[] = {// front
-							  0, 1, 2, 2, 3, 0,
-							  // right
-							  1, 5, 6, 6, 2, 1,
-							  // back
-							  7, 6, 5, 5, 4, 7,
-							  // left
-							  4, 0, 3, 3, 7, 4,
-							  // bottom
-							  4, 5, 1, 1, 0, 4,
-							  // top
-							  3, 2, 6, 6, 7, 3};
+	unsigned int indices[] = {
+		0, 1, 2, 2, 3, 0, // front
+		1, 5, 6, 6, 2, 1, // right
+		7, 6, 5, 5, 4, 7, // back
+		4, 0, 3, 3, 7, 4, // left
+		4, 5, 1, 1, 0, 4, // bottom
+		3, 2, 6, 6, 7, 3  // top
+	};
 
 	m_VAO = std::make_unique<VertexArray>();
 	m_VertexBuffer = std::make_unique<VertexBuffer>(
@@ -60,6 +47,7 @@ test_3d_cube::test_3d_cube()
 
 	VertexBufferLayout layout;
 	layout.Push<float>(3);
+	layout.Push<float>(2);
 
 	m_VAO->AddBuffer(*m_VertexBuffer, layout);
 
@@ -81,7 +69,7 @@ void test_3d_cube::OnRender()
 	// GLCall(glPolygonMode(GL_FRONT_AND_BACK, GL_LINE));
 
 	Renderer renderer;
-	// m_Texture->Bind(0);
+	m_Texture->Bind(0);
 
 	// glm::mat4 model = glm::rotate(glm::mat4(1.0f), 45.0f, m_TranslationA);
 	glm::mat4 model = glm::translate(glm::mat4(1.0f), m_TranslationA);
@@ -93,6 +81,7 @@ void test_3d_cube::OnRender()
 	m_Shader->SetUniformMat4f("u_MVP", mvp);
 
 	renderer.Draw(*m_VAO, *m_IndexBuffer, *m_Shader);
+	// renderer.DrawVA(*m_VAO, *m_Shader, 36);
 }
 
 void test_3d_cube::ImGuiRender()
