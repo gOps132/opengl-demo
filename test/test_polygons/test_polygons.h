@@ -24,14 +24,15 @@ class test_polygons : public Test {
 	virtual void ImGuiRender() override;
 
 	/* indices not needed */
-	float* create_circle(const float radius, const unsigned int p_steps);
+	void create_circle(const float radius, const int p_steps, float *&vert);
+
   private:
 	std::unique_ptr<VertexArray> m_vao;
 	std::unique_ptr<Shader> m_shader;
 	std::unique_ptr<VertexBuffer> m_vertexbfr;
 
 	glm::mat4 m_proj, m_view;
-	glm::vec3 m_translation_a;// cc_a, cc_b, cc_c;
+	glm::vec3 m_translation_a;
 	float m_clear_color[4];
 };
 
