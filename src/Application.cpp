@@ -21,10 +21,13 @@
 #include <examples/imgui_impl_opengl3.h>
 #include <examples/imgui_impl_glfw.h>
 
+#include "Window.h"
 #include "Log.h"
 #include "Renderer.h"
 #include "ErrorManager.h"
 #include "VertexBufferLayout.h"
+
+#include "Input.h"
 
 #include "Test.h"
 
@@ -62,16 +65,16 @@ int main(void)
 
 	constexpr int m_height = 1080;
 	constexpr int m_width = 720;
+	
+	
+	Window window(glfwCreateWindow(m_height, m_width, "LearnOpenGL", NULL, NULL));
 
-	GLFWwindow *window =
-		glfwCreateWindow(m_height, m_width, "LearnOpenGL", NULL, NULL);
-
-	if (window == NULL) {
-		std::cout << "Failed to create GLFW window" << std::endl;
+	if (Window::get_window() == NULL) {
+		std::cout << "Failed to create GLFW Window::get_window()" << std::endl;
 		glfwTerminate();
 		return -1;
 	}
-	glfwMakeContextCurrent(window);
+	glfwMakeContextCurrent(Window::get_window());
 
 	glfwSwapInterval(1); // synchronize with our vsync
 
@@ -82,7 +85,7 @@ int main(void)
 
 	glViewport(0, 0, m_height, m_width);
 
-	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+	glfwSetFramebufferSizeCallback(Window::get_window(), framebuffer_size_callback);
 
 	Renderer renderer;
 
@@ -94,7 +97,7 @@ int main(void)
 	ImGuiIO &io = ImGui::GetIO();
 	(void)io;
 	ImGui::StyleColorsDark();
-	ImGui_ImplGlfw_InitForOpenGL(window, true);
+	ImGui_ImplGlfw_InitForOpenGL(Window::get_window(), true);
 	ImGui_ImplOpenGL3_Init(glsl_version);
 
 	test::Test *currentTest = nullptr;
@@ -107,11 +110,11 @@ int main(void)
 	testMenu->RegisterTest<test::test_3d_cube>("3d Cube");
 	testMenu->RegisterTest<test::test_polygons>("Other Random Polygons");
 
-	while (!glfwWindowShouldClose(window)) {
+	while (!glfwWindowShouldClose(Window::get_window())) {
 		/* resets to black at the menu */
 		GLCall(glClearColor(0.0f, 0.0f, 0.0f, 1.0f));
 
-		processInput(window);
+		processInput(Window::get_window());
 
 		renderer.Clear();
 
@@ -135,7 +138,7 @@ int main(void)
 		ImGui::Render();
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
-		glfwSwapBuffers(window);
+		glfwSwapBuffers(Window::get_window());
 		glfwPollEvents();
 	}
 

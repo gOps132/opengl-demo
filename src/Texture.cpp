@@ -24,16 +24,15 @@ Texture::Texture(const std::string &path)
 	GLCall(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT));
 	GLCall(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT));
 
-	// 1 for now
-	// for (int i = 0; i < 5; i++) {
+	// for (int i = 0; i < 6; i++) {
 	// 	GLCall(glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGBA8,
 	// 						m_Width, m_Height, 0, GL_RGBA, GL_UNSIGNED_BYTE,
 	// 						m_LocalBuffer));
 	// }
 
-		GLCall(glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8,
-							m_Width, m_Height, 0, GL_RGBA, GL_UNSIGNED_BYTE,
-							m_LocalBuffer));
+	GLCall(glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8,
+						m_Width, m_Height, 0, GL_RGBA, GL_UNSIGNED_BYTE,
+						m_LocalBuffer));
 
 	glGenerateMipmap(GL_TEXTURE_2D);
 	GLCall(glBindTexture(GL_TEXTURE_2D, 0));

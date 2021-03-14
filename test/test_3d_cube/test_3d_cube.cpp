@@ -19,27 +19,53 @@ test_3d_cube::test_3d_cube()
 	  cc_a(5.5f, 5.0f, 3.0f), cc_b(0.0f, 0.0f, 0.0f), cc_c(0.0f, 0.0f, 1.0f),
 	  m_TranslationA(0, 0, 0)
 {
-	float vertices[] = {
-		// front
-		-1.0, -1.0, 1.0,	0.0f, 0.0f,
-		 1.0, -1.0, 1.0,	1.0f, 0.0f,
-		 1.0,  1.0, 1.0,	1.0f, 1.0f,
-		-1.0,  1.0, 1.0,	0.0f, 1.0f,
-		// back
-		-1.0, -1.0, -1.0,	0.0f, 0.0f,
-		 1.0, -1.0, -1.0,	1.0f, 0.0f,
-		 1.0,  1.0, -1.0,	1.0f, 1.0f,
-		-1.0,  1.0, -1.0,	0.0f, 1.0f,
-	};
+	// constexpr float vertices[] = {
+	// 	// front
+	// 	-1.0, -1.0, 1.0,	0.0f, 0.0f,
+	// 	 1.0, -1.0, 1.0,	1.0f, 0.0f,
+	// 	 1.0,  1.0, 1.0,	1.0f, 1.0f,
+	// 	-1.0,  1.0, 1.0,	0.0f, 1.0f,
+	// 	// back
+	// 	-1.0, -1.0, -1.0,	0.0f, 0.0f,
+	// 	 1.0, -1.0, -1.0,	1.0f, 0.0f,
+	// 	 1.0,  1.0, -1.0,	1.0f, 1.0f,
+	// 	-1.0,  1.0, -1.0,	0.0f, 1.0f,
+	// };
 
-	unsigned int indices[] = {
-		0, 1, 2, 2, 3, 0, // front
-		1, 5, 6, 6, 2, 1, // right
-		7, 6, 5, 5, 4, 7, // back
-		4, 0, 3, 3, 7, 4, // left
-		4, 5, 1, 1, 0, 4, // bottom
-		3, 2, 6, 6, 7, 3  // top
-	};
+	// unsigned int indices[] = {
+	// 	0, 1, 2, 2, 3, 0, // front
+	// 	1, 5, 6, 6, 2, 1, // right
+	// 	7, 6, 5, 5, 4, 7, // back
+	// 	4, 0, 3, 3, 7, 4, // left
+	// 	4, 5, 1, 1, 0, 4, // bottom
+	// 	3, 2, 6, 6, 7, 3  // top
+	// };
+
+	// cube and textures
+	const float vertices[] = {
+		-0.5f, -0.5f, -0.5f, 0.0f, 0.0f, 0.5f,	-0.5f, -0.5f, 1.0f, 0.0f,
+		0.5f,  0.5f,  -0.5f, 1.0f, 1.0f, 0.5f,	0.5f,  -0.5f, 1.0f, 1.0f,
+		-0.5f, 0.5f,  -0.5f, 0.0f, 1.0f, -0.5f, -0.5f, -0.5f, 0.0f, 0.0f,
+
+		-0.5f, -0.5f, 0.5f,	 0.0f, 0.0f, 0.5f,	-0.5f, 0.5f,  1.0f, 0.0f,
+		0.5f,  0.5f,  0.5f,	 1.0f, 1.0f, 0.5f,	0.5f,  0.5f,  1.0f, 1.0f,
+		-0.5f, 0.5f,  0.5f,	 0.0f, 1.0f, -0.5f, -0.5f, 0.5f,  0.0f, 0.0f,
+
+		-0.5f, 0.5f,  0.5f,	 1.0f, 0.0f, -0.5f, 0.5f,  -0.5f, 1.0f, 1.0f,
+		-0.5f, -0.5f, -0.5f, 0.0f, 1.0f, -0.5f, -0.5f, -0.5f, 0.0f, 1.0f,
+		-0.5f, -0.5f, 0.5f,	 0.0f, 0.0f, -0.5f, 0.5f,  0.5f,  1.0f, 0.0f,
+
+		0.5f,  0.5f,  0.5f,	 1.0f, 0.0f, 0.5f,	0.5f,  -0.5f, 1.0f, 1.0f,
+		0.5f,  -0.5f, -0.5f, 0.0f, 1.0f, 0.5f,	-0.5f, -0.5f, 0.0f, 1.0f,
+		0.5f,  -0.5f, 0.5f,	 0.0f, 0.0f, 0.5f,	0.5f,  0.5f,  1.0f, 0.0f,
+
+		-0.5f, -0.5f, -0.5f, 0.0f, 1.0f, 0.5f,	-0.5f, -0.5f, 1.0f, 1.0f,
+		0.5f,  -0.5f, 0.5f,	 1.0f, 0.0f, 0.5f,	-0.5f, 0.5f,  1.0f, 0.0f,
+		-0.5f, -0.5f, 0.5f,	 0.0f, 0.0f, -0.5f, -0.5f, -0.5f, 0.0f, 1.0f,
+
+		-0.5f, 0.5f,  -0.5f, 0.0f, 1.0f, 0.5f,	0.5f,  -0.5f, 1.0f, 1.0f,
+		0.5f,  0.5f,  0.5f,	 1.0f, 0.0f, 0.5f,	0.5f,  0.5f,  1.0f, 0.0f,
+		-0.5f, 0.5f,  0.5f,	 0.0f, 0.0f, -0.5f, 0.5f,  -0.5f, 0.0f, 1.0f};
 
 	m_VAO = std::make_unique<VertexArray>();
 	m_VertexBuffer = std::make_unique<VertexBuffer>(
@@ -51,14 +77,18 @@ test_3d_cube::test_3d_cube()
 
 	m_VAO->AddBuffer(*m_VertexBuffer, layout);
 
-	m_IndexBuffer = std::make_unique<IndexBuffer>(indices, sizeof(indices));
+	// m_IndexBuffer = std::make_unique<IndexBuffer>(indices, sizeof(indices));
 	m_Shader = std::make_unique<Shader>("shaders/test_3d_cube.shader");
 	m_Texture = std::make_unique<Texture>("textures/poop.png");
 }
 
 test_3d_cube::~test_3d_cube() {}
 
-void test_3d_cube::OnUpdate(float deltaTime) {}
+void test_3d_cube::OnUpdate(float deltaTime) 
+{
+	// if(Input::key_pressed(GLFW_KEY_TAB)) 
+		// LOG_INFO("Tab key is pressed");
+}
 
 void test_3d_cube::OnRender()
 {
@@ -80,8 +110,8 @@ void test_3d_cube::OnRender()
 	m_Shader->Bind();
 	m_Shader->SetUniformMat4f("u_MVP", mvp);
 
-	renderer.Draw(*m_VAO, *m_IndexBuffer, *m_Shader);
-	// renderer.DrawVA(*m_VAO, *m_Shader, 36);
+	// renderer.Draw(*m_VAO, *m_IndexBuffer, *m_Shader);
+	renderer.DrawVA(*m_VAO, *m_Shader, 36);
 }
 
 void test_3d_cube::ImGuiRender()
@@ -91,7 +121,7 @@ void test_3d_cube::ImGuiRender()
 	ImGui::SliderFloat3("camera coordinate a", &cc_a.x, 0.0f, (float)m_height);
 	ImGui::SliderFloat3("camera coordinate b", &cc_b.x, 0.0f, (float)m_height);
 	ImGui::SliderFloat3("camera coordinate c", &cc_c.x, 0.0f, (float)m_height);
-
+ 
 	ImGui::Text("Application average %.3f ms/frame (%.1f FPS)",
 				1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 }

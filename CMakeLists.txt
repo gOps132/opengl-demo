@@ -18,9 +18,9 @@ add_subdirectory(lib/FFmpeg)
 file(GLOB OPENGL_DEMO_TEST_CPP ${CMAKE_CURRENT_SOURCE_DIR}/test/*/*.cpp)
 
 set(OPENGL_DEMO_SOURCE_FILES
+	src/Application.cpp
 	src/ErrorManager.cpp
 	src/IndexBuffer.cpp
-	src/main.cpp
 	src/Renderer.cpp
 	src/Shader.cpp
 	src/Texture.cpp
@@ -28,6 +28,7 @@ set(OPENGL_DEMO_SOURCE_FILES
 	src/VertexBuffer.cpp
 	src/Test.cpp
 	src/Log.cpp
+	src/Input.cpp
 
 	${OPENGL_DEMO_TEST_CPP}
 
