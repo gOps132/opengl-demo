@@ -39,11 +39,6 @@
 
 #include <iostream>
 
-void framebuffer_size_callback(GLFWwindow *window, int width, int height)
-{
-	GLCall(glViewport(0, 0, width, height));
-}
-
 void processInput(GLFWwindow *window)
 {
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
@@ -52,53 +47,7 @@ void processInput(GLFWwindow *window)
 
 int main(void)
 {
-	Log::init();
-
-	glfwInit();
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
-#ifdef __APPLE__
-	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-#endif
-
-	constexpr int m_height = 1080;
-	constexpr int m_width = 720;
-	
-	
-	Window window(glfwCreateWindow(m_height, m_width, "LearnOpenGL", NULL, NULL));
-
-	if (Window::get_window() == NULL) {
-		std::cout << "Failed to create GLFW Window::get_window()" << std::endl;
-		glfwTerminate();
-		return -1;
-	}
-	glfwMakeContextCurrent(Window::get_window());
-
-	glfwSwapInterval(1); // synchronize with our vsync
-
-	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-		std::cout << "Failed to initialize GLAD" << std::endl;
-		return -1;
-	}
-
-	glViewport(0, 0, m_height, m_width);
-
-	glfwSetFramebufferSizeCallback(Window::get_window(), framebuffer_size_callback);
-
-	Renderer renderer;
-
-	const char *glsl_version = "#version 330 core";
-
-	/* ImGui Initialization */
-	IMGUI_CHECKVERSION();
-	ImGui::CreateContext();
-	ImGuiIO &io = ImGui::GetIO();
-	(void)io;
-	ImGui::StyleColorsDark();
-	ImGui_ImplGlfw_InitForOpenGL(Window::get_window(), true);
-	ImGui_ImplOpenGL3_Init(glsl_version);
+	Window* s_window = new Window();
 
 	test::Test *currentTest = nullptr;
 	test::TestMenu *testMenu = new test::TestMenu(currentTest);
@@ -110,14 +59,14 @@ int main(void)
 	testMenu->RegisterTest<test::test_3d_cube>("3d Cube");
 	testMenu->RegisterTest<test::test_polygons>("Other Random Polygons");
 
-	while (!glfwWindowShouldClose(Window::get_window())) {
+	while (!glfwWindowShouldClose(Window::get()->get_window())) {
 		/* resets to black at the menu */
 		GLCall(glClearColor(0.0f, 0.0f, 0.0f, 1.0f));
 
-		processInput(Window::get_window());
+		processInput(Window::get()->get_window());
 
-		renderer.Clear();
-
+		Window::get()->get_renderer().Clear();
+		
 		/* new imgui frame */
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplGlfw_NewFrame();
@@ -138,7 +87,7 @@ int main(void)
 		ImGui::Render();
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
-		glfwSwapBuffers(Window::get_window());
+		glfwSwapBuffers(Window::get()->get_window());
 		glfwPollEvents();
 	}
 
@@ -146,13 +95,7 @@ int main(void)
 	if (currentTest != testMenu)
 		delete testMenu;
 
-	/* ImGUI shutdown */
-	ImGui_ImplOpenGL3_Shutdown();
-	ImGui_ImplGlfw_Shutdown();
-
-	ImGui::DestroyContext();
-
-	glfwTerminate();
+	delete s_window;
 
 	return 0;
 }

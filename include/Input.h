@@ -1,7 +1,6 @@
 #ifndef __EVENT_H__
 #define __EVENT_H__
 
-#include <GLFW/glfw3.h>
 #include <utility>
 
 class Input {

@@ -1,9 +1,11 @@
 #include "Input.h"
 #include "Window.h"
 
+#include <GLFW/glfw3.h>
+
 bool Input::key_pressed(int keycode)
 {
-	auto window = static_cast<GLFWwindow *>(Window::get_window());
+	auto window = static_cast<GLFWwindow *>(Window::get()->get_window());
 	auto state = glfwGetKey(window, keycode);
 
 	return state == GLFW_PRESS || state == GLFW_REPEAT;
@@ -11,7 +13,7 @@ bool Input::key_pressed(int keycode)
 
 bool Input::mouse_btn_pressed(int button)
 {
-	auto window = static_cast<GLFWwindow *>(Window::get_window());
+	auto window = static_cast<GLFWwindow *>(Window::get()->get_window());
 	auto state = glfwGetMouseButton(window, button);
 
 	return state == GLFW_PRESS;
@@ -19,7 +21,7 @@ bool Input::mouse_btn_pressed(int button)
 
 std::pair<float, float> Input::get_mouse_pos()
 {
-	auto window = static_cast<GLFWwindow *>(Window::get_window());
+	auto window = static_cast<GLFWwindow *>(Window::get()->get_window());
 	double xPos, yPos;
 	glfwGetCursorPos(window, &xPos, &yPos);
 

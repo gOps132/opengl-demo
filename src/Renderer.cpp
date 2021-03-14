@@ -1,6 +1,8 @@
 #include "Renderer.h"
 #include "ErrorManager.h"
 
+#include <glad/glad.h>
+
 void Renderer::Draw(const VertexArray &va, const IndexBuffer &ib,
 					const Shader &shader) const
 {

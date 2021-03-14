@@ -29,6 +29,7 @@ set(OPENGL_DEMO_SOURCE_FILES
 	src/Test.cpp
 	src/Log.cpp
 	src/Input.cpp
+	src/Window.cpp
 
 	${OPENGL_DEMO_TEST_CPP}
 

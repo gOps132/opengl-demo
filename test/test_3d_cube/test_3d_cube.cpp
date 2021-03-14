@@ -9,6 +9,9 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 #include <GLFW/glfw3.h>
+
+#include "Input.h"
+#include "Log.h"
 namespace test {
 constexpr int m_height = 1080;
 constexpr int m_width = 720;
@@ -86,8 +89,8 @@ test_3d_cube::~test_3d_cube() {}
 
 void test_3d_cube::OnUpdate(float deltaTime) 
 {
-	// if(Input::key_pressed(GLFW_KEY_TAB)) 
-		// LOG_INFO("Tab key is pressed");
+	if(Input::key_pressed(GLFW_KEY_TAB)) 
+		LOG_CORE_INFO("Tab key is pressed");
 }
 
 void test_3d_cube::OnRender()
